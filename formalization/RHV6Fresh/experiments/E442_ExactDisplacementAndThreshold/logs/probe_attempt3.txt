@@ -1,0 +1,15 @@
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+RHV6Fresh/Terminal/E442_SCRATCH.lean:50:47: error: unsolved goals
+β T : ℝ
+hT : 0 < T
+k : ℤ
+⊢ towerPhase β T + ↑k * π - arctan (T * β⁻¹) = ↑k * π
+'RHV6Fresh.displacement_rule' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.signedPrimeSum_eq_primes_in_block' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RHV6Fresh.weight_dominates_below_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT=1

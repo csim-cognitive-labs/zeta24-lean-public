@@ -1,0 +1,10 @@
+[    0.62s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    2.78s] rang 1 : échantillon 69, indices ≠ double 0, encadrement viol 0, M5 4.1e-29 / 1.8e-29, M6 viol 0
+[    4.85s] rang 100 : échantillon 69, indices ≠ double 0, encadrement viol 0, M5 1.9e-26 / 9.4e-27, M6 viol 0
+[    6.93s] rang 1000 : échantillon 69, indices ≠ double 0, encadrement viol 0, M5 6.8e-25 / 3.4e-25, M6 viol 0
+[    9.01s] rang 10000 : échantillon 69, indices ≠ double 0, encadrement viol 0, M5 3.2e-23 / 1.6e-23, M6 viol 0
+[   11.14s] rang 100000 : échantillon 69, indices ≠ double 0, encadrement viol 0, M5 9.9e-22 / 4.9e-22, M6 viol 0
+[   13.83s] rang 1000000 : échantillon 69, indices ≠ double 0, encadrement viol 0, M5 1.2e-19 / 6.0e-20, M6 viol 0
+[   16.37s] rang 2001052 : échantillon 69, indices ≠ double 0, encadrement viol 0, M5 4.2e-19 / 2.1e-19, M6 viol 0
+[   16.37s] terminé
+EXIT=0

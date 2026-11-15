@@ -1,0 +1,2 @@
+Tour 20 : cumsum 3.31e-08 ; fsum 3.31e-08
+Tour 1000 : cumsum 6.98e-08 ; fsum 6.98e-08

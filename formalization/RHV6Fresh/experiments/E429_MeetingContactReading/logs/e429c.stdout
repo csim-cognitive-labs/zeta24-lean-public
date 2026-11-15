@@ -1,0 +1,8 @@
+[    0.60s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    0.61s] post-hoc (1) rang 100000 : P2 pire premier 10337, erreur double 2.6e-06 (cos πf = -1.1e-05), identité à 30 chiffres 3.3e-21, direct double/mp 3.0e-06, depuis contact double/mp 4.0e-07 ; tangente pire erreur double 1.1e-05, à 30 chiffres 2.7e-21
+[    0.61s] post-hoc (1) rang 1000000 : P2 pire premier 16787, erreur double 3.1e-07 (cos πf = -4.9e-04), identité à 30 chiffres 4.0e-22, direct double/mp 6.3e-07, depuis contact double/mp 9.4e-07 ; tangente pire erreur double 7.4e-04, à 30 chiffres 1.7e-19
+[    0.61s] post-hoc (1) rang 2001052 : P2 pire premier 2137, erreur double 2.5e-06 (cos πf = 3.7e-04), identité à 30 chiffres 1.5e-21, direct double/mp 2.3e-06, depuis contact double/mp 1.2e-07 ; tangente pire erreur double 3.2e-03, à 30 chiffres 7.2e-19
+[    1.41s] post-hoc (2) zero_rank1 absorbé par les autres : {'12': (13.194, 0.0), '120': (363.947, 0.0), '600': (1128967.521, 0.0), '1200': (731.623, 0.8278), '2000': (222.742, 0.8556)}
+[    1.77s] post-hoc (2) zero_rank10 absorbé par les autres : {'12': (0.857, 0.0), '120': (31.78, 0.0), '600': (2785.645, 0.0), '1200': (505.441, 0.4422), '2000': (99.543, 0.514)}
+[    2.15s] post-hoc (2) zero_rank100 absorbé par les autres : {'12': (0.04, 0.0), '120': (1.069, 0.0), '600': (15.294, 0.0), '1200': (101.665, 0.2191), '2000': (30.919, 0.3995)}
+[    2.15s] terminé

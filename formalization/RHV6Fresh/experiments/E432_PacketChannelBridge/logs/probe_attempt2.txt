@@ -1,0 +1,48 @@
+case refine_2
+z : TrueZero
+x : ℝ
+hx : 0 < x
+h :
+  HasDerivAt (⇑Complex.conjCLE ∘ fun y => ↑y * nontrivialZeroResidueTerm y ⟨zeroPoint z, ⋯⟩)
+    (↑Complex.conjCLE (-↑(zetaZeroMultiplicity (zeroPoint z)) * zeroTerm z x)) x
+⊢ ↑Complex.conjCLE (-↑(zetaZeroMultiplicity (zeroPoint z)) * zeroTerm z x) =
+    -↑(zetaZeroMultiplicity (zeroPoint z)) * (starRingEnd ℂ) (zeroTerm z x)
+RHV6Fresh/Terminal/RaccordBridgeProbe_SCRATCH.lean:68:10: warning: This simp argument is unused:
+  Complex.conjCLE_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RHV6Fresh/Terminal/RaccordBridgeProbe_SCRATCH.lean:148:27: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (Complex.exp (↑?x * Complex.I)).re
+in the target expression
+  (Complex.exp ↑(t / 2) * Complex.exp (↑(rZeroHeight ↑C.zero * t) * Complex.I)).re * (1 / 2) /
+        (1 / 2 * (1 / 2) + rZeroHeight ↑C.zero * rZeroHeight ↑C.zero) +
+      (Complex.exp ↑(t / 2) * Complex.exp (↑(rZeroHeight ↑C.zero * t) * Complex.I)).im * rZeroHeight ↑C.zero /
+        (1 / 2 * (1 / 2) + rZeroHeight ↑C.zero * rZeroHeight ↑C.zero) =
+    rexp (t / 2) * (1 / 2 * cos (rZeroHeight ↑C.zero * t) + rZeroHeight ↑C.zero * sin (rZeroHeight ↑C.zero * t)) /
+      (1 / 4 + rZeroHeight ↑C.zero ^ 2)
+
+C : OffCarrier
+t : ℝ
+hx : 0 < rexp t
+hx0 : ↑(rexp t) ≠ 0
+e1 : ↑t * C.linePoint = ↑(t / 2) + ↑(rZeroHeight ↑C.zero * t) * Complex.I
+⊢ (Complex.exp ↑(t / 2) * Complex.exp (↑(rZeroHeight ↑C.zero * t) * Complex.I)).re * (1 / 2) /
+        (1 / 2 * (1 / 2) + rZeroHeight ↑C.zero * rZeroHeight ↑C.zero) +
+      (Complex.exp ↑(t / 2) * Complex.exp (↑(rZeroHeight ↑C.zero * t) * Complex.I)).im * rZeroHeight ↑C.zero /
+        (1 / 2 * (1 / 2) + rZeroHeight ↑C.zero * rZeroHeight ↑C.zero) =
+    rexp (t / 2) * (1 / 2 * cos (rZeroHeight ↑C.zero * t) + rZeroHeight ↑C.zero * sin (rZeroHeight ↑C.zero * t)) /
+      (1 / 4 + rZeroHeight ↑C.zero ^ 2)
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    zZero
+  has type
+    TNonTrivialZetaZero
+  but is expected to have type
+    { cPoint // PIsNonTrivialZetaZero cPoint }
+  in the application
+    ↑zZero

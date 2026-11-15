@@ -1,0 +1,4 @@
+RHV6Fresh/Terminal/E445_T1_SCRATCH.lean:20:16: error(lean.unknownIdentifier): Unknown identifier `complement_break_lower_bound`
+RHV6Fresh/Terminal/E445_T1_SCRATCH.lean:27:16: error(lean.unknownIdentifier): Unknown identifier `complement_value_eq`
+RHV6Fresh/Terminal/E445_T1_SCRATCH.lean:33:4: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions.
+EXIT=1

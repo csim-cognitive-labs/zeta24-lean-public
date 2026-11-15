@@ -1,0 +1,60 @@
+M : ℕ
+ih : ∑ i ∈ range M, cellDemand β T (k₀ + ↑i) = demandAtContact β T (k₀ + ↑M) - demandAtContact β T k₀
+⊢ ∑ i ∈ range (M + 1), cellDemand β T (k₀ + ↑i) = demandAtContact β T (k₀ + ↑(M + 1)) - demandAtContact β T k₀
+error: RHV6Fresh/Terminal/E447_SCRATCH.lean:34:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ∑ i ∈ range ?n, ?a (i + 1)
+in the target expression
+  ∑ i ∈ range (M + 1), contactRealValue β T (k₀ + ↑i) * cellDemand β T (k₀ + ↑i) =
+    contactRealValue β T (k₀ + ↑(M + 1)) * demandAtContact β T (k₀ + ↑(M + 1)) -
+        contactRealValue β T k₀ * demandAtContact β T k₀ -
+      ∑ i ∈ range (M + 1),
+        (contactRealValue β T (k₀ + ↑i + 1) - contactRealValue β T (k₀ + ↑i)) * demandAtContact β T (k₀ + ↑i + 1)
+
+case succ
+β T : ℝ
+k₀ : ℤ
+M : ℕ
+ih :
+  ∑ i ∈ range M, contactRealValue β T (k₀ + ↑i) * cellDemand β T (k₀ + ↑i) =
+    contactRealValue β T (k₀ + ↑M) * demandAtContact β T (k₀ + ↑M) - contactRealValue β T k₀ * demandAtContact β T k₀ -
+      ∑ i ∈ range M,
+        (contactRealValue β T (k₀ + ↑i + 1) - contactRealValue β T (k₀ + ↑i)) * demandAtContact β T (k₀ + ↑i + 1)
+⊢ ∑ i ∈ range (M + 1), contactRealValue β T (k₀ + ↑i) * cellDemand β T (k₀ + ↑i) =
+    contactRealValue β T (k₀ + ↑(M + 1)) * demandAtContact β T (k₀ + ↑(M + 1)) -
+        contactRealValue β T k₀ * demandAtContact β T k₀ -
+      ∑ i ∈ range (M + 1),
+        (contactRealValue β T (k₀ + ↑i + 1) - contactRealValue β T (k₀ + ↑i)) * demandAtContact β T (k₀ + ↑i + 1)
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:46:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:57:42: Variable name `hT` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hT
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:67:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:80:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:83:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:90:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:102:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:145:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:180:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- RHV6Fresh.Terminal.E447_SCRATCH
+error: build failed

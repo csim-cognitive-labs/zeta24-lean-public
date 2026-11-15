@@ -1,0 +1,14 @@
+RHV6Fresh/Terminal/E442_SCRATCH.lean:21:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+RHV6Fresh/Terminal/E442_SCRATCH.lean:51:23: error: Tactic `unfold` failed to unfold `towerPhase` in
+  (T * Real.log (contactAt β T k) - arctan (T / β)) / π = ↑k
+RHV6Fresh/Terminal/E442_SCRATCH.lean:89:53: error: failed to prove strict positivity, but it would be possible to prove nonnegativity if desired
+'RHV6Fresh.displacement_rule' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.signedPrimeSum_eq_primes_in_block' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RHV6Fresh.weight_dominates_below_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT=1

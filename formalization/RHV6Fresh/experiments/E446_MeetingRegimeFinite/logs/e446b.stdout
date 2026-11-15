@@ -1,0 +1,51 @@
+[    0.56s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    2.44s] rang       1 β=0.50 : N_obs jumeau 10, (a) 10, comparable=True same=True, F2viol=0, rapports 1.061 0.948 1.034 0.989 0.970 0.997 1.033 0.991 1.014 0.984 1.011
+[    3.18s] rang       1 β=0.30 : N_obs jumeau 10, (a) 10, comparable=True same=True, F2viol=0, rapports 1.029 0.960 1.045 0.970 0.969 1.008 1.043 0.974 1.013 0.988 1.010
+[    3.90s] rang       1 β=0.70 : N_obs jumeau 10, (a) 10, comparable=True same=True, F2viol=0, rapports 1.062 0.923 1.057 0.990 0.956 1.010 1.024 0.992 1.014 0.979 1.017
+[    4.54s] rang       1 β=0.40 : N_obs jumeau 10, (a) 10, comparable=True same=True, F2viol=0, rapports 1.029 0.948 1.056 0.971 0.970 1.009 1.033 0.982 1.013 0.983 1.015
+[    5.21s] rang       1 β=0.60 : N_obs jumeau 10, (a) 10, comparable=True same=True, F2viol=0, rapports 1.062 0.949 1.035 0.989 0.971 0.998 1.034 0.983 1.014 0.984 1.016
+[    5.91s] rang       1 β=0.45 : N_obs jumeau 10, (a) 10, comparable=True same=True, F2viol=0, rapports 1.030 0.948 1.034 0.988 0.970 0.997 1.033 0.991 1.013 0.983 1.016
+[    6.61s] rang       1 β=0.55 : N_obs jumeau 10, (a) 10, comparable=True same=True, F2viol=0, rapports 1.061 0.948 1.035 0.989 0.970 0.997 1.034 0.983 1.014 0.989 1.012
+[    7.30s] rang      10 β=0.50 : N_obs jumeau 60, (a) 60, comparable=True same=True, F2viol=0, rapports 0.953 0.762 0.973 1.009 0.938 1.218 1.070 1.020 1.045 0.992 0.955 1.039
+[    7.99s] rang      10 β=0.30 : N_obs jumeau 60, (a) 60, comparable=True same=True, F2viol=0, rapports 0.953 0.762 0.973 1.009 0.938 1.218 1.033 1.020 1.045 0.992 0.955 1.039
+[    8.68s] rang      10 β=0.70 : N_obs jumeau 60, (a) 60, comparable=True same=True, F2viol=0, rapports 0.953 0.763 0.973 1.009 0.938 1.218 1.070 1.020 1.045 0.992 0.955 1.039
+[    9.37s] rang      10 β=0.40 : N_obs jumeau 60, (a) 60, comparable=True same=True, F2viol=0, rapports 0.953 0.762 0.973 1.009 0.938 1.218 1.070 1.020 1.045 0.992 0.955 1.039
+[   10.06s] rang      10 β=0.60 : N_obs jumeau 60, (a) 60, comparable=True same=True, F2viol=0, rapports 0.953 0.762 0.973 1.009 0.938 1.218 1.070 1.020 1.045 0.992 0.955 1.039
+[   10.75s] rang      10 β=0.45 : N_obs jumeau 60, (a) 60, comparable=True same=True, F2viol=0, rapports 0.953 0.762 0.973 1.009 0.938 1.218 1.070 1.020 1.045 0.992 0.955 1.039
+[   11.40s] rang      10 β=0.55 : N_obs jumeau 60, (a) 60, comparable=True same=True, F2viol=0, rapports 0.953 0.762 0.973 1.009 0.938 1.218 1.070 1.020 1.045 0.992 0.955 1.039
+[   12.12s] rang     100 β=0.50 : N_obs jumeau 366, (a) 366, comparable=True same=True, F2viol=0, rapports 0.520 1.316 0.731 1.521 1.278 1.168 1.146 0.585 0.982 0.610 1.011 0.906
+[   12.83s] rang     100 β=0.30 : N_obs jumeau 366, (a) 366, comparable=True same=True, F2viol=0, rapports 0.520 1.316 0.731 1.521 1.278 1.168 1.146 0.585 0.982 0.610 1.011 0.906
+[   13.51s] rang     100 β=0.70 : N_obs jumeau 366, (a) 366, comparable=True same=True, F2viol=0, rapports 0.520 1.316 0.731 1.521 1.278 1.168 1.146 0.585 0.982 0.610 1.011 0.906
+[   14.18s] rang     100 β=0.40 : N_obs jumeau 366, (a) 366, comparable=True same=True, F2viol=0, rapports 0.520 1.316 0.731 1.521 1.278 1.168 1.146 0.585 0.982 0.610 1.011 0.906
+[   14.81s] rang     100 β=0.60 : N_obs jumeau 366, (a) 366, comparable=True same=True, F2viol=0, rapports 0.520 1.316 0.731 1.521 1.278 1.168 1.146 0.585 0.982 0.610 1.011 0.906
+[   15.44s] rang     100 β=0.45 : N_obs jumeau 366, (a) 366, comparable=True same=True, F2viol=0, rapports 0.520 1.316 0.731 1.521 1.278 1.168 1.146 0.585 0.982 0.610 1.011 0.906
+[   16.08s] rang     100 β=0.55 : N_obs jumeau 366, (a) 366, comparable=True same=True, F2viol=0, rapports 0.520 1.316 0.731 1.521 1.278 1.168 1.146 0.585 0.982 0.610 1.011 0.906
+[   16.76s] rang    1000 β=0.50 : N_obs jumeau 2343, (a) 2343, comparable=True same=True, F2viol=0, rapports 0.000 2.611 0.000 1.820 1.516 1.264 1.052 0.000 1.091 0.681 1.506 0.000
+[   17.39s] rang    1000 β=0.30 : N_obs jumeau 2343, (a) 2343, comparable=True same=True, F2viol=0, rapports 0.000 2.611 0.000 1.820 1.516 1.264 1.052 0.000 1.091 0.681 1.506 0.000
+[   18.05s] rang    1000 β=0.70 : N_obs jumeau 2343, (a) 2343, comparable=True same=True, F2viol=0, rapports 0.000 2.611 0.000 1.820 1.516 1.264 1.052 0.000 1.091 0.681 1.506 0.000
+[   18.68s] rang    1000 β=0.40 : N_obs jumeau 2343, (a) 2343, comparable=True same=True, F2viol=0, rapports 0.000 2.611 0.000 1.820 1.516 1.264 1.052 0.000 1.091 0.681 1.506 0.000
+[   19.30s] rang    1000 β=0.60 : N_obs jumeau 2343, (a) 2343, comparable=True same=True, F2viol=0, rapports 0.000 2.611 0.000 1.820 1.516 1.264 1.052 0.000 1.091 0.681 1.506 0.000
+[   19.91s] rang    1000 β=0.45 : N_obs jumeau 2343, (a) 2343, comparable=True same=True, F2viol=0, rapports 0.000 2.611 0.000 1.820 1.516 1.264 1.052 0.000 1.091 0.681 1.506 0.000
+[   20.54s] rang    1000 β=0.55 : N_obs jumeau 2343, (a) 2343, comparable=True same=True, F2viol=0, rapports 0.000 2.611 0.000 1.820 1.516 1.264 1.052 0.000 1.091 0.681 1.506 0.000
+[   21.23s] rang   10000 β=0.50 : N_obs jumeau 24985, (a) 24985, comparable=True same=True, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 7.311 0.000 0.000 4.202 0.000 0.000
+[   21.95s] rang   10000 β=0.30 : N_obs jumeau 24985, (a) 24985, comparable=True same=True, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 7.311 0.000 0.000 4.202 0.000 0.000
+[   22.63s] rang   10000 β=0.70 : N_obs jumeau 24985, (a) 24985, comparable=True same=True, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 7.311 0.000 0.000 4.202 0.000 0.000
+[   23.28s] rang   10000 β=0.40 : N_obs jumeau 24985, (a) 24985, comparable=True same=True, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 7.311 0.000 0.000 4.202 0.000 0.000
+[   23.95s] rang   10000 β=0.60 : N_obs jumeau 24985, (a) 24985, comparable=True same=True, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 7.311 0.000 0.000 4.202 0.000 0.000
+[   24.67s] rang   10000 β=0.45 : N_obs jumeau 24985, (a) 24985, comparable=True same=True, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 7.311 0.000 0.000 4.202 0.000 0.000
+[   25.47s] rang   10000 β=0.55 : N_obs jumeau 24985, (a) 24985, comparable=True same=True, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 7.311 0.000 0.000 4.202 0.000 0.000
+[   26.61s] rang  100000 β=0.50 : N_obs jumeau 78486, (a) 211310, comparable=False same=None, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 26.464 0.000
+[   27.64s] rang  100000 β=0.30 : N_obs jumeau 78486, (a) 211310, comparable=False same=None, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 26.464 0.000
+[   28.75s] rang  100000 β=0.70 : N_obs jumeau 78486, (a) 211310, comparable=False same=None, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 26.464 0.000
+[   29.83s] rang  100000 β=0.40 : N_obs jumeau 78486, (a) 211310, comparable=False same=None, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 26.464 0.000
+[   30.83s] rang  100000 β=0.60 : N_obs jumeau 78486, (a) 211310, comparable=False same=None, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 26.464 0.000
+[   32.20s] rang  100000 β=0.45 : N_obs jumeau 78486, (a) 211310, comparable=False same=None, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 26.464 0.000
+[   35.69s] rang  100000 β=0.55 : N_obs jumeau 78486, (a) 211310, comparable=False same=None, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 26.464 0.000
+[   37.67s] rang 2000000 β=0.50 : N_obs jumeau 78495, (a) 664564, comparable=False same=None, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+[   39.46s] rang 2000000 β=0.30 : N_obs jumeau 78495, (a) 664564, comparable=False same=None, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+[   40.96s] rang 2000000 β=0.70 : N_obs jumeau 78495, (a) 664564, comparable=False same=None, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+[   42.43s] rang 2000000 β=0.40 : N_obs jumeau 78495, (a) 664564, comparable=False same=None, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+[   43.91s] rang 2000000 β=0.60 : N_obs jumeau 78495, (a) 664564, comparable=False same=None, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+[   45.40s] rang 2000000 β=0.45 : N_obs jumeau 78495, (a) 664564, comparable=False same=None, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+[   46.85s] rang 2000000 β=0.55 : N_obs jumeau 78495, (a) 664564, comparable=False same=None, F2viol=0, rapports 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+[   46.85s] all_ok = True

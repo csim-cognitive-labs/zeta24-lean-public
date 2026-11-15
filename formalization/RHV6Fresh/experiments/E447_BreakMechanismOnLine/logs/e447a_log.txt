@@ -1,0 +1,10 @@
+[    0.78s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    1.76s] premiers ≤ 10000000 : 664579
+[    1.81s] rang 1 T=14.1347 cellules=41 | Abel rel max=0.00e+00 | amp err max=2.85e-15 viol=0 | solo=0 err=-1.00e+00
+[    1.83s] rang 10 T=49.7738 cellules=145 | Abel rel max=2.85e-15 | amp err max=2.99e-15 viol=0 | solo=0 err=-1.00e+00
+[    1.84s] rang 100 T=236.5242 cellules=692 | Abel rel max=3.99e-15 | amp err max=3.22e-15 viol=0 | solo=8 err=1.17e-13
+[    1.85s] rang 1000 T=1419.4225 cellules=4160 | Abel rel max=3.10e-15 | amp err max=3.09e-15 viol=0 | solo=427 err=1.80e-12
+[    1.86s] rang 10000 T=9877.7827 cellules=28958 | Abel rel max=4.97e-15 | amp err max=3.44e-15 viol=0 | solo=3809 err=2.45e-11
+[    1.89s] rang 100000 T=74920.8275 cellules=219648 | Abel rel max=2.03e-15 | amp err max=3.41e-15 viol=0 | solo=29010 err=2.32e-10
+[    2.37s] rang 2000000 T=1131944.4718 cellules=3318569 | Abel rel max=4.25e-15 | amp err max=3.61e-15 viol=0 | solo=366644 err=9.31e-10
+[    2.37s] FIN e447a

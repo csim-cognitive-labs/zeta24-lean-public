@@ -1,0 +1,80 @@
+/-
+Copyright © 2026 Charles S. Tous droits réservés.
+Enveloppe Soleau INPI n° DSO2026044645, déposée le 15/11/2026. Voir COPYRIGHT.md et THIRD_PARTY_NOTICES.md à la racine du dépôt.
+-/
+
+import Certification.Solution
+
+/-!
+# RHV3Lean — axiomes des cibles Comparator
+
+Un seul fichier, une seule liste : toute cible du Comparator doit y figurer et
+n'admettre que `propext`, `Quot.sound` et `Classical.choice`.
+-/
+
+open RHV3Lean.Certification
+
+#print axioms cmp_C0_trueZero_provenance
+#print axioms cmp_C0_zeroMultiplicity_ne_zero
+#print axioms cmp_C0_zeroAttributes_are_functions_of_support
+#print axioms cmp_C0_order_is_member_sensitive
+#print axioms cmp_C0_orderKey_injective
+#print axioms cmp_C0_zeroGap_nonnegative
+#print axioms cmp_C0_zeroGap_null_iff_sameFiber
+#print axioms cmp_C0_mirror_zetaVanishes
+#print axioms cmp_C0_mirror_sameHeight_complementaryRadial
+#print axioms cmp_C0_off_gives_two_distinct_sameFiber_members
+#print axioms cmp_C2_foundPrimes_eq_image_rankInterval
+#print axioms cmp_C2_foundCount_eq_edgeRankDifference
+#print axioms cmp_T1_count_one_iff_unique_prime
+#print axioms cmp_C2_centralRank_between_edges
+#print axioms cmp_C2_centralPrime_isPrime_and_in_interval
+#print axioms cmp_C2_foundPrimes_generallyPlural
+#print axioms cmp_C2_countingReads_doesNotMoveContacts
+#print axioms cmp_C3_passage_gap_nonneg_and_nonNull_iff_positive
+#print axioms cmp_C3_rpass_endpoints_are_member_own
+#print axioms cmp_C4_primeGap_positive
+#print axioms cmp_C4_primeHistory_unique
+#print axioms cmp_C4_place_isNeverNull_and_gapPositive
+#print axioms cmp_C4_localLaw_endpointsDistinct
+#print axioms cmp_C4_triple_sameMiddleMember
+#print axioms cmp_C5_zeroHeightFiber_finite
+#print axioms cmp_C5_sameFiberInterposition
+#print axioms cmp_C5_existsConsecutiveInFiber
+#print axioms cmp_C5_offCriticalLine_existsNullPassage
+#print axioms cmp_C5_offCriticalLine_existsNullRelationPassage
+#print axioms cmp_ROUTE_passageEndpoints_upperBranch
+#print axioms cmp_C7_zeroHeight_ne_zero
+#print axioms cmp_C7_upperRepresentative_radialPosition
+#print axioms cmp_C7_inOpenStrip_of_mathlibHypotheses
+#print axioms cmp_C7_riemannHypothesis_of_allUpperOnCriticalLine
+#print axioms cmp_TRUE_CONTACTS_consecutive_width
+#print axioms cmp_TRUE_CONTACTS_tangent_law
+#print axioms cmp_TRUE_CONTACTS_decode_height
+#print axioms cmp_TRUE_CONTACTS_decode_radial
+#print axioms cmp_TRUE_CONTACTS_decode_member
+#print axioms cmp_TRUE_CONTACTS_direct_cell
+#print axioms cmp_TRUE_CONTACTS_same_contacts_same_member
+#print axioms cmp_CONTROL_principal_branch_carrier
+#print axioms cmp_SAME_CELL_contacts_only
+#print axioms cmp_OCCURRENCE_contacts_only
+#print axioms cmp_VON_MANGOLDT_CHEBYSHEV_same_cell
+#print axioms cmp_PASSAGE_PLACE_earlier_occurrence
+#print axioms cmp_C6_rpass_iff_localLaw
+#print axioms cmp_C8_carrier_rpass_iff_localLaw
+#print axioms cmp_Y_offMirror_exact_objects
+#print axioms cmp_Y_offMirror_sameHeight_distinct
+#print axioms cmp_Y_off_impossible_consumer
+#print axioms cmp_Y_riemannHypothesis_consumer
+#print axioms cmp_S4_canonical_contactMinus_ge_two
+#print axioms cmp_S4_canonical_same_contacts_same_member
+#print axioms cmp_S4_canonical_carrier_state
+#print axioms cmp_O8_fullRpass_null_of_sourceNull
+#print axioms cmp_O8_fullRpass_nonNull_of_sourceNonNull
+#print axioms cmp_L15_symmetricZeroWindow_finite
+#print axioms cmp_L15_symmetricZeroSum_eq_labelled_sum
+#print axioms cmp_L16_reconstructedPrimeAtRank_eq_canonicalPrimeAtRank
+#print axioms cmp_L16_reconstructedGap_eq_canonicalGap
+#print axioms cmp_M9A_total_of_domain
+#print axioms cmp_M9A_M9B_composition
+#print axioms cmp_M9A_psiZeroChannel_not_definitionally_chebyshev

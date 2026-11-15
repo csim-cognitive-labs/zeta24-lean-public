@@ -1,0 +1,295 @@
+Licence de recherche Zeta24-Lean — Propriétaire, usage non commercial strict, version 1.0 (15 novembre 2026)
+=============================================================================================================
+
+Article 0 — Avertissement
+-------------------------
+
+Le présent texte N'EST PAS une licence libre, ni une licence open source au sens de l'Open Source
+Initiative (OSI). Il s'agit d'une licence propriétaire de type « source disponible » : le code et les
+documents sont consultables, mais seuls les usages énumérés ci-dessous sont autorisés. Tous les droits
+d'auteur sont réservés. Tout ce qui n'est pas expressément accordé par la présente licence est interdit
+sans autorisation écrite préalable de l'auteur.
+
+Article 1 — Définitions
+-----------------------
+
+« Œuvre » : l'ensemble des textes, documents stratégiques, audits, expériences, scripts, code Lean
+original et toute découverte consignée dans ce dépôt, à l'exclusion des Composants tiers.
+
+« Composants tiers » : le code (et les données) listés dans le fichier THIRD_PARTY_NOTICES.md,
+notamment le code placé sous licence Apache 2.0, qui demeure la propriété de ses auteurs.
+
+« Usage non commercial » : la recherche, l'enseignement, la vérification et la publication académique,
+sans contrepartie financière et sans intégration dans un produit ou un service payant ou financé par la
+publicité.
+
+« Exploitation commerciale » : toute utilisation, directe ou indirecte, en vue d'un avantage économique,
+y compris l'utilisation interne à une entreprise, et y compris l'entraînement ou l'évaluation de modèles
+d'intelligence artificielle à finalité commerciale. Tout ce qui n'est pas un Usage non commercial est une
+Exploitation commerciale.
+
+« Version modifiée » : toute modification, adaptation, traduction ou œuvre créée à partir de tout ou
+partie de l'Œuvre.
+
+Article 2 — Titulaire, paternité et antériorité
+-----------------------------------------------
+
+Titulaire des droits : Charles S. (identité de laboratoire : CSIM Cognitive Labs), © 2026.
+
+Preuve d'antériorité : enveloppe Soleau INPI, numéro national DSO2026044645, déposée en ligne le
+15/11/2026 à 18:14:32 UTC.
+
+L'auteur revendique la paternité et l'antériorité de l'ensemble des découvertes, méthodes, objets
+(Tours, contacts, cassure, raccord, etc.) et résultats consignés dans l'Œuvre ; l'enveloppe Soleau en
+fait foi. Aucune disposition de la présente licence ne transfère un quelconque droit de propriété.
+
+Article 3 — Droits accordés
+---------------------------
+
+Sous réserve des conditions de l'article 4, l'auteur accorde à toute personne, sans frais, une licence
+non exclusive, non transférable, pour le monde entier et la durée de protection des droits, limitée à
+un Usage non commercial et aux actes suivants :
+
+  - consulter l'Œuvre ;
+  - la copier et la compiler localement ;
+  - vérifier et reproduire ses résultats ;
+  - la citer avec attribution ;
+  - la modifier LOCALEMENT, à seule fin de vérification ou de proposition d'amélioration à l'auteur.
+
+La redistribution de copies NON modifiées, complètes et accompagnées de toutes les notices, reste
+autorisée à titre non commercial (forks GitHub, archivage scientifique). Aucun droit de redistribuer
+une Version modifiée n'est accordé.
+
+Article 4 — Conditions
+----------------------
+
+(a) Attribution. Toute copie, redistribution ou citation porte la mention :
+    « Charles S. — CSIM Cognitive Labs, zeta24-lean, https://github.com/csim-cognitive-labs/zeta24-lean-public »
+    et toute copie conserve le présent fichier LICENSE, le fichier COPYRIGHT.md et le fichier
+    THIRD_PARTY_NOTICES.md.
+
+(b) Modifications locales. Toute modification locale est signalée et datée.
+
+(c) Pas de redistribution des versions modifiées. Toute Version modifiée ne peut être redistribuée ; les
+    améliorations se proposent à l'auteur par issue ou pull request.
+
+(d) Pas d'Exploitation commerciale. Toute Exploitation commerciale est interdite sans convention écrite
+    distincte signée par l'auteur (article 7).
+
+(e) Pas de fausse présentation. Il est interdit de présenter l'Œuvre ou une Version modifiée comme une
+    démonstration de l'hypothèse de Riemann validée par l'auteur sans son accord.
+
+(f) Pas de promotion. Le nom de l'auteur et celui de CSIM Cognitive Labs ne peuvent pas être utilisés
+    pour promouvoir une Version modifiée ou un produit sans accord de l'auteur.
+
+(g) Cession des contributions. Toute contribution soumise (code, texte, résultat, idée formalisée) est
+    cédée à l'auteur à titre exclusif, mondial et gratuit, pour toute la durée des droits et tous modes
+    d'exploitation, dans la mesure permise par la loi ; lorsque la cession n'est pas possible (droits
+    moraux), le contributeur accorde une licence exclusive équivalente et renonce à s'opposer aux
+    modifications ; le contributeur garantit être titulaire des droits qu'il cède ; le contributeur ne
+    détient aucun droit sur le projet du fait de sa contribution et est crédité par son nom dans un
+    fichier CONTRIBUTORS si l'auteur l'accepte.
+
+Article 5 — Composants tiers
+----------------------------
+
+Les Composants tiers sont exclus de la présente licence. Ils restent soumis à la licence Apache 2.0
+(ou à la licence qui leur est propre) et à leurs notices, détenues par leurs auteurs. La présente
+licence n'enlève aucun droit déjà accordé par ces licences. En cas de conflit, la licence du
+Composant tiers prévaut pour ce composant.
+
+Article 6 — Portée et exploitation des découvertes
+--------------------------------------------------
+
+La présente licence porte sur l'Œuvre et sur toute reproduction, traduction ou adaptation de ses
+textes, preuves formelles, scripts et résultats. Toute exploitation commerciale des découvertes et
+résultats consignés dans l'Œuvre, sous quelque forme que ce soit (produit, service, publication payante,
+entraînement de modèles à finalité commerciale, brevet, cession), est interdite sans convention écrite
+distincte signée par l'auteur. La citation scientifique avec attribution reste libre.
+
+Article 7 — Autorisations commerciales
+--------------------------------------
+
+Aucune autorisation commerciale n'est accordée par ce document. Seule une convention écrite distincte,
+signée par l'auteur, pourrait en accorder. Toute demande se fait par une issue ouverte sur le dépôt
+GitHub (https://github.com/csim-cognitive-labs/zeta24-lean-public). Aucune adresse e-mail n'est donnée
+dans le présent fichier.
+
+Article 8 — Absence de garantie et limitation de responsabilité
+---------------------------------------------------------------
+
+L'Œuvre est fournie « en l'état », sans garantie d'aucune sorte, expresse ou implicite, notamment de
+qualité marchande, d'adéquation à un usage particulier, d'exactitude des énoncés ou des résultats, ou
+d'absence de contrefaçon. Dans la mesure permise par la loi, l'auteur n'est responsable d'aucun
+dommage, direct ou indirect, résultant de l'Œuvre ou de son utilisation. Rien dans le présent article
+n'exclut une responsabilité qui ne peut l'être en droit.
+
+Article 9 — Résiliation
+-----------------------
+
+En cas de violation de la présente licence, les droits accordés prennent fin automatiquement. Ils
+sont rétablis si le contrevenant remédie à la violation dans les trente (30) jours suivant sa
+survenance ou sa notification, sans préjudice des droits de l'auteur pour la période de violation.
+
+Article 10 — Droit applicable et juridiction
+--------------------------------------------
+
+La présente licence est régie par le droit français. Les tribunaux compétents sont ceux du ressort du
+domicile de l'auteur.
+
+Article 11 — Versions
+---------------------
+
+L'auteur peut publier des versions ultérieures de la présente licence. Une copie reçue sous la
+version 1.0 reste régie par la version 1.0.
+
+
+=====================================================================================================
+
+English version
+===============
+
+Zeta24-Lean Research Licence — Proprietary, Strict Non-Commercial, version 1.0 (15 November 2026)
+--------------------------------------------------------------------------------------------------
+
+The French text above is the original. This English version is a faithful translation provided for
+convenience; in case of discrepancy, the French text prevails.
+
+Article 0 — Notice
+------------------
+
+This text IS NOT a free licence, nor an open source licence within the meaning of the Open Source
+Initiative (OSI). It is a proprietary "source-available" licence: the code and documents may be
+consulted, but only the uses listed below are permitted. All copyright is reserved. Anything not
+expressly granted by this licence is prohibited without the author's prior written permission.
+
+Article 1 — Definitions
+-----------------------
+
+"Work": all texts, strategy documents, audits, experiments, scripts, original Lean code and any
+discovery recorded in this repository, excluding the Third-Party Components.
+
+"Third-Party Components": the code (and data) listed in the file THIRD_PARTY_NOTICES.md, in
+particular code under the Apache 2.0 licence, which remains the property of its authors.
+
+"Non-Commercial Use": research, teaching, verification and academic publication, without financial
+consideration and without integration into a product or service that is paid for or funded by
+advertising.
+
+"Commercial Exploitation": any use, direct or indirect, with a view to economic advantage, including
+use internal to a company, and including the training or evaluation of artificial intelligence models
+for a commercial purpose. Anything that is not Non-Commercial Use is Commercial Exploitation.
+
+"Modified Version": any modification, adaptation, translation or work created from all or part of the
+Work.
+
+Article 2 — Rights holder, authorship and priority
+--------------------------------------------------
+
+Rights holder: Charles S. (laboratory identity: CSIM Cognitive Labs), (c) 2026.
+
+Proof of priority: INPI Soleau envelope, national number DSO2026044645, filed online on
+15/11/2026 at 18:14:32 UTC.
+
+The author claims authorship and priority of all the discoveries, methods, objects (Towers, contacts,
+break, junction, etc.) and results recorded in the Work; the Soleau envelope is evidence thereof. No
+provision of this licence transfers any property right.
+
+Article 3 — Grant of rights
+---------------------------
+
+Subject to the conditions of Article 4, the author grants to any person, free of charge, a
+non-exclusive, non-transferable licence, worldwide and for the duration of the rights, limited to
+Non-Commercial Use and to the following acts:
+
+  - consulting the Work;
+  - copying and compiling it locally;
+  - verifying and reproducing its results;
+  - citing it with attribution;
+  - modifying it LOCALLY, solely for the purpose of verification or of proposing an improvement to the
+    author.
+
+Redistribution of UNMODIFIED copies, complete and accompanied by all notices, remains permitted on a
+non-commercial basis (GitHub forks, scholarly archiving). No right to redistribute a Modified Version
+is granted.
+
+Article 4 — Conditions
+----------------------
+
+(a) Attribution. Every copy, redistribution or citation carries the notice:
+    "Charles S. — CSIM Cognitive Labs, zeta24-lean, https://github.com/csim-cognitive-labs/zeta24-lean-public"
+    and every copy retains this LICENSE file, the COPYRIGHT.md file and the THIRD_PARTY_NOTICES.md file.
+
+(b) Local modifications. Every local modification must be indicated and dated.
+
+(c) No redistribution of modified versions. No Modified Version may be redistributed; improvements are
+    to be proposed to the author by issue or pull request.
+
+(d) No Commercial Exploitation. Any Commercial Exploitation is prohibited without a separate written
+    agreement signed by the author (Article 7).
+
+(e) No misrepresentation. It is prohibited to present the Work or a Modified Version as a proof of the
+    Riemann Hypothesis validated by the author without the author's agreement.
+
+(f) No endorsement. The name of the author and that of CSIM Cognitive Labs may not be used to promote a
+    Modified Version or a product without the author's agreement.
+
+(g) Assignment of contributions. Any submitted contribution (code, text, result, formalised idea) is
+    assigned to the author on an exclusive, worldwide and royalty-free basis, for the whole duration of
+    the rights and for all modes of exploitation, to the extent permitted by law; where assignment is
+    not possible (moral rights), the contributor grants an equivalent exclusive licence and waives any
+    right to object to modifications; the contributor warrants that he or she holds the rights assigned;
+    the contributor holds no right in the project by reason of his or her contribution and is credited
+    by name in a CONTRIBUTORS file if the author so accepts.
+
+Article 5 — Third-Party Components
+----------------------------------
+
+The Third-Party Components are excluded from this licence. They remain subject to the Apache 2.0
+licence (or their own licence) and to their notices, and are held by their authors. This licence
+removes no right already granted by those licences. In case of conflict, the licence of the
+Third-Party Component prevails for that component.
+
+Article 6 — Scope and exploitation of the discoveries
+-----------------------------------------------------
+
+This licence applies to the Work and to any reproduction, translation or adaptation of its texts,
+formal proofs, scripts and results. Any commercial exploitation of the discoveries and results recorded
+in the Work, in any form whatsoever (product, service, paid publication, training of models for a
+commercial purpose, patent, assignment), is prohibited without a separate written agreement signed by
+the author. Scholarly citation with attribution remains free.
+
+Article 7 — Commercial permissions
+----------------------------------
+
+No commercial permission is granted by this document. Only a separate written agreement signed by the
+author could grant one. Any request is made through an issue opened on the GitHub repository
+(https://github.com/csim-cognitive-labs/zeta24-lean-public). No e-mail address is given in this file.
+
+Article 8 — Disclaimer of warranty and limitation of liability
+--------------------------------------------------------------
+
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY OF THE
+STATEMENTS OR RESULTS, AND NON-INFRINGEMENT. TO THE FULL EXTENT PERMITTED BY LAW, THE AUTHOR SHALL
+NOT BE LIABLE FOR ANY DAMAGES, DIRECT OR INDIRECT, ARISING FROM THE WORK OR ITS USE. NOTHING IN THIS
+ARTICLE EXCLUDES LIABILITY THAT CANNOT BE EXCLUDED BY LAW.
+
+Article 9 — Termination
+-----------------------
+
+If you breach this licence, the rights granted terminate automatically. They are reinstated if the
+infringer cures the breach within thirty (30) days of its occurrence or of notification, without
+prejudice to the author's rights for the period of the breach.
+
+Article 10 — Governing law and jurisdiction
+-------------------------------------------
+
+This licence is governed by French law. The competent courts are those within whose jurisdiction the
+author is domiciled.
+
+Article 11 — Versions
+---------------------
+
+The author may publish later versions of this licence. A copy received under version 1.0 remains
+governed by version 1.0.

@@ -1,0 +1,3 @@
+# lake build RHV6Fresh (complet), 2026-11-09, après ajout de Terminal/CarrierLocalReading.lean (isolé) — dernières lignes
+Build completed successfully (9064 jobs).
+EXIT=0

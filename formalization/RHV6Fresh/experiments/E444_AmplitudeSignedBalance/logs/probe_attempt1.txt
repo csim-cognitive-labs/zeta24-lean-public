@@ -1,0 +1,52 @@
+RHV6Fresh/Terminal/AmplitudeSignedBalance_SCRATCH.lean:33:83: error: unsolved goals
+β T : ℝ
+hβ : 0 < β
+hT : T ≠ 0
+x : ℝ
+⊢ T * Real.log x - (T * Real.log x - arctan (T / β)) = arctan (T / β)
+RHV6Fresh/Terminal/AmplitudeSignedBalance_SCRATCH.lean:68:8: error: `RHV6Fresh.contactRealValue_add_nat` has already been declared
+RHV6Fresh/Terminal/AmplitudeSignedBalance_SCRATCH.lean:89:50: error: No goals to be solved
+RHV6Fresh/Terminal/AmplitudeSignedBalance_SCRATCH.lean:95:72: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  -?a * ?b
+in the target expression
+  (-rexp (β * π / T)) ^ i * contactRealValue β T k₀ * (cellLength β T k₀ * rexp (π / T) ^ i) =
+    contactRealValue β T k₀ * cellLength β T k₀ * (-(rexp (β * π / T) * rexp (π / T))) ^ i
+
+β T : ℝ
+hT : 0 < T
+k₀ : ℤ
+M : ℕ
+r : ℝ := rexp ((β + 1) * π / T)
+hr : r = rexp ((β + 1) * π / T)
+hr0 : 0 < r
+hne : -r ≠ 1
+hsplit : r = rexp (β * π / T) * rexp (π / T)
+i : ℕ
+a✝ : i ∈ range M
+⊢ (-rexp (β * π / T)) ^ i * contactRealValue β T k₀ * (cellLength β T k₀ * rexp (π / T) ^ i) =
+    contactRealValue β T k₀ * cellLength β T k₀ * (-(rexp (β * π / T) * rexp (π / T))) ^ i
+RHV6Fresh/Terminal/AmplitudeSignedBalance_SCRATCH.lean:211:110: error: unsolved goals
+β T : ℝ
+hT : 0 < T
+n j : ℕ
+h : meetingCell β T { rank := n + j } = meetingCell β T { rank := n } + ↑(meetingOffset β T n j)
+⊢ (-rexp (β * π / T)) ^ meetingOffset β T n j * contactRealValue β T (meetingCell β T { rank := n }) =
+    contactRealValue β T (meetingCell β T { rank := n }) * (-rexp (β * π / T)) ^ meetingOffset β T n j
+RHV6Fresh/Terminal/AmplitudeSignedBalance_SCRATCH.lean:219:53: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  contactRealValue β ?m.67 ?m.68 * ?m.64 / contactRealValue β ?m.67 ?m.68
+in the target expression
+  contactRealValue β T (meetingCell β T { rank := n }) *
+      ((-1) ^ meetingOffset β T n j * rexp (β * π / T) ^ meetingOffset β T n j /
+        contactRealValue β T (meetingCell β T { rank := n })) =
+    (-1) ^ meetingOffset β T n j * rexp (β * π / T) ^ meetingOffset β T n j
+
+β T : ℝ
+hβ : 0 < β
+hT : 0 < T
+n j : ℕ
+⊢ contactRealValue β T (meetingCell β T { rank := n }) *
+      ((-1) ^ meetingOffset β T n j * rexp (β * π / T) ^ meetingOffset β T n j /
+        contactRealValue β T (meetingCell β T { rank := n })) =
+    (-1) ^ meetingOffset β T n j * rexp (β * π / T) ^ meetingOffset β T n j
+RHV6Fresh/Terminal/AmplitudeSignedBalance_SCRATCH.lean:228:2: error: No goals to be solved
+EXIT=1

@@ -1,0 +1,4 @@
+# lake build RHV6Fresh (complet), 2026-11-09, après ajout de Terminal/MirrorStrip.lean (isolé) — dernières lignes
+lignes contenant le mot error (commentaires de sources portées compris) : 0
+Build completed successfully (9064 jobs).
+EXIT=0

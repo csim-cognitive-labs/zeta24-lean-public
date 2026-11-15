@@ -1,0 +1,26 @@
+name = "rhv3_lean"
+version = "0.1.0"
+defaultTargets = ["RHV3Lean", "Certification"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+
+# Mathlib est épinglé par révision git exacte (dépôt public : la copie locale
+# `../rhv2_fresh/.lake/packages/mathlib` du dépôt de recherche privé n'existe pas ici).
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "51e6992efd06126df61a496bebf8f49482a4e129"
+
+[[lean_lib]]
+name = "RHV3Lean"
+globs = ["RHV3Lean", "RHV3Lean.+"]
+
+# Surface de certification (maître Lean, M.2).  Elle est SEPAREE de la
+# production : `Challenge.lean` gèle les ENONCES, `Solution.lean` les rejoue
+# depuis l'implémentation active, et Comparator refuse toute divergence.
+[[lean_lib]]
+name = "Certification"
+globs = ["Certification.+"]

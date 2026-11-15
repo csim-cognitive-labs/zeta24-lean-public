@@ -1,0 +1,29 @@
+RHV6Fresh/Terminal/SameHeightContactShift_SCRATCH.lean:62:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern in the current goal
+
+β β' T : ℝ
+hβ : 0 < β
+hβ' : 0 < β'
+hT : 0 < T
+k : ℝ
+l1 : -(Real.pi / 2) < Real.arctan (T / β) - Real.arctan (T / β')
+l2 : Real.arctan (T / β) - Real.arctan (T / β') < Real.pi / 2
+hpos : 0 < windingContact β' T k
+⊢ -(Real.pi / (2 * T)) < (Real.arctan (T / β) - Real.arctan (T / β')) / T
+RHV6Fresh/Terminal/SameHeightContactShift_SCRATCH.lean:67:4: error: Tactic `apply` failed: could not unify the type of `mul_lt_mul_of_pos_left ?m.101 hpos`
+  windingContact β' T k * ?m.98 < windingContact β' T k * ?m.99
+with the goal
+  Real.exp ((Real.arctan (T / β) - Real.arctan (T / β')) / T) * windingContact β' T k <
+    Real.exp (Real.pi / (2 * T)) * windingContact β' T k
+
+case right
+β β' T : ℝ
+hβ : 0 < β
+hβ' : 0 < β'
+hT : 0 < T
+k : ℝ
+l1 : -(Real.pi / 2) < Real.arctan (T / β) - Real.arctan (T / β')
+l2 : Real.arctan (T / β) - Real.arctan (T / β') < Real.pi / 2
+hpos : 0 < windingContact β' T k
+⊢ Real.exp ((Real.arctan (T / β) - Real.arctan (T / β')) / T) * windingContact β' T k <
+    Real.exp (Real.pi / (2 * T)) * windingContact β' T k
+EXIT=1

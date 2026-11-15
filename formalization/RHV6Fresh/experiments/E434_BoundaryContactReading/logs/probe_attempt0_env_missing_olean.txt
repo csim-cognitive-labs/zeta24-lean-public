@@ -1,0 +1,1 @@
+RHV6Fresh/Terminal/BoundaryContactProbe_SCRATCH.lean:1:0: error: object file '/opt/zeta24-lean/formalization/RHV6Fresh/.lake/build/lib/lean/RHV6Fresh/Terminal/PacketSeriesBalance.olean' of module RHV6Fresh.Terminal.PacketSeriesBalance does not exist

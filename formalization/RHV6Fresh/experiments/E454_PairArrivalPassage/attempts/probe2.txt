@@ -1,0 +1,3 @@
+probe2 2026-11-08T13:53:59+00:00 : passage_height_le existait déjà (réutilisé), 12 énoncés nouveaux
+passage_height_le : ∀ (p : TZeroPassage), rZeroHeight p.zEarlierMember ≤ rZeroHeight p.zLaterMember
+EXIT=0

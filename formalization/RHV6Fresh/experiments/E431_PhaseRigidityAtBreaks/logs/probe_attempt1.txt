@@ -1,0 +1,272 @@
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:12:4: error: Function expected at
+  stagePosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  β
+
+Hint: The identifier `stagePosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:13:9: error: Tactic `unfold` failed: Local variable `stagePosition` has no definition
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:26:4: error: Function expected at
+  cellFraction
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  β
+
+Hint: The identifier `cellFraction` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:27:9: error: Tactic `unfold` failed: Local variable `cellFraction` has no definition
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:33:47: error: Function expected at
+  densitySignChangeLog
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  T
+
+Hint: The identifier `densitySignChangeLog` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:34:23: error: Function expected at
+  densitySignChangeLog
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  T
+
+Hint: The identifier `densitySignChangeLog` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:36:31: error: Type mismatch
+  Nat.log_pos ?m.25
+has type
+  ?m.23 ≤ ?m.24 → 0 < Nat.log ?m.23 ?m.24
+but is expected to have type
+  0 < log ↑p
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:36:43: error: Application type mismatch: The argument
+  hp
+has type
+  Nat.Prime p
+but is expected to have type
+  1 < ?m.23
+in the application
+  Nat.log_pos hp
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:71:10: error: Function expected at
+  cellFraction
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  β
+
+Hint: The identifier `cellFraction` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:71:31: error: Function expected at
+  cellFraction
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  β
+
+Hint: The identifier `cellFraction` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:71:57: error: Function expected at
+  cellFraction
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  β
+
+Hint: The identifier `cellFraction` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:71:78: error: Function expected at
+  cellFraction
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  β
+
+Hint: The identifier `cellFraction` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:73:9: error: Tactic `unfold` failed: Local variable `cellFraction` has no definition
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:127:49: error: Type mismatch
+  Nat.log_pos ?m.8
+has type
+  ?m.6 ≤ ?m.7 → 0 < Nat.log ?m.6 ?m.7
+but is expected to have type
+  0 < primeLog m
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:127:61: error: Application type mismatch: The argument
+  thm_primeAtRank_isPrime m
+has type
+  Nat.Prime (fnPrimeAtRank m)
+but is expected to have type
+  1 < ?m.6
+in the application
+  Nat.log_pos (thm_primeAtRank_isPrime m)
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:129:31: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:129:54: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:132:2: error(lean.unknownIdentifier): Unknown identifier `realCountingDensity`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:133:6: error(lean.unknownIdentifier): Unknown identifier `realCountingDensity`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:134:8: error(lean.unknownIdentifier): Unknown identifier `realCountingDensity`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:136:35: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:136:57: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:139:2: error(lean.unknownIdentifier): Unknown identifier `realCountingDensity`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:140:6: error(lean.unknownIdentifier): Unknown identifier `realCountingDensity`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:141:8: error(lean.unknownIdentifier): Unknown identifier `realCountingDensity`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:144:4: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:144:38: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:144:73: error: Function expected at
+  realCountingDensity
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  C.linePoint
+
+Hint: The identifier `realCountingDensity` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:149:42: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:149:64: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:154:4: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:154:52: error: Function expected at
+  densitySignChangeLog
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  (rZeroHeight C.zero.1)
+
+Hint: The identifier `densitySignChangeLog` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:155:12: error(lean.unknownIdentifier): Unknown identifier `C.linePoint.im`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:155:41: error(lean.unknownIdentifier): Unknown identifier `C.linePoint_im`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:156:30: error(lean.unknownIdentifier): Unknown identifier `C.radialShift`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:157:34: error(lean.unknownIdentifier): Unknown identifier `C.radialShift_pos`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:158:8: error(lean.unknownIdentifier): Unknown identifier `C.pairSurplus_eq_zero_iff`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:154:101: error: unsolved goals
+x✝ : Sort u_1
+densitySignChangeLog : x✝
+m : ℕ
+hT : sorry ≠ 0
+hcosh : 1 < cosh (sorry * primeLog m)
+⊢ sorry ↔ ∃ k, primeLog m = sorry
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:170:51: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:170:82: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:173:21: error(lean.unknownIdentifier): Unknown identifier `C.pairDepositOnLineAt_iff_sign_change`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:173:9: error: Tactic `rcases` failed: `x✝ : ?m.9` is not an inductive datatype
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:179:4: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:179:26: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:181:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:182:13: error(lean.unknownIdentifier): Unknown identifier `C.pairDepositOnLineAt_unique`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:185:44: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:187:39: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:187:62: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:189:77: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:186:4: error: Function expected at
+  cellFraction
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  (rZeroRadialPosition C.zero.1)
+
+Hint: The identifier `cellFraction` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:188:4: error: Function expected at
+  cellFraction
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  (rZeroRadialPosition (mirrorMember C.zero).1)
+
+Hint: The identifier `cellFraction` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:189:40: error: Function expected at
+  mirrorMember
+but this term has type
+  ?m.3
+
+Note: Expected a function because this term is being applied to the argument
+  C.zero
+
+Hint: The identifier `mirrorMember` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:190:20: error(lean.unknownIdentifier): Unknown identifier `C.pairDepositOnLine_forces_sign_change`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:191:37: error(lean.unknownIdentifier): Unknown identifier `C.n`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:192:45: error(lean.unknownIdentifier): Unknown identifier `C.zero`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:193:47: error: Function expected at
+  mirrorMember
+but this term has type
+  x✝
+
+Note: Expected a function because this term is being applied to the argument
+  C.zero
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:194:27: error(lean.unknownIdentifier): Unknown identifier `C.n`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:194:53: error(lean.unknownIdentifier): Unknown identifier `densitySignChangeLog`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:202:22: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:203:14: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:202:54: error: unsolved goals
+OffCarrier : Sort ?u.2
+C : OffCarrier
+h : ∀ (m : ℕ), sorry = 0
+⊢ False
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:212:35: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  C
+has type `OffCarrier` which does not have the necessary form.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:212:58: error: Function expected at
+  packetIncrement
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  C.packetᶜ
+
+Hint: The identifier `packetIncrement` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:213:17: error(lean.unknownIdentifier): Unknown identifier `remainderIncrement_eq_packet_add_complement`
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:212:93: error: unsolved goals
+OffCarrier : Sort ?u.2
+C : OffCarrier
+x✝ : Sort u_1
+packetIncrement : x✝
+m : ℕ
+hm : 2 ≤ m
+hs : sorry ≠ 0
+⊢ sorry ≠ 0

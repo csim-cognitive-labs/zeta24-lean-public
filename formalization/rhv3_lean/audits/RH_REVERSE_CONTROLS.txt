@@ -1,0 +1,9 @@
+# Déclarations AUTORISEES à prendre `RiemannHypothesis` en hypothèse.
+#
+# Ce ne sont jamais des étapes de la route : ce sont des CONTROLES de mesure,
+# qui servent à établir la force exacte d'une entrée résiduelle.  L'audit exige
+# en plus qu'AUCUNE autre déclaration de RHV3Lean ne les référence, de sorte
+# qu'elles ne peuvent alimenter aucun théorème de la route.
+thm_zeroRadialPosition_half_of_riemannHypothesis
+thm_noNullPassage_of_riemannHypothesis
+cmp_C7_noNullPassage_of_riemannHypothesis

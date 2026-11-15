@@ -1,0 +1,26 @@
+experiments/E402_CollectiveContacts/ProbeCollectiveContactRigidity.lean:44:2: error: unsolved goals
+C : OffCarrier
+I : PrimeGapInterval
+hI : zeroPoint C.zero ∈ crowd I
+hDecomp : localArithmeticTarget I = gapCrowdSum I + gapTailSum I
+hSplit :
+  gapCrowdSum I =
+    nontrivialZeroResidueTerm I.upper (memberIndex C.zero) - nontrivialZeroResidueTerm I.lower (memberIndex C.zero) +
+      ∑ σ ∈ ⋯.toFinset.erase (memberIndex C.zero),
+        (nontrivialZeroResidueTerm I.upper σ - nontrivialZeroResidueTerm I.lower σ)
+hTail : ‖localArithmeticTarget I - gapCrowdSum I‖ ≤ followingBudget I.threshold * (I.lower + I.upper)
+hMirror : zeroPoint (mirrorMember C.zero) ∈ crowd I
+hShift : contactLog (mirrorMember C.zero) 0 - contactLog C.zero 0 ≠ 0
+hCoord :
+  rZeroHeight ↑C.zero = Real.pi / (contactLog C.zero (0 + 1) - contactLog C.zero 0) ∧
+    rZeroRadialPosition ↑C.zero =
+      Real.pi / (contactLog C.zero (0 + 1) - contactLog C.zero 0) /
+        Real.tan (Real.pi / (contactLog C.zero (0 + 1) - contactLog C.zero 0) * contactLog C.zero 0)
+hAmp : ‖↑I.upper ^ (zeroPoint C.zero - 1)‖ < ‖↑I.upper ^ (zeroPoint (mirrorMember C.zero) - 1)‖
+hCross : contactsCrossed C.zero I ≤ 1
+hF8 :
+  ¬∀ᶠ (x : ℝ) in nhds (meetingPoint { rank := I.rank }),
+      smoothedRemainder x = ∑ ρ ∈ ⋯.toFinset, nontrivialZeroResidueTerm x ρ
+hLow : rZeroRadialPosition ↑C.zero < 1 / 2
+⊢ False
+EXIT=1

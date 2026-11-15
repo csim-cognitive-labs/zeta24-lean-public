@@ -1,0 +1,86 @@
+audits_compilation/prime_caps_contacts_bridge/ProbePrimeCapsContactsBridge.lean:51:2: error: unsolved goals
+F : ℂ → ℂ
+hF : IsPrimeDeterminedZetaContinuation F
+C : OffCarrier
+I : PrimeGapInterval
+hI : zeroPoint C.zero ∈ crowd I
+hEq : Set.EqOn F riemannZeta {1}ᶜ
+hSrc : primeDeterminedZeroSource F = canonicalZetaZeroSource
+hUnique : Set.EqOn F riemannZeta {1}ᶜ
+hCrowd : ↑(crowd I) = {ρ | F ρ = 0 ∧ 0 < ρ.re ∧ ρ.re < 1 ∧ 0 < ρ.im ∧ ρ.im ≤ I.threshold}
+hCoord : F (↑(rZeroRadialPosition ↑(canonicalMember C.n)) + ↑(rZeroHeight ↑(canonicalMember C.n)) * Complex.I) = 0
+hCount : upperCountWithMultiplicity I.threshold = ∑ ρ ∈ upperWindow I.threshold, analyticOrderNatAt F ρ
+hLowIff : (∃ ρ, F ρ = 0 ∧ 0 < ρ.re ∧ ρ.re < 1 ∧ 0 < ρ.im ∧ ρ.re < 1 / 2) ↔ Nonempty OffCarrier
+A₀ : ℝ
+hA0 : 1 ≤ A₀
+hCap : ∀ (I : PrimeGapInterval), ↑(crowd I).card ≤ ↑⌈I.threshold⌉₊ * (A₀ * Real.log (↑⌈I.threshold⌉₊ + 3))
+hCapI : ↑(crowd I).card ≤ ↑⌈I.threshold⌉₊ * (A₀ * Real.log (↑⌈I.threshold⌉₊ + 3))
+A₁ : ℝ
+hA1 : 1 ≤ A₁
+hLowCap :
+  ∀ (k n : ℕ) (j : ℤ),
+    0 < n →
+      ↑n * (A₁ * Real.log (↑n + 3)) < ↑k + 1 →
+        Real.log (contactMinusAt (canonicalMember k) (j + 1) / contactMinusAt (canonicalMember k) j) < Real.pi / ↑n
+Cc T₀ A₂ : ℝ
+hA2 : 0 ≤ A₂
+hUpCap :
+  ∀ (k : ℕ) (T : ℝ) (j : ℤ),
+    T₀ ≤ T →
+      1 ≤ T →
+        (↑k + 1) * (A₂ * Real.log (2 * T + 3)) < T / (2 * Real.pi) * Zeta23.ell1 T - Cc * Real.log T →
+          Real.pi / (2 * T) ≤
+            Real.log (contactMinusAt (canonicalMember k) (j + 1) / contactMinusAt (canonicalMember k) j)
+A₃ : ℝ
+hA3 : 1 ≤ A₃
+hTrans :
+  ∀ (I J : PrimeGapInterval),
+    J.threshold ≤ I.threshold →
+      I.threshold ≤ J.threshold + 1 → ↑(crowd I \ crowd J).card ≤ A₃ * Real.log (|J.threshold| + 3)
+A₄ : ℝ
+hA4 : 1 ≤ A₄
+hTailCap :
+  ∀ (I : PrimeGapInterval) (t : ℝ),
+    I.threshold ≤ t → ↑(upperWindow (t + 1) \ upperWindow t).card ≤ A₄ * Real.log (|t| + 3)
+hBlind :
+  rZeroHeight ↑C.outgoingMember = rZeroHeight ↑C.zero ∧
+    towerPitch C.outgoingMember = towerPitch C.zero ∧
+      (∀ (I : PrimeGapInterval), zeroPoint C.zero ∈ crowd I ↔ zeroPoint C.outgoingMember ∈ crowd I) ∧
+        ∀ (k : ℤ),
+          contactLog C.outgoingMember (k + 1) - contactLog C.outgoingMember k =
+            contactLog C.zero (k + 1) - contactLog C.zero k
+hTwice : 1 ≤ lowCount I.threshold ∧ Zeta23.Ncount 0 I.threshold = onCount I.threshold + 2 * lowCount I.threshold
+hFamily :
+  ∀ (S : Finset TrueZero),
+    (∀ w ∈ S, zeroPoint w ∈ crowd I) → ∑ w ∈ S, contactsCrossed w I ≤ ↑S.card ∧ S.card ≤ (crowd I).card
+hDecomp : localArithmeticTarget I = gapCrowdSum I + gapTailSum I
+hSplit :
+  gapCrowdSum I =
+    nontrivialZeroResidueTerm I.upper (memberIndex C.zero) - nontrivialZeroResidueTerm I.lower (memberIndex C.zero) +
+      ∑ σ ∈ ⋯.toFinset.erase (memberIndex C.zero),
+        (nontrivialZeroResidueTerm I.upper σ - nontrivialZeroResidueTerm I.lower σ)
+hTail : ‖localArithmeticTarget I - gapCrowdSum I‖ ≤ followingBudget I.threshold * (I.lower + I.upper)
+hMirror : zeroPoint (mirrorMember C.zero) ∈ crowd I
+hShift :
+  Real.log (contactMinusAt (mirrorMember C.zero) 0) - Real.log (contactMinusAt C.zero 0) =
+    (Real.arctan (rZeroHeight ↑C.zero / (1 - rZeroRadialPosition ↑C.zero)) -
+        Real.arctan (rZeroHeight ↑C.zero / rZeroRadialPosition ↑C.zero)) /
+      rZeroHeight ↑C.zero
+hTan :
+  Real.tan (rZeroHeight ↑C.zero * Real.log (contactMinusAt C.zero 0)) =
+    rZeroHeight ↑C.zero / rZeroRadialPosition ↑C.zero
+hTwo :
+  rZeroHeight ↑C.zero = Real.pi / (contactLog C.zero (0 + 1) - contactLog C.zero 0) ∧
+    rZeroRadialPosition ↑C.zero =
+      Real.pi / (contactLog C.zero (0 + 1) - contactLog C.zero 0) /
+        Real.tan (Real.pi / (contactLog C.zero (0 + 1) - contactLog C.zero 0) * contactLog C.zero 0)
+hAmp : ‖↑I.upper ^ (zeroPoint C.zero - 1)‖ < ‖↑I.upper ^ (zeroPoint (mirrorMember C.zero) - 1)‖
+hCross : contactsCrossed C.zero I ≤ 1
+hF8 :
+  ¬∀ᶠ (x : ℝ) in nhds (meetingPoint { rank := I.rank }),
+      smoothedRemainder x = ∑ ρ ∈ ⋯.toFinset, nontrivialZeroResidueTerm x ρ
+hRig : CrowdRadialRigidity ↔ RiemannHypothesis
+hAll : ∃ I, zeroPoint C.zero ∈ crowd I
+hLow : rZeroRadialPosition ↑C.zero < 1 / 2
+⊢ False
+EXIT=1

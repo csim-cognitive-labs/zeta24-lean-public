@@ -1,0 +1,25 @@
+RHV6Fresh/Terminal/GapSlopeByContacts_SCRATCH.lean:135:63: error: unsolved goals
+case calc.step
+β T : ℝ
+hβ : 0 < β
+hT : 0 < T
+I : PrimeGapInterval
+h : GapHasContact β T I
+m : ℕ := wholeCellCount β T I
+v : ℝ := contactRealValue β T (firstContactAfterLower β T I)
+E : ℝ := rexp (β * π / T)
+sq : (-1) ^ m * (-1) ^ m = 1
+hv : 0 < v * v
+hE : 0 < E ^ m
+⊢ (-1) ^ m * ((-1) ^ m * E ^ m * v) * v < (-1) ^ m * 1 ^ m * ((-E) ^ m * v) * v
+RHV6Fresh/Terminal/GapSlopeByContacts_SCRATCH.lean:218:4: error: linarith failed to find a contradiction
+β T : ℝ
+hT : 0 < T
+k₀ : ℤ
+m : ℕ
+hexp : 1 ≤ rexp (π / T)
+hmono : Monotone fun j => contactAt β T (k₀ + ↑j + 1) - contactAt β T (k₀ + ↑j)
+this : 0 < contactAt β T (k₀ + ↑0)
+a✝ : contactAt β T (k₀ + ↑0) * (rexp (π / T) - 1) < 0
+⊢ False
+failed

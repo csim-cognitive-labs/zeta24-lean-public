@@ -1,0 +1,50 @@
+RHV6Fresh/Terminal/MeetingPriceTheorem_SCRATCH.lean:17:4: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  rexp ?x * rexp ?y
+in the target expression
+  rexp (log x * β) + rexp (log x * (1 - β)) =
+    2 * rexp (log x * (1 / 2)) * ((rexp ((β - 1 / 2) * log x) + rexp (-((β - 1 / 2) * log x))) / 2)
+
+β x : ℝ
+hx : 0 < x
+⊢ rexp (log x * β) + rexp (log x * (1 - β)) =
+    2 * rexp (log x * (1 / 2)) * ((rexp ((β - 1 / 2) * log x) + rexp (-((β - 1 / 2) * log x))) / 2)
+RHV6Fresh/Terminal/MeetingPriceTheorem_SCRATCH.lean:39:88: error: unsolved goals
+β : ℝ
+hβ : β ≠ 1 / 2
+K : ℝ
+hd : 0 < |β - 1 / 2|
+h : 1 + ((β - 1 / 2) * ((2 * |K| + 1) / |β - 1 / 2|)) ^ 2 / 2 ≤ offPrice β (rexp ((2 * |K| + 1) / |β - 1 / 2|))
+⊢ |(β * 2 - 1) / 2| / |(β * 2 - 1) / 2| = 1
+RHV6Fresh/Terminal/MeetingPriceTheorem_SCRATCH.lean:73:6: error: Type mismatch
+  this
+has type
+  contactAt β T (lastContactBefore β T I.upper + 1) = rexp (π / T) * contactAt β T (lastContactBefore β T I.upper)
+but is expected to have type
+  contactAt β T (lastContactBefore β T I.upper + 1) = contactAt β T (lastContactBefore β T I.upper) * rexp (π / T)
+RHV6Fresh/Terminal/MeetingPriceTheorem_SCRATCH.lean:90:48: warning: Variable name `hβ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hβ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+RHV6Fresh/Terminal/MeetingPriceTheorem_SCRATCH.lean:119:63: error: unsolved goals
+β T : ℝ
+hβ : 0 < β
+hT : 0 < T
+k₀ : ℤ
+m : ℕ
+D : ℝ
+hD : ∀ j ∈ range (m + 1), |cellDemand β T (k₀ + ↑j)| ≤ D
+q : ℝ := rexp (β * π / T)
+hq : q = rexp (β * π / T)
+hq1 : 1 < q
+hD0 : 0 ≤ D
+⊢ |contactRealValue β T k₀| * D * q ^ m / (q - 1) = |contactRealValue β T k₀| * D * rexp (β * π / T) ^ m / (q - 1)
+RHV6Fresh/Terminal/MeetingPriceTheorem_SCRATCH.lean:128:13: error(lean.unknownIdentifier): Unknown constant `Real.isLittleO_log_rpow_atTop`
+RHV6Fresh/Terminal/MeetingPriceTheorem_SCRATCH.lean:126:49: error: unsolved goals
+r : ℝ
+hr : 0 < r
+K : ℝ
+hc : 0 < 1 / (|K| + 1)
+⊢ ∀ᶠ (x : ℝ) in atTop, K * log x < x ^ r
+EXIT=1

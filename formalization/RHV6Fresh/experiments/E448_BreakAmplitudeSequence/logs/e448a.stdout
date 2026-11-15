@@ -1,0 +1,10 @@
+[    1.38s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    1.41s] premiers ≤ 10000000 : 664579
+[    1.58s] rang 1 T=14.1347 paires=664578 | orbite circ=2.24e-14 enroul=0 | ratio cells=1.39e-15 exact=3.89e-15 | mono=0 bornes=0 iff=0 | même cellule total=664512
+[    1.64s] rang 10 T=49.7738 paires=664578 | orbite circ=6.26e-14 enroul=0 | ratio cells=1.72e-15 exact=3.33e-15 | mono=0 bornes=0 iff=0 | même cellule total=664374
+[    1.69s] rang 100 T=236.5242 paires=664578 | orbite circ=3.59e-13 enroul=0 | ratio cells=1.32e-15 exact=3.77e-15 | mono=0 bornes=0 iff=0 | même cellule total=663753
+[    1.73s] rang 1000 T=1419.4225 paires=664578 | orbite circ=2.00e-12 enroul=0 | ratio cells=2.44e-15 exact=3.55e-15 | mono=0 bornes=0 iff=0 | même cellule total=660607
+[    1.77s] rang 10000 T=9877.7827 paires=664578 | orbite circ=1.60e-11 enroul=0 | ratio cells=2.66e-15 exact=4.88e-15 | mono=0 bornes=0 iff=0 | même cellule total=643950
+[    1.82s] rang 100000 T=74920.8275 paires=664578 | orbite circ=1.27e-10 enroul=0 | ratio cells=1.78e-15 exact=4.44e-15 | mono=0 bornes=0 iff=0 | même cellule total=562102
+[    1.86s] rang 2000000 T=1131944.4718 paires=664578 | orbite circ=2.04e-09 enroul=0 | ratio cells=2.22e-15 exact=5.55e-15 | mono=0 bornes=0 iff=0 | même cellule total=166681
+[    1.86s] FIN e448a

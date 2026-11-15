@@ -1,0 +1,32 @@
+# lake build RHV6Fresh.Terminal.MirrorStrip — tentative 1 (2026-11-09), EXIT=0 ; lignes du module seulement
+  ⏎  rw [eq_sub_iff_add_eq, eq_comm, ← eq_div_iff (by norm_num [Nat.pos_iff_ne_zero.mp hN])] at h_sum⏎⏎  /- Next, we establish bounds for the error term -/⏎
+⚠ [9099/9099] Replayed RHV6Fresh.Terminal.MirrorStrip
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:8:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:11:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:13:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:15:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:18:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:19:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:20:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:22:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:23:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:24:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:27:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:28:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:129:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:111:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:133:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:152:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/MirrorStrip.lean:181:100: This line exceeds the 100 character limit, please shorten it!
+info: RHV6Fresh/Terminal/MirrorStrip.lean:191:0: 'RHV6Fresh.mirrorStrip_word_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/MirrorStrip.lean:192:0: 'RHV6Fresh.mirrorStrip_eq_empty_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/MirrorStrip.lean:193:0: 'RHV6Fresh.mirrorStrip_infinite_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/MirrorStrip.lean:194:0: 'RHV6Fresh.mirrorStrip_not_nonempty_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/MirrorStrip.lean:195:0: 'RHV6Fresh.mem_mirrorStrip_iff_between_contacts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/MirrorStrip.lean:196:0: 'RHV6Fresh.mirror_contact_before_within_half_cell' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/MirrorStrip.lean:197:0: 'RHV6Fresh.zeroStrip_eq_empty_of_fiberCount_lt_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/MirrorStrip.lean:198:0: 'RHV6Fresh.two_le_fiberCount_of_zeroStrip_nonempty' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/MirrorStrip.lean:199:0: 'RHV6Fresh.stripEmptyOnCarriers_iff_riemannHypothesis' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/MirrorStrip.lean:200:0: 'RHV6Fresh.stripFiniteOnCarriers_iff_riemannHypothesis' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (9099 jobs).

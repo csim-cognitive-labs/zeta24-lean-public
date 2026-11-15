@@ -1,0 +1,59 @@
+{
+ "limit": 100000000,
+ "primes_gt3": 5761453,
+ "all_in_two_states": true,
+ "class_state_violations": 0,
+ "transition_counts": {
+  "t11": 1264047,
+  "t15": 1616470,
+  "t51": 1616470,
+  "t55": 1264465
+ },
+ "balance_telescoping_violations": 0,
+ "balance_min": -1,
+ "balance_max": 0,
+ "balance_hist": {
+  "-1": 2880517,
+  "0": 2880935,
+  "1": 0
+ },
+ "crossings": 3232940,
+ "alternation_violations": 0,
+ "return_violations": 0,
+ "dwell_between_inverse_crossings": {
+  "min": 0,
+  "median": 0.0,
+  "q90": 2.0,
+  "q99": 5.0,
+  "max": 15,
+  "mean": 0.7821084777658966
+ },
+ "dwell_balance_N11_minus_N55": {
+  "final": -418,
+  "min": -1019,
+  "max": 0,
+  "argmin_rank": 4299240,
+  "argmax_rank": 0
+ },
+ "occupancy_minus_dwell_abs_max": 0,
+ "valid_words_12_transitions": 8192,
+ "realized_words_12_transitions_primes_le_limit": 8192,
+ "realized_fraction_of_valid": 1.0,
+ "twin_pure_python_1e6": {
+  "primes_gt3": 78496,
+  "class_state_violations": 0,
+  "balance_min": -1,
+  "balance_max": 0,
+  "return_violations": 0,
+  "crossings": 45674
+ },
+ "numpy_restricted_1e6": {
+  "primes_gt3": 78496,
+  "class_state_violations": 0,
+  "balance_min": -1,
+  "balance_max": 0,
+  "crossings": 45674,
+  "return_violations": 0
+ },
+ "twin_agreement": true
+}

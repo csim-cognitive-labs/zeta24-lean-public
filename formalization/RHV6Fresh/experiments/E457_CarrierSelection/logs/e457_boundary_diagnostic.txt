@@ -1,0 +1,10 @@
+β=0.50 T=82.910381 échecs=['β_in'] ; premier limitant Δβ=138829 (1−f=9.29473e-9) ; ΔT=138829 (1−f=9.29473e-9) ; second premier ΔT=585881 (1−f=1.303e-05) ; bruit double≈6.9e-14 ; cause : NON EXPLIQUÉE
+β=0.50 T=276.452050 échecs=['β_in'] ; premier limitant Δβ=662513 (1−f=1.39762e-7) ; ΔT=662513 (1−f=1.39762e-7) ; second premier ΔT=693323 (1−f=7.018e-06) ; bruit double≈2.6e-13 ; cause : NON EXPLIQUÉE
+β=0.30 T=395.582870 échecs=['T_in'] ; premier limitant Δβ=336563 (1−f=1.61954e-7) ; ΔT=336563 (1−f=1.61954e-7) ; second premier ΔT=407233 (1−f=2.220e-05) ; bruit double≈3.5e-13 ; cause : NON EXPLIQUÉE
+β=0.40 T=258.610439 échecs=['β_in', 'T_in'] ; premier limitant Δβ=388781 (1−f=5.55792e-8) ; ΔT=388781 (1−f=5.55792e-8) ; second premier ΔT=245033 (1−f=2.732e-05) ; bruit double≈2.3e-13 ; cause : NON EXPLIQUÉE
+β=0.40 T=282.465115 échecs=['β_in', 'T_in'] ; premier limitant Δβ=928471 (1−f=1.00183e-7) ; ΔT=928471 (1−f=1.00183e-7) ; second premier ΔT=794593 (1−f=3.047e-05) ; bruit double≈2.7e-13 ; cause : NON EXPLIQUÉE
+β=0.40 T=373.864874 échecs=['T_in'] ; premier limitant Δβ=388177 (1−f=4.21625e-8) ; ΔT=388177 (1−f=4.21625e-8) ; second premier ΔT=222931 (1−f=4.156e-06) ; bruit double≈3.4e-13 ; cause : NON EXPLIQUÉE
+β=0.45 T=244.070898 échecs=['β_in', 'T_in'] ; premier limitant Δβ=287549 (1−f=8.00384e-8) ; ΔT=287549 (1−f=8.00384e-8) ; second premier ΔT=318737 (1−f=6.788e-06) ; bruit double≈2.1e-13 ; cause : NON EXPLIQUÉE
+β=0.45 T=283.211186 échecs=['T_in'] ; premier limitant Δβ=407383 (1−f=1.02586e-7) ; ΔT=407383 (1−f=1.02586e-7) ; second premier ΔT=26017 (1−f=4.770e-06) ; bruit double≈2.6e-13 ; cause : NON EXPLIQUÉE
+β=0.45 T=384.956117 échecs=['β_in', 'T_in'] ; premier limitant Δβ=178151 (1−f=2.13785e-8) ; ΔT=178151 (1−f=2.13785e-8) ; second premier ΔT=725099 (1−f=2.508e-06) ; bruit double≈3.3e-13 ; cause : NON EXPLIQUÉE
+cas signalés : 9 ; expliqués par la précision ou l ex æquo : 0

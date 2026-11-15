@@ -1,0 +1,3 @@
+warning: RHV6Fresh/Terminal/ContactSumProfile.lean:43:100: This line exceeds the 100 character limit, please shorten it!
+warning: RHV6Fresh/Terminal/ContactSumProfile.lean:64:100: This line exceeds the 100 character limit, please shorten it!
+Build completed successfully (9107 jobs).

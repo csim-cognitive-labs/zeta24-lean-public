@@ -1,0 +1,60 @@
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+RHV6Fresh/Terminal/E449_SCRATCH.lean:17:72: error: unsolved goals
+β T : ℝ
+hT : 0 < T
+k : ℤ
+⊢ ↑(1 + k) * π - π * ↑k = π
+RHV6Fresh/Terminal/E449_SCRATCH.lean:72:12: error: don't know how to synthesize implicit argument `a`
+  @Tendsto.sub ℝ ℝ PseudoMetricSpace.toUniformSpace.toTopologicalSpace instSub IsTopologicalAddGroup.to_continuousSub
+    (fun x => ?m.92) (fun x => towerPhase β T / π * (log x)⁻¹) atTop ?m.92 (towerPhase β T / π * 0) tendsto_const_nhds
+    (Tendsto.const_mul (towerPhase β T / π) hinv)
+context:
+β T : ℝ
+hT : 0 < T
+hinv : Tendsto (fun x => (log x)⁻¹) atTop (𝓝 0)
+⊢ ℝ
+RHV6Fresh/Terminal/E449_SCRATCH.lean:72:12: error: don't know how to synthesize implicit argument `f`
+  @Tendsto.sub ℝ ℝ PseudoMetricSpace.toUniformSpace.toTopologicalSpace instSub IsTopologicalAddGroup.to_continuousSub
+    (fun x => ?m.92) (fun x => towerPhase β T / π * (log x)⁻¹) atTop ?m.92 (towerPhase β T / π * 0) tendsto_const_nhds
+    (Tendsto.const_mul (towerPhase β T / π) hinv)
+context:
+β T : ℝ
+hT : 0 < T
+hinv : Tendsto (fun x => (log x)⁻¹) atTop (𝓝 0)
+⊢ ℝ → ℝ
+RHV6Fresh/Terminal/E449_SCRATCH.lean:72:31: error: don't know how to synthesize placeholder
+context:
+β T : ℝ
+hT : 0 < T
+hinv : Tendsto (fun x => (log x)⁻¹) atTop (𝓝 0)
+⊢ ℝ
+RHV6Fresh/Terminal/E449_SCRATCH.lean:72:9: error: failed to infer `have` declaration type
+RHV6Fresh/Terminal/E449_SCRATCH.lean:94:2: error: No goals to be solved
+RHV6Fresh/Terminal/E449_SCRATCH.lean:131:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+RHV6Fresh/Terminal/E449_SCRATCH.lean:138:22: warning: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+RHV6Fresh/Terminal/E449_SCRATCH.lean:192:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+RHV6Fresh/Terminal/E449_SCRATCH.lean:200:28: error: No goals to be solved
+'RHV6Fresh.tower_of_two_contacts' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RHV6Fresh.phase_bracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.word_slope_tendsto' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RHV6Fresh.cellFraction_primes_small_and_near_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.tower_eq_of_same_word' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

@@ -1,0 +1,16 @@
+[    0.6 s] zéros chargés
+[    1.2 s] premiers, ψ, A, fonds prêts : 1229 écarts
+[    9.8 s] profil écart n=4 [11, 13] calculé
+[   19.1 s] profil écart n=100 [547, 557] calculé
+[   28.4 s] profil écart n=300 [1993, 1997] calculé
+[   38.8 s] profil écart n=500 [3581, 3583] calculé
+[   47.6 s] profil écart n=614 [4523, 4547] calculé
+[   55.9 s] profil écart n=800 [6143, 6151] calculé
+[   64.4 s] profil écart n=1000 [7927, 7933] calculé
+[   72.8 s] profil écart n=1182 [9551, 9587] calculé
+[   81.2 s] profil écart n=1223 [9929, 9931] calculé
+[   89.6 s] profil écart n=1228 [9973, 10007] calculé
+[  139.8 s] fenêtre continue n=614..619 calculée
+[  140.1 s] jumeau OFF (blocs 1, 50, 500) calculé
+[  140.5 s] jumeaux mpmath faits
+[  140.6 s] E404 terminé

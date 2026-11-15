@@ -1,0 +1,6 @@
+# Contrats de force EQUIVALENTE a `RiemannHypothesis`.
+#
+# Trois colonnes : le prédicat, puis les deux théorèmes compilés qui établissent
+# l'équivalence dans les deux sens.  Un contrat de cette liste doit être signalé
+# dans le manifeste du tour AVANT que Comparator ne soit exécuté : Comparator
+# certifie des énoncés, il ne mesure pas leur force.

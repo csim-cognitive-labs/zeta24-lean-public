@@ -1,0 +1,19 @@
+# Habitants de CONTROLE des types porteurs.
+#
+# Exhiber un habitant d'un type ne réalise JAMAIS un objet que les maîtres
+# appellent CANONIQUE : il y faudrait de plus une règle de détermination.  Tout
+# nom listé ici est donc interdit de figurer comme réalisateur dans le registre
+# `CONTRACTS.md`, et l'audit le vérifie.
+tRatioFourOperator
+tRatioFourCarrier
+tPrincipalBranchCarrier
+# tCanonicalTrueTowerCarrier (RHV3-S4-CANONICAL-PRODUCER) diffère des trois
+# ci-dessus : ce n'est pas un habitant arbitraire, c'est une REGLE de
+# determination en forme close (plus petite adresse dont l'incidence atteint
+# x>=2), retrouvee dans l'historique Git (rh_gap_criterion/RHV2TrueContacts.lean
+# ::canonicalContactAddress) et portee sans coordonnee retiree. Mais aucun
+# maitre actuel ne definit C1/C2, donc rien ne certifie que CETTE regle est
+# celle que les maitres appellent CANONIQUE. Reste donc CONTROL_ONLY jusqu'a
+# ce qu'un maitre la designe explicitement, ou jusqu'a preuve/refutation de
+# PCanonicalCellFoundCountOne sur elle.
+tCanonicalTrueTowerCarrier

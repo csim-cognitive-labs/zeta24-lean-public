@@ -1,0 +1,2 @@
+hauteur 192.026656361 premier 709703 : marge double 1.7769252735888585e-10 ; position Tour 822.9998342379198819684833 ; position miroir 823.0000000001775598428453 ; écart des mots 1 ; B0 conforme True ; B4 conforme True
+cas recontrôlés : 1

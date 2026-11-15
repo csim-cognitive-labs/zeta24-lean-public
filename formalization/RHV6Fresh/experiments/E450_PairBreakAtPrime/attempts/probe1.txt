@@ -1,0 +1,27 @@
+RHV6Fresh/Terminal/PairBreakAtPrime_SCRATCH.lean:19:4: error: linarith failed to find a contradiction
+case h1
+β T x : ℝ
+h : stagePosition β T x - stagePosition (1 - β) T x = -mirrorPhaseShift β T / π
+a✝ : stagePosition (1 - β) T x < stagePosition β T x + mirrorPhaseShift β T / π
+⊢ False
+failed
+RHV6Fresh/Terminal/PairBreakAtPrime_SCRATCH.lean:49:4: error: linarith failed to find a contradiction
+case h1
+β T x : ℝ
+h : stagePosition β T x - stagePosition (1 - β) T x = -mirrorPhaseShift β T / π
+a✝ : stagePosition (1 - β) T x - stagePosition β T x < mirrorPhaseShift β T / π
+⊢ False
+failed
+'RHV6Fresh.break_amplitude_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.mirror_cellFraction' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RHV6Fresh.mirror_word_difference_le_one' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RHV6Fresh.pair_break_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.pair_break_sum_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.pair_break_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.pair_break_ratio_unbounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.pair_break_product_on_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+real	0m11.698s
+user	0m8.583s
+sys	0m5.616s
+EXIT=1

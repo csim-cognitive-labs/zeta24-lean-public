@@ -1,0 +1,17 @@
+# E459 volet déterministe — premiers ≤ 1000000 : 78498 ; hauteurs : 200 (première 14.134725142 , dernière 396.381854223 )
+
+## (a) ligne, dix premiers rangs, 200 hauteurs
+plus petite distance de la fraction de cellule à un contact (0 ou 1) : 5.086898e-04 ; strictement positive : True
+
+## (b) demi-largeur exacte de la fenêtre de même lecture (0.5 = toute position radiale basse)
+rang 0 seul      : min 5.000000e-01 ; médiane 5.000000e-01 ; max 5.000000e-01 ; hauteurs à fenêtre totale : 200
+dix premiers rangs: min 1.455367e-01 ; médiane 5.000000e-01 ; max 5.000000e-01 ; hauteurs à fenêtre totale : 196
+recoupement direct : juste en deçà du bord, lecture différente : 0 / 2000 ; juste au-delà, même lecture : 0 / 4
+
+## (c) part des Tours de contrôle qui satisfont H-a ; (d) premier rang de bande
+contrôle β = 0.3 : H-a au rang 0 : 200 / 200 ; H-a sur les dix premiers rangs : 199 / 200 ; accord avec la fenêtre exacte : 400 / 400
+   premier rang de bande : fini pour 200 / 200 Tours ; min 3 ; médiane 1223.0 ; max 14242 (premier correspondant au max : 154643)
+contrôle β = 0.4 : H-a au rang 0 : 200 / 200 ; H-a sur les dix premiers rangs : 200 / 200 ; accord avec la fenêtre exacte : 400 / 400
+   premier rang de bande : fini pour 200 / 200 Tours ; min 12 ; médiane 2242.5 ; max 23773 (premier correspondant au max : 271603)
+contrôle β = 0.45 : H-a au rang 0 : 200 / 200 ; H-a sur les dix premiers rangs : 200 / 200 ; accord avec la fenêtre exacte : 400 / 400
+   premier rang de bande : fini pour 200 / 200 Tours ; min 80 ; médiane 4636.5 ; max 46078 (premier correspondant au max : 560083)

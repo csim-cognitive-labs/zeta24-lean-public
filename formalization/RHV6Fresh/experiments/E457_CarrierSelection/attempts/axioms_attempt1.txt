@@ -1,0 +1,9 @@
+RHV6Fresh/Terminal/CarrierSelection.lean:303:0: 'RHV6Fresh.carrierWordsSelfMirror_iff_riemannHypothesis' depends on axioms: [propext, Classical.choice, Quot.sound]
+RHV6Fresh/Terminal/CarrierSelection.lean:304:0: 'RHV6Fresh.heightInjectiveOnCarriers_iff_riemannHypothesis' depends on axioms: [propext, Classical.choice, Quot.sound]
+RHV6Fresh/Terminal/CarrierSelection.lean:305:0: 'RHV6Fresh.noMixedHeight_of_heightInjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+RHV6Fresh/Terminal/CarrierSelection.lean:306:0: 'RHV6Fresh.priceRadiallyBlindOnCarriers_iff_riemannHypothesis' depends on axioms: [propext,
+RHV6Fresh/Terminal/CarrierSelection.lean:307:0: 'RHV6Fresh.radial_half_of_term_modulus_eq_two_primes' depends on axioms: [propext, Classical.choice, Quot.sound]
+RHV6Fresh/Terminal/CarrierSelection.lean:308:0: 'RHV6Fresh.termModulusMirrorBlind_iff_riemannHypothesis' depends on axioms: [propext, Classical.choice, Quot.sound]
+RHV6Fresh/Terminal/CarrierSelection.lean:309:0: 'RHV6Fresh.towerWord_stable_right_finset' depends on axioms: [propext, Classical.choice, Quot.sound]
+RHV6Fresh/Terminal/CarrierSelection.lean:310:0: 'RHV6Fresh.exists_nonCarrier_same_word_on_finset' depends on axioms: [propext, Classical.choice, Quot.sound]
+RHV6Fresh/Terminal/CarrierSelection.lean:311:0: 'RHV6Fresh.finite_window_predicate_not_carrier_selective' depends on axioms: [propext, Classical.choice, Quot.sound]

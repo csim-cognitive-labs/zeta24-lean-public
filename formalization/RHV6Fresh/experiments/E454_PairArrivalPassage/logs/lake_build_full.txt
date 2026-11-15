@@ -1,0 +1,5 @@
+lake build RHV6Fresh 2026-11-08T13:55:08+00:00 après E454
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+Build completed successfully (9064 jobs).
+EXIT=0

@@ -1,0 +1,10 @@
+β=0.50 T=82.910380854 : Δβ_max=2.42109e-6 ΔT_max=2.46604e-9 ; tests {'β_in': 'OK', 'T_in': 'OK', 'β_out': 'OK', 'T_out': 'OK'} ; CONFORME
+β=0.50 T=276.452049503 : Δβ_max=0.000121384 ΔT_max=3.27576e-8 ; tests {'β_in': 'OK', 'T_in': 'OK', 'β_out': 'OK', 'T_out': 'OK'} ; CONFORME
+β=0.30 T=395.582870011 : Δβ_max=0.000201271 ΔT_max=3.9979e-8 ; tests {'β_in': 'OK', 'T_in': 'OK', 'β_out': 'OK', 'T_out': 'OK'} ; CONFORME
+β=0.40 T=258.610439492 : Δβ_max=4.51553e-5 ΔT_max=1.35662e-8 ; tests {'β_in': 'OK', 'T_in': 'OK', 'β_out': 'OK', 'T_out': 'OK'} ; CONFORME
+β=0.40 T=282.465114765 : Δβ_max=8.89016e-5 ΔT_max=2.29043e-8 ; tests {'β_in': 'OK', 'T_in': 'OK', 'β_out': 'OK', 'T_out': 'OK'} ; CONFORME
+β=0.40 T=373.864873911 : Δβ_max=4.95213e-5 ΔT_max=1.02926e-8 ; tests {'β_in': 'OK', 'T_in': 'OK', 'β_out': 'OK', 'T_out': 'OK'} ; CONFORME
+β=0.45 T=244.070898497 : Δβ_max=6.13713e-5 ΔT_max=2.00052e-8 ; tests {'β_in': 'OK', 'T_in': 'OK', 'β_out': 'OK', 'T_out': 'OK'} ; CONFORME
+β=0.45 T=283.211185733 : Δβ_max=9.12749e-5 ΔT_max=2.49495e-8 ; tests {'β_in': 'OK', 'T_in': 'OK', 'β_out': 'OK', 'T_out': 'OK'} ; CONFORME
+β=0.45 T=384.956116815 : Δβ_max=2.58547e-5 ΔT_max=5.55505e-9 ; tests {'β_in': 'OK', 'T_in': 'OK', 'β_out': 'OK', 'T_out': 'OK'} ; CONFORME
+cas recontrôlés en précision étendue : 9 ; conformes : 9

@@ -1,0 +1,5 @@
+'RHV6Fresh.contactSumProfile_meetingPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.contactSumProfile_continuation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.contactSumProfile_two_gaps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.memberProfile_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.contactSumProfile_next_at_meeting' depends on axioms: [propext, Classical.choice, Quot.sound]

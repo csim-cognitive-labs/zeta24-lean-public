@@ -1,0 +1,6 @@
+[    0.51s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    1.08s] premiers : 78504
+[   11.47s] rang 1 : orbite=1.82e-29 cells=7.06e-31 exact=2.07e-30 mono=0 même cellule=[0, 11, 133, 1051, 8352, 68896] ok=True
+[   19.10s] rang 100 : orbite=3.88e-28 cells=9.80e-31 exact=2.66e-30 mono=0 même cellule=[0, 0, 33, 891, 8189, 68733] ok=True
+[   26.96s] rang 10000 : orbite=1.68e-26 cells=1.77e-30 exact=3.75e-30 mono=0 même cellule=[0, 0, 0, 12, 3413, 61684] ok=True
+[   26.97s] FIN e448b all_ok=True

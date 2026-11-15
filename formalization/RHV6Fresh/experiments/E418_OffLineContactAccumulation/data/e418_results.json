@@ -1,0 +1,583 @@
+{
+ "r1_b0.30_tour_seule": {
+  "rang": 1,
+  "T": 14.134725142,
+  "beta": 0.3,
+  "scenario": "tour_seule",
+  "geometrie": {
+   "0.30": {
+    "phase": 1.5495751879357345,
+    "phase_ligne": 1.5354371953240937,
+    "deplacement_log_contact": 0.001000231166125121,
+    "rapport_amplitude_x100": 0.3981071705534972,
+    "module_1_sur_rho": 0.07073182039543373,
+    "module_1_sur_rho_ligne": 0.07070352773048678
+   }
+  },
+  "max_abs_delta_lamB": 0.19652839146015538,
+  "max_abs_delta_lamA": 0.2016705927215559,
+  "rms_delta_lamB": 0.083113629972869,
+  "borne_max": 2.6453579757180115,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.5035657805186646,
+  "changements_classification_B": 0,
+  "changements_classification_A": 0,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.083113629972869,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r1_b0.30_paire_miroir": {
+  "rang": 1,
+  "T": 14.134725142,
+  "beta": 0.3,
+  "scenario": "paire_miroir",
+  "geometrie": {
+   "0.30": {
+    "phase": 1.5495751879357345,
+    "phase_ligne": 1.5354371953240937,
+    "deplacement_log_contact": 0.001000231166125121,
+    "rapport_amplitude_x100": 0.3981071705534972,
+    "module_1_sur_rho": 0.07073182039543373,
+    "module_1_sur_rho_ligne": 0.07070352773048678
+   },
+   "0.70": {
+    "phase": 1.5213133289035414,
+    "phase_ligne": 1.5354371953240937,
+    "deplacement_log_contact": -0.0009992317698902093,
+    "rapport_amplitude_x100": 2.5118864315095797,
+    "module_1_sur_rho": 0.07066115231936013,
+    "module_1_sur_rho_ligne": 0.07070352773048678
+   }
+  },
+  "max_abs_delta_lamB": 0.6014938515532937,
+  "max_abs_delta_lamA": 0.7131481806224632,
+  "rms_delta_lamB": 0.26814916720887666,
+  "borne_max": 4.269862768430483,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.5411569382268072,
+  "changements_classification_B": 1,
+  "changements_classification_A": 2,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.26814916720887666,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r1_b0.45_tour_seule": {
+  "rang": 1,
+  "T": 14.134725142,
+  "beta": 0.45,
+  "scenario": "tour_seule",
+  "geometrie": {
+   "0.45": {
+    "phase": 1.538970588863574,
+    "phase_ligne": 1.5354371953240937,
+    "deplacement_log_contact": 0.0002499796426165515,
+    "rapport_amplitude_x100": 0.7943282347242815,
+    "module_1_sur_rho": 0.07071192357168153,
+    "module_1_sur_rho_ligne": 0.07070352773048678
+   }
+  },
+  "max_abs_delta_lamB": 0.06023476202398867,
+  "max_abs_delta_lamA": 0.061811489557254795,
+  "rms_delta_lamB": 0.027822278460428975,
+  "borne_max": 2.7802538191274904,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.13772021316283956,
+  "changements_classification_B": 0,
+  "changements_classification_A": 0,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.027822278460428975,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r1_b0.45_paire_miroir": {
+  "rang": 1,
+  "T": 14.134725142,
+  "beta": 0.45,
+  "scenario": "paire_miroir",
+  "geometrie": {
+   "0.45": {
+    "phase": 1.538970588863574,
+    "phase_ligne": 1.5354371953240937,
+    "deplacement_log_contact": 0.0002499796426165515,
+    "rapport_amplitude_x100": 0.7943282347242815,
+    "module_1_sur_rho": 0.07071192357168153,
+    "module_1_sur_rho_ligne": 0.07070352773048678
+   },
+   "0.55": {
+    "phase": 1.5319046848366484,
+    "phase_ligne": 1.5354371953240937,
+    "deplacement_log_contact": -0.0002499171686719803,
+    "rapport_amplitude_x100": 1.2589254117941675,
+    "module_1_sur_rho": 0.07069425159499428,
+    "module_1_sur_rho_ligne": 0.07070352773048678
+   }
+  },
+  "max_abs_delta_lamB": 0.506948090689828,
+  "max_abs_delta_lamA": 0.6368507010301239,
+  "rms_delta_lamB": 0.16291460874742567,
+  "borne_max": 4.244339515073116,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.34940868071039993,
+  "changements_classification_B": 0,
+  "changements_classification_A": 2,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.16291460874742567,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r1_b0.49_tour_seule": {
+  "rang": 1,
+  "T": 14.134725142,
+  "beta": 0.49,
+  "scenario": "tour_seule",
+  "geometrie": {
+   "0.49": {
+    "phase": 1.5361438061996922,
+    "phase_ligne": 1.5354371953240937,
+    "deplacement_log_contact": 4.9991129540877736e-05,
+    "rapport_amplitude_x100": 0.9549925860214359,
+    "module_1_sur_rho": 0.07070527735384949,
+    "module_1_sur_rho_ligne": 0.07070352773048678
+   }
+  },
+  "max_abs_delta_lamB": 0.01275313188022208,
+  "max_abs_delta_lamA": 0.013087001099850643,
+  "rms_delta_lamB": 0.006060669083722703,
+  "borne_max": 2.8186584381110924,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.027715662735975644,
+  "changements_classification_B": 0,
+  "changements_classification_A": 0,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.006060669083722703,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r1_b0.49_paire_miroir": {
+  "rang": 1,
+  "T": 14.134725142,
+  "beta": 0.49,
+  "scenario": "paire_miroir",
+  "geometrie": {
+   "0.49": {
+    "phase": 1.5361438061996922,
+    "phase_ligne": 1.5354371953240937,
+    "deplacement_log_contact": 4.9991129540877736e-05,
+    "rapport_amplitude_x100": 0.9549925860214359,
+    "module_1_sur_rho": 0.07070527735384949,
+    "module_1_sur_rho_ligne": 0.07070352773048678
+   },
+   "0.51": {
+    "phase": 1.5347306197709993,
+    "phase_ligne": 1.5354371953240937,
+    "deplacement_log_contact": -4.998863055319471e-05,
+    "rapport_amplitude_x100": 1.0471285480508996,
+    "module_1_sur_rho": 0.07070174289503811,
+    "module_1_sur_rho_ligne": 0.07070352773048678
+   }
+  },
+  "max_abs_delta_lamB": 0.501078359371867,
+  "max_abs_delta_lamA": 0.6320191283882937,
+  "rms_delta_lamB": 0.15697831873332896,
+  "borne_max": 4.242708633708164,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.33328838847506226,
+  "changements_classification_B": 0,
+  "changements_classification_A": 2,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.15697831873332896,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r100_b0.30_tour_seule": {
+  "rang": 100,
+  "T": 236.524229666,
+  "beta": 0.3,
+  "scenario": "tour_seule",
+  "geometrie": {
+   "0.30": {
+    "phase": 1.5695279584778417,
+    "phase_ligne": 1.5686823816151076,
+    "deplacement_log_contact": 3.575011591531505e-06,
+    "rapport_amplitude_x100": 0.3981071705534972,
+    "module_1_sur_rho": 0.004227893256573039,
+    "module_1_sur_rho_ligne": 0.004227887210671122
+   }
+  },
+  "max_abs_delta_lamB": 0.08333677558275898,
+  "max_abs_delta_lamA": 0.09375611790770133,
+  "rms_delta_lamB": 0.04938238312103601,
+  "borne_max": 2.6453579757180115,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.47853748431997084,
+  "changements_classification_B": 0,
+  "changements_classification_A": 0,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.04938238312103601,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r100_b0.30_paire_miroir": {
+  "rang": 100,
+  "T": 236.524229666,
+  "beta": 0.3,
+  "scenario": "paire_miroir",
+  "geometrie": {
+   "0.30": {
+    "phase": 1.5695279584778417,
+    "phase_ligne": 1.5686823816151076,
+    "deplacement_log_contact": 3.575011591531505e-06,
+    "rapport_amplitude_x100": 0.3981071705534972,
+    "module_1_sur_rho": 0.004227893256573039,
+    "module_1_sur_rho_ligne": 0.004227887210671122
+   },
+   "0.70": {
+    "phase": 1.567836807775309,
+    "phase_ligne": 1.5686823816151076,
+    "deplacement_log_contact": -3.574998810872789e-06,
+    "rapport_amplitude_x100": 2.5118864315095797,
+    "module_1_sur_rho": 0.0042278781418668785,
+    "module_1_sur_rho_ligne": 0.004227887210671122
+   }
+  },
+  "max_abs_delta_lamB": 0.28066750109061606,
+  "max_abs_delta_lamA": 0.3060828888452545,
+  "rms_delta_lamB": 0.1665640726468842,
+  "borne_max": 4.269862768430483,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.5123313751121548,
+  "changements_classification_B": 0,
+  "changements_classification_A": 0,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.1665640726468842,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r100_b0.45_tour_seule": {
+  "rang": 100,
+  "T": 236.524229666,
+  "beta": 0.45,
+  "scenario": "tour_seule",
+  "geometrie": {
+   "0.45": {
+    "phase": 1.5688937755946235,
+    "phase_ligne": 1.5686823816151076,
+    "deplacement_log_contact": 8.937518993904963e-07,
+    "rapport_amplitude_x100": 0.7943282347242815,
+    "module_1_sur_rho": 0.004227889005545546,
+    "module_1_sur_rho_ligne": 0.004227887210671122
+   }
+  },
+  "max_abs_delta_lamB": 0.029429175484475323,
+  "max_abs_delta_lamA": 0.032566679716282826,
+  "rms_delta_lamB": 0.017437866550926145,
+  "borne_max": 2.7802538191274904,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.13122408700880128,
+  "changements_classification_B": 0,
+  "changements_classification_A": 0,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.017437866550926145,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r100_b0.45_paire_miroir": {
+  "rang": 100,
+  "T": 236.524229666,
+  "beta": 0.45,
+  "scenario": "paire_miroir",
+  "geometrie": {
+   "0.45": {
+    "phase": 1.5688937755946235,
+    "phase_ligne": 1.5686823816151076,
+    "deplacement_log_contact": 8.937518993904963e-07,
+    "rapport_amplitude_x100": 0.7943282347242815,
+    "module_1_sur_rho": 0.004227889005545546,
+    "module_1_sur_rho_ligne": 0.004227887210671122
+   },
+   "0.55": {
+    "phase": 1.5684709878245253,
+    "phase_ligne": 1.5686823816151076,
+    "deplacement_log_contact": -8.937511005990332e-07,
+    "rapport_amplitude_x100": 1.2589254117941675,
+    "module_1_sur_rho": 0.004227885226865207,
+    "module_1_sur_rho_ligne": 0.004227887210671122
+   }
+  },
+  "max_abs_delta_lamB": 0.1395548884677864,
+  "max_abs_delta_lamA": 0.1632807963654259,
+  "rms_delta_lamB": 0.08231402945069081,
+  "borne_max": 4.244339515073116,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.32826402865767285,
+  "changements_classification_B": 0,
+  "changements_classification_A": 0,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.08231402945069081,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r100_b0.49_tour_seule": {
+  "rang": 100,
+  "T": 236.524229666,
+  "beta": 0.49,
+  "scenario": "tour_seule",
+  "geometrie": {
+   "0.49": {
+    "phase": 1.5687246603965008,
+    "phase_ligne": 1.5686823816151076,
+    "deplacement_log_contact": 1.787503185313475e-07,
+    "rapport_amplitude_x100": 0.9549925860214359,
+    "module_1_sur_rho": 0.00422788758476055,
+    "module_1_sur_rho_ligne": 0.004227887210671122
+   }
+  },
+  "max_abs_delta_lamB": 0.006507542328449745,
+  "max_abs_delta_lamA": 0.007170480714589408,
+  "rms_delta_lamB": 0.003856996720003478,
+  "borne_max": 2.8186584381110924,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.026413360422672016,
+  "changements_classification_B": 0,
+  "changements_classification_A": 0,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.003856996720003478,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r100_b0.49_paire_miroir": {
+  "rang": 100,
+  "T": 236.524229666,
+  "beta": 0.49,
+  "scenario": "paire_miroir",
+  "geometrie": {
+   "0.49": {
+    "phase": 1.5687246603965008,
+    "phase_ligne": 1.5686823816151076,
+    "deplacement_log_contact": 1.787503185313475e-07,
+    "rapport_amplitude_x100": 0.9549925860214359,
+    "module_1_sur_rho": 0.00422788758476055,
+    "module_1_sur_rho_ligne": 0.004227887210671122
+   },
+   "0.51": {
+    "phase": 1.568640102841272,
+    "phase_ligne": 1.5686823816151076,
+    "deplacement_log_contact": -1.787502865789755e-07,
+    "rapport_amplitude_x100": 1.0471285480508996,
+    "module_1_sur_rho": 0.0042278868290244334,
+    "module_1_sur_rho_ligne": 0.004227887210671122
+   }
+  },
+  "max_abs_delta_lamB": 0.13184983962159721,
+  "max_abs_delta_lamA": 0.15538596333350396,
+  "rms_delta_lamB": 0.07741321044301996,
+  "borne_max": 4.242708633708164,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.3126674196328212,
+  "changements_classification_B": 0,
+  "changements_classification_A": 0,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.07741321044301996,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r2000_b0.30_tour_seule": {
+  "rang": 2000,
+  "T": 2515.286482925,
+  "beta": 0.3,
+  "scenario": "tour_seule",
+  "geometrie": {
+   "0.30": {
+    "phase": 1.5706770560873196,
+    "phase_ligne": 1.570597542283944,
+    "deplacement_log_contact": 3.161222545238586e-08,
+    "rapport_amplitude_x100": 0.3981071705534972,
+    "module_1_sur_rho": 0.0003975690243142243,
+    "module_1_sur_rho_ligne": 0.0003975690192870077
+   }
+  },
+  "max_abs_delta_lamB": 0.0038135688114116486,
+  "max_abs_delta_lamA": 0.017608327945450867,
+  "rms_delta_lamB": 0.0012072702564085466,
+  "borne_max": 2.6453579757180115,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.023925400735931548,
+  "changements_classification_B": 0,
+  "changements_classification_A": 0,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.0012072702564085466,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r2000_b0.30_paire_miroir": {
+  "rang": 2000,
+  "T": 2515.286482925,
+  "beta": 0.3,
+  "scenario": "paire_miroir",
+  "geometrie": {
+   "0.30": {
+    "phase": 1.5706770560873196,
+    "phase_ligne": 1.570597542283944,
+    "deplacement_log_contact": 3.161222545238586e-08,
+    "rapport_amplitude_x100": 0.3981071705534972,
+    "module_1_sur_rho": 0.0003975690243142243,
+    "module_1_sur_rho_ligne": 0.0003975690192870077
+   },
+   "0.70": {
+    "phase": 1.570518028483082,
+    "phase_ligne": 1.570597542283944,
+    "deplacement_log_contact": -3.1612224453078245e-08,
+    "rapport_amplitude_x100": 2.5118864315095797,
+    "module_1_sur_rho": 0.00039756901174618314,
+    "module_1_sur_rho_ligne": 0.0003975690192870077
+   }
+  },
+  "max_abs_delta_lamB": 0.013565020276983688,
+  "max_abs_delta_lamA": 0.06263355692065267,
+  "rms_delta_lamB": 0.004255573288186537,
+  "borne_max": 4.269862768430483,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.025615126677249408,
+  "changements_classification_B": 0,
+  "changements_classification_A": 0,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.004255573288186537,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r2000_b0.45_tour_seule": {
+  "rang": 2000,
+  "T": 2515.286482925,
+  "beta": 0.45,
+  "scenario": "tour_seule",
+  "geometrie": {
+   "0.45": {
+    "phase": 1.5706174207345915,
+    "phase_ligne": 1.570597542283944,
+    "deplacement_log_contact": 7.903056285036592e-09,
+    "rapport_amplitude_x100": 0.7943282347242815,
+    "module_1_sur_rho": 0.00039756902077946264,
+    "module_1_sur_rho_ligne": 0.0003975690192870077
+   }
+  },
+  "max_abs_delta_lamB": 0.0013837185512198121,
+  "max_abs_delta_lamA": 0.006389021529963814,
+  "rms_delta_lamB": 0.0004360824377709466,
+  "borne_max": 2.7802538191274904,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.0065608149700292434,
+  "changements_classification_B": 0,
+  "changements_classification_A": 0,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.0004360824377709466,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r2000_b0.45_paire_miroir": {
+  "rang": 2000,
+  "T": 2515.286482925,
+  "beta": 0.45,
+  "scenario": "paire_miroir",
+  "geometrie": {
+   "0.45": {
+    "phase": 1.5706174207345915,
+    "phase_ligne": 1.570597542283944,
+    "deplacement_log_contact": 7.903056285036592e-09,
+    "rapport_amplitude_x100": 0.7943282347242815,
+    "module_1_sur_rho": 0.00039756902077946264,
+    "module_1_sur_rho_ligne": 0.0003975690192870077
+   },
+   "0.55": {
+    "phase": 1.5705776638334534,
+    "phase_ligne": 1.570597542283944,
+    "deplacement_log_contact": -7.903056222624005e-09,
+    "rapport_amplitude_x100": 1.2589254117941675,
+    "module_1_sur_rho": 0.00039756901763745233,
+    "module_1_sur_rho_ligne": 0.0003975690192870077
+   }
+  },
+  "max_abs_delta_lamB": 0.006099959979786758,
+  "max_abs_delta_lamA": 0.02816523773813414,
+  "rms_delta_lamB": 0.0019439742983440164,
+  "borne_max": 4.244339515073116,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.01641214811846798,
+  "changements_classification_B": 0,
+  "changements_classification_A": 0,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.0019439742983440164,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r2000_b0.49_tour_seule": {
+  "rang": 2000,
+  "T": 2515.286482925,
+  "beta": 0.49,
+  "scenario": "tour_seule",
+  "geometrie": {
+   "0.49": {
+    "phase": 1.5706015179740613,
+    "phase_ligne": 1.570597542283944,
+    "deplacement_log_contact": 1.5806112521696809e-09,
+    "rapport_amplitude_x100": 0.9549925860214359,
+    "module_1_sur_rho": 0.0003975690195980667,
+    "module_1_sur_rho_ligne": 0.0003975690192870077
+   }
+  },
+  "max_abs_delta_lamB": 0.00030867053038607397,
+  "max_abs_delta_lamA": 0.0014252195581801689,
+  "rms_delta_lamB": 9.714279340980145e-05,
+  "borne_max": 2.8186584381110924,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.0013205906168739102,
+  "changements_classification_B": 0,
+  "changements_classification_A": 0,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 9.714279340980145e-05,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "r2000_b0.49_paire_miroir": {
+  "rang": 2000,
+  "T": 2515.286482925,
+  "beta": 0.49,
+  "scenario": "paire_miroir",
+  "geometrie": {
+   "0.49": {
+    "phase": 1.5706015179740613,
+    "phase_ligne": 1.570597542283944,
+    "deplacement_log_contact": 1.5806112521696809e-09,
+    "rapport_amplitude_x100": 0.9549925860214359,
+    "module_1_sur_rho": 0.0003975690195980667,
+    "module_1_sur_rho_ligne": 0.0003975690192870077
+   },
+   "0.51": {
+    "phase": 1.5705935665938329,
+    "phase_ligne": 1.570597542283944,
+    "deplacement_log_contact": -1.5806112496978952e-09,
+    "rapport_amplitude_x100": 1.0471285480508996,
+    "module_1_sur_rho": 0.0003975690189696646,
+    "module_1_sur_rho_ligne": 0.0003975690192870077
+   }
+  },
+  "max_abs_delta_lamB": 0.005669137487802062,
+  "max_abs_delta_lamA": 0.026176007114501146,
+  "rms_delta_lamB": 0.0018104630149242357,
+  "borne_max": 4.242708633708164,
+  "delta_dans_borne": true,
+  "rapport_delta_sur_borne_max": 0.01563235237392108,
+  "changements_classification_B": 0,
+  "changements_classification_A": 0,
+  "erreurs_B_vs_verite": 0,
+  "erreurs_A_vs_verite": 0,
+  "complement_necessaire_rms": 0.0018104630149242357,
+  "residu_troncature_rms_ligne": 0.00028524356396175763
+ },
+ "compensation_lstsq": {
+  "residu_relatif": 3.275132451324312e-15,
+  "coef_max": 0.009695953298766007,
+  "coef_non_entiers": true
+ }
+}

@@ -1,0 +1,35 @@
+zeros lus : 2001052 ; dernier = 1132490.658714411
+
+=== famille de 2001052 Tours, hauteur max 1132490.659
+x0=1000 cell=0.003 inedite=False P=43 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.999, 0.001, 43, 0, 0], "J-noF": [0.999, 0.001, 43, 0, 0], "D2-F": [0.994, 0.006, 43, 0, 0], "D2-noF": [0.999, 0.001, 43, 0, 0]}
+x0=10000 cell=0.028 inedite=False P=33 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.989, 0.008, 33, 0, 0], "J-noF": [0.989, 0.01, 33, 0, 0], "D2-F": [0.964, 0.032, 33, 0, 0], "D2-noF": [0.994, 0.006, 33, 0, 0]}
+x0=50000 cell=0.139 inedite=True P=29 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.949, 0.033, 29, 0, 0], "J-noF": [0.972, 0.03, 29, 0, 0], "D2-F": [0.868, 0.114, 29, 0, 0], "D2-noF": [0.972, 0.027, 29, 0, 0]}
+x0=100000 cell=0.277 inedite=False P=23 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.902, 0.063, 23, 0, 0], "J-noF": [0.911, 0.091, 23, 0, 0], "D2-F": [0.775, 0.187, 23, 0, 0], "D2-noF": [0.947, 0.048, 23, 0, 0]}
+x0=150000 cell=0.416 inedite=True P=27 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.84, 0.112, 27, 0, 0], "J-noF": [1.124, 0.03, 27, 0, 0], "D2-F": [0.698, 0.246, 0, 27, 0], "D2-noF": [0.905, 0.099, 27, 0, 0]}
+x0=200000 cell=0.555 inedite=False P=25 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.73, 0.104, 0, 25, 0], "J-noF": [1.165, 0.012, 25, 0, 0], "D2-F": [0.629, 0.155, 0, 25, 0], "D2-noF": [0.902, 0.048, 25, 0, 0]}
+x0=250000 cell=0.694 inedite=True P=21 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.628, 0.278, 0, 21, 0], "J-noF": [1.068, 0.068, 21, 0, 0], "D2-F": [0.562, 0.347, 0, 21, 0], "D2-noF": [0.876, 0.084, 21, 0, 0]}
+x0=300000 cell=0.832 inedite=False P=22 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.546, 0.359, 0, 22, 0], "J-noF": [0.944, 0.174, 22, 0, 0], "D2-F": [0.502, 0.395, 0, 22, 0], "D2-noF": [0.818, 0.134, 22, 0, 0]}
+x0=400000 cell=1.110 inedite=True P=24 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.428, 0.45, 0, 24, 0], "J-noF": [0.694, 0.305, 18, 6, 0], "D2-F": [0.407, 0.453, 0, 24, 0], "D2-noF": [0.643, 0.361, 4, 20, 0]}
+x0=500000 cell=1.387 inedite=False P=25 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.349, 0.467, 0, 25, 0], "J-noF": [0.54, 0.469, 1, 24, 0], "D2-F": [0.338, 0.463, 0, 25, 0], "D2-noF": [0.525, 0.484, 0, 25, 0]}
+x0=700000 cell=1.942 inedite=True P=22 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.254, 0.413, 0, 22, 0], "J-noF": [0.461, 0.631, 0, 22, 0], "D2-F": [0.25, 0.409, 0, 22, 0], "D2-noF": [0.448, 0.619, 0, 22, 0]}
+x0=1000000 cell=2.774 inedite=False P=24 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.181, 0.329, 0, 24, 0], "J-noF": [0.231, 0.634, 0, 24, 0], "D2-F": [0.18, 0.327, 0, 24, 0], "D2-noF": [0.232, 0.623, 0, 24, 0]}
+x0=10000000 cell=27.741 inedite=False P=14 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.033, 0.086, 0, 14, 0], "J-noF": [0.024, 0.115, 0, 14, 0], "D2-F": [0.034, 0.086, 0, 14, 0], "D2-noF": [0.025, 0.115, 0, 14, 0]}
+x0=100000000 cell=277.406 inedite=False P=17 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.049, 0.054, 0, 17, 0], "J-noF": [0.042, 0.058, 0, 17, 0], "D2-F": [0.0, 0.217, 0, 17, 0], "D2-noF": [0.0, 0.217, 0, 17, 0]}
+
+=== famille de 500000 Tours, hauteur max 319387.219
+x0=1000 cell=0.010 inedite=False P=43 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.995, 0.003, 43, 0, 0], "J-noF": [0.995, 0.005, 43, 0, 0], "D2-F": [0.982, 0.017, 43, 0, 0], "D2-noF": [0.997, 0.003, 43, 0, 0]}
+x0=10000 cell=0.098 inedite=False P=33 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.959, 0.029, 33, 0, 0], "J-noF": [1.035, 0.002, 33, 0, 0], "D2-F": [0.898, 0.089, 33, 0, 0], "D2-noF": [0.98, 0.02, 33, 0, 0]}
+x0=50000 cell=0.492 inedite=True P=29 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.779, 0.156, 29, 0, 0], "J-noF": [1.162, -0.001, 29, 0, 0], "D2-F": [0.66, 0.273, 0, 29, 0], "D2-noF": [0.903, 0.094, 29, 0, 0]}
+x0=100000 cell=0.984 inedite=False P=23 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.474, 0.419, 0, 23, 0], "J-noF": [0.898, 0.1, 23, 0, 0], "D2-F": [0.445, 0.431, 0, 23, 0], "D2-noF": [0.783, 0.226, 23, 0, 0]}
+x0=150000 cell=1.475 inedite=True P=27 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.33, 0.467, 0, 27, 0], "J-noF": [0.49, 0.586, 1, 26, 0], "D2-F": [0.32, 0.46, 0, 27, 0], "D2-noF": [0.484, 0.581, 0, 27, 0]}
+x0=200000 cell=1.967 inedite=False P=25 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.251, 0.233, 0, 25, 0], "J-noF": [0.462, 0.477, 0, 25, 0], "D2-F": [0.247, 0.234, 0, 25, 0], "D2-noF": [0.447, 0.455, 0, 25, 0]}
+x0=250000 cell=2.459 inedite=True P=21 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.202, 0.375, 0, 21, 0], "J-noF": [0.344, 0.589, 0, 21, 0], "D2-F": [0.2, 0.371, 0, 21, 0], "D2-noF": [0.337, 0.581, 0, 21, 0]}
+x0=300000 cell=2.951 inedite=False P=22 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.171, 0.313, 0, 22, 0], "J-noF": [0.286, 0.63, 0, 22, 0], "D2-F": [0.17, 0.312, 0, 22, 0], "D2-noF": [0.283, 0.619, 0, 22, 0]}
+x0=400000 cell=3.935 inedite=True P=24 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.131, 0.279, 0, 24, 0], "J-noF": [0.16, 0.49, 0, 24, 0], "D2-F": [0.13, 0.278, 0, 24, 0], "D2-noF": [0.16, 0.486, 0, 24, 0]}
+x0=500000 cell=4.918 inedite=False P=25 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.104, 0.3, 0, 25, 0], "J-noF": [0.149, 0.399, 0, 25, 0], "D2-F": [0.104, 0.299, 0, 25, 0], "D2-noF": [0.149, 0.398, 0, 25, 0]}
+x0=700000 cell=6.885 inedite=True P=22 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.076, 0.188, 0, 22, 0], "J-noF": [0.087, 0.332, 0, 22, 0], "D2-F": [0.076, 0.188, 0, 22, 0], "D2-noF": [0.087, 0.331, 0, 22, 0]}
+x0=1000000 cell=9.836 inedite=False P=24 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.056, 0.158, 0, 24, 0], "J-noF": [0.037, 0.258, 0, 24, 0], "D2-F": [0.056, 0.158, 0, 24, 0], "D2-noF": [0.037, 0.258, 0, 24, 0]}
+x0=10000000 cell=98.363 inedite=False P=14 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.044, 0.059, 0, 14, 0], "J-noF": [0.022, 0.071, 0, 14, 0], "D2-F": [0.044, 0.06, 0, 14, 0], "D2-noF": [0.023, 0.072, 0, 14, 0]}
+x0=100000000 cell=983.631 inedite=False P=17 (min_prem, max_comp, justes, manques, faux) : {"J-F": [0.053, 0.053, 0, 17, 0], "J-noF": [0.054, 0.055, 0, 17, 0], "D2-F": [0.054, 0.217, 0, 17, 0], "D2-noF": [0.0, 0.217, 0, 17, 0]}
+
+FIN ; duree 1084.4 s

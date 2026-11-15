@@ -1,0 +1,66 @@
+constantes : c0 = −logDeriv ζ(0) = -1.83787706641 ; c1 = logDeriv ζ(−1) = 1.98505372441 ; τ = 1.64493406685 ; cellBackgroundConstant = 5.62774520011
+zéros : 2001052 hauteurs (SHA-256 vérifié), γ_max = 1132490.659 ; hauteurs posées sur la ligne (hypothèse de données), m = 1
+
+=== Volet E406 : ψ(N) − N = spectralRemainder N + cellCorrection N (convention de cellule, 2 001 052 zéros) ===
+  N =    4546 : ψ(N)−N =     -8.30388 ; spectral(tronqué) + c(N) =     -8.29318 ; résidu = -1.0694e-02 ; |c(N)| = 1.337877 ≤ 5.627745 : True ; résolution π·N/γ_max = 0.013
+  N =    4547 : ψ(N)−N =     -0.88165 ; spectral(tronqué) + c(N) =     -0.89233 ; résidu = +1.0679e-02 ; |c(N)| = 1.337877 ≤ 5.627745 : True ; résolution π·N/γ_max = 0.013
+  N =    9586 : ψ(N)−N =     +4.74959 ; spectral(tronqué) + c(N) =     +4.77409 ; résidu = -2.4499e-02 ; |c(N)| = 1.337877 ≤ 5.627745 : True ; résolution π·N/γ_max = 0.027
+  N =    9587 : ψ(N)−N =    +12.91775 ; spectral(tronqué) + c(N) =    +12.89325 ; résidu = +2.4505e-02 ; |c(N)| = 1.337877 ≤ 5.627745 : True ; résolution π·N/γ_max = 0.027
+  N =    9930 : ψ(N)−N =    +37.36895 ; spectral(tronqué) + c(N) =    +37.39484 ; résidu = -2.5883e-02 ; |c(N)| = 1.337877 ≤ 5.627745 : True ; résolution π·N/γ_max = 0.028
+  N =    9931 : ψ(N)−N =    +45.57237 ; spectral(tronqué) + c(N) =    +45.54659 ; résidu = +2.5779e-02 ; |c(N)| = 1.337877 ≤ 5.627745 : True ; résolution π·N/γ_max = 0.028
+  N =  104728 : ψ(N)−N =    +28.42669 ; spectral(tronqué) + c(N) =    +28.72862 ; résidu = -3.0193e-01 ; |c(N)| = 1.337877 ≤ 5.627745 : True ; résolution π·N/γ_max = 0.291
+  N =  104729 : ψ(N)−N =    +38.98582 ; spectral(tronqué) + c(N) =    +38.67622 ; résidu = +3.0961e-01 ; |c(N)| = 1.337877 ≤ 5.627745 : True ; résolution π·N/γ_max = 0.291
+  N = 1000002 : ψ(N)−N =   -415.40250 ; spectral(tronqué) + c(N) =   -411.00608 ; résidu = -4.3964e+00 ; |c(N)| = 1.337877 ≤ 5.627745 : True ; résolution π·N/γ_max = 2.774
+  N = 1000003 : ψ(N)−N =   -402.58699 ; spectral(tronqué) + c(N) =   -406.91585 ; résidu = +4.3289e+00 ; |c(N)| = 1.337877 ≤ 5.627745 : True ; résolution π·N/γ_max = 2.774
+
+=== Volet E407/E408 : incrément du paquet bas à la rencontre p (N = p−1) contre sa borne compilée K(H) ===
+    (K(H) = nombre de zéros de hauteur ≤ H, deux branches, multiplicité 1 ; cassure = log p ; borne compilée du complément : log p − 1 − 4τ − K(H))
+  p = 4547 : log p = 8.4222 ; seconde différence du fond − 1 = -1.064e-11 (borne 4τ = 6.580) ; remainderIncrement (identité) = +7.42222 ; par les zéros (tronqué) = +7.40085
+    H =      30.0 : K(H) =       6 ; |incr. bas| =    0.0116 (borne K : True, quotient 1.93e-03) ; incr. complément =   +7.4338 ; borne compilée du complément =    -5.158 ; part de (log p − 1) portée au-dessus de H =  100.2 %
+    H =     100.0 : K(H) =      58 ; |incr. bas| =    0.0533 (borne K : True, quotient 9.19e-04) ; incr. complément =   +7.3689 ; borne compilée du complément =   -57.158 ; part de (log p − 1) portée au-dessus de H =   99.3 %
+    H =     300.0 : K(H) =     276 ; |incr. bas| =    0.0235 (borne K : True, quotient 8.51e-05) ; incr. complément =   +7.4457 ; borne compilée du complément =  -275.158 ; part de (log p − 1) portée au-dessus de H =  100.3 %
+    H =     594.0 : K(H) =     674 ; |incr. bas| =    0.2906 (borne K : True, quotient 4.31e-04) ; incr. complément =   +7.7129 ; borne compilée du complément =  -673.158 ; part de (log p − 1) portée au-dessus de H =  103.9 %
+    H =    1000.0 : K(H) =    1298 ; |incr. bas| =    0.2487 (borne K : True, quotient 1.92e-04) ; incr. complément =   +7.1735 ; borne compilée du complément = -1297.158 ; part de (log p − 1) portée au-dessus de H =   96.6 %
+    H =    3000.0 : K(H) =    4938 ; |incr. bas| =    1.8856 (borne K : True, quotient 3.82e-04) ; incr. complément =   +5.5367 ; borne compilée du complément = -4937.158 ; part de (log p − 1) portée au-dessus de H =   74.6 %
+    H =   10000.0 : K(H) =   20284 ; |incr. bas| =    3.1792 (borne K : True, quotient 1.57e-04) ; incr. complément =   +4.2431 ; borne compilée du complément = -20283.158 ; part de (log p − 1) portée au-dessus de H =   57.2 %
+    H =   30000.0 : K(H) =   71346 ; |incr. bas| =    6.6142 (borne K : True, quotient 9.27e-05) ; incr. complément =   +0.8081 ; borne compilée du complément = -71345.158 ; part de (log p − 1) portée au-dessus de H =   10.9 %
+    H =  100000.0 : K(H) =  276138 ; |incr. bas| =    7.1772 (borne K : True, quotient 2.60e-05) ; incr. complément =   +0.2450 ; borne compilée du complément = -276137.158 ; part de (log p − 1) portée au-dessus de H =    3.3 %
+    H =  300000.0 : K(H) =  933318 ; |incr. bas| =    7.3405 (borne K : True, quotient 7.86e-06) ; incr. complément =   +0.0818 ; borne compilée du complément = -933317.158 ; part de (log p − 1) portée au-dessus de H =    1.1 %
+    H = 1132490.7 : K(H) = 4002104 ; |incr. bas| =    7.4008 (borne K : True, quotient 1.85e-06) ; incr. complément =   +0.0214 ; borne compilée du complément = -4002103.158 ; part de (log p − 1) portée au-dessus de H =    0.3 %
+    plancher compilé (frequency_floor_of_low_realization) : K(H) ≥ 0.842 dès H ≥ γ_1 = 14.135 ; fréquence observée en E404 pour la cassure nette : ordre π·p = 14285
+  p = 9587 : log p = 9.1682 ; seconde différence du fond − 1 = -1.135e-12 (borne 4τ = 6.580) ; remainderIncrement (identité) = +8.16816 ; par les zéros (tronqué) = +8.11916
+    H =      30.0 : K(H) =       6 ; |incr. bas| =    0.0442 (borne K : True, quotient 7.37e-03) ; incr. complément =   +8.1240 ; borne compilée du complément =    -4.412 ; part de (log p − 1) portée au-dessus de H =   99.5 %
+    H =     100.0 : K(H) =      58 ; |incr. bas| =    0.0428 (borne K : True, quotient 7.37e-04) ; incr. complément =   +8.1254 ; borne compilée du complément =   -56.412 ; part de (log p − 1) portée au-dessus de H =   99.5 %
+    H =     300.0 : K(H) =     276 ; |incr. bas| =    0.1686 (borne K : True, quotient 6.11e-04) ; incr. complément =   +8.3368 ; borne compilée du complément =  -274.412 ; part de (log p − 1) portée au-dessus de H =  102.1 %
+    H =     594.0 : K(H) =     674 ; |incr. bas| =    0.4196 (borne K : True, quotient 6.23e-04) ; incr. complément =   +8.5878 ; borne compilée du complément =  -672.412 ; part de (log p − 1) portée au-dessus de H =  105.1 %
+    H =    1000.0 : K(H) =    1298 ; |incr. bas| =    0.7737 (borne K : True, quotient 5.96e-04) ; incr. complément =   +8.9419 ; borne compilée du complément = -1296.412 ; part de (log p − 1) portée au-dessus de H =  109.5 %
+    H =    3000.0 : K(H) =    4938 ; |incr. bas| =    0.5028 (borne K : True, quotient 1.02e-04) ; incr. complément =   +8.6709 ; borne compilée du complément = -4936.412 ; part de (log p − 1) portée au-dessus de H =  106.2 %
+    H =   10000.0 : K(H) =   20284 ; |incr. bas| =    2.2980 (borne K : True, quotient 1.13e-04) ; incr. complément =   +5.8701 ; borne compilée du complément = -20282.412 ; part de (log p − 1) portée au-dessus de H =   71.9 %
+    H =   30000.0 : K(H) =   71346 ; |incr. bas| =    5.9400 (borne K : True, quotient 8.33e-05) ; incr. complément =   +2.2281 ; borne compilée du complément = -71344.412 ; part de (log p − 1) portée au-dessus de H =   27.3 %
+    H =  100000.0 : K(H) =  276138 ; |incr. bas| =    7.6459 (borne K : True, quotient 2.77e-05) ; incr. complément =   +0.5222 ; borne compilée du complément = -276136.412 ; part de (log p − 1) portée au-dessus de H =    6.4 %
+    H =  300000.0 : K(H) =  933318 ; |incr. bas| =    7.9827 (borne K : True, quotient 8.55e-06) ; incr. complément =   +0.1854 ; borne compilée du complément = -933316.412 ; part de (log p − 1) portée au-dessus de H =    2.3 %
+    H = 1132490.7 : K(H) = 4002104 ; |incr. bas| =    8.1192 (borne K : True, quotient 2.03e-06) ; incr. complément =   +0.0490 ; borne compilée du complément = -4002102.412 ; part de (log p − 1) portée au-dessus de H =    0.6 %
+    plancher compilé (frequency_floor_of_low_realization) : K(H) ≥ 1.588 dès H ≥ γ_1 = 14.135 ; fréquence observée en E404 pour la cassure nette : ordre π·p = 30118
+  p = 104729 : log p = 11.5591 ; seconde différence du fond − 1 = -8.882e-16 (borne 4τ = 6.580) ; remainderIncrement (identité) = +10.55913 ; par les zéros (tronqué) = +9.94760
+    H =      30.0 : K(H) =       6 ; |incr. bas| =    0.0095 (borne K : True, quotient 1.58e-03) ; incr. complément =  +10.5686 ; borne compilée du complément =    -2.021 ; part de (log p − 1) portée au-dessus de H =  100.1 %
+    H =     100.0 : K(H) =      58 ; |incr. bas| =    0.0192 (borne K : True, quotient 3.32e-04) ; incr. complément =  +10.5784 ; borne compilée du complément =   -54.021 ; part de (log p − 1) portée au-dessus de H =  100.2 %
+    H =     300.0 : K(H) =     276 ; |incr. bas| =    0.0203 (borne K : True, quotient 7.35e-05) ; incr. complément =  +10.5388 ; borne compilée du complément =  -272.021 ; part de (log p − 1) portée au-dessus de H =   99.8 %
+    H =     594.0 : K(H) =     674 ; |incr. bas| =    0.0227 (borne K : True, quotient 3.37e-05) ; incr. complément =  +10.5364 ; borne compilée du complément =  -670.021 ; part de (log p − 1) portée au-dessus de H =   99.8 %
+    H =    1000.0 : K(H) =    1298 ; |incr. bas| =    0.1901 (borne K : True, quotient 1.46e-04) ; incr. complément =  +10.3691 ; borne compilée du complément = -1294.021 ; part de (log p − 1) portée au-dessus de H =   98.2 %
+    H =    3000.0 : K(H) =    4938 ; |incr. bas| =    0.4198 (borne K : True, quotient 8.50e-05) ; incr. complément =  +10.1394 ; borne compilée du complément = -4934.021 ; part de (log p − 1) portée au-dessus de H =   96.0 %
+    H =   10000.0 : K(H) =   20284 ; |incr. bas| =    0.3477 (borne K : True, quotient 1.71e-05) ; incr. complément =  +10.2115 ; borne compilée du complément = -20280.021 ; part de (log p − 1) portée au-dessus de H =   96.7 %
+    H =   30000.0 : K(H) =   71346 ; |incr. bas| =    0.6987 (borne K : True, quotient 9.79e-06) ; incr. complément =   +9.8605 ; borne compilée du complément = -71342.021 ; part de (log p − 1) portée au-dessus de H =   93.4 %
+    H =  100000.0 : K(H) =  276138 ; |incr. bas| =    1.7798 (borne K : True, quotient 6.45e-06) ; incr. complément =   +8.7793 ; borne compilée du complément = -276134.021 ; part de (log p − 1) portée au-dessus de H =   83.1 %
+    H =  300000.0 : K(H) =  933318 ; |incr. bas| =    7.1559 (borne K : True, quotient 7.67e-06) ; incr. complément =   +3.4032 ; borne compilée du complément = -933314.021 ; part de (log p − 1) portée au-dessus de H =   32.2 %
+    H = 1132490.7 : K(H) = 4002104 ; |incr. bas| =    9.9476 (borne K : True, quotient 2.49e-06) ; incr. complément =   +0.6115 ; borne compilée du complément = -4002100.021 ; part de (log p − 1) portée au-dessus de H =    5.8 %
+    plancher compilé (frequency_floor_of_low_realization) : K(H) ≥ 3.979 dès H ≥ γ_2 = 21.022 ; fréquence observée en E404 pour la cassure nette : ordre π·p = 329016
+
+=== Volet E411 (lecture seule) : ‖localPacket (low H)ᶜ p‖ / √p, le niveau du complément, par seuil ===
+  p = 4547 : exactRemainder p = +0.4562 (= ψ(p) − fond ; ψ(p)−p = -0.8817) ; 
+     H=30: bas -2.073, compl/√p +0.0375 | H=100: bas -4.170, compl/√p +0.0686 | H=300: bas +1.693, compl/√p -0.0183 | H=594: bas +2.151, compl/√p -0.0251 | H=1000: bas -2.138, compl/√p +0.0385 | H=3000: bas -1.244, compl/√p +0.0252 | H=10000: bas -1.851, compl/√p +0.0342 | H=30000: bas +0.059, compl/√p +0.0059 | H=100000: bas +0.333, compl/√p +0.0018 | H=300000: bas +0.415, compl/√p +0.0006 | H=1.13249e+06: bas +0.446, compl/√p +0.0002
+  p = 9587 : exactRemainder p = +14.2556 (= ψ(p) − fond ; ψ(p)−p = +12.9178) ; 
+     H=30: bas +18.425, compl/√p -0.0426 | H=100: bas +22.243, compl/√p -0.0816 | H=300: bas +16.887, compl/√p -0.0269 | H=594: bas +12.579, compl/√p +0.0171 | H=1000: bas +8.344, compl/√p +0.0604 | H=3000: bas +9.856, compl/√p +0.0449 | H=10000: bas +11.065, compl/√p +0.0326 | H=30000: bas +13.140, compl/√p +0.0114 | H=100000: bas +13.994, compl/√p +0.0027 | H=300000: bas +14.163, compl/√p +0.0009 | H=1.13249e+06: bas +14.231, compl/√p +0.0003
+  p = 104729 : exactRemainder p = +40.3237 (= ψ(p) − fond ; ψ(p)−p = +38.9858) ; 
+     H=30: bas +22.518, compl/√p +0.0550 | H=100: bas +23.930, compl/√p +0.0507 | H=300: bas +17.618, compl/√p +0.0702 | H=594: bas +19.469, compl/√p +0.0644 | H=1000: bas +20.446, compl/√p +0.0614 | H=3000: bas +20.940, compl/√p +0.0599 | H=10000: bas +30.790, compl/√p +0.0295 | H=30000: bas +33.282, compl/√p +0.0218 | H=100000: bas +35.649, compl/√p +0.0144 | H=300000: bas +38.626, compl/√p +0.0052 | H=1.13249e+06: bas +40.014, compl/√p +0.0010
+
+Temps total : 4.5 s. Aucune conclusion sur l'exposant : jumeau, pas preuve.

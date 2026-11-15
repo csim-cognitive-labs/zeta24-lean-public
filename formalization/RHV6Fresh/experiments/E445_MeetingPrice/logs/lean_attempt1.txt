@@ -1,0 +1,7 @@
+'RHV6Fresh.pair_amplitude_eq_price' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.offPrice_unbounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.offPrice_of_meeting_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.meeting_value_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.valueCellSum_abs_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.price_beats_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT=0

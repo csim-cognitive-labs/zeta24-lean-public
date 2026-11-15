@@ -1,0 +1,40 @@
+# E456 volet déterministe — premiers ≤ 1000000 : nombre 78498 ; premiers > 3 : 78496 ; transitions : 78495
+
+## P2 — recompte des quatre transitions
+5 000 premiers écarts (p>3) : {'t11': 994, 't15': 1490, 't51': 1490, 't55': 1026} ; somme 5000 ; τ15−τ51 = 0 ; premier état 5, dernier état 5 ; τ11−τ55 = -32 ; croisements 2980 (0.5960), maintiens 2020
+799 fenêtres × 12 = 9 588 transitions : {'t11': 1915, 't15': 2868, 't51': 2868, 't55': 1937} ; somme 9588 ; τ15−τ51 = 0 ; premier état 5, dernier état 5 ; τ11−τ55 = -22 ; croisements 5736 (0.5982), maintiens 3852
+texte collé : t11 994, t15 1490, t51 1490, t55 1026 (somme 5000) ; « 9 590 premiers », « 799 fenêtres » (9 588 transitions) : incohérent
+bilan orienté : min -1 max 0 ; nul ⟺ même état aux bouts : True
+premiers > 3 jusqu'au rang : 9 590 premiers ≠ 5 001 premiers pour 5 000 écarts ; 799×12+1 = 9 589 premiers
+
+## P2 — énumération exacte des 8 192 mots de douze transitions (13 états)
+total 8192 ; classes : {'B egalite': '924 (0.1128)', 'C famille1': '3634 (0.4436)', 'D famille5': '3634 (0.4436)'} ; somme des parts 1.0
+texte : B 10,5 % C 43,8 % D 43,8 % (somme 98,1 %) — exact : {'B egalite': 11.28, 'C famille1': 44.36, 'D famille5': 44.36}
+candidats pour « A » (texte 51,9 %) : {'croisements >= 7': 38.72, 'croisements >= 6': 61.28, 'croisements > maintiens': 38.72, 'croisements >= 8': 19.38, 'n11=n55 ou cr>=7': 45.58}
+nombre de croisements sous l'uniforme : {0: 2, 1: 24, 2: 132, 3: 440, 4: 990, 5: 1584, 6: 1848, 7: 1584, 8: 990, 9: 440, 10: 132, 11: 24, 12: 2} = binomiale(12,1/2) : False
+799 premières fenêtres : B 0.1327 C 0.4255 D 0.4418 (somme 1) ; croisements≥7 0.6733 ; croisements moyens 7.1790 (uniforme : 6) ; texte : 56,5 / 10,6 / 40,4 / 42,4 (somme 93,4)
+toutes (6541) fenêtres ≤ 10^6 : B 0.1529 C 0.4181 D 0.4290 (somme 1) ; croisements≥7 0.6209 ; croisements moyens 6.9824 (uniforme : 6) ; texte : 56,5 / 10,6 / 40,4 / 42,4 (somme 93,4)
+
+## P3 — la distribution du nombre de croisements est-elle gaussienne ?
+fenêtres de 12 (6541) : moyenne 6.9824 écart-type 1.6414 p̂ 0.5819 ; asymétrie -0.0536 aplatissement exc. -0.2316 ; dispersion var/(np(1−p)) 0.9227 ; support 13 valeurs (discret) ; KS contre normale ajustée 0.1251
+  khi-deux contre binomiale(12, 1/2) : 2267.4 sur 10 ddl (p≈0.00e+00)
+  khi-deux contre binomiale(12, p̂) : 28.9 sur 10 ddl (p≈6.64e-04)
+  histogramme réel (0..12) : [0, 1, 11, 90, 318, 807, 1253, 1587, 1283, 806, 316, 61, 8] ; binomiale(12,p̂) : [0, 3, 24, 111, 347, 772, 1254, 1495, 1300, 804, 336, 85, 10]
+fenêtres de 120 (654) : p̂ 0.5819 asymétrie 0.0155 aplatissement exc. -0.1399 dispersion 0.9700 KS 0.0530 Shapiro p 0.0546
+fenêtres de 1200 (65) : p̂ 0.5819 asymétrie -0.1817 aplatissement exc. 1.4161 dispersion 1.0218 KS 0.0664 Shapiro p 0.245
+fenêtres de 12000 (6) : p̂ 0.5824 asymétrie 0.5066 aplatissement exc. -1.0653 dispersion 4.4308 KS 0.1625 Shapiro p 0.705
+biais : part des maintiens sur tous les écarts ≤ 10^6 : 0.4181 (indépendance : 0,5) ; t11 16394 t55 16427
+
+## P1 — jumeau de K6 sur 5000 hauteurs réelles (première 14.134725142 , dernière 5447.861998301 )
+M5 : écart maximal entre rapports de cellule ON/OFF et avec π/T : 3.99e-16
+M4 : décalage / demi-cellule, maximum 0.0090 (< 1 attendu) ; violations 0
+M1 : distance minimale entre grilles ON et OFF, en fraction de cellule : 5.843e-06 (> 0 attendu) ; décroît en (1−2β)/(πT)×... : β=0,3 à T=5447.86 : 1.169e-05
+
+## P4 — intervention sur β à T fixée (grille des rencontres), contrôle : intervention sur T à β fixée
+écarts touchés (≤ 10^6, 78495 écarts) : part ON 0.0653, part OFF 0.0653
+recouvrement de Jaccard des écarts touchés, β 0,5 → 0,3 à T fixée : moyenne 0.9916, min 0.3418, max 1.0000
+contrôle, T → hauteur suivante à β fixée : moyenne 0.2397, min 0.1026, max 0.3622
+composition mod 6 des écarts touchés (maintien, τ15, τ51) : ON [0.4462, 0.2991, 0.2546] ; OFF [0.4464, 0.2991, 0.2545] ; tous les écarts [0.4181, 0.2909, 0.2909]
+contingence type × quartile de fraction de cellule : p-valeurs ON médiane 0.814 (part < 0,05 : 0.005) ; OFF médiane 0.813 (part < 0,05 : 0.005) ; attendu sous indépendance : 0,05
+intervention sur T (β = 1/2) : pas π/T 0.22226 → 0.14944 ; phase 1.535437 → 1.547016 ; contact k=1 1.3922 → 1.2499
+intervention sur β (T = 14.1347) : pas 0.22226 → 0.22226 (identique) ; phase 1.535437 → 1.549575 ; contact k=1 1.3922 → 1.3936 ; facteur 1.001001 ∈ ]0.894822, 1.117541[

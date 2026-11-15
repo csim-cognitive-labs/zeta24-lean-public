@@ -1,0 +1,24 @@
+RHV6Fresh/Terminal/GapSlopeByContacts_SCRATCH.lean:9:39: warning: Variable name `ha` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ha
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+RHV6Fresh/Terminal/GapSlopeByContacts_SCRATCH.lean:114:82: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 0
+  d ≥ 0
+  c ≥ 0
+  c - e ≥ 0
+  b ≥ 1
+  b - c ≥ 0
+  a ≥ 0
+  a - b ≤ 0
+  a - c ≤ -1
+  a - d ≥ 0
+where
+ a := ↑⌊C⌋₊
+ b := ↑(p - 1)
+ c := ↑n
+ d := ↑(fnPrimeAtRank I.rank)
+ e := ↑(fnPrimeSuccessor I.rank)

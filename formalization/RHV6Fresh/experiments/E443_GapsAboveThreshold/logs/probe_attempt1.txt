@@ -1,0 +1,42 @@
+RHV6Fresh/Terminal/E443_SCRATCH.lean:23:28: error: failed to prove positivity/nonnegativity/nonzeroness
+RHV6Fresh/Terminal/E443_SCRATCH.lean:117:2: error: Type mismatch
+  mul_le_mul_of_nonneg_left hup (LT.lt.le (exp_pos ?m.76))
+has type
+  rexp ?m.76 * contactAt β T (meetingCell β T I) ≤ rexp ?m.76 * I.upper
+but is expected to have type
+  rexp (π / T) * contactAt β T (meetingCell β T I) ≤ I.upper * rexp (π / T)
+RHV6Fresh/Terminal/E443_SCRATCH.lean:131:14: error: don't know how to synthesize implicit argument `β`
+  @contact_succ_meeting_le ?m.131 T hT I
+context:
+β T : ℝ
+hT : 0 < T
+I J : PrimeGapInterval
+hIJ : J.rank = I.rank + 1
+hI : GapHasContact β T I
+hJ : GapHasContact β T J
+hltI : contactAt β T (meetingCell β T I) < I.upper
+hltJ : contactAt β T (meetingCell β T J) < J.upper
+hfar :
+  Real.log ↑(fnPrimeAtRank (I.rank + 1)) + 2 * √(I.upper * rexp (π / T)) * Real.log (I.upper * rexp (π / T)) <
+    I.upper * (1 - rexp (-(π / T)))
+hC1 : 1 ≤ contactAt β T (meetingCell β T I + 1)
+⊢ ℝ
+RHV6Fresh/Terminal/E443_SCRATCH.lean:131:7: error: failed to infer `have` declaration type
+RHV6Fresh/Terminal/E443_SCRATCH.lean:126:46: error: unsolved goals
+β T : ℝ
+hT : 0 < T
+I J : PrimeGapInterval
+hIJ : J.rank = I.rank + 1
+hI : GapHasContact β T I
+hJ : GapHasContact β T J
+hltI : contactAt β T (meetingCell β T I) < I.upper
+hltJ : contactAt β T (meetingCell β T J) < J.upper
+hfar :
+  Real.log ↑(fnPrimeAtRank (I.rank + 1)) + 2 * √(I.upper * rexp (π / T)) * Real.log (I.upper * rexp (π / T)) <
+    I.upper * (1 - rexp (-(π / T)))
+hC1 : 1 ≤ contactAt β T (meetingCell β T I + 1)
+⊢ Real.log ↑(fnPrimeAtRank (I.rank + 1)) + cellNonPrimeWeight β T (meetingCell β T I) < I.upper * (1 - rexp (-(π / T)))
+'RHV6Fresh.meetingCell_displacement_lt' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RHV6Fresh.gap_demand_variation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.meeting_falls_above_second_threshold' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+EXIT=1

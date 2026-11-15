@@ -1,0 +1,13 @@
+RHV6Fresh/Terminal/E442_SCRATCH.lean:51:20: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Real.log (rexp ?x)
+in the target expression
+  stagePosition β T (rexp ((towerPhase β T + ↑k * π) / T)) = ↑k
+
+β T : ℝ
+hT : 0 < T
+k : ℤ
+⊢ stagePosition β T (rexp ((towerPhase β T + ↑k * π) / T)) = ↑k
+'RHV6Fresh.displacement_rule' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.signedPrimeSum_eq_primes_in_block' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RHV6Fresh.weight_dominates_below_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT=1

@@ -1,0 +1,37 @@
+import RHV6Fresh.Terminal.MeetingPriceTheorem
+
+/-! E445 — Tentative T2 : le bilan pondéré de la série des cellules du MIROIR `(1−β, T)` (P5, borné par sa dernière
+cellule) contre le budget cumulé des rencontres (Tchebychev `θ(x) ≤ log 4 · x`, Mathlib). On tente de conclure que
+le prix du miroir à la dernière cellule dépasse le budget cumulé ; la dernière étape est laissée à `nlinarith`. -/
+
+namespace RHV6Fresh
+open Real RHV3Lean Finset
+
+theorem T2_series_vs_cumulative_budget {β T : ℝ} (hβ : 0 < β) (hβ' : β < 1 / 2) (hT : 0 < T) (I : PrimeGapInterval) :
+    False := by
+  set γ := 1 - β with hγ           -- position radiale du miroir
+  have hγ0 : 0 < γ := by linarith
+  have hγ1 : 1 / 2 < γ := by linarith
+  -- (a) amplitude du miroir à sa cellule de rencontre, imposée par le zéro (P4)
+  obtain ⟨hlo, hhi⟩ := meeting_value_bounds (T := T) hγ0 hT I
+  -- (b) budget cumulé des rencontres jusqu'à p = I.upper : θ(p) ≤ log 4 · p (Tchebychev)
+  have hbudget : Chebyshev.theta I.upper ≤ Real.log 4 * I.upper :=
+    Chebyshev.theta_le_log4_mul_x (by linarith [I.one_lt_upper])
+  -- (c) le prix du miroir est p^γ, γ < 1 : il reste SOUS le budget linéaire
+  have hsub : I.upper ^ γ ≤ I.upper := by
+    have := Real.rpow_le_rpow_of_exponent_le (by linarith [I.one_lt_upper] : (1 : ℝ) ≤ I.upper) (by linarith : γ ≤ 1)
+    simpa using this
+  -- (d) FERMETURE tentée : le prix dépasserait le budget ; le compilateur dit ce qui manque
+  have hneed : Real.log 4 * I.upper < I.upper ^ γ * Real.exp (-(γ * Real.pi / T)) / ‖(⟨γ, T⟩ : ℂ)‖ := by
+    nlinarith [hsub, hbudget, Real.exp_pos (-(γ * Real.pi / T)), norm_mk_pos (T := T) hγ0, I.one_lt_upper]
+  have hpos := norm_mk_pos (T := T) hγ0
+  have hexp1 : Real.exp (-(γ * Real.pi / T)) ≤ 1 := Real.exp_le_one_iff.mpr (by
+    have : 0 ≤ γ * Real.pi / T := by positivity
+    linarith)
+  have h4 : 1 < Real.log 4 := by
+    have := Real.log_lt_log (Real.exp_pos 1) (by
+      have := Real.exp_one_lt_d9; norm_num at this ⊢; linarith : Real.exp 1 < 4)
+    rwa [Real.log_exp] at this
+  nlinarith
+
+end RHV6Fresh

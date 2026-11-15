@@ -1,0 +1,6 @@
+RHV6Fresh/Terminal/E448_SCRATCH.lean:102:2: error: No goals to be solved
+'RHV6Fresh.cellFraction_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.line_break_amplitude_ratio_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.line_break_amplitude_eq_iff_same_cell' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.line_break_amplitude_ratio_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.line_break_amplitude_series' depends on axioms: [propext, Classical.choice, Quot.sound]

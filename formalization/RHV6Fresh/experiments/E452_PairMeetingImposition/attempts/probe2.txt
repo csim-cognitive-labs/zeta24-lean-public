@@ -1,0 +1,25 @@
+RHV6Fresh/Terminal/E452_SCRATCH.lean:68:40: warning: Variable name `hβ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hβ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+RHV6Fresh/Terminal/E452_SCRATCH.lean:176:4: error: linarith failed to find a contradiction
+case inr.inr
+β T : ℝ
+hβ : 0 < β
+hβ1 : β < 1
+x : ℝ
+hb : 0 ≤ |contactRealValue (1 - β) T (lastContactBefore (1 - β) T x)|
+h : mirrorWordShift β T x = 1
+this :
+  |contactRealValue β T (lastContactBefore β T x)| + 1 * |contactRealValue (1 - β) T (lastContactBefore (1 - β) T x)| ≤
+    ||contactRealValue β T (lastContactBefore β T x)| +
+        1 * |contactRealValue (1 - β) T (lastContactBefore (1 - β) T x)||
+a✝ :
+  ||contactRealValue β T (lastContactBefore β T x)| +
+        -1 * |contactRealValue (1 - β) T (lastContactBefore (1 - β) T x)|| <
+    |contactRealValue β T (lastContactBefore β T x)| - |contactRealValue (1 - β) T (lastContactBefore (1 - β) T x)|
+⊢ False
+failed
+EXIT=1

@@ -1,0 +1,12 @@
+[     0.0s] crible jusqu'à 30000000
+[     2.1s] premiers : 1857860 ; ψ(30000000) = 30000704.282093
+[     2.1s] zéros lus (1000 premiers) : γ_1 = 14.134725, γ_1000 = 1419.422481
+[     9.2s] Tour 1 (T=14.135, 45 cellules) : G1 2.1e-16 G2 1.5e-13 G3 7.7e-14 | stab max 5.0e-07 | |L|/x^1.5 max 0.0285 | |a|/x^1.5 max 0.0217 | |a|/ℓ² dernier 2.22e-05 | signes 0.50 | |A|/x^1.5 max 0.0175 | G6 0.061
+[    16.2s] Tour 2 (T=21.022, 68 cellules) : G1 2.2e-16 G2 3.2e-13 G3 2.8e-13 | stab max 7.0e-07 | |L|/x^1.5 max 0.0580 | |a|/x^1.5 max 0.0307 | |a|/ℓ² dernier 1.14e-04 | signes 0.67 | |A|/x^1.5 max 0.0295 | G6 0.165
+[    23.6s] Tour 3 (T=25.011, 81 cellules) : G1 2.2e-16 G2 2.5e-13 G3 2.8e-13 | stab max 1.3e-06 | |L|/x^1.5 max 0.0663 | |a|/x^1.5 max 0.0314 | |a|/ℓ² dernier 1.28e-04 | signes 0.56 | |A|/x^1.5 max 0.0370 | G6 0.216
+[    29.5s] Tour 5 (T=32.935, 107 cellules) : G1 2.2e-16 G2 3.0e-13 G3 7.0e-13 | stab max 6.7e-07 | |L|/x^1.5 max 0.0454 | |a|/x^1.5 max 0.0328 | |a|/ℓ² dernier 2.24e-04 | signes 0.50 | |A|/x^1.5 max 0.0402 | G6 0.186
+[    34.9s] Tour 10 (T=49.774, 163 cellules) : G1 2.2e-16 G2 5.0e-13 G3 9.4e-13 | stab max 1.4e-07 | |L|/x^1.5 max 0.0363 | |a|/x^1.5 max 0.0266 | |a|/ℓ² dernier 1.50e-05 | signes 0.43 | |A|/x^1.5 max 0.0305 | G6 0.213
+[    39.7s] Tour 20 (T=77.145, 252 cellules) : G1 2.2e-16 G2 5.5e-13 G3 7.9e-13 | stab max 7.8e-07 | |L|/x^1.5 max 0.0225 | |a|/x^1.5 max 0.0193 | |a|/ℓ² dernier 2.75e-04 | signes 0.36 | |A|/x^1.5 max 0.0243 | G6 0.197
+[    42.9s] Tour 100 (T=236.524, 775 cellules) : G1 2.2e-16 G2 1.2e-12 G3 3.5e-12 | stab max 1.6e-05 | |L|/x^1.5 max 0.0061 | |a|/x^1.5 max 0.0076 | |a|/ℓ² dernier 2.10e-03 | signes 0.24 | |A|/x^1.5 max 0.0108 | G6 0.195
+[    45.7s] Tour 1000 (T=1419.422, 4657 cellules) : G1 2.3e-16 G2 7.4e-12 G3 3.6e-11 | stab max 3.6e-04 | |L|/x^1.5 max 0.0007 | |a|/x^1.5 max 0.0017 | |a|/ℓ² dernier 1.92e-03 | signes 0.12 | |A|/x^1.5 max 0.0026 | G6 0.253
+[    45.7s] verdict {'point1': True, 'point2': True, 'point3': True, 'lettre': 'A'} ; écrit twin_results.json

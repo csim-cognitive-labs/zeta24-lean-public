@@ -1,0 +1,373 @@
+{
+ "zeros": 2001052,
+ "sha256": "2ef7b752c2f17405222e670a61098250c8e4e09047f823f41e2b41a7b378e7c6",
+ "N": 1000000,
+ "beta": 0.5,
+ "towers": {
+  "rank1": {
+   "T": 14.134725142,
+   "r": 1.2488968123408286,
+   "violations": {
+    "A1_bertrand": 0,
+    "A2_wholeCellCount": 0,
+    "A3_displacement": 0,
+    "A4_gap_in_cell": 0,
+    "A5_gap_demand": 0,
+    "A6_nonprime_bound": 0,
+    "A7_second_threshold": 0
+   },
+   "xstar": 8.684466061316087,
+   "xstar2": 11649.944741436124,
+   "gaps": 78497,
+   "contact_fraction": 0.0007006637196325975,
+   "A6_ratio_max": 0.11684339419802776,
+   "A6_ratio_mean": 0.012323674676688033,
+   "meeting_cells_both_contacts": 7,
+   "descending_fraction_below_xstar": 0.0,
+   "descending_fraction_between": 0.75,
+   "n_between": 4,
+   "descending_fraction_above_xstar2": null,
+   "n_above2": 0,
+   "largest_nondescending_p_both": 13,
+   "decades": {
+    "1e1": {
+     "n": 4,
+     "contact_fraction": 1.0,
+     "rule_mean_min1_g_over_L": 1.0,
+     "primes_per_cell_over_L_logp": 0.6841998589562704
+    },
+    "1e2": {
+     "n": 21,
+     "contact_fraction": 0.47619047619047616,
+     "rule_mean_min1_g_over_L": 0.4895464815000556,
+     "primes_per_cell_over_L_logp": 2.7923297948645405
+    },
+    "1e3": {
+     "n": 143,
+     "contact_fraction": 0.06993006993006994,
+     "rule_mean_min1_g_over_L": 0.07361551414739455,
+     "primes_per_cell_over_L_logp": 18.501356780286148
+    },
+    "1e4": {
+     "n": 1061,
+     "contact_fraction": 0.00942507068803016,
+     "rule_mean_min1_g_over_L": 0.009762273307443784,
+     "primes_per_cell_over_L_logp": 136.2596674306348
+    },
+    "1e5": {
+     "n": 8363,
+     "contact_fraction": 0.0013153174698074853,
+     "rule_mean_min1_g_over_L": 0.0012365760027703665,
+     "primes_per_cell_over_L_logp": 1090.824135636388
+    },
+    "1e6": {
+     "n": 68905,
+     "contact_fraction": 0.00014512734924896598,
+     "rule_mean_min1_g_over_L": 0.0001503319691343155,
+     "primes_per_cell_over_L_logp": 9048.200030266593
+    }
+   },
+   "measures_no_theorem": {
+    "cells_above_xstar": 51,
+    "primes_per_cell_mean": 1342.2549019607843,
+    "L_over_logC_mean": 1356.6345956718205,
+    "positive_slope_fraction_above_xstar": 0.49019607843137253,
+    "abs_slope_over_L_mean_above_xstar": 0.06934141603039301
+   },
+   "max_displacement": 2,
+   "bertrand_bound": 4.118623564697943
+  },
+  "rank100": {
+   "T": 236.524229666,
+   "r": 1.0133709310575483,
+   "violations": {
+    "A1_bertrand": 0,
+    "A2_wholeCellCount": 0,
+    "A3_displacement": 0,
+    "A4_gap_in_cell": 0,
+    "A5_gap_demand": 0,
+    "A6_nonprime_bound": 0,
+    "A7_second_threshold": 0
+   },
+   "xstar": 458.26659966527234,
+   "xstar2": 5638357.344821345,
+   "gaps": 78497,
+   "contact_fraction": 0.008306049912735518,
+   "A6_ratio_max": 0.12474081290064999,
+   "A6_ratio_mean": 0.0008087937401201926,
+   "meeting_cells_both_contacts": 114,
+   "descending_fraction_below_xstar": 0.0,
+   "descending_fraction_between": 1.0,
+   "n_between": 37,
+   "descending_fraction_above_xstar2": null,
+   "n_above2": 0,
+   "largest_nondescending_p_both": 457,
+   "decades": {
+    "1e1": {
+     "n": 4,
+     "contact_fraction": 1.0,
+     "rule_mean_min1_g_over_L": 1.0,
+     "primes_per_cell_over_L_logp": 0.04097641017399979
+    },
+    "1e2": {
+     "n": 21,
+     "contact_fraction": 1.0,
+     "rule_mean_min1_g_over_L": 1.0,
+     "primes_per_cell_over_L_logp": 0.1660767909629487
+    },
+    "1e3": {
+     "n": 143,
+     "contact_fraction": 0.7692307692307693,
+     "rule_mean_min1_g_over_L": 0.7626238931243403,
+     "primes_per_cell_over_L_logp": 1.0968428591291792
+    },
+    "1e4": {
+     "n": 1061,
+     "contact_fraction": 0.16022620169651272,
+     "rule_mean_min1_g_over_L": 0.16145182270510994,
+     "primes_per_cell_over_L_logp": 8.158359432001314
+    },
+    "1e5": {
+     "n": 8363,
+     "contact_fraction": 0.020805930886045678,
+     "rule_mean_min1_g_over_L": 0.020729655828602644,
+     "primes_per_cell_over_L_logp": 64.7932736151674
+    },
+    "1e6": {
+     "n": 68905,
+     "contact_fraction": 0.0025107031420071113,
+     "rule_mean_min1_g_over_L": 0.0025159267663539702,
+     "primes_per_cell_over_L_logp": 537.3814647364246
+    }
+   },
+   "measures_no_theorem": {
+    "cells_above_xstar": 578,
+    "primes_per_cell_mean": 134.59515570934255,
+    "L_over_logC_mean": 134.87526354074456,
+    "positive_slope_fraction_above_xstar": 0.48961937716262977,
+    "abs_slope_over_L_mean_above_xstar": 0.14253067197350386
+   },
+   "max_displacement": 38,
+   "bertrand_bound": 53.18566536300151
+  },
+  "rank1000": {
+   "T": 1419.422480946,
+   "r": 1.002215740478208,
+   "violations": {
+    "A1_bertrand": 0,
+    "A2_wholeCellCount": 0,
+    "A3_displacement": 0,
+    "A4_gap_in_cell": 0,
+    "A5_gap_demand": 0,
+    "A6_nonprime_bound": 0,
+    "A7_second_threshold": 0
+   },
+   "xstar": 3709.1727240309237,
+   "xstar2": 314043789.39457023,
+   "gaps": 78497,
+   "contact_fraction": 0.03733900658623896,
+   "A6_ratio_max": 0.12494945525899878,
+   "A6_ratio_mean": 0.00013539644071764318,
+   "meeting_cells_both_contacts": 603,
+   "descending_fraction_below_xstar": 0.0,
+   "descending_fraction_between": 0.9775280898876404,
+   "n_between": 178,
+   "descending_fraction_above_xstar2": null,
+   "n_above2": 0,
+   "largest_nondescending_p_both": 5333,
+   "decades": {
+    "1e1": {
+     "n": 4,
+     "contact_fraction": 1.0,
+     "rule_mean_min1_g_over_L": 1.0,
+     "primes_per_cell_over_L_logp": 0.006813611160817669
+    },
+    "1e2": {
+     "n": 21,
+     "contact_fraction": 1.0,
+     "rule_mean_min1_g_over_L": 1.0,
+     "primes_per_cell_over_L_logp": 0.027629439829154594
+    },
+    "1e3": {
+     "n": 143,
+     "contact_fraction": 1.0,
+     "rule_mean_min1_g_over_L": 1.0,
+     "primes_per_cell_over_L_logp": 0.18269055197741804
+    },
+    "1e4": {
+     "n": 1061,
+     "contact_fraction": 0.6437323279924599,
+     "rule_mean_min1_g_over_L": 0.6424249986537043,
+     "primes_per_cell_over_L_logp": 1.359454186638225
+    },
+    "1e5": {
+     "n": 8363,
+     "contact_fraction": 0.1243572880545259,
+     "rule_mean_min1_g_over_L": 0.12403180127352421,
+     "primes_per_cell_over_L_logp": 10.79635066893806
+    },
+    "1e6": {
+     "n": 68905,
+     "contact_fraction": 0.015093244321892461,
+     "rule_mean_min1_g_over_L": 0.015098527602828194,
+     "primes_per_cell_over_L_logp": 89.5426132955579
+    }
+   },
+   "measures_no_theorem": {
+    "cells_above_xstar": 2528,
+    "primes_per_cell_mean": 30.811708860759495,
+    "L_over_logC_mean": 30.859363963909978,
+    "positive_slope_fraction_above_xstar": 0.4833860759493671,
+    "abs_slope_over_L_mean_above_xstar": 0.20670228013729663
+   },
+   "max_displacement": 231,
+   "bertrand_bound": 314.1751309536864
+  },
+  "rank10000": {
+   "T": 9877.782654004,
+   "r": 1.0003180969254584,
+   "violations": {
+    "A1_bertrand": 0,
+    "A2_wholeCellCount": 0,
+    "A3_displacement": 0,
+    "A4_gap_in_cell": 0,
+    "A5_gap_demand": 0,
+    "A6_nonprime_bound": 0,
+    "A7_second_threshold": 0
+   },
+   "xstar": 32676.907867019007,
+   "xstar2": 22482057782.295006,
+   "gaps": 78497,
+   "contact_fraction": 0.17056702803928814,
+   "A6_ratio_max": 0.12496509624482913,
+   "A6_ratio_mean": 1.9472987652728935e-05,
+   "meeting_cells_both_contacts": 4007,
+   "descending_fraction_below_xstar": 0.0,
+   "descending_fraction_between": 0.9976377952755906,
+   "n_between": 1270,
+   "descending_fraction_above_xstar2": null,
+   "n_above2": 0,
+   "largest_nondescending_p_both": 49727,
+   "decades": {
+    "1e1": {
+     "n": 4,
+     "contact_fraction": 1.0,
+     "rule_mean_min1_g_over_L": 1.0,
+     "primes_per_cell_over_L_logp": 0.0009794826254992156
+    },
+    "1e2": {
+     "n": 21,
+     "contact_fraction": 1.0,
+     "rule_mean_min1_g_over_L": 1.0,
+     "primes_per_cell_over_L_logp": 0.003970501544862927
+    },
+    "1e3": {
+     "n": 143,
+     "contact_fraction": 1.0,
+     "rule_mean_min1_g_over_L": 1.0,
+     "primes_per_cell_over_L_logp": 0.02625243148518402
+    },
+    "1e4": {
+     "n": 1061,
+     "contact_fraction": 0.9886899151743638,
+     "rule_mean_min1_g_over_L": 0.988755016288214,
+     "primes_per_cell_over_L_logp": 0.19534491901118475
+    },
+    "1e5": {
+     "n": 8363,
+     "contact_fraction": 0.5918928614133684,
+     "rule_mean_min1_g_over_L": 0.5935568702413759,
+     "primes_per_cell_over_L_logp": 1.5514172150924774
+    },
+    "1e6": {
+     "n": 68905,
+     "contact_fraction": 0.10481097162760322,
+     "rule_mean_min1_g_over_L": 0.10478205411923253,
+     "primes_per_cell_over_L_logp": 12.867150974609169
+    }
+   },
+   "measures_no_theorem": {
+    "cells_above_xstar": 10756,
+    "primes_per_cell_mean": 6.9717367050948305,
+    "L_over_logC_mean": 6.9810952126747905,
+    "positive_slope_fraction_above_xstar": 0.4835440684269245,
+    "abs_slope_over_L_mean_above_xstar": 0.3092458016454353
+   },
+   "max_displacement": 1606,
+   "bertrand_bound": 2180.3905040436243
+  },
+  "rank100000": {
+   "T": 74920.827498994,
+   "r": 1.0000419330462074,
+   "violations": {
+    "A1_bertrand": 0,
+    "A2_wholeCellCount": 0,
+    "A3_displacement": 0,
+    "A4_gap_in_cell": 0,
+    "A5_gap_demand": 0,
+    "A6_nonprime_bound": 0,
+    "A7_second_threshold": 0
+   },
+   "xstar": 300819.1814846664,
+   "xstar2": 1812570554731.724,
+   "gaps": 78497,
+   "contact_fraction": 0.6076792743671733,
+   "A6_ratio_max": 0.12499938211120867,
+   "A6_ratio_mean": 2.5678672281432372e-06,
+   "meeting_cells_both_contacts": 28502,
+   "descending_fraction_below_xstar": 0.0,
+   "descending_fraction_between": 0.9993157714676703,
+   "n_between": 8769,
+   "descending_fraction_above_xstar2": null,
+   "n_above2": 0,
+   "largest_nondescending_p_both": 466483,
+   "decades": {
+    "1e1": {
+     "n": 4,
+     "contact_fraction": 1.0,
+     "rule_mean_min1_g_over_L": 1.0,
+     "primes_per_cell_over_L_logp": 0.00012915171706840158
+    },
+    "1e2": {
+     "n": 21,
+     "contact_fraction": 1.0,
+     "rule_mean_min1_g_over_L": 1.0,
+     "primes_per_cell_over_L_logp": 0.0005234892783486521
+    },
+    "1e3": {
+     "n": 143,
+     "contact_fraction": 1.0,
+     "rule_mean_min1_g_over_L": 1.0,
+     "primes_per_cell_over_L_logp": 0.003461259102582896
+    },
+    "1e4": {
+     "n": 1061,
+     "contact_fraction": 1.0,
+     "rule_mean_min1_g_over_L": 1.0,
+     "primes_per_cell_over_L_logp": 0.025754780497223524
+    },
+    "1e5": {
+     "n": 8363,
+     "contact_fraction": 0.9770417314360875,
+     "rule_mean_min1_g_over_L": 0.978591797000282,
+     "primes_per_cell_over_L_logp": 0.20454372216717773
+    },
+    "1e6": {
+     "n": 68905,
+     "contact_fraction": 0.5558522603584646,
+     "rule_mean_min1_g_over_L": 0.5564263790598855,
+     "primes_per_cell_over_L_logp": 1.6964428918977137
+    }
+   },
+   "measures_no_theorem": {
+    "cells_above_xstar": 28647,
+    "primes_per_cell_mean": 1.8302789122770273,
+    "L_over_logC_mean": 1.8317771389868907,
+    "positive_slope_fraction_above_xstar": 0.4475861346737878,
+    "abs_slope_over_L_mean_above_xstar": 0.5007375665633825
+   },
+   "max_displacement": 12182,
+   "bertrand_bound": 16531.201739173823
+  }
+ }
+}

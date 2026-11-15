@@ -1,0 +1,23 @@
+RHV6Fresh/Terminal/MeetingCellSigns_SCRATCH.lean:65:47: error: No goals to be solved
+RHV6Fresh/Terminal/MeetingCellSigns_SCRATCH.lean:67:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b - c ≥ 1
+  b - d ≤ 0
+  a ≥ 0
+where
+ a := ↑I.rank
+ b := lastContactBefore β T I.upper
+ c := lastContactBefore β T J.upper
+ d := lastContactBefore β T J.lower
+RHV6Fresh/Terminal/MeetingCellSigns_SCRATCH.lean:107:2: error: Type mismatch
+  contactRealValue_sign_shift hβ hT ?m.78 ?m.79
+has type
+  0 < (-1) ^ ?m.79 * contactRealValue β T (?m.78 + ↑?m.79) * contactRealValue β T ?m.78
+but is expected to have type
+  0 <
+    (-1) ^
+          (meetingCell β T { rank := n } + ↑(meetingCell β T { rank := n + J } - meetingCell β T { rank := n }).toNat -
+              meetingCell β T { rank := n }).toNat *
+        contactRealValue β T
+          (meetingCell β T { rank := n } + ↑(meetingCell β T { rank := n + J } - meetingCell β T { rank := n }).toNat) *
+      contactRealValue β T (meetingCell β T { rank := n })

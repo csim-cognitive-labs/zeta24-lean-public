@@ -1,0 +1,14 @@
+RHV6Fresh/Terminal/E449_SCRATCH.lean:67:59: warning: Variable name `hT` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hT
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+RHV6Fresh/Terminal/E449_SCRATCH.lean:138:22: warning: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'RHV6Fresh.tower_of_two_contacts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.phase_bracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.word_slope_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.cellFraction_primes_small_and_near_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.tower_eq_of_same_word' depends on axioms: [propext, Classical.choice, Quot.sound]

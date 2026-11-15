@@ -1,0 +1,36 @@
+{
+ "sha256": "2ef7b752c2f17405222e670a61098250c8e4e09047f823f41e2b41a7b378e7c6",
+ "dps": 30,
+ "towers": {
+  "rank1": {
+   "xstar_mp": 8.684466061316078,
+   "xstar2_mp": 11649.94474143611,
+   "xstar_relerr_vs_float64": 1.0522556854668105e-15,
+   "xstar2_relerr_vs_float64": 1.2507319128428803e-15
+  },
+  "rank100": {
+   "xstar_mp": 458.26659966527285,
+   "xstar2_mp": 5638357.344821355,
+   "xstar_relerr_vs_float64": 1.1208322603628436e-15,
+   "xstar2_relerr_vs_float64": 1.754730630608189e-15
+  },
+  "rank1000": {
+   "xstar_mp": 3709.1727240308833,
+   "xstar2_mp": 314043789.3945749,
+   "xstar_relerr_vs_float64": 1.088917752490557e-14,
+   "xstar2_relerr_vs_float64": 1.481396196275194e-14
+  },
+  "rank10000": {
+   "xstar_mp": 32676.907867006554,
+   "xstar2_mp": 22482057782.278706,
+   "xstar_relerr_vs_float64": 3.8108466130966543e-13,
+   "xstar2_relerr_vs_float64": 7.250637085640683e-13
+  },
+  "rank100000": {
+   "xstar_mp": 300819.1814851805,
+   "xstar2_mp": 1812570554739.8777,
+   "xstar_relerr_vs_float64": 1.7089989055563629e-12,
+   "xstar2_relerr_vs_float64": 4.498354734515831e-12
+  }
+ }
+}

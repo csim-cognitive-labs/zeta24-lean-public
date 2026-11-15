@@ -1,0 +1,9 @@
+[    0.56s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    1.57s] rang 1 : {"P1_max_rel_dev": "9.7602e-31", "P1_ok": true, "P5_max_ratio": "0.10518", "P5_ok": true}
+[    1.57s] rang 10 : {"P1_max_rel_dev": "9.7602e-31", "P1_ok": true, "P5_max_ratio": "0.031066", "P5_ok": true}
+[    1.58s] rang 100 : {"P1_max_rel_dev": "9.7602e-31", "P1_ok": true, "P5_max_ratio": "0.0066192", "P5_ok": true}
+[    1.59s] rang 1000 : {"P1_max_rel_dev": "9.7602e-31", "P1_ok": true, "P5_max_ratio": "0.001106", "P5_ok": true}
+[    1.60s] rang 10000 : {"P1_max_rel_dev": "9.7602e-31", "P1_ok": true, "P5_max_ratio": "0.00015901", "P5_ok": true}
+[    1.60s] rang 100000 : {"P1_max_rel_dev": "9.7602e-31", "P1_ok": true, "P5_max_ratio": "2.0966e-5", "P5_ok": true}
+[    1.61s] rang 2000000 : {"P1_max_rel_dev": "9.7602e-31", "P1_ok": true, "P5_max_ratio": "1.3877e-6", "P5_ok": true}
+[    1.61s] all_ok = True

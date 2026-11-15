@@ -1,0 +1,2970 @@
+[
+ {
+  "tours": 2001052,
+  "hauteur_max": 1132490.658714411,
+  "debut": 1000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 0.002774056129660344,
+  "R2_decidee": true,
+  "premiers_vrais": 43,
+  "puissances_vraies": 1,
+  "composes_vrais": 256,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.99859759694322,
+    "saut_max_sur_composes": 0.0009946292589796699,
+    "saut_max_sur_puissances": 0.09994768135360096,
+    "marge": 0.9976029676842404,
+    "err_max_premiers": 0.0014024030567799661,
+    "err_max_composes": 0.0009946292589796699,
+    "err_max_puissances": 5.231864639904105e-05,
+    "R0": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.9986550352543229,
+    "saut_max_sur_composes": 0.0012870500646226615,
+    "saut_max_sur_puissances": 0.09989829287244896,
+    "marge": 0.9973679851897002,
+    "err_max_premiers": 0.0014040195338687056,
+    "err_max_composes": 0.0012870500646226615,
+    "err_max_puissances": 0.0001017071275510456,
+    "R0": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.993974057063635,
+    "saut_max_sur_composes": 0.005586059141111832,
+    "saut_max_sur_puissances": 0.09956978992283094,
+    "marge": 0.9883879979225231,
+    "err_max_premiers": 0.006025942936365047,
+    "err_max_composes": 0.005586059141111832,
+    "err_max_puissances": 0.0004302100771690631,
+    "R0": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.9992710037936278,
+    "saut_max_sur_composes": 0.0007235426402553255,
+    "saut_max_sur_puissances": 0.09994242702499756,
+    "marge": 0.9985474611533725,
+    "err_max_premiers": 0.0007289962063722344,
+    "err_max_composes": 0.0007235426402553255,
+    "err_max_puissances": 5.7572975002445625e-05,
+    "R0": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 2001052,
+  "hauteur_max": 1132490.658714411,
+  "debut": 10000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 0.027740561296603444,
+  "R2_decidee": true,
+  "premiers_vrais": 33,
+  "puissances_vraies": 1,
+  "composes_vrais": 266,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.988734327252358,
+    "saut_max_sur_composes": 0.0076523081537784796,
+    "saut_max_sur_puissances": 0.4944711166240141,
+    "marge": 0.9810820190985795,
+    "err_max_premiers": 0.011265672747642008,
+    "err_max_composes": 0.0076523081537784796,
+    "err_max_puissances": 0.0055288833759858935,
+    "R0": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.9886392772577329,
+    "saut_max_sur_composes": 0.00973391166918086,
+    "saut_max_sur_puissances": 0.49707292156975635,
+    "marge": 0.9789053655885521,
+    "err_max_premiers": 0.011360722742267071,
+    "err_max_composes": 0.00973391166918086,
+    "err_max_puissances": 0.002927078430243646,
+    "R0": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.963778529830047,
+    "saut_max_sur_composes": 0.032444451456565916,
+    "saut_max_sur_puissances": 0.48209021136570807,
+    "marge": 0.931334078373481,
+    "err_max_premiers": 0.03622147016995303,
+    "err_max_composes": 0.032444451456565916,
+    "err_max_puissances": 0.017909788634291934,
+    "R0": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.9942181610574494,
+    "saut_max_sur_composes": 0.005719370487183104,
+    "saut_max_sur_puissances": 0.4971575015843265,
+    "marge": 0.9884987905702664,
+    "err_max_premiers": 0.005781838942550577,
+    "err_max_composes": 0.005719370487183104,
+    "err_max_puissances": 0.0028424984156735222,
+    "R0": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 2001052,
+  "hauteur_max": 1132490.658714411,
+  "debut": 50000,
+  "largeur": 300,
+  "inedite": true,
+  "cellule_tour_haute": 0.1387028064830172,
+  "R2_decidee": true,
+  "premiers_vrais": 29,
+  "puissances_vraies": 0,
+  "composes_vrais": 271,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.9485922654048566,
+    "saut_max_sur_composes": 0.03322564122658915,
+    "saut_max_sur_puissances": null,
+    "marge": 0.9153666241782675,
+    "err_max_premiers": 0.05140773459514336,
+    "err_max_composes": 0.03322564122658915,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 29,
+     "justes": 29,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 29,
+     "justes": 29,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.9715641635183153,
+    "saut_max_sur_composes": 0.029663923734094357,
+    "saut_max_sur_puissances": null,
+    "marge": 0.941900239784221,
+    "err_max_premiers": 0.028435836481684684,
+    "err_max_composes": 0.029663923734094357,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 29,
+     "justes": 29,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 29,
+     "justes": 29,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.8677081077978912,
+    "saut_max_sur_composes": 0.11353117267641391,
+    "saut_max_sur_puissances": null,
+    "marge": 0.7541769351214773,
+    "err_max_premiers": 0.1322918922021088,
+    "err_max_composes": 0.11353117267641391,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 29,
+     "justes": 29,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 29,
+     "justes": 29,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.9718173364476421,
+    "saut_max_sur_composes": 0.026804043545078916,
+    "saut_max_sur_puissances": null,
+    "marge": 0.9450132929025632,
+    "err_max_premiers": 0.02818266355235788,
+    "err_max_composes": 0.026804043545078916,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 29,
+     "justes": 29,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 29,
+     "justes": 29,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 2001052,
+  "hauteur_max": 1132490.658714411,
+  "debut": 100000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 0.2774056129660344,
+  "R2_decidee": true,
+  "premiers_vrais": 23,
+  "puissances_vraies": 0,
+  "composes_vrais": 277,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.9023223216078503,
+    "saut_max_sur_composes": 0.06270119340096658,
+    "saut_max_sur_puissances": null,
+    "marge": 0.8396211282068837,
+    "err_max_premiers": 0.09767767839214969,
+    "err_max_composes": 0.06270119340096658,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 23,
+     "justes": 23,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 23,
+     "justes": 23,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.9107564907823106,
+    "saut_max_sur_composes": 0.09104250312061288,
+    "saut_max_sur_puissances": null,
+    "marge": 0.8197139876616977,
+    "err_max_premiers": 0.08924350921768942,
+    "err_max_composes": 0.09104250312061288,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 23,
+     "justes": 23,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 23,
+     "justes": 23,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.774769175614168,
+    "saut_max_sur_composes": 0.1865661684689528,
+    "saut_max_sur_puissances": null,
+    "marge": 0.5882030071452152,
+    "err_max_premiers": 0.22523082438583197,
+    "err_max_composes": 0.1865661684689528,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 23,
+     "justes": 23,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 23,
+     "justes": 23,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.9473220811912375,
+    "saut_max_sur_composes": 0.04789042710119253,
+    "saut_max_sur_puissances": null,
+    "marge": 0.899431654090045,
+    "err_max_premiers": 0.05267791880876249,
+    "err_max_composes": 0.04789042710119253,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 23,
+     "justes": 23,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 23,
+     "justes": 23,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 2001052,
+  "hauteur_max": 1132490.658714411,
+  "debut": 150000,
+  "largeur": 300,
+  "inedite": true,
+  "cellule_tour_haute": 0.41610841944905164,
+  "R2_decidee": true,
+  "premiers_vrais": 27,
+  "puissances_vraies": 0,
+  "composes_vrais": 273,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.8398318280704038,
+    "saut_max_sur_composes": 0.11243520964153966,
+    "saut_max_sur_puissances": null,
+    "marge": 0.7273966184288642,
+    "err_max_premiers": 0.1601681719295962,
+    "err_max_composes": 0.11243520964153966,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 27,
+     "justes": 27,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 27,
+     "justes": 27,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 1.1238368387044604,
+    "saut_max_sur_composes": 0.030477055534837455,
+    "saut_max_sur_puissances": null,
+    "marge": 1.093359783169623,
+    "err_max_premiers": 0.1570781124307612,
+    "err_max_composes": 0.16378786101942996,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 27,
+     "justes": 27,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 27,
+     "justes": 27,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.697745319470961,
+    "saut_max_sur_composes": 0.2461827292922946,
+    "saut_max_sur_puissances": null,
+    "marge": 0.4515625901786664,
+    "err_max_premiers": 0.30225468052903903,
+    "err_max_composes": 0.2461827292922946,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 27,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 27,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.9048041885634812,
+    "saut_max_sur_composes": 0.09944422453442776,
+    "saut_max_sur_puissances": null,
+    "marge": 0.8053599640290534,
+    "err_max_premiers": 0.09519581143651878,
+    "err_max_composes": 0.09944422453442776,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 27,
+     "justes": 27,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 27,
+     "justes": 27,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 2001052,
+  "hauteur_max": 1132490.658714411,
+  "debut": 200000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 0.5548112259320688,
+  "R2_decidee": true,
+  "premiers_vrais": 25,
+  "puissances_vraies": 0,
+  "composes_vrais": 275,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.7298138336883778,
+    "saut_max_sur_composes": 0.1036239601014258,
+    "saut_max_sur_puissances": null,
+    "marge": 0.626189873586952,
+    "err_max_premiers": 0.2701861663116222,
+    "err_max_composes": 0.1036239601014258,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 1.1652399412422707,
+    "saut_max_sur_composes": 0.011886947745107306,
+    "saut_max_sur_puissances": null,
+    "marge": 1.1533529934971634,
+    "err_max_premiers": 0.17709590838528277,
+    "err_max_composes": 0.07417782388416548,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 25,
+     "justes": 25,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 25,
+     "justes": 25,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.6290960516180685,
+    "saut_max_sur_composes": 0.1552740356315632,
+    "saut_max_sur_puissances": null,
+    "marge": 0.4738220159865053,
+    "err_max_premiers": 0.3709039483819315,
+    "err_max_composes": 0.1552740356315632,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.9017541739334782,
+    "saut_max_sur_composes": 0.04765889912194896,
+    "saut_max_sur_puissances": null,
+    "marge": 0.8540952748115292,
+    "err_max_premiers": 0.09824582606652177,
+    "err_max_composes": 0.04765889912194896,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 25,
+     "justes": 25,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 25,
+     "justes": 25,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 2001052,
+  "hauteur_max": 1132490.658714411,
+  "debut": 250000,
+  "largeur": 300,
+  "inedite": true,
+  "cellule_tour_haute": 0.693514032415086,
+  "R2_decidee": true,
+  "premiers_vrais": 21,
+  "puissances_vraies": 0,
+  "composes_vrais": 279,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.6280892273672276,
+    "saut_max_sur_composes": 0.2784268772278277,
+    "saut_max_sur_puissances": null,
+    "marge": 0.3496623501393999,
+    "err_max_premiers": 0.3719107726327724,
+    "err_max_composes": 0.2784268772278277,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 21,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 21,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 1.0677016972356939,
+    "saut_max_sur_composes": 0.06778941391440811,
+    "saut_max_sur_puissances": null,
+    "marge": 0.9999122833212858,
+    "err_max_premiers": 0.13034722464638016,
+    "err_max_composes": 0.17656668890770635,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 21,
+     "justes": 21,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 21,
+     "justes": 21,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.562168912887172,
+    "saut_max_sur_composes": 0.3472228110754232,
+    "saut_max_sur_puissances": null,
+    "marge": 0.21494610181174878,
+    "err_max_premiers": 0.43783108711282803,
+    "err_max_composes": 0.3472228110754232,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 21,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 21,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.8756927254792796,
+    "saut_max_sur_composes": 0.08396625923224081,
+    "saut_max_sur_puissances": null,
+    "marge": 0.7917264662470388,
+    "err_max_premiers": 0.12430727452072043,
+    "err_max_composes": 0.08396625923224081,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 21,
+     "justes": 21,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 21,
+     "justes": 21,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 2001052,
+  "hauteur_max": 1132490.658714411,
+  "debut": 300000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 0.8322168388981033,
+  "R2_decidee": true,
+  "premiers_vrais": 22,
+  "puissances_vraies": 0,
+  "composes_vrais": 278,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.5459327935825614,
+    "saut_max_sur_composes": 0.35940583678433397,
+    "saut_max_sur_puissances": null,
+    "marge": 0.18652695679822745,
+    "err_max_premiers": 0.4540672064174386,
+    "err_max_composes": 0.35940583678433397,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.9442934601053198,
+    "saut_max_sur_composes": 0.17427239884962673,
+    "saut_max_sur_puissances": null,
+    "marge": 0.770021061255693,
+    "err_max_premiers": 0.08676707040396581,
+    "err_max_composes": 0.17427239884962673,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 22,
+     "justes": 22,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 22,
+     "justes": 22,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.5023227174301647,
+    "saut_max_sur_composes": 0.3950218875617562,
+    "saut_max_sur_puissances": null,
+    "marge": 0.10730082986840844,
+    "err_max_premiers": 0.49767728256983534,
+    "err_max_composes": 0.3950218875617562,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.8180941769404904,
+    "saut_max_sur_composes": 0.13424145678527674,
+    "saut_max_sur_puissances": null,
+    "marge": 0.6838527201552136,
+    "err_max_premiers": 0.18190582305950964,
+    "err_max_composes": 0.13424145678527674,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 22,
+     "justes": 22,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 22,
+     "justes": 22,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 2001052,
+  "hauteur_max": 1132490.658714411,
+  "debut": 400000,
+  "largeur": 300,
+  "inedite": true,
+  "cellule_tour_haute": 1.1096224518641375,
+  "R2_decidee": false,
+  "premiers_vrais": 24,
+  "puissances_vraies": 0,
+  "composes_vrais": 276,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.42757978915185135,
+    "saut_max_sur_composes": 0.4497126950611499,
+    "saut_max_sur_puissances": null,
+    "marge": -0.02213290590929856,
+    "err_max_premiers": 0.5724202108481486,
+    "err_max_composes": 0.4497126950611499,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.694350491931728,
+    "saut_max_sur_composes": 0.30483420873637734,
+    "saut_max_sur_puissances": null,
+    "marge": 0.3895162831953507,
+    "err_max_premiers": 0.30564950806827196,
+    "err_max_composes": 0.30483420873637734,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 18,
+     "justes": 18,
+     "manques": 6,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 18,
+     "justes": 18,
+     "manques": 6,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.4066008217235776,
+    "saut_max_sur_composes": 0.4526203444439061,
+    "saut_max_sur_puissances": null,
+    "marge": -0.0460195227203285,
+    "err_max_premiers": 0.5933991782764224,
+    "err_max_composes": 0.4526203444439061,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.6425651827210825,
+    "saut_max_sur_composes": 0.3608736646682834,
+    "saut_max_sur_puissances": null,
+    "marge": 0.28169151805279913,
+    "err_max_premiers": 0.35743481727891746,
+    "err_max_composes": 0.3608736646682834,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 4,
+     "justes": 4,
+     "manques": 20,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 4,
+     "justes": 4,
+     "manques": 20,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 2001052,
+  "hauteur_max": 1132490.658714411,
+  "debut": 500000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 1.387028064830172,
+  "R2_decidee": false,
+  "premiers_vrais": 25,
+  "puissances_vraies": 0,
+  "composes_vrais": 275,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.3493120248225341,
+    "saut_max_sur_composes": 0.46722480797732857,
+    "saut_max_sur_puissances": null,
+    "marge": -0.11791278315479448,
+    "err_max_premiers": 0.6506879751774659,
+    "err_max_composes": 0.46722480797732857,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.5401912414916581,
+    "saut_max_sur_composes": 0.46900337385672536,
+    "saut_max_sur_puissances": null,
+    "marge": 0.07118786763493273,
+    "err_max_premiers": 0.4598087585083419,
+    "err_max_composes": 0.46900337385672536,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 1,
+     "justes": 1,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 1,
+     "justes": 1,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.3378103759887546,
+    "saut_max_sur_composes": 0.4626935921010501,
+    "saut_max_sur_puissances": null,
+    "marge": -0.12488321611229553,
+    "err_max_premiers": 0.6621896240112455,
+    "err_max_composes": 0.4626935921010501,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.5252189189609306,
+    "saut_max_sur_composes": 0.4840203225499329,
+    "saut_max_sur_puissances": null,
+    "marge": 0.04119859641099777,
+    "err_max_premiers": 0.47478108103906935,
+    "err_max_composes": 0.4840203225499329,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 2001052,
+  "hauteur_max": 1132490.658714411,
+  "debut": 700000,
+  "largeur": 300,
+  "inedite": true,
+  "cellule_tour_haute": 1.9418392907622408,
+  "R2_decidee": false,
+  "premiers_vrais": 22,
+  "puissances_vraies": 0,
+  "composes_vrais": 278,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.25418417362526946,
+    "saut_max_sur_composes": 0.4132308728536901,
+    "saut_max_sur_puissances": null,
+    "marge": -0.15904669922842063,
+    "err_max_premiers": 0.7458158263747305,
+    "err_max_composes": 0.4132308728536901,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.46138529795518207,
+    "saut_max_sur_composes": 0.631452578436854,
+    "saut_max_sur_puissances": null,
+    "marge": -0.1700672804816719,
+    "err_max_premiers": 0.538614702044818,
+    "err_max_composes": 0.631452578436854,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.249764651834918,
+    "saut_max_sur_composes": 0.4086840212137915,
+    "saut_max_sur_puissances": null,
+    "marge": -0.1589193693788735,
+    "err_max_premiers": 0.750235348165082,
+    "err_max_composes": 0.4086840212137915,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.4482680967117341,
+    "saut_max_sur_composes": 0.6189987591480287,
+    "saut_max_sur_puissances": null,
+    "marge": -0.1707306624362946,
+    "err_max_premiers": 0.5517319032882659,
+    "err_max_composes": 0.6189987591480287,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 2001052,
+  "hauteur_max": 1132490.658714411,
+  "debut": 1000000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 2.774056129660344,
+  "R2_decidee": false,
+  "premiers_vrais": 24,
+  "puissances_vraies": 0,
+  "composes_vrais": 276,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.1812371641932337,
+    "saut_max_sur_composes": 0.32933635634427727,
+    "saut_max_sur_puissances": null,
+    "marge": -0.14809919215104356,
+    "err_max_premiers": 0.8187628358067662,
+    "err_max_composes": 0.32933635634427727,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.2312090474172157,
+    "saut_max_sur_composes": 0.63438349179583,
+    "saut_max_sur_puissances": null,
+    "marge": -0.40317444437861427,
+    "err_max_premiers": 0.7687909525827843,
+    "err_max_composes": 0.63438349179583,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.17970890653802926,
+    "saut_max_sur_composes": 0.3267982258388152,
+    "saut_max_sur_puissances": null,
+    "marge": -0.14708931930078592,
+    "err_max_premiers": 0.8202910934619707,
+    "err_max_composes": 0.3267982258388152,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.23155851711208675,
+    "saut_max_sur_composes": 0.6232549728264146,
+    "saut_max_sur_puissances": null,
+    "marge": -0.3916964557143279,
+    "err_max_premiers": 0.7684414828879133,
+    "err_max_composes": 0.6232549728264146,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 2001052,
+  "hauteur_max": 1132490.658714411,
+  "debut": 10000000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 27.740561296603445,
+  "R2_decidee": false,
+  "premiers_vrais": 14,
+  "puissances_vraies": 0,
+  "composes_vrais": 286,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.033324910448989976,
+    "saut_max_sur_composes": 0.08565601825538205,
+    "saut_max_sur_puissances": null,
+    "marge": -0.05233110780639207,
+    "err_max_premiers": 0.96667508955101,
+    "err_max_composes": 0.08565601825538205,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.024396939948622944,
+    "saut_max_sur_composes": 0.11517122206413698,
+    "saut_max_sur_puissances": null,
+    "marge": -0.09077428211551403,
+    "err_max_premiers": 0.9756030600513771,
+    "err_max_composes": 0.11517122206413698,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.03441394319420999,
+    "saut_max_sur_composes": 0.08579241632011542,
+    "saut_max_sur_puissances": null,
+    "marge": -0.051378473125905426,
+    "err_max_premiers": 0.96558605680579,
+    "err_max_composes": 0.08579241632011542,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.025204587496487227,
+    "saut_max_sur_composes": 0.11535929139817049,
+    "saut_max_sur_puissances": null,
+    "marge": -0.09015470390168326,
+    "err_max_premiers": 0.9747954125035128,
+    "err_max_composes": 0.11535929139817049,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 2001052,
+  "hauteur_max": 1132490.658714411,
+  "debut": 100000000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 277.4056129660344,
+  "R2_decidee": false,
+  "premiers_vrais": 17,
+  "puissances_vraies": 0,
+  "composes_vrais": 283,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.04880568599827823,
+    "saut_max_sur_composes": 0.05368515984814096,
+    "saut_max_sur_puissances": null,
+    "marge": -0.004879473849862731,
+    "err_max_premiers": 0.9511943140017217,
+    "err_max_composes": 0.05368515984814096,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.04197279832219177,
+    "saut_max_sur_composes": 0.0575519501607151,
+    "saut_max_sur_puissances": null,
+    "marge": -0.015579151838523327,
+    "err_max_premiers": 0.9580272016778082,
+    "err_max_composes": 0.0575519501607151,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.0,
+    "saut_max_sur_composes": 0.21714723941915598,
+    "saut_max_sur_puissances": null,
+    "marge": -0.21714723941915598,
+    "err_max_premiers": 1.0,
+    "err_max_composes": 0.21714723941915598,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.0,
+    "saut_max_sur_composes": 0.21714722267988348,
+    "saut_max_sur_puissances": null,
+    "marge": -0.21714722267988348,
+    "err_max_premiers": 1.0,
+    "err_max_composes": 0.21714722267988348,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 500000,
+  "hauteur_max": 319387.21930923,
+  "debut": 1000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 0.009836312988304364,
+  "R2_decidee": true,
+  "premiers_vrais": 43,
+  "puissances_vraies": 1,
+  "composes_vrais": 256,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.9949856851384138,
+    "saut_max_sur_composes": 0.0034926368077567594,
+    "saut_max_sur_puissances": 0.09981766586899823,
+    "marge": 0.991493048330657,
+    "err_max_premiers": 0.005014314861586211,
+    "err_max_composes": 0.0034926368077567594,
+    "err_max_puissances": 0.0001823341310017712,
+    "R0": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.9951213504015337,
+    "saut_max_sur_composes": 0.004711698842790206,
+    "saut_max_sur_puissances": 0.09931755544844983,
+    "marge": 0.9904096515587435,
+    "err_max_premiers": 0.004878649598466289,
+    "err_max_composes": 0.004711698842790206,
+    "err_max_puissances": 0.0006824445515501709,
+    "R0": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.9819054193537137,
+    "saut_max_sur_composes": 0.016552581593226597,
+    "saut_max_sur_puissances": 0.09873290014890115,
+    "marge": 0.9653528377604871,
+    "err_max_premiers": 0.01809458064628633,
+    "err_max_composes": 0.016552581593226597,
+    "err_max_puissances": 0.0012670998510988518,
+    "R0": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.997401919444558,
+    "saut_max_sur_composes": 0.0025869299332338114,
+    "saut_max_sur_puissances": 0.09979898134286472,
+    "marge": 0.9948149895113242,
+    "err_max_premiers": 0.002598080555441973,
+    "err_max_composes": 0.0025869299332338114,
+    "err_max_puissances": 0.00020101865713528788,
+    "R0": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 43,
+     "justes": 43,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 500000,
+  "hauteur_max": 319387.21930923,
+  "debut": 10000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 0.09836312988304363,
+  "R2_decidee": true,
+  "premiers_vrais": 33,
+  "puissances_vraies": 1,
+  "composes_vrais": 266,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.9585068689978655,
+    "saut_max_sur_composes": 0.028536489456404898,
+    "saut_max_sur_puissances": 0.4798529677039435,
+    "marge": 0.9299703795414607,
+    "err_max_premiers": 0.041493131002134476,
+    "err_max_composes": 0.028536489456404898,
+    "err_max_puissances": 0.020147032296056522,
+    "R0": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 1.035021890647354,
+    "saut_max_sur_composes": 0.001506419311908948,
+    "saut_max_sur_puissances": 0.5194153501756146,
+    "marge": 1.033515471335445,
+    "err_max_premiers": 0.04046067064064607,
+    "err_max_composes": 0.02906290948753036,
+    "err_max_puissances": 0.019415350175614576,
+    "R0": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.8975443847654824,
+    "saut_max_sur_composes": 0.08908877828908597,
+    "saut_max_sur_puissances": 0.44937400194113114,
+    "marge": 0.8084556064763964,
+    "err_max_premiers": 0.10245561523451763,
+    "err_max_composes": 0.08908877828908597,
+    "err_max_puissances": 0.05062599805886886,
+    "R0": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.9797711331892036,
+    "saut_max_sur_composes": 0.020217439593968784,
+    "saut_max_sur_puissances": 0.4898872760529479,
+    "marge": 0.9595536935952348,
+    "err_max_premiers": 0.020228866810796386,
+    "err_max_composes": 0.020217439593968784,
+    "err_max_puissances": 0.010112723947052094,
+    "R0": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 33,
+     "justes": 33,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 500000,
+  "hauteur_max": 319387.21930923,
+  "debut": 50000,
+  "largeur": 300,
+  "inedite": true,
+  "cellule_tour_haute": 0.49181564941521816,
+  "R2_decidee": true,
+  "premiers_vrais": 29,
+  "puissances_vraies": 0,
+  "composes_vrais": 271,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.7794426150672225,
+    "saut_max_sur_composes": 0.1560296498516085,
+    "saut_max_sur_puissances": null,
+    "marge": 0.623412965215614,
+    "err_max_premiers": 0.22055738493277754,
+    "err_max_composes": 0.1560296498516085,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 29,
+     "justes": 29,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 29,
+     "justes": 29,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 1.1618828564894954,
+    "saut_max_sur_composes": -0.0005184329770033198,
+    "saut_max_sur_puissances": null,
+    "marge": 1.1624012894664988,
+    "err_max_premiers": 0.1787127873739962,
+    "err_max_composes": 0.11575996943816382,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 29,
+     "justes": 29,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 29,
+     "justes": 29,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.6596471529584207,
+    "saut_max_sur_composes": 0.27276062629062575,
+    "saut_max_sur_puissances": null,
+    "marge": 0.38688652666779494,
+    "err_max_premiers": 0.3403528470415793,
+    "err_max_composes": 0.27276062629062575,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 29,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 29,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.9028203014525923,
+    "saut_max_sur_composes": 0.09425917534593663,
+    "saut_max_sur_puissances": null,
+    "marge": 0.8085611261066556,
+    "err_max_premiers": 0.09717969854740771,
+    "err_max_composes": 0.09425917534593663,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 29,
+     "justes": 29,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 29,
+     "justes": 29,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 500000,
+  "hauteur_max": 319387.21930923,
+  "debut": 100000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 0.9836312988304363,
+  "R2_decidee": true,
+  "premiers_vrais": 23,
+  "puissances_vraies": 0,
+  "composes_vrais": 277,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.47411004943800744,
+    "saut_max_sur_composes": 0.4185731356919528,
+    "saut_max_sur_puissances": null,
+    "marge": 0.05553691374605463,
+    "err_max_premiers": 0.5258899505619925,
+    "err_max_composes": 0.4185731356919528,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 23,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 23,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.8978101520732651,
+    "saut_max_sur_composes": 0.09969404771534264,
+    "saut_max_sur_puissances": null,
+    "marge": 0.7981161043579225,
+    "err_max_premiers": 0.10218984792673491,
+    "err_max_composes": 0.09969404771534264,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 23,
+     "justes": 23,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 23,
+     "justes": 23,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.4453917721090092,
+    "saut_max_sur_composes": 0.43086061919248253,
+    "saut_max_sur_puissances": null,
+    "marge": 0.01453115291652668,
+    "err_max_premiers": 0.5546082278909907,
+    "err_max_composes": 0.43086061919248253,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 23,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 23,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.7833306609665742,
+    "saut_max_sur_composes": 0.22591792037917868,
+    "saut_max_sur_puissances": null,
+    "marge": 0.5574127405873955,
+    "err_max_premiers": 0.21666933903342578,
+    "err_max_composes": 0.22591792037917868,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 23,
+     "justes": 23,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 23,
+     "justes": 23,
+     "manques": 0,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 500000,
+  "hauteur_max": 319387.21930923,
+  "debut": 150000,
+  "largeur": 300,
+  "inedite": true,
+  "cellule_tour_haute": 1.4754469482456545,
+  "R2_decidee": false,
+  "premiers_vrais": 27,
+  "puissances_vraies": 0,
+  "composes_vrais": 273,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.32964560653383945,
+    "saut_max_sur_composes": 0.46668542828271414,
+    "saut_max_sur_puissances": null,
+    "marge": -0.1370398217488747,
+    "err_max_premiers": 0.6703543934661605,
+    "err_max_composes": 0.46668542828271414,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 27,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 27,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.4900376423512365,
+    "saut_max_sur_composes": 0.5862007831970226,
+    "saut_max_sur_puissances": null,
+    "marge": -0.09616314084578614,
+    "err_max_premiers": 0.5099623576487635,
+    "err_max_composes": 0.5862007831970226,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 1,
+     "justes": 1,
+     "manques": 26,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 1,
+     "justes": 1,
+     "manques": 26,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.3200534571335506,
+    "saut_max_sur_composes": 0.46030607445973354,
+    "saut_max_sur_puissances": null,
+    "marge": -0.14025261732618294,
+    "err_max_premiers": 0.6799465428664494,
+    "err_max_composes": 0.46030607445973354,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 27,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 27,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.4839201838425293,
+    "saut_max_sur_composes": 0.5805265247138304,
+    "saut_max_sur_puissances": null,
+    "marge": -0.0966063408713011,
+    "err_max_premiers": 0.5160798161574707,
+    "err_max_composes": 0.5805265247138304,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 27,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 27,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 500000,
+  "hauteur_max": 319387.21930923,
+  "debut": 200000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 1.9672625976608726,
+  "R2_decidee": false,
+  "premiers_vrais": 25,
+  "puissances_vraies": 0,
+  "composes_vrais": 275,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.25074876828338,
+    "saut_max_sur_composes": 0.2332678652511543,
+    "saut_max_sur_puissances": null,
+    "marge": 0.017480903032225686,
+    "err_max_premiers": 0.74925123171662,
+    "err_max_composes": 0.2332678652511543,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.46150160400902973,
+    "saut_max_sur_composes": 0.476833003907045,
+    "saut_max_sur_puissances": null,
+    "marge": -0.015331399898015297,
+    "err_max_premiers": 0.5384983959909703,
+    "err_max_composes": 0.476833003907045,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.2466364953026954,
+    "saut_max_sur_composes": 0.23367235387725538,
+    "saut_max_sur_puissances": null,
+    "marge": 0.012964141425440029,
+    "err_max_premiers": 0.7533635046973046,
+    "err_max_composes": 0.23367235387725538,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.4468789187794717,
+    "saut_max_sur_composes": 0.45465464612059053,
+    "saut_max_sur_puissances": null,
+    "marge": -0.00777572734111881,
+    "err_max_premiers": 0.5531210812205283,
+    "err_max_composes": 0.45465464612059053,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 500000,
+  "hauteur_max": 319387.21930923,
+  "debut": 250000,
+  "largeur": 300,
+  "inedite": true,
+  "cellule_tour_haute": 2.459078247076091,
+  "R2_decidee": false,
+  "premiers_vrais": 21,
+  "puissances_vraies": 0,
+  "composes_vrais": 279,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.20187540504460685,
+    "saut_max_sur_composes": 0.3748158879016244,
+    "saut_max_sur_puissances": null,
+    "marge": -0.17294048285701755,
+    "err_max_premiers": 0.7981245949553931,
+    "err_max_composes": 0.3748158879016244,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 21,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 21,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.34368659270269214,
+    "saut_max_sur_composes": 0.588671546328645,
+    "saut_max_sur_puissances": null,
+    "marge": -0.2449849536259529,
+    "err_max_premiers": 0.6563134072973078,
+    "err_max_composes": 0.588671546328645,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 21,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 21,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.19966836813252253,
+    "saut_max_sur_composes": 0.3710637939562607,
+    "saut_max_sur_puissances": null,
+    "marge": -0.17139542582373818,
+    "err_max_premiers": 0.8003316318674775,
+    "err_max_composes": 0.3710637939562607,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 21,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 21,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.3370908701192677,
+    "saut_max_sur_composes": 0.5808537628812172,
+    "saut_max_sur_puissances": null,
+    "marge": -0.24376289276194946,
+    "err_max_premiers": 0.6629091298807324,
+    "err_max_composes": 0.5808537628812172,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 21,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 21,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 500000,
+  "hauteur_max": 319387.21930923,
+  "debut": 300000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 2.950893896491309,
+  "R2_decidee": false,
+  "premiers_vrais": 22,
+  "puissances_vraies": 0,
+  "composes_vrais": 278,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.17080136908621357,
+    "saut_max_sur_composes": 0.3133029735965122,
+    "saut_max_sur_puissances": null,
+    "marge": -0.14250160451029864,
+    "err_max_premiers": 0.8291986309137864,
+    "err_max_composes": 0.3133029735965122,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.2857517375754014,
+    "saut_max_sur_composes": 0.6299910503229506,
+    "saut_max_sur_puissances": null,
+    "marge": -0.34423931274754915,
+    "err_max_premiers": 0.7142482624245986,
+    "err_max_composes": 0.6299910503229506,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.16953187556385152,
+    "saut_max_sur_composes": 0.31200166914178384,
+    "saut_max_sur_puissances": null,
+    "marge": -0.14246979357793232,
+    "err_max_premiers": 0.8304681244361485,
+    "err_max_composes": 0.31200166914178384,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.2825435087760778,
+    "saut_max_sur_composes": 0.6191121463417637,
+    "saut_max_sur_puissances": null,
+    "marge": -0.3365686375656859,
+    "err_max_premiers": 0.7174564912239222,
+    "err_max_composes": 0.6191121463417637,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 500000,
+  "hauteur_max": 319387.21930923,
+  "debut": 400000,
+  "largeur": 300,
+  "inedite": true,
+  "cellule_tour_haute": 3.9345251953217453,
+  "R2_decidee": false,
+  "premiers_vrais": 24,
+  "puissances_vraies": 0,
+  "composes_vrais": 276,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.13072504937836638,
+    "saut_max_sur_composes": 0.27915011892589464,
+    "saut_max_sur_puissances": null,
+    "marge": -0.14842506954752827,
+    "err_max_premiers": 0.8692749506216336,
+    "err_max_composes": 0.27915011892589464,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.15959119200955563,
+    "saut_max_sur_composes": 0.49019992389126815,
+    "saut_max_sur_puissances": null,
+    "marge": -0.3306087318817125,
+    "err_max_premiers": 0.8404088079904444,
+    "err_max_composes": 0.49019992389126815,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.13024657935805228,
+    "saut_max_sur_composes": 0.2783817329370179,
+    "saut_max_sur_puissances": null,
+    "marge": -0.14813515357896562,
+    "err_max_premiers": 0.8697534206419477,
+    "err_max_composes": 0.2783817329370179,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.1595236057567396,
+    "saut_max_sur_composes": 0.48562387837375537,
+    "saut_max_sur_puissances": null,
+    "marge": -0.3261002726170158,
+    "err_max_premiers": 0.8404763942432604,
+    "err_max_composes": 0.48562387837375537,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 500000,
+  "hauteur_max": 319387.21930923,
+  "debut": 500000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 4.918156494152182,
+  "R2_decidee": false,
+  "premiers_vrais": 25,
+  "puissances_vraies": 0,
+  "composes_vrais": 275,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.10425778124918886,
+    "saut_max_sur_composes": 0.29973605924829433,
+    "saut_max_sur_puissances": null,
+    "marge": -0.19547827799910547,
+    "err_max_premiers": 0.8957422187508112,
+    "err_max_composes": 0.29973605924829433,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.1489852795314962,
+    "saut_max_sur_composes": 0.398520975062091,
+    "saut_max_sur_puissances": null,
+    "marge": -0.2495356955305948,
+    "err_max_premiers": 0.8510147204685038,
+    "err_max_composes": 0.398520975062091,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.10399907889726873,
+    "saut_max_sur_composes": 0.2992786194069136,
+    "saut_max_sur_puissances": null,
+    "marge": -0.19527954050964486,
+    "err_max_premiers": 0.8960009211027313,
+    "err_max_composes": 0.2992786194069136,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.14855453222467233,
+    "saut_max_sur_composes": 0.39775091625826114,
+    "saut_max_sur_puissances": null,
+    "marge": -0.24919638403358882,
+    "err_max_premiers": 0.8514454677753277,
+    "err_max_composes": 0.39775091625826114,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 25,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 500000,
+  "hauteur_max": 319387.21930923,
+  "debut": 700000,
+  "largeur": 300,
+  "inedite": true,
+  "cellule_tour_haute": 6.885419091813054,
+  "R2_decidee": false,
+  "premiers_vrais": 22,
+  "puissances_vraies": 0,
+  "composes_vrais": 278,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.07572725262834423,
+    "saut_max_sur_composes": 0.18803506715904572,
+    "saut_max_sur_puissances": null,
+    "marge": -0.11230781453070149,
+    "err_max_premiers": 0.9242727473716558,
+    "err_max_composes": 0.18803506715904572,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.08685629580034761,
+    "saut_max_sur_composes": 0.33219876903933326,
+    "saut_max_sur_puissances": null,
+    "marge": -0.24534247323898567,
+    "err_max_premiers": 0.9131437041996524,
+    "err_max_composes": 0.33219876903933326,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.07563707035946057,
+    "saut_max_sur_composes": 0.18785869856420426,
+    "saut_max_sur_puissances": null,
+    "marge": -0.11222162820474368,
+    "err_max_premiers": 0.9243629296405395,
+    "err_max_composes": 0.18785869856420426,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.08678340857970927,
+    "saut_max_sur_composes": 0.3312344175153376,
+    "saut_max_sur_puissances": null,
+    "marge": -0.24445100893562832,
+    "err_max_premiers": 0.9132165914202908,
+    "err_max_composes": 0.3312344175153376,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 22,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 500000,
+  "hauteur_max": 319387.21930923,
+  "debut": 1000000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 9.836312988304364,
+  "R2_decidee": false,
+  "premiers_vrais": 24,
+  "puissances_vraies": 0,
+  "composes_vrais": 276,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.056156022646796644,
+    "saut_max_sur_composes": 0.15831858254346334,
+    "saut_max_sur_puissances": null,
+    "marge": -0.1021625598966667,
+    "err_max_premiers": 0.9438439773532034,
+    "err_max_composes": 0.15831858254346334,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.036754763836654006,
+    "saut_max_sur_composes": 0.25812593422300456,
+    "saut_max_sur_puissances": null,
+    "marge": -0.22137117038635057,
+    "err_max_premiers": 0.963245236163346,
+    "err_max_composes": 0.25812593422300456,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.056137569455417514,
+    "saut_max_sur_composes": 0.15826369047665925,
+    "saut_max_sur_puissances": null,
+    "marge": -0.10212612102124174,
+    "err_max_premiers": 0.9438624305445825,
+    "err_max_composes": 0.15826369047665925,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.03688003983045971,
+    "saut_max_sur_composes": 0.2578395874126544,
+    "saut_max_sur_puissances": null,
+    "marge": -0.2209595475821947,
+    "err_max_premiers": 0.9631199601695403,
+    "err_max_composes": 0.2578395874126544,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 24,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 500000,
+  "hauteur_max": 319387.21930923,
+  "debut": 10000000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 98.36312988304364,
+  "R2_decidee": false,
+  "premiers_vrais": 14,
+  "puissances_vraies": 0,
+  "composes_vrais": 286,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.04350057718057356,
+    "saut_max_sur_composes": 0.05923511425946182,
+    "saut_max_sur_puissances": null,
+    "marge": -0.015734537078888257,
+    "err_max_premiers": 0.9564994228194265,
+    "err_max_composes": 0.05923511425946182,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.021982051675882328,
+    "saut_max_sur_composes": 0.07101945811156102,
+    "saut_max_sur_puissances": null,
+    "marge": -0.04903740643567869,
+    "err_max_premiers": 0.9780179483241177,
+    "err_max_composes": 0.07101945811156102,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.04410801169962125,
+    "saut_max_sur_composes": 0.06010316917344802,
+    "saut_max_sur_puissances": null,
+    "marge": -0.015995157473826765,
+    "err_max_premiers": 0.9558919883003787,
+    "err_max_composes": 0.06010316917344802,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.022781060987716473,
+    "saut_max_sur_composes": 0.07173605620331018,
+    "saut_max_sur_puissances": null,
+    "marge": -0.04895499521559371,
+    "err_max_premiers": 0.9772189390122835,
+    "err_max_composes": 0.07173605620331018,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 14,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ },
+ {
+  "tours": 500000,
+  "hauteur_max": 319387.21930923,
+  "debut": 100000000,
+  "largeur": 300,
+  "inedite": false,
+  "cellule_tour_haute": 983.6312988304363,
+  "R2_decidee": false,
+  "premiers_vrais": 17,
+  "puissances_vraies": 0,
+  "composes_vrais": 283,
+  "canaux": {
+   "J-F": {
+    "saut_min_sur_premiers": 0.05253273961371642,
+    "saut_max_sur_composes": 0.053035520030030404,
+    "saut_max_sur_puissances": null,
+    "marge": -0.0005027804163139846,
+    "err_max_premiers": 0.9474672603862836,
+    "err_max_composes": 0.053035520030030404,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "J-noF": {
+    "saut_min_sur_premiers": 0.053753700802197726,
+    "saut_max_sur_composes": 0.05451888627987796,
+    "saut_max_sur_puissances": null,
+    "marge": -0.0007651854776802303,
+    "err_max_premiers": 0.9462462991978022,
+    "err_max_composes": 0.05451888627987796,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-F": {
+    "saut_min_sur_premiers": 0.05428680236927389,
+    "saut_max_sur_composes": 0.21714723871186226,
+    "saut_max_sur_puissances": null,
+    "marge": -0.16286043634258837,
+    "err_max_premiers": 0.9457131976307261,
+    "err_max_composes": 0.21714723871186226,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   },
+   "D2-noF": {
+    "saut_min_sur_premiers": 0.0,
+    "saut_max_sur_composes": 0.21714722928128355,
+    "saut_max_sur_puissances": null,
+    "marge": -0.21714722928128355,
+    "err_max_premiers": 1.0,
+    "err_max_composes": 0.21714722928128355,
+    "err_max_puissances": null,
+    "R0": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    },
+    "R1": {
+     "predits": 0,
+     "justes": 0,
+     "manques": 17,
+     "faux_composes": 0,
+     "faux_puissances": 0
+    }
+   }
+  }
+ }
+]

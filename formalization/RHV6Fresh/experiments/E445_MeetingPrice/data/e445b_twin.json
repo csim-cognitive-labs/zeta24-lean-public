@@ -1,0 +1,48 @@
+{
+ "dps": 30,
+ "towers": {
+  "1": {
+   "P1_max_rel_dev": "9.7602e-31",
+   "P1_ok": true,
+   "P5_max_ratio": "0.10518",
+   "P5_ok": true
+  },
+  "10": {
+   "P1_max_rel_dev": "9.7602e-31",
+   "P1_ok": true,
+   "P5_max_ratio": "0.031066",
+   "P5_ok": true
+  },
+  "100": {
+   "P1_max_rel_dev": "9.7602e-31",
+   "P1_ok": true,
+   "P5_max_ratio": "0.0066192",
+   "P5_ok": true
+  },
+  "1000": {
+   "P1_max_rel_dev": "9.7602e-31",
+   "P1_ok": true,
+   "P5_max_ratio": "0.001106",
+   "P5_ok": true
+  },
+  "10000": {
+   "P1_max_rel_dev": "9.7602e-31",
+   "P1_ok": true,
+   "P5_max_ratio": "0.00015901",
+   "P5_ok": true
+  },
+  "100000": {
+   "P1_max_rel_dev": "9.7602e-31",
+   "P1_ok": true,
+   "P5_max_ratio": "2.0966e-5",
+   "P5_ok": true
+  },
+  "2000000": {
+   "P1_max_rel_dev": "9.7602e-31",
+   "P1_ok": true,
+   "P5_max_ratio": "1.3877e-6",
+   "P5_ok": true
+  }
+ },
+ "all_ok": true
+}

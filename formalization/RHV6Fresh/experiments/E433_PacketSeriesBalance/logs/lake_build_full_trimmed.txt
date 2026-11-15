@@ -1,0 +1,11 @@
+⚠ [3575/3597] Replayed RHV3Lean.Objects.TrueZero
+warning: RHV3Lean/Objects/TrueZero.lean:183:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+...
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/DemonstrationChain.lean:1120:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+Build completed successfully (9064 jobs).

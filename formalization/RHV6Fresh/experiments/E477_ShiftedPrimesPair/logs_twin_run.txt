@@ -1,0 +1,15 @@
+[     0.0s] crible jusqu'à 30000000
+[     0.8s] premiers : 1857860 ; support Λ ≥ 1000 : 1858526
+[     3.3s] Tour 1 β=0.5 témoin : décalés 0 ; max|D| 0.0e+00
+[     4.0s] Tour 1 T=14.13 β=0.45 δ/π=2.25e-03 cellules 44 décalés 3062 | P1 2.50e-03 (écart 0.113) | P2 résidu 0.000 |D| 1.14 | P3 5.0e-12 | P4 R 1.312 (non déc. 0.999) | P5 borne 2.83 pente 1.601557430271909 S/x^1.5 -1.83e-04
+[     4.5s] Tour 1 T=14.13 β=0.4 δ/π=4.50e-03 cellules 44 décalés 6177 | P1 5.05e-03 (écart 0.122) | P2 résidu 0.001 |D| 1.13 | P3 2.0e-12 | P4 R 1.210 (non déc. 0.999) | P5 borne 11.48 pente 1.721054101748115 S/x^1.5 -1.03e-03
+[     5.0s] Tour 1 T=14.13 β=0.3 δ/π=9.00e-03 cellules 44 décalés 12272 | P1 1.00e-02 (écart 0.113) | P2 résidu 0.001 |D| 1.13 | P3 5.6e-13 | P4 R 1.155 (non déc. 0.998) | P5 borne 3.17 pente 1.877993711547389 S/x^1.5 -2.87e-03
+[     5.9s] Tour 10 β=0.5 témoin : décalés 0 ; max|D| 0.0e+00
+[     6.6s] Tour 10 T=49.77 β=0.45 δ/π=6.39e-04 cellules 162 décalés 1139 | P1 6.23e-04 (écart 0.026) | P2 résidu 0.000 |D| 1.02 | P3 1.2e-10 | P4 R 0.602 (non déc. 1.000) | P5 borne 87.64 pente 1.5341973435240246 S/x^1.5 4.99e-06
+[     7.3s] Tour 10 T=49.77 β=0.4 δ/π=1.28e-03 cellules 162 décalés 2366 | P1 1.29e-03 (écart 0.012) | P2 résidu 0.000 |D| 1.07 | P3 4.4e-11 | P4 R 1.321 (non déc. 1.000) | P5 borne 66.50 pente 1.511377682624304 S/x^1.5 8.27e-06
+[     8.1s] Tour 10 T=49.77 β=0.3 δ/π=2.56e-03 cellules 162 décalés 4722 | P1 2.58e-03 (écart 0.011) | P2 résidu 0.000 |D| 1.04 | P3 1.8e-11 | P4 R 1.167 (non déc. 1.000) | P5 borne 123.04 pente 1.4486989959911178 S/x^1.5 6.08e-06
+[     8.4s] Tour 100 β=0.5 témoin : décalés 0 ; max|D| 0.0e+00
+[    10.6s] Tour 100 T=236.52 β=0.45 δ/π=1.35e-04 cellules 774 décalés 238 | P1 1.29e-04 (écart 0.039) | P2 résidu 0.000 |D| 0.98 | P3 2.7e-09 | P4 R -0.140 (non déc. 1.000) | P5 borne 1178.64 pente 1.4883998807204983 S/x^1.5 1.27e-08
+[    12.7s] Tour 100 T=236.52 β=0.4 δ/π=2.69e-04 cellules 774 décalés 473 | P1 2.57e-04 (écart 0.046) | P2 résidu 0.000 |D| 0.99 | P3 6.6e-10 | P4 R 1.387 (non déc. 1.000) | P5 borne 13198.94 pente 1.492172380950578 S/x^1.5 2.67e-07
+[    15.0s] Tour 100 T=236.52 β=0.3 δ/π=5.38e-04 cellules 774 décalés 973 | P1 5.29e-04 (écart 0.017) | P2 résidu 0.000 |D| 1.03 | P3 2.7e-10 | P4 R -2.814 (non déc. 1.000) | P5 borne 3324.85 pente 1.4321258731828668 S/x^1.5 2.30e-07
+[    15.0s] verdict jumeau {"P1": false, "P2": true, "P3": false, "P4": true, "P5": false, "P6": {"1": {"R": [1.3121801101425066, 1.2098020432974461, 1.155043567389043], "R_delta": [0.009271738724307668, 0.017096477668747494, 0.032643678477590476], "second_ordre": 1.0, "premier_ordre": 0.0}, "10": {"R": [0.6021796583730905, 1.3214619164518837, 1.1671737235500899], "R_delta": [0.0012097093304599613, 0.00530932314177079, 0.009378821112076245], "second_ordre": 0.0, "premier_ordre": 0.0}}, "temoin": true} ; écrit twin_results.json

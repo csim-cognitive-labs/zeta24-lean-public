@@ -1,0 +1,80 @@
+{
+ "zeros": 2001052,
+ "sha256": "2ef7b752c2f17405222e670a61098250c8e4e09047f823f41e2b41a7b378e7c6",
+ "dps": 30,
+ "points": [
+  {
+   "label": "z\u00e9ro rang 1",
+   "gamma": 14.134725142,
+   "abs_zeta": 2.1043088827289015e-10,
+   "abs_dzeta": 0.7931604333910833,
+   "is_zero": true,
+   "ok": true
+  },
+  {
+   "label": "z\u00e9ro rang 10",
+   "gamma": 49.773832478,
+   "abs_zeta": 4.649849270610868e-10,
+   "abs_dzeta": 1.4189322507315414,
+   "is_zero": true,
+   "ok": true
+  },
+  {
+   "label": "z\u00e9ro rang 100",
+   "gamma": 236.524229666,
+   "abs_zeta": 7.342485219317283e-10,
+   "abs_dzeta": 3.995024593183204,
+   "is_zero": true,
+   "ok": true
+  },
+  {
+   "label": "z\u00e9ro rang 1000",
+   "gamma": 1419.422480946,
+   "abs_zeta": 1.1872979561414134e-11,
+   "abs_dzeta": 2.784406256504349,
+   "is_zero": true,
+   "ok": true
+  },
+  {
+   "label": "z\u00e9ro rang 10000",
+   "gamma": 9877.782654004,
+   "abs_zeta": 1.3039064081935944e-08,
+   "abs_dzeta": 8.689018832418348,
+   "is_zero": true,
+   "ok": true
+  },
+  {
+   "label": "z\u00e9ro rang 100000",
+   "gamma": 74920.827498994,
+   "abs_zeta": 4.147396811595339e-09,
+   "abs_dzeta": 21.784892583053736,
+   "is_zero": true,
+   "ok": true
+  },
+  {
+   "label": "contr\u00f4le milieu rangs 1\u20132",
+   "gamma": 17.5783823905,
+   "abs_zeta": 2.3159513435419194,
+   "abs_dzeta": 1.2018750936818645,
+   "is_zero": false,
+   "ok": true
+  },
+  {
+   "label": "contr\u00f4le milieu rangs 100\u2013101",
+   "gamma": 237.1470250735,
+   "abs_zeta": 1.1979254867484936,
+   "abs_dzeta": 2.193429752995064,
+   "is_zero": false,
+   "ok": true
+  },
+  {
+   "label": "contr\u00f4le milieu rangs 10000\u201310001",
+   "gamma": 9878.2187131935,
+   "abs_zeta": 1.659029625041949,
+   "abs_dzeta": 6.300147156141647,
+   "is_zero": false,
+   "ok": true
+  }
+ ],
+ "all_ok": true
+}

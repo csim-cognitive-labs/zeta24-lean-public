@@ -1,0 +1,49 @@
+# E457 volet déterministe — premiers ≤ 1000000 : 78498 ; hauteurs : 200 (première 14.134725142 , dernière 396.381854223 )
+
+## Ligne (β = 1/2), 200 hauteurs de zéros
+vérification directe aux deux bords : violations 2 / 200
+Δβ_max  : min 2.421e-06  médiane 4.676e-03  max 6.762e-02
+ΔT_max  : min 2.466e-09  médiane 1.875e-06  max 1.595e-05
+demi-écart vers la hauteur suivante : min 0.2491  médiane 0.8546
+rapport ΔT_max / demi-écart : max 2.412e-05  médiane 2.213e-06
+fraction de cellule au premier limitant : Δβ médiane 0.999993 (attendu proche de 1) ; ΔT médiane 0.999993
+approximation ΔT ≈ π(1−f)/log q au premier limitant : erreur relative max 1.86e-04
+trois premières hauteurs : T=14.1347 β=0.50 Δβ=5.232e-04 (p=689873) ΔT=2.751e-06 (p=689873) ; T=21.0220 β=0.50 Δβ=1.996e-04 (p=867079) ΔT=6.941e-07 (p=867079) ; T=25.0109 β=0.50 Δβ=3.891e-04 (p=568619) ΔT=1.174e-06 (p=568619)
+
+## Contrôle β = 0.30 aux mêmes hauteurs (Tours non porteuses)
+vérification directe aux deux bords : violations 1 / 200
+Δβ_max  : min 1.324e-05  médiane 4.644e-03  max 6.397e-02
+ΔT_max  : min 2.710e-08  médiane 1.995e-06  max 1.686e-05
+demi-écart vers la hauteur suivante : min 0.2491  médiane 0.8546
+rapport ΔT_max / demi-écart : max 2.855e-05  médiane 2.068e-06
+fraction de cellule au premier limitant : Δβ médiane 0.999992 (attendu proche de 1) ; ΔT médiane 0.999992
+approximation ΔT ≈ π(1−f)/log q au premier limitant : erreur relative max 1.10e-04
+trois premières hauteurs : T=14.1347 β=0.30 Δβ=8.476e-04 (p=862441) ΔT=4.386e-06 (p=862441) ; T=21.0220 β=0.30 Δβ=1.767e-03 (p=747053) ΔT=6.215e-06 (p=747053) ; T=25.0109 β=0.30 Δβ=6.975e-04 (p=501659) ΔT=2.124e-06 (p=501659)
+
+## Contrôle β = 0.40 aux mêmes hauteurs (Tours non porteuses)
+vérification directe aux deux bords : violations 3 / 200
+Δβ_max  : min 4.516e-05  médiane 4.600e-03  max 5.707e-02
+ΔT_max  : min 1.029e-08  médiane 1.891e-06  max 1.465e-05
+demi-écart vers la hauteur suivante : min 0.2491  médiane 0.8546
+rapport ΔT_max / demi-écart : max 2.256e-05  médiane 2.102e-06
+fraction de cellule au premier limitant : Δβ médiane 0.999992 (attendu proche de 1) ; ΔT médiane 0.999992
+approximation ΔT ≈ π(1−f)/log q au premier limitant : erreur relative max 1.46e-04
+trois premières hauteurs : T=14.1347 β=0.40 Δβ=8.272e-05 (p=862013) ΔT=4.279e-07 (p=862013) ; T=21.0220 β=0.40 Δβ=1.744e-03 (p=92177) ΔT=6.442e-06 (p=477031) ; T=25.0109 β=0.40 Δβ=7.455e-04 (p=939931) ΔT=2.167e-06 (p=939931)
+
+## Contrôle β = 0.45 aux mêmes hauteurs (Tours non porteuses)
+vérification directe aux deux bords : violations 3 / 200
+Δβ_max  : min 2.585e-05  médiane 4.942e-03  max 4.697e-02
+ΔT_max  : min 5.555e-09  médiane 2.078e-06  max 1.518e-05
+demi-écart vers la hauteur suivante : min 0.2491  médiane 0.8546
+rapport ΔT_max / demi-écart : max 2.475e-05  médiane 2.538e-06
+fraction de cellule au premier limitant : Δβ médiane 0.999991 (attendu proche de 1) ; ΔT médiane 0.999991
+approximation ΔT ≈ π(1−f)/log q au premier limitant : erreur relative max 1.65e-04
+trois premières hauteurs : T=14.1347 β=0.45 Δβ=1.971e-04 (p=861797) ΔT=1.019e-06 (p=861797) ; T=21.0220 β=0.45 Δβ=1.487e-03 (p=304643) ΔT=5.601e-06 (p=304643) ; T=25.0109 β=0.45 Δβ=2.673e-03 (p=939853) ΔT=7.769e-06 (p=939853)
+
+## Comparaison ligne / contrôles (la marge est-elle une propriété du mot, pas du poids ?)
+β = 0.30 : médiane Δβ_max contrôle/ligne 0.993 ; médiane ΔT_max contrôle/ligne 1.064 ; corrélation des rangs ΔT (ligne vs contrôle) -0.022
+β = 0.40 : médiane Δβ_max contrôle/ligne 0.984 ; médiane ΔT_max contrôle/ligne 1.009 ; corrélation des rangs ΔT (ligne vs contrôle) -0.015
+β = 0.45 : médiane Δβ_max contrôle/ligne 1.057 ; médiane ΔT_max contrôle/ligne 1.108 ; corrélation des rangs ΔT (ligne vs contrôle) -0.092
+
+## Lecture (mesure, aucune loi)
+Pour chaque Tour, porteuse ou non, il existe une Tour voisine de même hauteur (β décalé) et une Tour voisine de même position radiale (T décalé) ayant exactement le même mot sur les 78 498 premiers ≤ 10⁶ ; la marge en hauteur est très inférieure au demi-écart entre zéros ; les marges des contrôles sont du même ordre que celles de la ligne.

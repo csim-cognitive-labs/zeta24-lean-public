@@ -1,0 +1,12 @@
+'RHV6Fresh.zeroMult_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.one_le_zeroMult_zeroPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.zeroContribution_eq_zeroMult_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.zeroMult_mirrorMember' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.mirrorMember_ne_self_of_off' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.zero_break_amplitude_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.zero_mirror_word_difference_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.zero_pair_term_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.zero_pair_weighted_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.zero_pair_term_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.zero_pair_term_ratio_unbounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT=0

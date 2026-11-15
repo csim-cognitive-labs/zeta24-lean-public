@@ -1,0 +1,2 @@
+RHV6Fresh/Terminal/E445_T3_SCRATCH.lean:30:4: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions.
+EXIT=1

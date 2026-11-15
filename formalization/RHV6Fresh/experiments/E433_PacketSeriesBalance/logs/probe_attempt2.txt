@@ -1,0 +1,26 @@
+RHV6Fresh/Terminal/SeriesBalanceProbe_SCRATCH.lean:100:2: error: unsolved goals
+C : OffCarrier
+h : C.outgoing.zLaterMember = ↑(mirrorMember C.zero)
+a : ℕ
+ha : 2 ≤ a
+m : ℕ
+hsilent : ∀ k < m, packetIncrement C.packetᶜ (a + k) = 0
+hb :
+  0 =
+    ∑ k ∈ Finset.range m, ↑(ArithmeticFunction.vonMangoldt (a + k + 1)) -
+        (stepAt backgroundPrimitive (a + m) - stepAt backgroundPrimitive a) -
+      (C.pairPrimitive (↑(a + m) + 1) - C.pairPrimitive ↑(a + m) - (C.pairPrimitive (↑a + 1) - C.pairPrimitive ↑a))
+⊢ False
+RHV6Fresh/Terminal/SeriesBalanceProbe_SCRATCH.lean:106:2: error: unsolved goals
+C : OffCarrier
+h : C.outgoing.zLaterMember = ↑(mirrorMember C.zero)
+a : ℕ
+ha : 2 ≤ a
+K : ℝ
+hbdd : ∀ (m : ℕ), ‖∑ k ∈ Finset.range m, packetIncrement C.packetᶜ (a + k)‖ ≤ K
+hb :
+  ∀ (m : ℕ),
+    ∑ k ∈ Finset.range m, packetIncrement C.packetᶜ (a + k) =
+      ∑ k ∈ Finset.range m, remainderIncrement (a + k) -
+        (C.pairPrimitive (↑(a + m) + 1) - C.pairPrimitive ↑(a + m) - (C.pairPrimitive (↑a + 1) - C.pairPrimitive ↑a))
+⊢ False

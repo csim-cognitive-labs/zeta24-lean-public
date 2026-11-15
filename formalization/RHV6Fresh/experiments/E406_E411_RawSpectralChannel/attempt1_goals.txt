@@ -1,0 +1,33 @@
+RHV6Fresh/Terminal/RawSpectralChannel.lean:423:80: error: unsolved goals
+ε : ℝ
+hε : 0 < ε
+⊢ ∃ H C₁ C₂,
+    0 ≤ C₁ ∧
+      0 ≤ C₂ ∧
+        (∀ (N : ℕ), 2 ≤ N → ‖localPacket (↑(lowFrequencies H)) N‖ ≤ C₁ * ↑N ^ (1 / 2 + ε)) ∧
+          ∀ (N : ℕ), 2 ≤ N → ‖localPacket (↑(lowFrequencies H))ᶜ N‖ ≤ C₂ * ↑N ^ (1 / 2 + ε)
+RHV6Fresh/Terminal/RawSpectralChannel.lean:427:2: error: unsolved goals
+case refine_1
+ε : ℝ
+hε : 0 < ε
+H C₁ C₂ : ℝ
+hC₁ : 0 ≤ C₁
+hC₂ : 0 ≤ C₂
+hlow : ∀ (N : ℕ), 2 ≤ N → ‖localPacket (↑(lowFrequencies H)) N‖ ≤ C₁ * ↑N ^ (1 / 2 + ε)
+hhigh : ∀ (N : ℕ), 2 ≤ N → ‖localPacket (↑(lowFrequencies H))ᶜ N‖ ≤ C₂ * ↑N ^ (1 / 2 + ε)
+hred : ∀ (N : ℕ), 2 ≤ N → |psiRemainder N| ≤ (C₁ + C₂ + cellBackgroundConstant) * ↑N ^ (1 / 2 + ε)
+⊢ 0 ≤ C₁ + C₂ + cellBackgroundConstant + 1
+RHV6Fresh/Terminal/RawSpectralChannel.lean:428:2: error: unsolved goals
+case refine_2
+ε : ℝ
+hε : 0 < ε
+H C₁ C₂ : ℝ
+hC₁ : 0 ≤ C₁
+hC₂ : 0 ≤ C₂
+hlow : ∀ (N : ℕ), 2 ≤ N → ‖localPacket (↑(lowFrequencies H)) N‖ ≤ C₁ * ↑N ^ (1 / 2 + ε)
+hhigh : ∀ (N : ℕ), 2 ≤ N → ‖localPacket (↑(lowFrequencies H))ᶜ N‖ ≤ C₂ * ↑N ^ (1 / 2 + ε)
+hred : ∀ (N : ℕ), 2 ≤ N → |psiRemainder N| ≤ (C₁ + C₂ + cellBackgroundConstant) * ↑N ^ (1 / 2 + ε)
+E : ℕ
+hE : IsRawEvent E
+⊢ |psiRemainder E| ≤ (C₁ + C₂ + cellBackgroundConstant + 1) * ↑E ^ (1 / 2 + ε) ∧
+    |psiRemainder (E - 1)| ≤ (C₁ + C₂ + cellBackgroundConstant + 1) * ↑E ^ (1 / 2 + ε)

@@ -1,0 +1,8 @@
+# premiers reconstruits (canal A, 2001052 zéros) :
+[10007, 10009, 10037, 10039]
+# écarts reconstruits :
+[2, 28, 2]
+# premiers réels (validation) :
+[10007, 10009, 10037, 10039]
+# écarts réels :
+[2, 28, 2]

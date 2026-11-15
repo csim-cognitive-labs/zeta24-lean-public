@@ -1,0 +1,37 @@
+import RHV6Fresh.Terminal.MeetingPriceTheorem
+import RHV6Fresh.Terminal.ComplementRigidityAudit
+
+/-! E445 — Tentative T1 : le prix de la paire au point de rencontre contre le budget `Λ(N+1)` porté par le complément
+(E435 `complement_break_lower_bound`). Chaque `have` est un énoncé du corpus ; la dernière étape est laissée au
+compilateur (`exact?`) pour qu'il dise exactement ce qui manque. -/
+
+namespace RHV6Fresh
+open Real RHV3Lean Filter
+
+variable (C : OffCarrier)
+
+theorem T1_price_vs_budget (h : C.outgoing.zLaterMember = (mirrorMember C.zero).1) : False := by
+  -- (a) à chaque rencontre, la cassure moins les constantes est portée par le complément de la paire
+  have hbreak : ∀ N : ℕ, 2 ≤ N →
+      (ArithmeticFunction.vonMangoldt (N + 1) : ℝ) - 1 - 4 * trivialTailConstant -
+        ∑ ρ ∈ ({memberIndex C.zero, memberIndex (mirrorMember C.zero), conjIndex C.zero,
+          conjIndex (mirrorMember C.zero)} : Finset ExplicitIndex), (zetaZeroMultiplicity (ρ : ℂ) : ℝ) ≤
+      ‖packetIncrement C.packetᶜ N‖ :=
+    fun N hN => C.complement_break_lower_bound h hN
+  -- (b) le prix radial de la paire n'est pas borné (P2)
+  have hprice : ∀ K : ℝ, ∃ x : ℝ, 1 < x ∧ K < offPrice (rZeroRadialPosition C.zero.1) x :=
+    offPrice_unbounded (by linarith [C.zero_low])
+  -- (c) la valeur ponctuelle du complément = reste exact − pas de la primitive de la paire (E435)
+  have hval : ∀ N : ℕ, 2 ≤ N →
+      localPacket C.packetᶜ N = exactRemainder N - (C.pairPrimitive ((N : ℝ) + 1) - C.pairPrimitive N) :=
+    fun N hN => C.complement_value_eq h hN
+  -- (d) l'exposant du reste est au moins 1/2 + δ, et l'exposant acquis est 1 (E435)
+  have hexp : 1 / 2 + C.radialShift ≤ remainderExponent := C.remainderExponent_ge_mirror
+  have hacq := C.acquired_exponent_admits_carrier
+  -- (e) FERMETURE : il faudrait une borne du reste lissé sous 1/2 + δ ; le compilateur dit ce qui manque
+  have hneed : ∃ θ K : ℝ, θ < 1 / 2 + C.radialShift ∧ ∀ x : ℝ, 1 < x → ‖smoothedRemainder x‖ ≤ K * x ^ θ := by
+    exact?
+  obtain ⟨θ, K, hθ, hK⟩ := hneed
+  exact C.no_remainder_bound_below_mirror hθ hK
+
+end RHV6Fresh

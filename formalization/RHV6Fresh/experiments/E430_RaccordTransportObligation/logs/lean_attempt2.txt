@@ -1,0 +1,10 @@
+'RHV6Fresh.amplitude_from_lastContact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.energyRatio_from_contacts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.pair_transport_from_contacts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.obligation_iff_factor_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.not_raccordTransportObligation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.obligation_of_link' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.link_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.break_split_any_packet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.pairDepositOnLine_iff_sign_change' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT=0

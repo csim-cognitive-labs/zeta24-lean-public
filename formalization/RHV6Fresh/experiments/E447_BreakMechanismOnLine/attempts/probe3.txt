@@ -1,0 +1,60 @@
+warning: RHV6Fresh/Terminal/MeetingRegimeFinite.lean:168:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/MeetingRegimeFinite.lean:186:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+info: RHV6Fresh/Terminal/MeetingRegimeFinite.lean:214:0: 'RHV6Fresh.log_ratio_ge_cell_of_meeting' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/MeetingRegimeFinite.lean:215:0: 'RHV6Fresh.two_consecutive_contacts_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/MeetingRegimeFinite.lean:216:0: 'RHV6Fresh.meeting_break_rank_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/MeetingRegimeFinite.lean:217:0: 'RHV6Fresh.cellWeight_div_cellLength_tendsto_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/MeetingRegimeFinite.lean:218:0: 'RHV6Fresh.cellDemand_div_cellLength_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/MeetingRegimeFinite.lean:219:0: 'RHV6Fresh.tower_step_div_cellLength_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/MeetingRegimeFinite.lean:220:0: 'RHV6Fresh.valuePrimeSum_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+✖ [9090/9090] Building RHV6Fresh.Terminal.E447_SCRATCH (7.5s)
+trace: .> LEAN_PATH=/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/Cli/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/batteries/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/Qq/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/aesop/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/proofwidgets/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/importGraph/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/plausible/.lake/build/lib/lean:/opt/zeta24-lean/formalization/rhv2_fresh/.lake/packages/mathlib/.lake/build/lib/lean:/opt/zeta24-lean/formalization/rhv3_lean/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/build/lib/lean /home/gha-deploy/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/bin/lean /opt/zeta24-lean/formalization/RHV6Fresh/RHV6Fresh/Terminal/E447_SCRATCH.lean -o /opt/zeta24-lean/formalization/RHV6Fresh/.lake/build/lib/lean/RHV6Fresh/Terminal/E447_SCRATCH.olean -i /opt/zeta24-lean/formalization/RHV6Fresh/.lake/build/lib/lean/RHV6Fresh/Terminal/E447_SCRATCH.ilean -c /opt/zeta24-lean/formalization/RHV6Fresh/.lake/build/ir/RHV6Fresh/Terminal/E447_SCRATCH.c --setup /opt/zeta24-lean/formalization/RHV6Fresh/.lake/build/ir/RHV6Fresh/Terminal/E447_SCRATCH.setup.json --json
+error: RHV6Fresh/Terminal/E447_SCRATCH.lean:19:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ∑ i ∈ range ?n, ?a (i + 1)
+in the target expression
+  ∑ i ∈ range (M + 1), cellDemand β T (k₀ + ↑i) = demandAtContact β T (k₀ + ↑(M + 1)) - demandAtContact β T k₀
+
+case succ
+β T : ℝ
+k₀ : ℤ
+M : ℕ
+ih : ∑ i ∈ range M, cellDemand β T (k₀ + ↑i) = demandAtContact β T (k₀ + ↑M) - demandAtContact β T k₀
+⊢ ∑ i ∈ range (M + 1), cellDemand β T (k₀ + ↑i) = demandAtContact β T (k₀ + ↑(M + 1)) - demandAtContact β T k₀
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:46:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:57:42: Variable name `hT` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hT
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:67:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:80:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:83:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:90:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:102:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:145:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:180:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- RHV6Fresh.Terminal.E447_SCRATCH
+error: build failed

@@ -1,0 +1,27 @@
+@Ico_mem_nhdsLT : ∀ {α : Type u_1} [inst : TopologicalSpace α] [inst_1 : LinearOrder α] [ClosedIicTopology α] {a b : α},
+  a < b → Set.Ico a b ∈ 𝓝[<] b
+@Nat.floor_eq_iff : ∀ {R : Type u_1} [inst : Semiring R] [inst_1 : LinearOrder R] [inst_2 : FloorSemiring R] {a : R}
+  {n : ℕ}, 0 ≤ a → (⌊a⌋₊ = n ↔ ↑n ≤ a ∧ a < ↑n + 1)
+Chebyshev.psi_eq_psi_coe_floor : ∀ (x : ℝ), Chebyshev.psi x = Chebyshev.psi ↑⌊x⌋₊
+@continuousAt_log : ∀ {x : ℝ}, x ≠ 0 → ContinuousAt log x
+@ContinuousAt.rpow_const : ∀ {α : Type u_1} [inst : TopologicalSpace α] {f : α → ℝ} {x : α} {p : ℝ},
+  ContinuousAt f x → f x ≠ 0 ∨ 0 ≤ p → ContinuousAt (fun x => f x ^ p) x
+@tendsto_nhds_unique : ∀ {X : Type u_1} {Y : Type u_2} [inst : TopologicalSpace X] [T2Space X] {f : Y → X}
+  {l : Filter Y} {a b : X} [l.NeBot], Tendsto f l (𝓝 a) → Tendsto f l (𝓝 b) → a = b
+RHV6Fresh/Terminal/CollectiveGapRecomposition_SCRATCH.lean:10:8: error(lean.unknownIdentifier): Unknown identifier `continuousAt_finset_sum`
+@Finset.sum_range_sub : ∀ {G : Type u_1} [inst : AddCommGroup G] (f : ℕ → G) (n : ℕ),
+  ∑ i ∈ Finset.range n, (f (i + 1) - f i) = f n - f 0
+@ArithmeticFunction.vonMangoldt_apply_prime : ∀ {p : ℕ}, Nat.Prime p → ArithmeticFunction.vonMangoldt p = log ↑p
+RHV6Fresh.massA_eq_psi : ∀ (N : ℕ), RHV6Fresh.massA N = Chebyshev.psi ↑N
+RHV6Fresh.massA_succ : ∀ (N : ℕ), RHV6Fresh.massA (N + 1) = RHV6Fresh.massA N + ArithmeticFunction.vonMangoldt (N + 1)
+RHV6Fresh.breakResidual : Finset (ℝ × ℝ) → ℝ → ℝ → ℝ
+RHV6Fresh.towerRe : ℝ → ℝ → ℝ → ℝ
+thm_primeAtRank_isPrime : ∀ (nRank : ℕ), Nat.Prime (fnPrimeAtRank nRank)
+RHV6Fresh.gap_variation_eq_remainders : ∀ (F : ℝ → ℂ) {β T : ℝ} {I : RHV6Fresh.PrimeGapInterval},
+  RHV6Fresh.GapHasContact β T I →
+    F I.upper - F I.lower =
+      RHV6Fresh.initialEdgeRemainder F β T I + RHV6Fresh.wholeCellSum F β T I + RHV6Fresh.finalEdgeRemainder F β T I
+@tendsto_nhdsWithin_of_tendsto_nhds : ∀ {α : Type u_1} {β : Type u_2} [inst : TopologicalSpace α] {f : α → β} {a : α}
+  {s : Set α} {l : Filter β}, Tendsto f (𝓝 a) l → Tendsto f (𝓝[s] a) l
+RHV6Fresh/Terminal/CollectiveGapRecomposition_SCRATCH.lean:22:27: error: failed to prove positivity/nonnegativity/nonzeroness
+EXIT=1

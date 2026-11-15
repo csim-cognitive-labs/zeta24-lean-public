@@ -1,0 +1,24 @@
+RHV6Fresh/Terminal/GapPartialRemainders_SCRATCH.lean:210:71: error: unsolved goals
+s : Finset (ℝ × ℝ)
+β T target x : ℝ
+hβ : 0 < β
+hβ1 : β < 1
+hT : 0 < T
+h₁ : (β, T) ∈ s
+h₂ : (1 - β, T) ∈ s
+hne : (β, T) ≠ (1 - β, T)
+hbal : breakResidual s target x = 0
+hpair : breakResidual ((s.erase (β, T)).erase (1 - β, T)) target x = 0 + (towerRe β T x + towerRe (1 - β) T x)
+K : ℝ
+hK : ∀ (k : ℤ), |contactRealValue (1 - β) T k| ≤ K
+hv : |contactRealValue (1 - β) T 0| = contactAt (1 - β) T 0 ^ (1 - β) / ‖{ re := 1 - β, im := T }‖
+⊢ False
+RHV6Fresh/Terminal/GapPartialRemainders_SCRATCH.lean:218:13: error: unsolved goals
+C : OffCarrier
+h :
+  ∀ (I : PrimeGapInterval) (s : Finset (ℝ × ℝ)),
+    breakResidual s (log I.upper) I.upper = log I.upper - ∑ ρ ∈ s, towerRe ρ.1 ρ.2 I.upper
+hmirror : rZeroRadialPosition ↑(mirrorMember C.zero) = 1 / 2 + C.radialShift
+hzero : rZeroRadialPosition ↑C.zero = 1 / 2 - C.radialShift
+⊢ False
+EXIT=1

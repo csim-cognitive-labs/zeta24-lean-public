@@ -1,0 +1,10 @@
+'RHV6Fresh.stagePosition_lt_of_radial_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.radial_of_cellFraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.radial_of_value_and_length_ratios' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.valueLengthSum_closed_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.valueCellSum_eq_signed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.valuePrimeSum_eq_primes_in_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.valuePrimeSum_eq_meetings' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.radial_of_meeting_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.meetingOffset_lt_bertrand' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT=0

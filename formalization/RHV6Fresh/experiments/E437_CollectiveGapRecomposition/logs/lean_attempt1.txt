@@ -1,0 +1,9 @@
+'RHV6Fresh.rawDemand_jump' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.familyGapShare_eq_remainders' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.gap_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.series_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.familyRe_continuousAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.rawResidual_jump_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.meeting_jump_carried_by_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.meeting_not_recomposed_by_finite_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT=0

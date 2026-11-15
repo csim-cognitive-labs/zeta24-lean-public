@@ -1,0 +1,27 @@
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:183:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:211:2: error: unsolved goals
+C : OffCarrier
+h : ∀ (m : ℕ), C.pairSurplus m = 0
+k : ℤ
+hk : log ↑(fnPrimeAtRank 2) = densitySignChangeLog (rZeroHeight ↑C.zero) k
+j : ℤ
+hj : log ↑(fnPrimeAtRank 3) = densitySignChangeLog (rZeroHeight ↑C.zero) j
+⊢ False
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:218:2: error: unsolved goals
+C : OffCarrier
+m : ℕ
+hm : 2 ≤ m
+hs : C.pairSurplus m ≠ 0
+hsplit : remainderIncrement m = packetIncrement C.packet m
+h0 : packetIncrement C.packetᶜ m = 0
+⊢ False
+RHV6Fresh/Terminal/RaccordPhaseProbe_SCRATCH.lean:219:0: error: Invalid name after `end`: Expected `OffCarrier`, but found `RHV6Fresh`
+
+Hint: If you meant to end the outer scope(s) `RHV6Fresh`, you must end all the intervening scopes `RHV6Fresh.OffCarrier`:
+  end RHV6Fresh.̲O̲f̲f̲C̲a̲r̲r̲i̲e̲r̲

@@ -1,0 +1,3 @@
+[    0.54s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    0.60s] jumeau mpmath dps=30 ; 10 premiers par couple aux indices [0, 11111, 22222, 33333, 44444, 55555, 66666, 77777, 88888, 99999]
+[    0.66s] 240 cas ; violations 0 ; pire identité H4 0.0e+00 ; pire écart numpy 3.0e-15

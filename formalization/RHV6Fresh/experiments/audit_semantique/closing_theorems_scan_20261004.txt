@@ -1,0 +1,49 @@
+# Balayage du 2026-10-04 (HEAD 4828bd07) : tous les theoremes compiles (RHV6Fresh + RHV3Lean) dont la CONCLUSION directe est l'une de :
+# RiemannHypothesis, TowerPrisoner, VerticalPassage, not HorizontalPassage, InsideField, PrisonAtInfinity, TowerSymmetric, UnderLineScaleAtInfinity, PNoRegimeChange, LocalCaptivity, beta = 1/2, 1/2 <= beta
+# Format : [conclusion] nom :: NHYP = nombre d'hypotheses propositionnelles :: hypotheses. Limite : conclusions sous une conjonction ou une equivalence non balayees.
+# RegimeCell.radial_a (NHYP=0) porte sur une cellule RegimeCell donnee en argument (structure), pas sur un zero quelconque.
+[¬HorizontalPassage] RHV6Fresh.no_horizontal_of_riemannHypothesis :: NHYP=1 :: RiemannHypothesis
+[InsideField] RHV6Fresh.inside_field_of_onLine :: NHYP=3 :: RHV3Lean.rZeroRadialPosition ↑z₁ = 1 / 2 ;; RHV3Lean.rZeroRadialPosition ↑w = 1 / 2 ;; RHV3Lean.rZeroHeight ↑z₁ ≤ RHV3Lean.rZeroHeight ↑w
+[InsideField] RHV6Fresh.lower_member_prisoner :: NHYP=3 :: RHV3Lean.rZeroRadialPosition ↑z₁ = 1 / 2 ;; RHV3Lean.rZeroRadialPosition ↑w ≤ 1 / 2 ;; ‖RHV6Fresh.zeroPoint z₁‖ ≤ ‖RHV6Fresh.zeroPoint w‖
+[VerticalPassage] RHV6Fresh.raccordHierarchy_forces_height :: NHYP=3 :: 0 < RHV3Lean.rZeroHeight p.zEarlierMember ;; 0 < RHV3Lean.rZeroHeight p.zLaterMember ;; RHV6Fresh.RaccordHierarchy p hE hL
+[β = 1/2] RHV6Fresh.EngagedState.onLine :: NHYP=1 :: RHV6Fresh.EngagedState z
+[InsideField] RHV6Fresh.inside_field_of_parameters :: NHYP=2 :: RHV3Lean.rZeroRadialPosition ↑w ≤ RHV3Lean.rZeroRadialPosition ↑z₁ ;; ‖RHV6Fresh.zeroPoint z₁‖ ≤ ‖RHV6Fresh.zeroPoint w‖
+[RiemannHypothesis] RHV6Fresh.riemannHypothesis_of_raccordHierarchy :: NHYP=1 :: ∀ (p : RHV3Lean.TZeroPassage) (hE : 0 < RHV3Lean.rZeroHeight p.zEarlierMember)   (hL : 0 < RHV3Lean.rZeroHeigh
+[RiemannHypothesis] RHV6Fresh.riemannHypothesis_of_remainderCaptive :: NHYP=1 :: RHV6Fresh.RemainderCaptive z
+[RiemannHypothesis] RHV6Fresh.riemannHypothesis_of_remainder_sqrt_growth :: NHYP=1 :: ∃ C, ∀ (x : ℝ), 1 < x → ‖RHV6Fresh.smoothedRemainder x‖ ≤ C * x ^ (1 / 2)
+[InsideField] RHV6Fresh.inside_field_of_same_exponent :: NHYP=2 :: RHV3Lean.rZeroRadialPosition ↑w = RHV3Lean.rZeroRadialPosition ↑z₁ ;; RHV3Lean.rZeroHeight ↑z₁ ≤ RHV3Lean.rZeroHeight ↑w
+[VerticalPassage] RHV6Fresh.onLine_passage_vertical :: NHYP=2 :: RHV3Lean.rZeroRadialPosition p.zEarlierMember = 1 / 2 ;; RHV3Lean.rZeroRadialPosition p.zLaterMember = 1 / 2
+[β = 1/2] RHV6Fresh.onLine_of_prisonAtInfinity_pair :: NHYP=3 :: RHV3Lean.rZeroRadialPosition ↑z₁ = 1 / 2 ;; RHV6Fresh.PrisonAtInfinity z₁ w ;; RHV6Fresh.PrisonAtInfinity z₁ (RHV6Fresh.mirrorMember w)
+[RiemannHypothesis] RHV6Fresh.riemannHypothesis_of_first_field :: NHYP=2 :: RHV3Lean.rZeroRadialPosition ↑z₁ = 1 / 2 ;; ∀ (w : RHV6Fresh.TrueZero), RHV6Fresh.InsideField z₁ w
+[β = 1/2] RHV6Fresh.engaged_step_closes_of_symmetric_arrival :: NHYP=2 :: 0 < RHV3Lean.rZeroHeight p.zLaterMember ;; RHV6Fresh.TowerSymmetric ⟨p.zLaterMember, hL⟩
+[RiemannHypothesis] RHV6Fresh.riemannHypothesis_of_noLowerSide :: NHYP=1 :: ∀ (z : RHV6Fresh.TrueZero), ¬RHV3Lean.rZeroRadialPosition ↑z < 1 / 2
+[PNoRegimeChange] RHV6Fresh.noRegimeChange_of_riemannHypothesis :: NHYP=1 :: RiemannHypothesis
+[β = 1/2] RHV6Fresh.inside_field_forces_line :: NHYP=3 :: RHV3Lean.rZeroRadialPosition ↑z₁ = 1 / 2 ;; RHV6Fresh.InsideField z₁ w ;; RHV6Fresh.InsideField z₁ (RHV6Fresh.mirrorMember w)
+[VerticalPassage] RHV6Fresh.allVertical_of_noRegimeChange :: NHYP=2 :: RHV6Fresh.PNoRegimeChange ;; 0 < RHV3Lean.rZeroHeight p.zEarlierMember
+[1/2 ≤ β] RHV6Fresh.RegimeCell.radial_a :: NHYP=0 :: 
+[TowerPrisoner] RHV6Fresh.prison_of_riemannHypothesis :: NHYP=1 :: RiemannHypothesis
+[β = 1/2] RHV6Fresh.onLine_of_mirror_phase_shift_eq_zero :: NHYP=1 :: (RHV6Fresh.towerMotionOf (RHV6Fresh.mirrorMember z)).phase - (RHV6Fresh.towerMotionOf z).phase = 0
+[TowerPrisoner] RHV6Fresh.prison_of_remainderCaptive :: NHYP=1 :: RHV6Fresh.RemainderCaptive z
+[1/2 ≤ β] RHV6Fresh.passage_exit_radial_ge_half :: NHYP=1 :: RHV3Lean.rZeroHeight p.zEarlierMember < RHV3Lean.rZeroHeight p.zLaterMember
+[RiemannHypothesis] RHV6Fresh.riemannHypothesis_of_same_exponent :: NHYP=2 :: RHV3Lean.rZeroRadialPosition ↑z₁ = 1 / 2 ;; ∀ (w : RHV6Fresh.TrueZero), RHV3Lean.rZeroRadialPosition ↑w = RHV3Lean.rZeroRadialPosition ↑z₁
+[RiemannHypothesis] RHV6Fresh.riemannHypothesis_of_noRegimeChange :: NHYP=1 :: RHV6Fresh.PNoRegimeChange
+[InsideField] RHV6Fresh.first_tower_envelope_of_raccordHierarchy :: NHYP=2 :: ∀ (p : RHV3Lean.TZeroPassage) (hE : 0 < RHV3Lean.rZeroHeight p.zEarlierMember)   (hL : 0 < RHV3Lean.rZeroHeigh ;; RHV3Lean.rZeroHeight ↑z₁ ≤ RHV3Lean.rZeroHeight ↑w
+[RiemannHypothesis] RHV6Fresh.riemannHypothesis_of_whole_winding :: NHYP=1 :: ∀ (w : RHV6Fresh.TrueZero) (x : ℝ), 0 < x → ‖RHV6Fresh.zeroTerm w x‖ ≤ ‖RHV6Fresh.zeroTerm z₁ x‖
+[PrisonAtInfinity] RHV6Fresh.prisonAtInfinity_of_onLine :: NHYP=3 :: RHV3Lean.rZeroRadialPosition ↑z₁ = 1 / 2 ;; RHV3Lean.rZeroRadialPosition ↑w = 1 / 2 ;; RHV3Lean.rZeroHeight ↑z₁ ≤ RHV3Lean.rZeroHeight ↑w
+[RiemannHypothesis] RHV6Fresh.SpectralRepresentation.riemannHypothesis_of_onLine :: NHYP=1 :: ∀ (i : ι), Rep.weight i ≠ 0 → (Rep.point i).re = 1 / 2
+[1/2 ≤ β] RHV6Fresh.radial_floor_of_riemannHypothesis :: NHYP=3 :: RiemannHypothesis ;; RHV6Fresh.VerticalPassage p ;; RHV3Lean.rZeroRadialPosition p.zEarlierMember = 1 / 2
+[β = 1/2] RHV3Lean.thm_allRadialPositions_of_upperBranch :: NHYP=1 :: ∀ (zUpperZero : RHV3Lean.TUpperNonTrivialZetaZero), RHV3Lean.rZeroRadialPosition ↑zUpperZero = 1 / 2
+[VerticalPassage] RHV6Fresh.persistent_forces_height :: NHYP=3 :: 0 < RHV3Lean.rZeroHeight p.zEarlierMember ;; 0 < RHV3Lean.rZeroHeight p.zLaterMember ;; RHV6Fresh.PersistentCapture p hE hL
+[RiemannHypothesis] RHV3Lean.thm_riemannHypothesis_of_allUpperOnCriticalLine :: NHYP=1 :: ∀ (zUpperZero : RHV3Lean.TUpperNonTrivialZetaZero), RHV3Lean.rZeroRadialPosition ↑zUpperZero = 1 / 2
+[β = 1/2] RHV6Fresh.onLine_of_mirror_contact_eq :: NHYP=1 :: RHV6Fresh.contactMinusAt (RHV6Fresh.mirrorMember z) k = RHV6Fresh.contactMinusAt z k
+[β = 1/2] RHV6Fresh.CanonicalTransition.engaged :: NHYP=1 :: RHV6Fresh.CanonicalTransition e l
+[LocalCaptivity] RHV6Fresh.persistent_gives_local :: NHYP=3 :: 0 < RHV3Lean.rZeroHeight p.zEarlierMember ;; 0 < RHV3Lean.rZeroHeight p.zLaterMember ;; RHV6Fresh.PersistentCapture p hE hL
+[RiemannHypothesis] RHV6Fresh.riemannHypothesis_of_height_always_advances :: NHYP=1 :: ∀ (p : RHV3Lean.TZeroPassage), 0 < RHV3Lean.rZeroHeight p.zEarlierMember → RHV6Fresh.VerticalPassage p
+[RiemannHypothesis] RHV6Fresh.riemannHypothesis_of_noOff :: NHYP=1 :: ∀ (z : RHV6Fresh.TrueZero), ¬RHV3Lean.PIsOffCriticalLine ↑z
+[RiemannHypothesis] RHV6Fresh.riemannHypothesis_of_prison :: NHYP=1 :: ∀ (p : RHV3Lean.TZeroPassage), RHV6Fresh.TowerPrisoner p
+[β = 1/2] RHV6Fresh.remainderCaptive_onLine :: NHYP=1 :: RHV6Fresh.RemainderCaptive z
+[β = 1/2] RHV3Lean.thm_zeroRadialPosition_half_of_riemannHypothesis :: NHYP=1 :: RiemannHypothesis
+[β = 1/2] RHV6Fresh.prisoner_between_zeros_onLine :: NHYP=4 :: p.zLaterMember = q.zEarlierMember ;; 0 < RHV3Lean.rZeroHeight p.zEarlierMember ;; RHV6Fresh.TowerPrisoner p ;; RHV6Fresh.TowerPrisoner q
+[β = 1/2] RHV6Fresh.junction_vertical_vertical :: NHYP=3 :: p.zLaterMember = q.zEarlierMember ;; RHV6Fresh.VerticalPassage p ;; RHV6Fresh.VerticalPassage q
+[RiemannHypothesis] RHV6Fresh.riemannHypothesis_of_persistent :: NHYP=1 :: ∀ (p : RHV3Lean.TZeroPassage) (hE : 0 < RHV3Lean.rZeroHeight p.zEarlierMember)   (hL : 0 < RHV3Lean.rZeroHeigh
+[VerticalPassage] RHV6Fresh.prisoner_forces_height :: NHYP=3 :: RHV6Fresh.TowerPrisoner p ;; 0 < RHV3Lean.rZeroHeight p.zEarlierMember ;; 0 < RHV3Lean.rZeroHeight p.zLaterMember

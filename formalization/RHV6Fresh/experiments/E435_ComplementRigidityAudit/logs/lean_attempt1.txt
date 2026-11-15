@@ -1,0 +1,10 @@
+'RHV6Fresh.complement_series_of_windows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.channelPrimitive_compl_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.complement_window_re_by_contacts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.complementPrimitive_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.complement_break_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.remainderExponent_ge_mirror' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.no_remainder_bound_below_mirror' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.complement_bound_transfers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.no_offCarrier_iff_remainderExponent_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT=0

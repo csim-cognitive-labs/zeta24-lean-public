@@ -1,0 +1,14 @@
+dps 30
+zéros 1..3 recalculés = certifiés à 1e-28 : OK
+Tour 1 télescopage brut : somme écarts - [2,1009] = -1.1833e-30 | J : 3.4513e-31 | lissé : 0.0
+Tour 2 télescopage brut : somme écarts - [2,1009] = 1.9722e-30 | J : 4.9304e-32 | lissé : 1.2326e-32
+Tour 3 télescopage brut : somme écarts - [2,1009] = -3.4513e-31 | J : -1.8489e-31 | lissé : 4.9304e-32
+demande totale [2,1009] = -0.332282131799033
+max |demande - somme lissée des 3 premiers zéros| sur les 168 écarts : 0.14926517
+max |demande - somme lissée des 30 premiers zéros| sur les 168 écarts : 0.03197992
+max |demande - somme lissée des 100 premiers zéros| sur les 168 écarts : 0.013065798
+nombre d'écarts où la somme lissée des 3 Tours égale la demande à 1e-20 : 0
+
+real	0m11.310s
+user	0m11.292s
+sys	0m0.016s

@@ -1,0 +1,35 @@
+RHV6Fresh/Terminal/PairWordInversion_SCRATCH.lean:34:27: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?m.131 / π + ?m.132 / log x
+in the target expression
+  -((|towerPhase β T| + π) / (π * log x)) + T / π ≤ ((T * log x - towerPhase β T) / π - cellFraction β T x) / log x
+
+case left
+β T x : ℝ
+hx : 1 < x
+hl : 0 < log x
+hpi : 0 < π
+h : towerPhase β T = T * log x - π * (↑(lastContactBefore β T x) + cellFraction β T x)
+hf0 : 0 ≤ cellFraction β T x
+hf1 : cellFraction β T x < 1
+hk : ↑(lastContactBefore β T x) = (T * log x - towerPhase β T) / π - cellFraction β T x
+hφ : towerPhase β T ≤ |towerPhase β T|
+hφ' : -|towerPhase β T| ≤ towerPhase β T
+⊢ -((|towerPhase β T| + π) / (π * log x)) + T / π ≤ ((T * log x - towerPhase β T) / π - cellFraction β T x) / log x
+RHV6Fresh/Terminal/PairWordInversion_SCRATCH.lean:36:27: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?m.153 / π + ?m.154 / log x
+in the target expression
+  ((T * log x - towerPhase β T) / π - cellFraction β T x) / log x ≤ (|towerPhase β T| + π) / (π * log x) + T / π
+
+case right
+β T x : ℝ
+hx : 1 < x
+hl : 0 < log x
+hpi : 0 < π
+h : towerPhase β T = T * log x - π * (↑(lastContactBefore β T x) + cellFraction β T x)
+hf0 : 0 ≤ cellFraction β T x
+hf1 : cellFraction β T x < 1
+hk : ↑(lastContactBefore β T x) = (T * log x - towerPhase β T) / π - cellFraction β T x
+hφ : towerPhase β T ≤ |towerPhase β T|
+hφ' : -|towerPhase β T| ≤ towerPhase β T
+⊢ ((T * log x - towerPhase β T) / π - cellFraction β T x) / log x ≤ (|towerPhase β T| + π) / (π * log x) + T / π
+EXIT=1

@@ -1,0 +1,7 @@
+'RHV6Fresh.packetIncrement_series_telescopes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.remainderIncrement_series_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.complement_series_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.localPacket_pair_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.pair_complement_series_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.pair_series_eq_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.norm_mirror_primitive_term' depends on axioms: [propext, Classical.choice, Quot.sound]

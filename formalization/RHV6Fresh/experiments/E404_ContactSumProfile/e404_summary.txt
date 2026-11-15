@@ -1,0 +1,34 @@
+E404 — exécution du 2026-11-02 07:19:48 ; durée 140.6 s ; premiers ≤ 10000 (1229 écarts) ; écarts choisis [4, 100, 300, 500, 614, 800, 1000, 1182, 1223, 1228] ; fenêtre continue 614..619
+provenance : zeros: ../data/odlyzko_zeros6_2001052.txt
+provenance : sha256: 2ef7b752c2f17405222e670a61098250c8e4e09047f823f41e2b41a7b378e7c6 (== .sha256)
+provenance : N = 2001052 ; T_1 = 14.134725142 ; T_max = 1132490.658714411
+provenance : hypothèse de données : hauteurs de zéros connus posés sur la ligne (β = 1/2) ; ne certifient pas l'absence de zéros OFF
+écart le plus long : n=1182 [9551, 9587] ; dernier écart de longueur 2 : n=1223 [9929, 9931]
+1. Par écart (toute la liste de zéros) : montée brute calculée / vérité ; chute brute calculée / vérité ; pente brute min/max sur la grille (vérité = 1 hors puissances de premiers) ; résidu brut max sur la grille ; montée lissée calculée / Z_n ; résidu lissé max
+   n=4 [11,13] : montée brute 0.999401 / 0.999415 ; chute brute -1.565419 / -1.565409 (log p = 2.564949) ; pente brute min 0.9981 max 1.0006 ; résidu brut max 1.56e-05 ; montée lissée 6.672674757e-03 / Z_n 6.672674755e-03 ; résidu lissé max 2.12e-11
+   n=100 [547,557] : montée brute 8.999299 / 9.000000 ; chute brute -5.320691 / -5.322565 (log p = 6.322565) ; pente brute min 0.9687 max 1.0188 ; résidu brut max 1.77e-03 ; montée lissée -1.183553210e-01 / Z_n -1.183553201e-01 ; résidu lissé max 1.80e-09
+   n=300 [1993,1997] : montée brute 2.993970 / 3.000000 ; chute brute -6.588253 / -6.599401 (log p = 7.599401) ; pente brute min 0.6716 max 1.3088 ; résidu brut max 7.41e-03 ; montée lissée -2.099290739e-02 / Z_n -2.099290907e-02 ; résidu lissé max 7.73e-09
+   n=500 [3581,3583] : montée brute 0.972903 / 1.000000 ; chute brute -7.160883 / -7.183956 (log p = 8.183956) ; pente brute min -1.7704 max 3.7719 ; résidu brut max 1.40e-02 ; montée lissée 7.711556837e-04 / Z_n 7.711563101e-04 ; résidu lissé max 1.56e-08
+   n=614 [4523,4547] : montée brute 22.969592 / 23.000000 ; chute brute -7.392879 / -7.422223 (log p = 8.422223) ; pente brute min 0.9241 max 1.0398 ; résidu brut max 1.67e-02 ; montée lissée 1.992073544e-02 / Z_n 1.992072673e-02 ; résidu lissé max 1.58e-08
+   n=800 [6143,6151] : montée brute 7.031260 / 7.000000 ; chute brute -7.758075 / -7.724370 (log p = 8.724370) ; pente brute min 0.9111 max 1.1825 ; résidu brut max 1.76e-02 ; montée lissée 1.935099827e-04 / Z_n 1.935093346e-04 ; résidu lissé max 2.32e-08
+   n=1000 [7927,7933] : montée brute 5.061435 / 5.000000 ; chute brute -8.027313 / -7.978787 (log p = 8.978787) ; pente brute min 0.4779 max 1.6723 ; résidu brut max 4.22e-02 ; montée lissée 2.976923884e-03 / Z_n 2.976930507e-03 ; résidu lissé max 3.47e-08
+   n=1182 [9551,9587] : montée brute 35.080738 / 35.000000 ; chute brute -8.247950 / -8.168163 (log p = 9.168163) ; pente brute min 0.9029 max 1.1929 ; résidu brut max 4.04e-02 ; montée lissée 8.990960804e-02 / Z_n 8.990961730e-02 ; résidu lissé max 2.35e-08
+   n=1223 [9929,9931] : montée brute 0.910218 / 1.000000 ; chute brute -8.129570 / -8.203416 (log p = 9.203416) ; pente brute min -5.5992 max 7.7923 ; résidu brut max 6.26e-02 ; montée lissée 3.962908880e-03 / Z_n 3.962916770e-03 ; résidu lissé max 5.44e-08
+   n=1228 [9973,10007] : montée brute 32.889173 / 33.000000 ; chute brute -8.114576 / -8.211040 (log p = 9.211040) ; pente brute min 0.9339 max 1.0013 ; résidu brut max 6.12e-02 ; montée lissée 8.312059803e-02 / Z_n 8.312059382e-02 ; résidu lissé max 6.34e-09
+2. Décomposition par fréquence : voir e404_freq_decomposition.txt (montée et chute cumulées par seuil, les deux canaux).
+3. Jumeau OFF : |Δ| au point p_{n+1}−1/2 par bloc, contre le résidu réel au même point
+   n=4 x=12.5 : brut |Δ| bloc1 3.272e-03 bloc50 5.989e-03 bloc500 6.907e-03 (résidu brut 4.882e-06) ; lissé |Δ| bloc1 2.496e-06 bloc50 1.528e-06 bloc500 1.051e-07 (résidu lissé 2.894e-12)
+   n=100 x=556.5 : brut |Δ| bloc1 7.856e-02 bloc50 2.023e-01 bloc500 6.474e-01 (résidu brut 1.734e-03) ; lissé |Δ| bloc1 1.228e-05 bloc50 6.928e-07 bloc500 2.422e-04 (résidu lissé 5.635e-10)
+   n=300 x=1996.5 : brut |Δ| bloc1 1.431e-01 bloc50 3.373e-01 bloc500 3.913e+00 (résidu brut 4.208e-03) ; lissé |Δ| bloc1 3.494e-05 bloc50 5.298e-04 bloc500 1.066e-04 (résidu lissé 5.660e-09)
+   n=500 x=3582.5 : brut |Δ| bloc1 6.328e-02 bloc50 9.021e-01 bloc500 9.209e-01 (résidu brut 1.343e-02) ; lissé |Δ| bloc1 8.902e-05 bloc50 3.225e-04 bloc500 9.197e-04 (résidu lissé 1.353e-08)
+   n=614 x=4546.5 : brut |Δ| bloc1 1.844e-01 bloc50 2.856e-01 bloc500 5.197e+00 (résidu brut 1.370e-02) ; lissé |Δ| bloc1 7.713e-05 bloc50 1.128e-04 bloc500 7.791e-04 (résidu lissé 1.581e-08)
+   n=800 x=6150.5 : brut |Δ| bloc1 2.171e-01 bloc50 2.771e-01 bloc500 1.188e+01 (résidu brut 1.615e-02) ; lissé |Δ| bloc1 9.440e-05 bloc50 9.666e-04 bloc500 7.021e-04 (résidu lissé 2.157e-08)
+   n=1000 x=7932.5 : brut |Δ| bloc1 3.758e-01 bloc50 1.572e+00 bloc500 7.323e+00 (résidu brut 2.869e-02) ; lissé |Δ| bloc1 1.728e-05 bloc50 1.252e-03 bloc500 9.530e-04 (résidu lissé 3.470e-08)
+   n=1182 x=9586.5 : brut |Δ| bloc1 2.667e-01 bloc50 2.412e-01 bloc500 5.303e+00 (résidu brut 4.032e-02) ; lissé |Δ| bloc1 1.333e-04 bloc50 1.335e-03 bloc500 1.496e-03 (résidu lissé 2.353e-08)
+   n=1223 x=9930.5 : brut |Δ| bloc1 4.332e-01 bloc50 4.181e+00 bloc500 8.751e+00 (résidu brut 3.554e-02) ; lissé |Δ| bloc1 2.776e-05 bloc50 9.491e-04 bloc500 9.738e-04 (résidu lissé 3.762e-08)
+   n=1228 x=10006.5 : brut |Δ| bloc1 4.345e-01 bloc50 2.257e+00 bloc500 7.250e+00 (résidu brut 6.124e-02) ; lissé |Δ| bloc1 3.019e-05 bloc50 1.760e-03 bloc500 2.701e-03 (résidu lissé 1.376e-09)
+4. Jumeaux mpmath (dps 30) :
+   n=4 x=12.5 (2000 zéros) : brut mpmath − numpy = 3.40e-14 ; lissé mpmath − numpy = 1.72e-16 ; A mpmath − flottant = 0.00e+00 ; ψ exact = 10.229909453
+   n=614 x=4546.5 (2000 zéros) : brut mpmath − numpy = 4.43e-12 ; lissé mpmath − numpy = 4.44e-16 ; A mpmath − flottant = 2.27e-12 ; ψ exact = 4537.696122226
+   n=1228 x=10006.5 (2000 zéros) : brut mpmath − numpy = 2.90e-12 ; lissé mpmath − numpy = 1.56e-14 ; A mpmath − flottant = 1.18e-11 ; ψ exact = 10013.396693263
+Aucune conclusion sur β des vrais zéros.

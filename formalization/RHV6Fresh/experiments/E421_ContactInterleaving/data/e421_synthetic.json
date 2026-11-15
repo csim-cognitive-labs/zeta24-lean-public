@@ -1,0 +1,46 @@
+[
+ {
+  "beta": 0.5,
+  "T": 237.1470250735,
+  "n_contacts_tour": 17,
+  "deplacement_log": 0.0,
+  "deplacement_en_pas": 0.0,
+  "somme_changements_rang": 0,
+  "max_changement_rang": 0,
+  "miroir_distance_min_en_pas": 0.0,
+  "miroir_distance_attendue_en_pas": 0.0
+ },
+ {
+  "beta": 0.3,
+  "T": 237.1470250735,
+  "n_contacts_tour": 17,
+  "deplacement_log": 3.556258915003537e-06,
+  "deplacement_en_pas": 0.00026844862306401397,
+  "somme_changements_rang": 1047,
+  "max_changement_rang": 72,
+  "miroir_distance_min_en_pas": 0.0005368962913887965,
+  "miroir_distance_attendue_en_pas": 0.0005368962914588838
+ },
+ {
+  "beta": 0.45,
+  "T": 237.1470250735,
+  "n_contacts_tour": 17,
+  "deplacement_log": 8.890637407062413e-07,
+  "deplacement_en_pas": 6.711208118222592e-05,
+  "somme_changements_rang": 289,
+  "max_changement_rang": 24,
+  "miroir_distance_min_en_pas": 0.00013422410264881348,
+  "miroir_distance_attendue_en_pas": 0.0001342241026975994
+ },
+ {
+  "beta": 0.49,
+  "T": 237.1470250735,
+  "n_contacts_tour": 17,
+  "deplacement_log": 1.77812687435561e-07,
+  "deplacement_en_pas": 1.342241165400095e-05,
+  "somme_changements_rang": 53,
+  "max_changement_rang": 6,
+  "miroir_distance_min_en_pas": 2.684482086498895e-05,
+  "miroir_distance_attendue_en_pas": 2.6844820921384343e-05
+ }
+]

@@ -1,0 +1,17 @@
+RHV6Fresh/Terminal/E445_T3_SCRATCH.lean:24:45: error(lean.unknownIdentifier): Unknown identifier `complement_break_lower_bound`
+RHV6Fresh/Terminal/E445_T3_SCRATCH.lean:13:83: error: unsolved goals
+C : OffCarrier
+h : C.outgoing.zLaterMember = ↑(mirrorMember C.zero)
+hnc : ∀ (x : ℝ), 0 < x → ‖zeroTerm C.zero x‖ < ‖zeroTerm C.zero x + zeroTerm (mirrorMember C.zero) x‖
+hprice : ∀ (K : ℝ), ∃ x, 1 < x ∧ K < offPrice (rZeroRadialPosition ↑C.zero) x
+hpair :
+  ∀ (x : ℝ),
+    1 ≤ x →
+      ‖C.pairPrimitive x‖ ≤
+        2 * ↑(zetaZeroMultiplicity (zeroPoint C.zero)) *
+            (1 / (‖zeroPoint C.zero‖ * ‖zeroPoint C.zero + 1‖) +
+              1 / (‖zeroPoint (mirrorMember C.zero)‖ * ‖zeroPoint (mirrorMember C.zero) + 1‖)) *
+          x ^ (1 + (1 / 2 + C.radialShift))
+hexp : 1 / 2 + C.radialShift ≤ remainderExponent
+⊢ False
+EXIT=1

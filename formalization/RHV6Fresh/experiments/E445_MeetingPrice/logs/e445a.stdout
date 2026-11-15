@@ -1,0 +1,30 @@
+[    0.54s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    0.62s] rang 1 T=14.1347 : violations {'P4_lower': 0, 'P4_upper': 0, 'P5_bound': 0} ; P5 ratio max 0.443 (facteur q/(q−1) = 9.5)
+[    0.62s]   β=0.3 : prix(10⁶)=7.96, miroir bat log p dès p=641 (et après : True), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=892, identité paire 1.4e-15
+[    0.62s]   β=0.4 : prix(10⁶)=2.12, miroir bat log p dès p=2579 (et après : True), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=3.55e+03, identité paire 4.7e-16
+[    0.62s]   β=0.45 : prix(10⁶)=1.25, miroir bat log p dès p=6421 (et après : True), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=7.08e+03, identité paire 1.0e-15
+[    0.64s] rang 10 T=49.7738 : violations {'P4_lower': 0, 'P4_upper': 0, 'P5_bound': 0} ; P5 ratio max 0.154 (facteur q/(q−1) = 32.2)
+[    0.64s]   β=0.3 : prix(10⁶)=7.96, miroir bat log p dès p=5813 (et après : True), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=3.14e+03, identité paire 1.4e-15
+[    0.64s]   β=0.4 : prix(10⁶)=2.12, miroir bat log p dès p=33479 (et après : True), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=1.25e+04, identité paire 4.7e-16
+[    0.64s]   β=0.45 : prix(10⁶)=1.25, miroir bat log p dès p=104173 (et après : True), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=2.49e+04, identité paire 1.0e-15
+[    0.65s] rang 100 T=236.5242 : violations {'P4_lower': 0, 'P4_upper': 0, 'P5_bound': 0} ; P5 ratio max 0.063 (facteur q/(q−1) = 151.1)
+[    0.65s]   β=0.3 : prix(10⁶)=7.96, miroir bat log p dès p=78341 (et après : True), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=1.49e+04, identité paire 1.4e-15
+[    0.65s]   β=0.4 : prix(10⁶)=2.12, miroir bat log p dès p=687317 (et après : True), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=5.93e+04, identité paire 4.7e-16
+[    0.65s]   β=0.45 : prix(10⁶)=1.25, miroir bat log p dès p=None (et après : False), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=1.18e+05, identité paire 1.0e-15
+[    0.66s] rang 1000 T=1419.4225 : violations {'P4_lower': 0, 'P4_upper': 0, 'P5_bound': 0} ; P5 ratio max 0.007 (facteur q/(q−1) = 904.1)
+[    0.66s]   β=0.3 : prix(10⁶)=7.96, miroir bat log p dès p=None (et après : False), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=8.94e+04, identité paire 1.4e-15
+[    0.66s]   β=0.4 : prix(10⁶)=2.12, miroir bat log p dès p=None (et après : False), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=3.56e+05, identité paire 4.7e-16
+[    0.66s]   β=0.45 : prix(10⁶)=1.25, miroir bat log p dès p=None (et après : False), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=7.1e+05, identité paire 1.0e-15
+[    0.67s] rang 10000 T=9877.7827 : violations {'P4_lower': 0, 'P4_upper': 0, 'P5_bound': 0} ; P5 ratio max 0.001 (facteur q/(q−1) = 6288.9)
+[    0.67s]   β=0.3 : prix(10⁶)=7.96, miroir bat log p dès p=None (et après : False), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=6.22e+05, identité paire 1.4e-15
+[    0.67s]   β=0.4 : prix(10⁶)=2.12, miroir bat log p dès p=None (et après : False), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=2.48e+06, identité paire 4.7e-16
+[    0.67s]   β=0.45 : prix(10⁶)=1.25, miroir bat log p dès p=None (et après : False), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=4.94e+06, identité paire 1.0e-15
+[    0.70s] rang 100000 T=74920.8275 : violations {'P4_lower': 0, 'P4_upper': 0, 'P5_bound': 0} ; P5 ratio max 0.000 (facteur q/(q−1) = 47696.6)
+[    0.70s]   β=0.3 : prix(10⁶)=7.96, miroir bat log p dès p=None (et après : False), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=4.72e+06, identité paire 1.4e-15
+[    0.70s]   β=0.4 : prix(10⁶)=2.12, miroir bat log p dès p=None (et après : False), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=1.88e+07, identité paire 4.7e-16
+[    0.70s]   β=0.45 : prix(10⁶)=1.25, miroir bat log p dès p=None (et après : False), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=3.75e+07, identité paire 1.0e-15
+[    1.07s] rang 2000000 T=1131944.4718 : violations {'P4_lower': 0, 'P4_upper': 0, 'P5_bound': 0} ; P5 ratio max 0.000 (facteur q/(q−1) = 720618.7)
+[    1.07s]   β=0.3 : prix(10⁶)=7.96, miroir bat log p dès p=None (et après : False), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=7.13e+07, identité paire 1.4e-15
+[    1.07s]   β=0.4 : prix(10⁶)=2.12, miroir bat log p dès p=None (et après : False), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=2.84e+08, identité paire 4.7e-16
+[    1.07s]   β=0.45 : prix(10⁶)=1.25, miroir bat log p dès p=None (et après : False), bat θ(p) sur 0.0000 des rencontres, θ/miroir(10⁶)=5.66e+08, identité paire 1.0e-15
+[    1.07s] TOTAL violations = 0

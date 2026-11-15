@@ -1,0 +1,6 @@
+'RHV6Fresh.low_arrival_above_on_history' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.low_entry_successor_le_half_of_on_fibre' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.no_on_in_fibre_of_successor_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.low_entry_successor_trichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.low_arrival_on_fibre_refutes_noMixedHeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.on_members_split_by_low_arrival' depends on axioms: [propext, Classical.choice, Quot.sound]

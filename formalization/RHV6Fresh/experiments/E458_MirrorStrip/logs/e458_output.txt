@@ -1,0 +1,33 @@
+# E458 volet déterministe — premiers ≤ 1000000 : 78498 ; hauteurs : 200 (première 14.134725142 , dernière 396.381854223 )
+
+## ligne β = 1/2
+hauteurs à bande vide jusqu à 10^6 : 200 / 200
+effectif de bande : min 0 ; médiane 0.0 ; max 0 ; total 0
+effectifs aux hauteurs 1, 2, 3, 50, 100, 200 : [0, 0, 0, 0, 0, 0]
+premier premier de bande aux hauteurs 1, 2, 3, 50, 100, 200 : [None, None, None, None, None, None]
+violations B0 : 0 ; B4 direct : 0 ; B4 réciproque : 0 ; cas sous le bruit (écartés) : 0
+
+## contrôle β = 0.3
+hauteurs à bande vide jusqu à 10^6 : 0 / 200
+effectif de bande : min 17 ; médiane 42.5 ; max 688 ; total 13476
+effectifs aux hauteurs 1, 2, 3, 50, 100, 200 : [688, 439, 404, 79, 49, 28]
+premier premier de bande aux hauteurs 1, 2, 3, 50, 100, 200 : [877, 2551, 7, 8017, 61, 37991]
+violations B0 : 0 ; B4 direct : 0 ; B4 réciproque : 0 ; cas sous le bruit (écartés) : 0
+
+## contrôle β = 0.4
+hauteurs à bande vide jusqu à 10^6 : 0 / 200
+effectif de bande : min 7 ; médiane 22.0 ; max 335 ; total 6724
+effectifs aux hauteurs 1, 2, 3, 50, 100, 200 : [335, 219, 200, 33, 26, 9]
+premier premier de bande aux hauteurs 1, 2, 3, 50, 100, 200 : [877, 2963, 3739, 8017, 8311, 130811]
+violations B0 : 0 ; B4 direct : 0 ; B4 réciproque : 0 ; cas sous le bruit (écartés) : 0
+
+## contrôle β = 0.45
+hauteurs à bande vide jusqu à 10^6 : 0 / 200
+effectif de bande : min 2 ; médiane 10.0 ; max 168 ; total 3360
+effectifs aux hauteurs 1, 2, 3, 50, 100, 200 : [168, 106, 107, 19, 10, 3]
+premier premier de bande aux hauteurs 1, 2, 3, 50, 100, 200 : [877, 2963, 3739, 95789, 156487, 130811]
+violations B0 : 0 ; B4 direct : 0 ; B4 réciproque : 0 ; cas sous le bruit (écartés) : 1
+
+## Bilan
+ligne : bande vide aux 200 hauteurs : True
+violations B0/B4 toutes Tours : 0 ; cas sous le bruit : 1

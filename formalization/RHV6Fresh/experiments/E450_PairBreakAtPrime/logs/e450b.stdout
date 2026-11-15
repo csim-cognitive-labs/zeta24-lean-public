@@ -1,0 +1,21 @@
+[    0.53s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    0.59s] premiers ≤ 10000000 : 664579 ; échantillon 100000 ; repères [1009.0, 10007.0, 100003.0, 1000003.0, 9999991.0]
+[    0.60s] rang 1 β=0.30 décalage=2.826e-02 | H1 4.0e-15 | H2 fract 1.3e-14 mots≠ 0.0097 max|Δk|=1 | H3 5.4e-15 feff∈[0.006,0.997] | H4 viol=0 | H5 3.1e-15 miroir/Tour@10^7=6.280e+02 | ok=True
+[    0.61s] rang 1 β=0.40 décalage=1.413e-02 | H1 2.8e-15 | H2 fract 1.8e-14 mots≠ 0.0051 max|Δk|=1 | H3 4.6e-15 feff∈[0.003,0.998] | H4 viol=0 | H5 2.3e-15 miroir/Tour@10^7=2.506e+01 | ok=True
+[    0.62s] rang 1 β=0.45 décalage=7.066e-03 | H1 3.2e-15 | H2 fract 1.4e-14 mots≠ 0.0024 max|Δk|=1 | H3 6.4e-15 feff∈[0.001,0.999] | H4 viol=0 | H5 2.9e-15 miroir/Tour@10^7=5.006e+00 | ok=True
+[    0.63s] rang 10 β=0.30 décalage=8.035e-03 | H1 3.2e-15 | H2 fract 3.7e-14 mots≠ 0.0025 max|Δk|=1 | H3 4.9e-15 feff∈[0.002,0.999] | H4 viol=0 | H5 3.7e-15 miroir/Tour@10^7=6.171e+02 | ok=True
+[    0.64s] rang 10 β=0.40 décalage=4.018e-03 | H1 2.9e-15 | H2 fract 1.8e-14 mots≠ 0.0014 max|Δk|=1 | H3 3.8e-15 feff∈[0.001,0.999] | H4 viol=0 | H5 2.0e-15 miroir/Tour@10^7=2.484e+01 | ok=True
+[    0.64s] rang 10 β=0.45 décalage=2.009e-03 | H1 2.5e-15 | H2 fract 5.2e-14 mots≠ 0.0008 max|Δk|=1 | H3 4.5e-15 feff∈[0.000,1.000] | H4 viol=0 | H5 2.2e-15 miroir/Tour@10^7=4.984e+00 | ok=True
+[    0.65s] rang 100 β=0.30 décalage=1.691e-03 | H1 4.2e-15 | H2 fract 2.2e-13 mots≠ 0.0006 max|Δk|=1 | H3 6.5e-15 feff∈[0.000,1.000] | H4 viol=0 | H5 3.9e-15 miroir/Tour@10^7=6.335e+02 | ok=True
+[    0.66s] rang 100 β=0.40 décalage=8.456e-04 | H1 3.6e-15 | H2 fract 2.0e-13 mots≠ 0.0003 max|Δk|=1 | H3 5.4e-15 feff∈[0.000,1.000] | H4 viol=0 | H5 3.3e-15 miroir/Tour@10^7=2.505e+01 | ok=True
+[    0.67s] rang 100 β=0.45 décalage=4.228e-04 | H1 3.5e-15 | H2 fract 2.3e-13 mots≠ 0.0002 max|Δk|=1 | H3 5.2e-15 feff∈[0.000,1.000] | H4 viol=0 | H5 2.8e-15 miroir/Tour@10^7=5.005e+00 | ok=True
+[    0.67s] rang 1000 β=0.30 décalage=2.818e-04 | H1 4.3e-15 | H2 fract 1.0e-12 mots≠ 0.0001 max|Δk|=1 | H3 5.8e-15 feff∈[0.000,1.000] | H4 viol=0 | H5 4.4e-15 miroir/Tour@10^7=6.304e+02 | ok=True
+[    0.68s] rang 1000 β=0.40 décalage=1.409e-04 | H1 3.7e-15 | H2 fract 1.1e-12 mots≠ 0.0001 max|Δk|=1 | H3 5.5e-15 feff∈[0.000,1.000] | H4 viol=0 | H5 2.6e-15 miroir/Tour@10^7=2.511e+01 | ok=True
+[    0.69s] rang 1000 β=0.45 décalage=7.045e-05 | H1 3.3e-15 | H2 fract 1.3e-12 mots≠ 0.0000 max|Δk|=1 | H3 6.4e-15 feff∈[0.000,1.000] | H4 viol=0 | H5 3.5e-15 miroir/Tour@10^7=5.011e+00 | ok=True
+[    0.70s] rang 10000 β=0.30 décalage=4.049e-05 | H1 5.1e-15 | H2 fract 8.2e-12 mots≠ 0.0000 max|Δk|=1 | H3 7.9e-15 feff∈[0.000,1.000] | H4 viol=0 | H5 4.2e-15 miroir/Tour@10^7=6.309e+02 | ok=True
+[    0.71s] rang 10000 β=0.40 décalage=2.025e-05 | H1 4.0e-15 | H2 fract 1.0e-11 mots≠ 0.0000 max|Δk|=1 | H3 6.0e-15 feff∈[0.000,1.000] | H4 viol=0 | H5 2.8e-15 miroir/Tour@10^7=2.512e+01 | ok=True
+[    0.71s] rang 10000 β=0.45 décalage=1.012e-05 | H1 3.9e-15 | H2 fract 9.3e-12 mots≠ 0.0000 max|Δk|=1 | H3 6.8e-15 feff∈[0.000,1.000] | H4 viol=0 | H5 3.7e-15 miroir/Tour@10^7=5.012e+00 | ok=True
+[    0.72s] rang 100000 β=0.30 décalage=5.339e-06 | H1 5.0e-15 | H2 fract 7.4e-11 mots≠ 0.0000 max|Δk|=0 | H3 7.4e-15 feff∈[0.000,1.000] | H4 viol=0 | H5 4.2e-15 miroir/Tour@10^7=6.310e+02 | ok=True
+[    0.73s] rang 100000 β=0.40 décalage=2.669e-06 | H1 4.1e-15 | H2 fract 5.0e-11 mots≠ 0.0000 max|Δk|=0 | H3 6.6e-15 feff∈[0.000,1.000] | H4 viol=0 | H5 2.9e-15 miroir/Tour@10^7=2.512e+01 | ok=True
+[    0.74s] rang 100000 β=0.45 décalage=1.335e-06 | H1 3.7e-15 | H2 fract 6.2e-11 mots≠ 0.0000 max|Δk|=0 | H3 7.2e-15 feff∈[0.000,1.000] | H4 viol=0 | H5 3.9e-15 miroir/Tour@10^7=5.012e+00 | ok=True
+[    0.74s] FIN e450b all_ok=True

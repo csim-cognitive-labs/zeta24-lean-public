@@ -1,0 +1,7 @@
+# Applications DERIVEES entre types porteurs.
+#
+# Elles ne sont pas des habitants : elles prennent un porteur en argument et en
+# rendent un autre.  Elles ne peuvent donc pas davantage réaliser un objet
+# CANONIQUE, et le registre ne les inscrit comme réalisateur d'aucune obligation
+# d'habitation.
+toOperator

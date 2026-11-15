@@ -1,0 +1,1 @@
+Copie de anthropics/formal-math@fbdc36bbf17d20af3fd0447c6d1a8a02773c9844, répertoire zeta23 : clôture d’import de Zeta23.Final (clôtures de Zeta23.Final et Zeta23.FinalMult), imports renommés Zeta23.* → RHV6Fresh.Zeta23Port.*, contenu inchangé. Apache 2.0 (LICENSE, NOTICE). Même toolchain et même révision Mathlib (51e6992e).

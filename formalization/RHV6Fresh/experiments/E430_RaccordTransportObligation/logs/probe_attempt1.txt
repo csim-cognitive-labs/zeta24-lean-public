@@ -1,0 +1,38 @@
+RHV6Fresh/Terminal/RaccordTransportProbe_SCRATCH.lean:18:2: error: unsolved goals
+C : OffCarrier
+hON : rZeroRadialPosition ↑C.nextMember = 1 / 2
+hbreak : eventCompensation C.packet C.meetingPred = packetIncrement C.packetᶜ C.meetingPred
+hsplit :
+  remainderIncrement C.meetingPred = packetIncrement C.packet C.meetingPred + packetIncrement C.packetᶜ C.meetingPred
+⊢ (rPrimeGapLogRatio C.n - rPrimeGapLogRatio (C.n + 1)) * C.radialShift = 0
+RHV6Fresh/Terminal/RaccordTransportProbe_SCRATCH.lean:25:2: error: unsolved goals
+C : OffCarrier
+h : C.outgoing.zLaterMember = ↑(mirrorMember C.zero)
+hbreak : eventCompensation C.packet C.meetingPred = packetIncrement C.packetᶜ C.meetingPred
+⊢ 2 * cosh (C.radialShift * C.breakLog) * realCountingDensity C.linePoint C.breakLog =
+    2 * realCountingDensity C.linePoint C.breakLog
+RHV6Fresh/Terminal/RaccordTransportProbe_SCRATCH.lean:38:2: error: unsolved goals
+C : OffCarrier
+h : C.outgoing.zLaterMember = ↑(mirrorMember C.zero)
+h2 : 2 ≤ C.meetingPred
+hx0 : 1 < ↑C.meetingPred
+hx1 : 1 < ↑C.meetingPred + 1
+hx2 : 1 < ↑(C.meetingPred + 1) + 1
+⊢ ↑(↑(C.meetingPred + 1) + 1) *
+          (smoothingFactor C.zero * zeroTerm C.zero (↑(C.meetingPred + 1) + 1) +
+                smoothingFactor (mirrorMember C.zero) * zeroTerm (mirrorMember C.zero) (↑(C.meetingPred + 1) + 1) +
+              nontrivialZeroResidueTerm (↑(C.meetingPred + 1) + 1) (conjIndex C.zero) +
+            nontrivialZeroResidueTerm (↑(C.meetingPred + 1) + 1) (conjIndex (mirrorMember C.zero))) -
+        ↑↑(C.meetingPred + 1) * channelOn C.packet ↑(C.meetingPred + 1) -
+      (↑(↑C.meetingPred + 1) *
+          (smoothingFactor C.zero * zeroTerm C.zero (↑C.meetingPred + 1) +
+                smoothingFactor (mirrorMember C.zero) * zeroTerm (mirrorMember C.zero) (↑C.meetingPred + 1) +
+              nontrivialZeroResidueTerm (↑C.meetingPred + 1) (conjIndex C.zero) +
+            nontrivialZeroResidueTerm (↑C.meetingPred + 1) (conjIndex (mirrorMember C.zero))) -
+        ↑↑C.meetingPred *
+          (smoothingFactor C.zero * zeroTerm C.zero ↑C.meetingPred +
+                smoothingFactor (mirrorMember C.zero) * zeroTerm (mirrorMember C.zero) ↑C.meetingPred +
+              nontrivialZeroResidueTerm (↑C.meetingPred) (conjIndex C.zero) +
+            nontrivialZeroResidueTerm (↑C.meetingPred) (conjIndex (mirrorMember C.zero)))) =
+    0
+EXIT=1

@@ -1,0 +1,17 @@
+RHV6Fresh/Terminal/CarrierSelection_SCRATCH.lean:271:2: error: (deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+'RHV6Fresh.carrierWordsSelfMirror_iff_riemannHypothesis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.heightInjectiveOnCarriers_iff_riemannHypothesis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.noMixedHeight_of_heightInjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.priceRadiallyBlindOnCarriers_iff_riemannHypothesis' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RHV6Fresh.radial_half_of_term_modulus_eq_two_primes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.termModulusMirrorBlind_iff_riemannHypothesis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.towerWord_stable_right_finset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.exists_nonCarrier_same_word_on_finset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.finite_window_predicate_not_carrier_selective' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT=1

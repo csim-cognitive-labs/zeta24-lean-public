@@ -1,0 +1,12 @@
+[     0.0s] crible jusqu'à 30000000
+[     0.7s] premiers : 1857860 ; support Λ ≥ 1000 : 1858526
+[     1.8s] Tour 1 T=14.135 cellules 45 premiers 1517453 | H1 7.1e-15 H2 3.0e-15 H3id 1.4e-14 | pos 0.5511 préd 0.5277 | regroup 1.4e-15 | budget/x^1.5 0.0091 saw/x^1.5 -13.2388
+[     2.1s] H4 : β=0.5: méd 0.00e+00, mot décalé 0.000 ; β=0.45: méd 4.45e-04, mot décalé 0.002 ; β=0.4: méd 8.90e-04, mot décalé 0.004 ; β=0.3: méd 1.78e-03, mot décalé 0.008
+[     2.9s] Tour 2 T=21.022 cellules 68 premiers 1681673 | H1 8.0e-15 H2 3.6e-15 H3id 1.6e-14 | pos 0.5173 préd 0.5187 | regroup 6.8e-15 | budget/x^1.5 0.0231 saw/x^1.5 4.3195
+[     3.8s] Tour 3 T=25.011 cellules 81 premiers 1737409 | H1 8.1e-15 H2 3.5e-15 H3id 1.6e-14 | pos 0.5061 préd 0.5157 | regroup 9.1e-15 | budget/x^1.5 0.0255 saw/x^1.5 -2.5881
+[     4.6s] Tour 5 T=32.935 cellules 106 premiers 1699877 | H1 8.0e-15 H2 3.9e-15 H3id 1.6e-14 | pos 0.5231 préd 0.5119 | regroup 1.0e-14 | budget/x^1.5 0.0122 saw/x^1.5 1.1756
+[     5.7s] Tour 10 T=49.774 cellules 162 premiers 1828267 | H1 7.3e-15 H2 3.3e-15 H3id 1.4e-14 | pos 0.5071 préd 0.5079 | regroup 8.1e-15 | budget/x^1.5 -0.0057 saw/x^1.5 0.3352
+[     6.9s] Tour 20 T=77.145 cellules 252 premiers 1839007 | H1 7.2e-15 H2 3.6e-15 H3id 1.4e-14 | pos 0.5044 préd 0.5051 | regroup 5.3e-15 | budget/x^1.5 0.0008 saw/x^1.5 0.0936
+[     9.5s] Tour 100 T=236.524 cellules 774 premiers 1842066 | H1 6.6e-15 H2 3.4e-15 H3id 1.3e-14 | pos 0.5014 préd 0.5017 | regroup 4.1e-14 | budget/x^1.5 0.0067 saw/x^1.5 0.0105
+[    22.2s] Tour 1000 T=1419.422 cellules 4653 premiers 1857391 | H1 6.8e-15 H2 3.5e-15 H3id 1.4e-14 | pos 0.5000 préd 0.5003 | regroup 3.0e-14 | budget/x^1.5 -0.0006 saw/x^1.5 -0.0004
+[    22.2s] verdict jumeau {'H1': True, 'H2': True, 'H3a': True, 'H3b': False, 'H4': False} ; écrit twin_results.json

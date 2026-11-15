@@ -1,0 +1,62 @@
+RHV6Fresh/Terminal/GapPartialRemainders_SCRATCH.lean:107:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+RHV6Fresh/Terminal/GapPartialRemainders_SCRATCH.lean:186:20: error: Function expected at
+  fnPrimeAtRank
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (n + J)
+
+Hint: The identifier `fnPrimeAtRank` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/GapPartialRemainders_SCRATCH.lean:186:59: error: Function expected at
+  fnPrimeAtRank
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  n
+
+Hint: The identifier `fnPrimeAtRank` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/GapPartialRemainders_SCRATCH.lean:199:48: error: Function expected at
+  fnPrimeAtRank
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  n
+
+Hint: The identifier `fnPrimeAtRank` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/GapPartialRemainders_SCRATCH.lean:199:66: error: Function expected at
+  fnPrimeAtRank
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (n + J)
+
+Hint: The identifier `fnPrimeAtRank` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/GapPartialRemainders_SCRATCH.lean:199:92: error: unsolved goals
+x✝ : Sort u_1
+fnPrimeAtRank : x✝
+ρ : ℂ
+β T : ℝ
+k₀ : ℤ
+m n J : ℕ
+⊢ Sort ?u.20
+
+x✝ : Sort u_1
+fnPrimeAtRank : x✝
+ρ : ℂ
+β T : ℝ
+k₀ : ℤ
+m n J : ℕ
+⊢ ?m.17
+RHV6Fresh/Terminal/GapPartialRemainders_SCRATCH.lean:207:0: warning: declaration uses `sorry`
+RHV6Fresh/Terminal/GapPartialRemainders_SCRATCH.lean:217:0: warning: declaration uses `sorry`
+EXIT=1

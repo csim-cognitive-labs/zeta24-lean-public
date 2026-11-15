@@ -1,0 +1,13 @@
+RHV6Fresh/Terminal/LowArrivalFrequencyFibre_SCRATCH.lean:14:5: warning: Variable name `hlow` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlow
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'RHV6Fresh.low_arrival_above_on_history' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.low_entry_successor_le_half_of_on_fibre' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.no_on_in_fibre_of_successor_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.low_entry_successor_trichotomy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.low_arrival_on_fibre_refutes_noMixedHeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.on_members_split_by_low_arrival' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT=0

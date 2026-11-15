@@ -1,0 +1,80 @@
+error: RHV6Fresh/Terminal/E447_SCRATCH.lean:48:95: unsolved goals
+case e_a
+β T : ℝ
+hT : 0 < T
+k₀ : ℤ
+M i : ℕ
+a✝ : i ∈ range M
+⊢ -((contactRealValue β T (k₀ + ↑i + 1) - contactRealValue β T (k₀ + ↑i)) * demandAtContact β T (k₀ + ↑i + 1)) =
+    (1 + rexp (β * π / T)) * (contactRealValue β T (k₀ + ↑i) * demandAtContact β T (k₀ + ↑i + 1))
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:58:42: Variable name `hT` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hT
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+error: RHV6Fresh/Terminal/E447_SCRATCH.lean:69:28: Application type mismatch: The argument
+  hT
+has type
+  0 < T
+but is expected to have type
+  ?m.60 ≠ 0
+in the application
+  contactRealValue_succ hT
+error: RHV6Fresh/Terminal/E447_SCRATCH.lean:68:106: unsolved goals
+T : ℝ
+hT : 0 < T
+k : ℤ
+⊢ contactRealValue (1 / 2) T (k + 1) ^ 2 = rexp (π / T) * contactRealValue (1 / 2) T k ^ 2
+error: RHV6Fresh/Terminal/E447_SCRATCH.lean:85:20: Invalid rewrite argument: Expected an equality or iff proof or definition name, but `?m.53` is a value of type
+  ?m.52
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:93:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/E447_SCRATCH.lean:105:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+error: RHV6Fresh/Terminal/E447_SCRATCH.lean:154:26: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+error: RHV6Fresh/Terminal/E447_SCRATCH.lean:147:86: unsolved goals
+β T : ℝ
+k : ℤ
+q : ℕ
+hq : contactAt β T k ≤ ↑q
+hp : Nat.Prime q
+hsolo : ∀ n ∈ Ioc ⌊contactAt β T k⌋₊ q, n ≠ q → Λ n = 0
+habs : q ∉ Ioc ⌊contactAt β T k⌋₊ q
+hc : 0 < contactAt β T k
+⊢ ⌊contactAt β T k⌋₊ < q
+error: RHV6Fresh/Terminal/E447_SCRATCH.lean:186:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  |?a / ?b|
+in the target expression
+  (abs ∘ fun x ↦ 1 / ‖{ re := 1 / 2, im := T }‖ * (demandAtContact (1 / 2) T (k₀ + ↑x) / contactAt (1 / 2) T (k₀ + ↑x)))
+      i =
+    (abs ∘ fun i ↦
+        contactRealValue (1 / 2) T (k₀ + ↑i) * demandAtContact (1 / 2) T (k₀ + ↑i) /
+          (contactAt (1 / 2) T (k₀ + ↑i) ^ (1 / 2) * contactAt (1 / 2) T (k₀ + ↑i)))
+      i
+
+T : ℝ
+hT : 0 < T
+k₀ : ℤ
+hn : 0 < ‖{ re := 1 / 2, im := T }‖
+h :
+  Tendsto
+    (abs ∘ fun x ↦
+      1 / ‖{ re := 1 / 2, im := T }‖ * (demandAtContact (1 / 2) T (k₀ + ↑x) / contactAt (1 / 2) T (k₀ + ↑x)))
+    atTop (𝓝 0)
+i : ℕ
+hc : 0 < contactAt (1 / 2) T (k₀ + ↑i)
+hr : 0 < contactAt (1 / 2) T (k₀ + ↑i) ^ (1 / 2)
+⊢ (abs ∘ fun x ↦ 1 / ‖{ re := 1 / 2, im := T }‖ * (demandAtContact (1 / 2) T (k₀ + ↑x) / contactAt (1 / 2) T (k₀ + ↑x)))
+      i =
+    (abs ∘ fun i ↦
+        contactRealValue (1 / 2) T (k₀ + ↑i) * demandAtContact (1 / 2) T (k₀ + ↑i) /
+          (contactAt (1 / 2) T (k₀ + ↑i) ^ (1 / 2) * contactAt (1 / 2) T (k₀ + ↑i)))
+      i
+error: Lean exited with code 1
+Some required targets logged failures:
+- RHV6Fresh.Terminal.E447_SCRATCH
+error: build failed

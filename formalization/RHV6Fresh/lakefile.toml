@@ -1,0 +1,36 @@
+name = "rhv6_fresh"
+version = "0.1.0"
+defaultTargets = ["RHV6Fresh"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+
+[[require]]
+name = "rhv3_lean"
+path = "../rhv3_lean"
+
+[[lean_lib]]
+name = "RHV6Fresh"
+globs = ["RHV6Fresh"]
+
+# L'ancienne bibliothèque séparée `RHV6Demonstration` (démonstration sans RH, 2026-09-22) est déplacée dans la bibliothèque
+# unique : `RHV6Fresh/Terminal/DemonstrationWithoutRH.lean` (auteur, 2026-10-09 : aucune cible séparée).
+# L'ancienne cible séparée `RHV6FreshTDD` est supprimée (auteur, 2026-10-09) : la chaîne unique de la démonstration est
+# `RHV6Fresh/Terminal/DemonstrationChain.lean`, importée par `RHV6Fresh.lean`. Une seule commande : `lake build RHV6Fresh`.
+
+# RHV6Closure et RHV6ClosureEntry (cibles de fermeture par « V », maître Lean final §11 et instruction
+# de l'auteur 2026-09-24) sont retirées (auteur, 2026-09-26) : leur prémisse entière (la notion « V »,
+# dernier rayon de la seconde Tour ou lecture à l'entrée comparés à `p_min(z)`, référence d'un AUTRE
+# zéro, via l'inversion d'une cellule fixe) est détruite avec `Terminal/PairContradiction.lean`,
+# `Terminal/EntryCollision.lean`, `Terminal/InversionClosure.lean`, `Terminal/PairHeightGap.lean`,
+# `Terminal/TwoTowersComparison.lean`.  Il n'existe actuellement aucune route de collision dans le
+# code ; la seule caractérisation de RH restante est `riemannHypothesis_iff_noLowerSide`
+# (`Terminal/ReadingArithmetic.lean`), sans pont inconditionnel connu vers elle.
+
+# Certificats lourds (bandes 22 et 28, `ZetaBox22/*`, `ZetaBox28/*`) : cible OPTIONNELLE depuis le 2026-10-27, jamais
+# construite par `lake build RHV6Fresh`. Commande : `lake build RHV6FreshCertificates`.
+[[lean_lib]]
+name = "RHV6FreshCertificates"
+globs = ["RHV6FreshCertificates"]

@@ -1,0 +1,6 @@
+[    0.50s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+Traceback (most recent call last):
+  File "/opt/zeta24-lean/formalization/RHV6Fresh/experiments/E450_PairBreakAtPrime/scripts/e450b_pair_break.py", line 22, in <module>
+    marks = np.array([float(P[np.searchsorted(P, 10 ** j)]) for j in range(3, 8)])
+                            ~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: index 664579 is out of bounds for axis 0 with size 664579

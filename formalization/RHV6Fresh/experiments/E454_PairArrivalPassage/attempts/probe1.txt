@@ -1,0 +1,15 @@
+probe1 2026-11-08T13:53:40+00:00 : sonde scratch K4 (13 énoncés)
+contact_interval_eq : ∀ (z : TrueZero) (k : ℤ), log (contactMinusAt z (k + 1) / contactMinusAt z k) = π / rZeroHeight ↑z
+@mirror_contact_ratio_gt : ∀ {β T : ℝ},
+  0 < β →
+    β < 1 / 2 →
+      0 < T →
+        ∀ (k : ℤ),
+          |contactRealValue β T (k + 1)| / |contactRealValue β T k| <
+            |contactRealValue (1 - β) T (k + 1)| / |contactRealValue (1 - β) T k|
+zero_pair_term_ratio : ∀ (z : TrueZero) {x : ℝ},
+  0 < x →
+    ‖zeroTerm z x‖ / ‖zeroTerm (mirrorMember z) x‖ =
+      x ^ (2 * rZeroRadialPosition ↑z - 1) * (‖zeroPoint (mirrorMember z)‖ / ‖zeroPoint z‖)
+RHV6Fresh/Terminal/PairArrivalPassage_SCRATCH.lean:16:8: error: `RHV6Fresh.passage_height_le` has already been declared
+EXIT=1

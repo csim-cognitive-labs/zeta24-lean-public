@@ -1,0 +1,16 @@
+[    0.55s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    0.66s] 1. résidu de troncature par écart : moyen 12.46, max 155.8 (cassure moyenne 7.566e+04) ; identité erase 2.7e-08
+[    0.77s] 2. lecture radiale aux rencontres (canal lissé, 649 Tours × 1999 écarts) : erreur max 3.0e-11
+[    0.77s] 3. off_17.5 : part/cassure 0.006 ; part/Σ|dépôts F_H| 0.1801 ; dépasse la cassure sur 0.000 des écarts ; |dépôt| 12 premiers 1.54, 12 derniers 793 ; identité 1.5e-08
+[    0.78s] 3. off_23.0 : part/cassure 0.005 ; part/Σ|dépôts F_H| 0.1373 ; dépasse la cassure sur 0.000 des écarts ; |dépôt| 12 premiers 0.804, 12 derniers 641 ; identité 1.5e-08
+[    0.78s] 3. on_control_17.5 : part/cassure 0.002 ; part/Σ|dépôts F_H| 0.0641 ; dépasse la cassure sur 0.000 des écarts ; |dépôt| 12 premiers 1.23, 12 derniers 220 ; identité 1.5e-08
+[    0.78s] 3. on_control_23.0 : part/cassure 0.002 ; part/Σ|dépôts F_H| 0.0484 ; dépasse la cassure sur 0.000 des écarts ; |dépôt| 12 premiers 0.651, 12 derniers 178 ; identité 1.5e-08
+[    1.55s] 4. off_17.5 : {'12': (15.283, 0.0, 12), '120': (669.4973, 0.0, 120), '600': (1928458.7351, 0.0, 564), '1200': (4243.9089, 0.7294, 649), '2000': (1286.2152, 0.7092, 649)}
+[    2.39s] 4. off_23.0 : {'12': (7.0616, 0.0, 12), '120': (314.8756, 0.0, 120), '600': (176731.2472, 0.0, 564), '1200': (3213.7362, 0.7911, 649), '2000': (1090.8573, 0.4336, 649)}
+[    3.15s] 4. on_control_17.5 : {'12': (13.95, 0.0, 12), '120': (389.0615, 0.0, 120), '600': (779658.51, 0.0, 564), '1200': (1496.2277, 0.745, 649), '2000': (401.0672, 0.7276, 649)}
+[    3.72s] 4. on_control_23.0 : {'12': (6.0791, 0.0, 12), '120': (192.933, 0.0, 120), '600': (64659.3339, 0.0, 564), '1200': (1207.5988, 0.8065, 649), '2000': (379.9033, 0.4893, 649)}
+[    3.72s] 4. critère Deux (off_17.5 / on_control_17.5) : rapport ‖a‖ OFF/témoin m=12 1.0956, 120 1.7208, 600 2.4735 → croît : True
+[    3.72s] 4. critère Deux (off_23.0 / on_control_23.0) : rapport ‖a‖ OFF/témoin m=12 1.1616, 120 1.6320, 600 2.7333 → croît : True
+[    3.77s] 5. Trois : c<0,1 sur 0.043 des rencontres, plus longue suite 21, c moyen 0.693 ; absorption A par B (un scalaire) résidu relatif 0.877 ; distance au réseau : toutes 0.270, annulées 0.1603476243954927
+[    3.87s] jumeau : dépôts des paires dev rel max {'off_17.5': 6.110562430771466e-14, 'off_23.0': 3.592216823185368e-14, 'on_control_17.5': 5.095987669315873e-14, 'on_control_23.0': 2.809882621447224e-14} ; ψ₁ exact dev 1.1e-13 ; ε (H=100) dev max 2.2e-13
+[    3.87s] terminé

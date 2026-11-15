@@ -1,0 +1,223 @@
+{
+  "manifest_version": "1",
+  "purpose": "Pinning de l'infrastructure Comparator RHV3 (maître Lean, M.8) et registre des cibles fortes non encore réalisées (Q.3, Q.6).",
+  "toolchain": {
+    "lean_toolchain": "leanprover/lean4:v4.33.0-rc2",
+    "mathlib_commit": "51e6992efd06126df61a496bebf8f49482a4e129",
+    "mathlib_source": "../rhv2_fresh/.lake/packages/mathlib",
+    "comparator_binary": "/usr/local/bin/comparator",
+    "comparator_binary_sha256": "2ff51e0ef0535999d633b18c45b248b5b7dedcca87866e9d701c345261fd365e",
+    "lean4export_binary": "/usr/local/bin/lean4export",
+    "lean4export_binary_sha256": "9f7b3dbba23cdbc2d978205a24baf05af83e360cf6f49ad7483ecbd7c4f0525b",
+    "landrun_binary": "/usr/local/bin/landrun",
+    "landrun_binary_sha256": "67043055130ff4ba1e773fe67dbc2ed25d89851bf7759048a677f0bae1240919",
+    "nanoda_binary": "/usr/local/bin/nanoda_bin",
+    "nanoda_binary_sha256": "29ce059b45f234f0cfc982ec52d82927c6cd7d0f03a9d02f27687a61fb76bf17"
+  },
+  "families_covered": [
+    "C0",
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7 (conditionnel)",
+    "C8",
+    "Y (consumers conditionnels)"
+  ],
+  "families_not_covered": [
+    "C7 — theorem RiemannHypothesis SANS hypothèse"
+  ],
+  "not_realised_targets": [
+    {
+      "id": "R-PASS-PRODUCER",
+      "family": "C3",
+      "expected_strong_lean_type": "theorem : PIsMemberSensitivePassageTransport nPlaceEarlierEndpoint nPlaceLaterEndpoint fnMemberCentralPrime fnPassagePlace",
+      "status": "NOT_REALISED",
+      "note": "R-PASS est desormais strictement endpoints-only et equivaut a la loi locale. Il ne contient plus aucune clause de nullite. Son producteur canonique depend encore de la succession C3."
+    },
+    {
+      "id": "S4-OPERATOR-INHABITANT",
+      "family": "C1",
+      "expected_strong_lean_type": "def tCanonicalCarrier : TTrueTowerCarrier, avec fnState z produisant directement les deux vrais contacts consecutifs et leurs lois exactes, sans kappa, span, stage ni fenetre.",
+      "status": "NOT_REALISED",
+      "note": "RETRACTION T05 : exp(phi/T), exp((phi+pi)/T) est uniquement la branche principale. La regression historique exige les incidences diagnostiques 4,10,14,22 pour Z1-Z4. Les deux lois decodent une paire mais ne fournissent aucune regle contacts-only qui la selectionne."
+    },
+    {
+      "id": "S4-CANONICAL-STATE-THREADING",
+      "family": "C1",
+      "expected_strong_lean_type": "theorem : le porteur canonique fournit exactement le vrai evenement de contacts de chaque membre",
+      "status": "NOT_REALISED",
+      "note": "Depend du producteur canonique non materialise ; le controle de branche principale ne peut pas realiser cette cible."
+    },
+    {
+      "id": "CANONICAL-C3-IN-CELL",
+      "family": "C2",
+      "expected_strong_lean_type": "theorem : le C3 canonique appartient reellement a la cellule canonique (C-,C+]",
+      "status": "NOT_REALISED",
+      "note": "Le lemme generique exige la non-vacuite. RHV2Master.lean identifie explicitement cette capture/comptage comme la premiere obligation non derivee."
+    },
+    {
+      "id": "CANONICAL-PRIME-OCCURRENCE",
+      "family": "C3",
+      "expected_strong_lean_type": "def/theorem : occurrence reelle dont le C3 est prouve dans sa cellule canonique",
+      "status": "NOT_REALISED",
+      "note": "La structure generique compile, mais sa fidelite semantique depend du porteur canonique et de la non-vacuite de sa cellule."
+    },
+    {
+      "id": "CANONICAL-CELL-NONEMPTY",
+      "family": "C2",
+      "expected_strong_lean_type": "theorem : forall z, 0 < nCellFoundCount (tCarrier.tCarrierCell z), pour le porteur CANONIQUE, pas pour un habitant de controle.",
+      "status": "NOT_REALISED",
+      "note": "CORPS_LEAN_RESTANT : produire forall z, 0 < nCellFoundCount (tCanonicalCarrier.tCarrierCell z) pour la paire de vrais contacts consecutifs. Aucun controle ratio-four ne realise cette cible."
+    },
+    {
+      "id": "LOCAL-LAW-PRODUCER",
+      "family": "C4",
+      "expected_strong_lean_type": "theorem : PLocalLawTransportsPassageOntoPlace fnMemberCentralPrime fnPassagePlace",
+      "status": "NOT_REALISED",
+      "note": "CORPS_LEAN_RESTANT : prouver C3(B)=p_(r+1) pour la place fnCarrierPassagePlace construite depuis le rang C3(A). La reconstruction Lambda-psi-J-pi et le premier terme C3(A)=p_r compilent."
+    },
+    {
+      "id": "TRIPLE-UPPER-BRANCH-BRIDGE",
+      "family": "C4",
+      "expected_strong_lean_type": "bridge : TZeroPassage -> les deux extrémités typées en branche supérieure, pour que la Tour soit lisible sur chacune",
+      "status": "REALISED",
+      "realiser": "thm_passageEndpoints_upperBranch",
+      "realised_in_tour": "T01-OFF-UPPER"
+    },
+    {
+      "id": "LOCAL-LAW-ON-OPERATOR",
+      "family": "C4",
+      "expected_strong_lean_type": "def PLocalLawOnCarrier tCanonicalCarrier fnPassagePlace — l'enonce est porte par le premier central de la cellule contacts-only",
+      "status": "REALISED",
+      "note": "L'enonce est porte par fnCarrierMemberCentralPrime, lu sur la cellule contacts-only du meme membre.",
+      "realiser": "PLocalLawOnCarrier",
+      "realised_in_tour": "T04-CONTACTS-ONLY"
+    },
+    {
+      "id": "OFF-LOCAL-FINITENESS",
+      "family": "C5",
+      "expected_strong_lean_type": "theorem : la fibre de hauteur des vrais zéros est localement finie / discrète (Mathlib : isDiscrete_riemannZetaZeros, IsCompact.inter_riemannZetaZeros_finite)",
+      "status": "REALISED",
+      "note": "Entrée non compensable de OFF.CONSECUTIVE_PAIR_EXTRACTION ; deux membres distincts de même hauteur ne forment pas encore un passage.",
+      "realiser": "thm_zeroHeightFiber_finite",
+      "realised_in_tour": "T01-OFF-UPPER"
+    },
+    {
+      "id": "OFF-CONSECUTIVE-NULL-PASSAGE",
+      "family": "C5",
+      "expected_strong_lean_type": "theorem : PIsOffCriticalLine z -> exists E : TZeroPassage, PZeroPassageRelationNull E",
+      "status": "REALISED",
+      "note": "Exige la discrétion/finitude locale de la fibre de hauteur : deux membres distincts de même hauteur ne suffisent pas, il faut qu'ils forment un passage CONSECUTIF.",
+      "realiser": "thm_offCriticalLine_existsNullPassage",
+      "realised_in_tour": "T01-OFF-UPPER"
+    },
+    {
+      "id": "SAME-E-CONTRADICTION",
+      "family": "C5",
+      "expected_strong_lean_type": "theorem : PIsOffCriticalLine z -> False, sur LE MEME passage",
+      "status": "NOT_REALISED",
+      "note": "RETRACTION T05 : l'ancien corps tirait la conservation de nullite d'un champ de R-PASS. SAME-E attend maintenant un theorem derive de la correspondance exacte, absent des sources Lean."
+    },
+    {
+      "id": "DERIVED-NULLITY-CONSERVATION",
+      "family": "C4",
+      "expected_strong_lean_type": "theorem : pour le meme passage E et sa place produite, Null_Z(E) -> Null_P(Phi(E)), derive sans champ ni hypothese terminale",
+      "status": "NOT_REALISED",
+      "note": "Aucun terme trouve. Les egalites d'extremites et la succession premiere donnent au contraire deux premiers distincts ; elles ne relient pas a elles seules l'egalite des hauteurs a l'egalite des premiers."
+    },
+    {
+      "id": "PASSAGE-HEIGHT-GAP-POSITIVE",
+      "family": "C4",
+      "expected_strong_lean_type": "theorem : forall E, 0 < rZeroPassageHeightGap E, derive de la conservation exacte",
+      "status": "NOT_REALISED",
+      "note": "L'ancien corps etait une projection de la clause de nullite circulaire retiree."
+    },
+    {
+      "id": "TRIPLE-TWO-GAPS-POSITIVE",
+      "family": "C4",
+      "expected_strong_lean_type": "theorem : les deux gaps du triple sont strictement positifs",
+      "status": "NOT_REALISED",
+      "note": "Consommateur direct du theorem de positivite passage non materialise."
+    },
+    {
+      "id": "CARRIER-SAME-E-CONSUMER",
+      "family": "C5",
+      "expected_strong_lean_type": "theorem : SAME-E sur le porteur canonique et exactement E_OFF",
+      "status": "NOT_REALISED",
+      "note": "Doit consommer la conservation de nullite derivee, jamais R-PASS seul."
+    },
+    {
+      "id": "CARRIER-TERMINAL-CONSUMER",
+      "family": "C7",
+      "expected_strong_lean_type": "theorem : raccord du SAME-E produit a thm_riemannHypothesis_of_allUpperOnCriticalLine",
+      "status": "NOT_REALISED",
+      "note": "Le bridge analytique compile, mais aucun producteur amont de centralite n'est disponible."
+    },
+    {
+      "id": "RIEMANN-HYPOTHESIS",
+      "family": "C5",
+      "expected_strong_lean_type": "theorem RiemannHypothesis_proved : RiemannHypothesis",
+      "status": "NOT_REALISED",
+      "note": "CORPS_LEAN_RESTANT : theorem sans hypothese de type RiemannHypothesis. Les corps contacts-only SAME-E et universalisation compilent une fois le transport membre-sensible produit."
+    },
+    {
+      "id": "SAME-PRIME-C3-INJECTIVITY",
+      "family": "Y",
+      "expected_strong_lean_type": "theorem : Function.Injective tCanonicalCarrier.nCarrierCentralPrime, derive de la provenance placeIndex effectivement produite",
+      "status": "NOT_REALISED",
+      "note": "Le corps historique thm_centralPrime_injective_of_placeIndex est produit conditionnellement a PCanonicalPlaceIsMemberIndex. PMemberCarriesCanonicalStateAtItsPlace reste une propriete acquise et ne produit pas cette provenance depuis la geometrie contacts-only RHV3."
+    },
+    {
+      "id": "TRUE-OFF-MIRROR-SAME-C3",
+      "family": "Y",
+      "expected_strong_lean_type": "theorem thm_offMirror_sameCentralPrime_from_canonicalEvent (zOff : TOffCriticalLineUpperZero) : C3(original zOff) = C3(mirror zOff)",
+      "status": "NOT_REALISED",
+      "note": "Premier corps exact manquant. Aucun theorem existant ne recolle les deux cellules propres, potentiellement distinctes, au meme evenement canonique sans PSameHeightSameCentralPrime ou sans supposer directement l'egalite conclue. E60 est proof_premise=false."
+    },
+    {
+      "id": "SAME-PRIME-COLLISION-CLOSED-RH",
+      "family": "Y",
+      "expected_strong_lean_type": "theorem RiemannHypothesis_proved : RiemannHypothesis",
+      "status": "NOT_REALISED",
+      "note": "Les consumers thm_off_impossible_by_samePrimeCollision, thm_allUpperCentral_by_samePrimeCollision et riemannHypothesis_of_samePrimeCollision compilent, mais attendent les deux producteurs precedents."
+    }
+  ],
+  "challenge_frozen_blob_history": [
+    {
+      "tour": "T02-MACRO-CLOSURE",
+      "from": "fefc90e35ae520189050ba0221597b3f0703f22e",
+      "to": "b49d66328392410cb053714abecbc6e6d1c2c188",
+      "change": "ADDITIVE_ONLY",
+      "prefix_identical": true,
+      "targets": "44 -> 61"
+    },
+    {
+      "tour": "T03-TRUE-STATE",
+      "from": "b49d66328392410cb053714abecbc6e6d1c2c188",
+      "to": "909a7dfd70f9cffb1b282337ebdb907ac1f5d7b0",
+      "change": "ADDITIVE_ONLY",
+      "prefix_identical": true,
+      "targets": "61 -> 71"
+    },
+    {
+      "tour": "T04-CONTACTS-ONLY",
+      "from": "909a7dfd70f9cffb1b282337ebdb907ac1f5d7b0",
+      "to": "e0e620ae391668f7edc44909ea01729c3aefd282",
+      "change": "NORMATIVE_REPLACEMENT_SECTION_T",
+      "prefix_identical": false,
+      "targets": "71 -> 50"
+    },
+    {
+      "tour": "T06-SAME-PRIME-COLLISION",
+      "from": "a53b017587b6d363bf161bab99b16ef88759de4d",
+      "to": "47334dc4c8926e8f67594c1c3adf7c5c8cbd32b4",
+      "change": "ADDITIVE_ONLY",
+      "prefix_identical": true,
+      "targets": "45 -> 49"
+    }
+  ],
+  "rh_equivalent_contracts": []
+}

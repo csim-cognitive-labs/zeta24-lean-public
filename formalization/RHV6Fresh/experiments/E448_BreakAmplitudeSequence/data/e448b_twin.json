@@ -1,0 +1,132 @@
+{
+ "dps": 30,
+ "towers": [
+  {
+   "rank": 1,
+   "T": 14.134725142,
+   "orbit_max_circ_residual": 1.8242408433235898e-29,
+   "ratio_cells_max_rel_err": 7.058902040483288e-31,
+   "ratio_exact_max_rel_err": 2.070759876205156e-30,
+   "mono_violations": 0,
+   "same_cell_by_decade": [
+    {
+     "decade": 0,
+     "pairs": 4,
+     "same_cell": 0
+    },
+    {
+     "decade": 1,
+     "pairs": 21,
+     "same_cell": 11
+    },
+    {
+     "decade": 2,
+     "pairs": 143,
+     "same_cell": 133
+    },
+    {
+     "decade": 3,
+     "pairs": 1061,
+     "same_cell": 1051
+    },
+    {
+     "decade": 4,
+     "pairs": 8363,
+     "same_cell": 8352
+    },
+    {
+     "decade": 5,
+     "pairs": 68906,
+     "same_cell": 68896
+    }
+   ],
+   "same_cell_matches_e448a": true,
+   "ok": true
+  },
+  {
+   "rank": 100,
+   "T": 236.524229666,
+   "orbit_max_circ_residual": 3.880209577555852e-28,
+   "ratio_cells_max_rel_err": 9.795491351063431e-31,
+   "ratio_exact_max_rel_err": 2.662405555120915e-30,
+   "mono_violations": 0,
+   "same_cell_by_decade": [
+    {
+     "decade": 0,
+     "pairs": 4,
+     "same_cell": 0
+    },
+    {
+     "decade": 1,
+     "pairs": 21,
+     "same_cell": 0
+    },
+    {
+     "decade": 2,
+     "pairs": 143,
+     "same_cell": 33
+    },
+    {
+     "decade": 3,
+     "pairs": 1061,
+     "same_cell": 891
+    },
+    {
+     "decade": 4,
+     "pairs": 8363,
+     "same_cell": 8189
+    },
+    {
+     "decade": 5,
+     "pairs": 68906,
+     "same_cell": 68733
+    }
+   ],
+   "same_cell_matches_e448a": true,
+   "ok": true
+  },
+  {
+   "rank": 10000,
+   "T": 9877.782654004,
+   "orbit_max_circ_residual": 1.676437891969118e-26,
+   "ratio_cells_max_rel_err": 1.7746548030716044e-30,
+   "ratio_exact_max_rel_err": 3.746493473151165e-30,
+   "mono_violations": 0,
+   "same_cell_by_decade": [
+    {
+     "decade": 0,
+     "pairs": 4,
+     "same_cell": 0
+    },
+    {
+     "decade": 1,
+     "pairs": 21,
+     "same_cell": 0
+    },
+    {
+     "decade": 2,
+     "pairs": 143,
+     "same_cell": 0
+    },
+    {
+     "decade": 3,
+     "pairs": 1061,
+     "same_cell": 12
+    },
+    {
+     "decade": 4,
+     "pairs": 8363,
+     "same_cell": 3413
+    },
+    {
+     "decade": 5,
+     "pairs": 68906,
+     "same_cell": 61684
+    }
+   ],
+   "same_cell_matches_e448a": true,
+   "ok": true
+  }
+ ],
+ "all_ok": true
+}

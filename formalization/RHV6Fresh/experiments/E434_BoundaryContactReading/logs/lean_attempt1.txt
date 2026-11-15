@@ -1,0 +1,11 @@
+RHV6Fresh/Terminal/BoundaryContactReading.lean:39:57: warning: Variable name `hT` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hT
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'RHV6Fresh.towerIm_from_lastContact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.integratedTower_re_from_lastContact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.pairPrimitive_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.pairPrimitive_re_from_contacts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.pair_window_re_balance' depends on axioms: [propext, Classical.choice, Quot.sound]

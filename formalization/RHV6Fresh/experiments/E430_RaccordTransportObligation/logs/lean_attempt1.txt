@@ -1,0 +1,582 @@
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:59:47: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:62:47: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:66:23: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:66:48: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:66:74: error: unsolved goals
+x✝¹ : Sort u_1
+rZeroRadialPosition : x✝¹
+x✝ : Sort u_2
+rZeroHeight : x✝
+z : TrueZero
+⊢ ‖{ re := RHV3Lean.rZeroRadialPosition ↑z, im := RHV3Lean.rZeroHeight ↑z }‖ = ‖{ re := sorry, im := sorry }‖
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:71:8: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:72:25: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:72:51: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:73:30: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:73:56: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:74:18: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:75:24: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:75:50: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:75:71: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:83:26: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:83:52: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  l.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:84:30: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:84:56: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  l.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:85:18: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:86:24: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  l.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:86:50: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  l.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:86:71: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  l.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:87:26: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  e.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:87:52: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  e.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:88:30: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  e.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:88:56: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  e.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:89:18: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  e.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:90:24: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  e.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:90:50: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  e.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:90:71: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  e.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:101:46: error: Function expected at
+  fnPrimeAtRank
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (C.n + 1)
+
+Hint: The identifier `fnPrimeAtRank` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:102:50: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  C.zero.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:103:54: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  C.zero.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:103:77: error: Function expected at
+  fnPrimeAtRank
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (C.n + 1)
+
+Hint: The identifier `fnPrimeAtRank` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:105:48: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  C.zero.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:105:71: error: Function expected at
+  fnPrimeAtRank
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (C.n + 1)
+
+Hint: The identifier `fnPrimeAtRank` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:106:12: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  C.zero.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:107:50: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  C.zero.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:108:54: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  C.zero.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:108:77: error: Function expected at
+  fnPrimeAtRank
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (C.n + 1)
+
+Hint: The identifier `fnPrimeAtRank` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:110:48: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  C.zero.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:110:71: error: Function expected at
+  fnPrimeAtRank
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (C.n + 1)
+
+Hint: The identifier `fnPrimeAtRank` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:111:12: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  C.zero.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:112:22: error: Function expected at
+  fnPrimeAtRank
+but this term has type
+  x✝¹
+
+Note: Expected a function because this term is being applied to the argument
+  (C.n + 1)
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:112:68: error(lean.unknownIdentifier): Unknown identifier `thm_primeAtRank_isPrime`
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:113:12: error: Function expected at
+  rZeroHeight
+but this term has type
+  x✝
+
+Note: Expected a function because this term is being applied to the argument
+  (mirrorMember C.zero).1
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:113:50: error: Function expected at
+  rZeroHeight
+but this term has type
+  x✝
+
+Note: Expected a function because this term is being applied to the argument
+  C.zero.1
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:111:38: error: unsolved goals
+C : OffCarrier
+x✝¹ : Sort u_1
+fnPrimeAtRank : x✝¹
+x✝ : Sort u_2
+rZeroHeight : x✝
+hq : 0 < sorry
+⊢ energyRatio C.zero (mirrorMember C.zero) sorry =
+    |contactRealValue (1 / 2 + C.radialShift) sorry (lastContactBefore (1 / 2 + C.radialShift) sorry sorry)| *
+        rexp ((1 / 2 + C.radialShift) * π * cellFraction (1 / 2 + C.radialShift) sorry sorry / sorry) /
+      (|contactRealValue (1 / 2 - C.radialShift) sorry (lastContactBefore (1 / 2 - C.radialShift) sorry sorry)| *
+        rexp ((1 / 2 - C.radialShift) * π * cellFraction (1 / 2 - C.radialShift) sorry sorry / sorry))
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:121:35: error(lean.unknownIdentifier): Unknown identifier `fnPrimeAtRank`
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:122:48: error(lean.unknownIdentifier): Unknown identifier `fnPrimeAtRank`
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:123:54: error(lean.unknownIdentifier): Unknown identifier `fnPrimeAtRank`
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:124:43: error(lean.unknownIdentifier): Unknown identifier `fnPrimeAtRank`
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:127:41: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  C.nextMember.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:128:79: error: unsolved goals
+C : OffCarrier
+x✝ : Sort u_1
+rZeroRadialPosition : x✝
+hON : sorry = 1 / 2
+⊢ energyRatio C.prevMember C.zero sorry * energyRatio C.zero (mirrorMember C.zero) sorry *
+        energyRatio (mirrorMember C.zero) C.nextMember sorry =
+      energyRatio C.prevMember C.nextMember sorry ↔
+    C.detourPrimeContent ^ C.radialShift = 1
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:141:46: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  C.nextMember.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:147:34: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  C.nextMember.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:148:98: error: unsolved goals
+C : OffCarrier
+x✝ : Sort u_1
+rZeroRadialPosition : x✝
+hON : sorry = 1 / 2
+hlink : C.radialShift * log C.detourPrimeContent = 0
+⊢ Sort ?u.23
+
+C : OffCarrier
+x✝ : Sort u_1
+rZeroRadialPosition : x✝
+hON : sorry = 1 / 2
+hlink : C.radialShift * log C.detourPrimeContent = 0
+⊢ ?m.25
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:170:44: error(lean.unknownIdentifier): Unknown identifier `fnPrimeAtRank`
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:172:27: error: Invalid field notation: Function `breakLog` does not have a usable parameter of type `OffCarrier` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:180:41: error: Invalid field notation: Function `breakLog` does not have a usable parameter of type `OffCarrier` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:181:60: error: Invalid field notation: Function `breakLog` does not have a usable parameter of type `OffCarrier` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:182:40: error: Invalid field notation: Function `breakLog` does not have a usable parameter of type `OffCarrier` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:187:13: error: Invalid field notation: Function `breakLog` does not have a usable parameter of type `OffCarrier` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:187:48: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  C.zero.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:190:46: error: Invalid field notation: Function `breakLog` does not have a usable parameter of type `OffCarrier` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:191:52: error: Invalid field notation: Function `breakLog_pos` does not have a usable parameter of type `OffCarrier` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:192:44: error: Invalid field notation: Function `breakLog` does not have a usable parameter of type `OffCarrier` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:193:43: error: Invalid field notation: Function `breakLog` does not have a usable parameter of type `OffCarrier` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:193:94: error: Invalid field notation: Function `breakLog` does not have a usable parameter of type `OffCarrier` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:199:58: error: Invalid field notation: Function `breakLog_pos` does not have a usable parameter of type `OffCarrier` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:200:2: error: Tactic `assumption` failed
+
+C : OffCarrier
+x✝ : Sort u_1
+rZeroHeight : x✝
+h : 2 * cosh (C.radialShift * sorry) * realCountingDensity C.linePoint sorry = 2 * realCountingDensity C.linePoint sorry
+hcosh : 1 < cosh (C.radialShift * sorry)
+hD : realCountingDensity C.linePoint sorry = 0
+hT : C.linePoint.im ≠ 0
+this : ∃ k, sorry = densitySignChangeLog (RHV3Lean.rZeroHeight ↑C.zero) k
+⊢ ∃ k, sorry = densitySignChangeLog sorry k
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:204:55: error: Invalid field notation: Function `breakLog` does not have a usable parameter of type `OffCarrier` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:204:90: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  C.zero.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:209:44: error: Invalid field notation: Function `breakLog` does not have a usable parameter of type `OffCarrier` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:210:55: error: Invalid field notation: Function `breakLog_pos` does not have a usable parameter of type `OffCarrier` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:216:35: error: Invalid field notation: Function `breakLog` does not have a usable parameter of type `OffCarrier` for which to substitute `C`
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:216:70: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  C.zero.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/RaccordTransportObligation.lean:222:51: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  C.nextMember.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+'RHV6Fresh.amplitude_from_lastContact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.energyRatio_from_contacts' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.pair_transport_from_contacts' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.obligation_iff_factor_one' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.not_raccordTransportObligation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RHV6Fresh.OffCarrier.obligation_of_link' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.link_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.break_split_any_packet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RHV6Fresh.OffCarrier.pairDepositOnLine_iff_sign_change' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+EXIT=1

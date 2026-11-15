@@ -1,0 +1,12 @@
+[    0.52s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    0.55s] premiers ≤ 10000000 : 664579
+[    2.70s] zéro rang 1 T=14.1347 | X=10^7 : T∈[14.1347103132, 14.1347398746] (largeur 3.0e-05) φ largeur 4.48e-04 β∈[0.497004, 0.503344] vrai dedans=True | X=10^3 : T largeur 5.5e-02 β largeur 4.97e+00 | tangentielle β err max 1.1e-11
+[    4.60s] zéro rang 10 T=49.7738 | X=10^7 : T∈[49.7738130292, 49.7738392462] (largeur 2.6e-05) φ largeur 3.94e-04 β∈[0.494972, 0.514572] vrai dedans=True | X=10^3 : T largeur 5.0e-02 β largeur 1.27e+01 | tangentielle β err max 2.9e-10
+[    6.96s] zéro rang 100 T=236.5242 | X=10^7 : T∈[236.5242276042, 236.5242339527] (largeur 6.3e-06) φ largeur 8.80e-05 β∈[0.486342, 0.507149] vrai dedans=True | X=10^3 : T largeur 1.6e-02 β largeur 1.98e+01 | tangentielle β err max 1.3e-07
+[   11.20s] zéro rang 1000 T=1419.4225 | X=10^7 : T∈[1419.4224786697, 1419.4224847760] (largeur 6.1e-06) φ largeur 8.80e-05 β∈[0.415192, 0.540083] vrai dedans=True | X=10^3 : T largeur 3.1e-02 β largeur 2.16e+02 | tangentielle β err max 9.6e-06
+[   13.68s] zéro rang 10000 T=9877.7827 | X=10^7 : T∈[9877.7826382176, 9877.7826635785] (largeur 2.5e-05) φ largeur 3.89e-04 β∈[-0.918888, 2.925555] vrai dedans=True | X=10^3 : T largeur 1.5e-01 β largeur 7.35e+03 | tangentielle β err max 9.3e-03
+[   15.95s] zéro rang 100000 T=74920.8275 | X=10^7 : T∈[74920.8274843567, 74920.8275279572] (largeur 4.4e-05) φ largeur 6.76e-04 β∈[-33.053086, 17.595265] vrai dedans=True | X=10^3 : T largeur 1.1e-01 β largeur 5.25e+04 | tangentielle β err max 3.7e+00
+[   18.16s] contrôle milieu rangs 1-2 T=17.5784 | X=10^7 : T∈[17.5783593280, 17.5784006228] (largeur 4.1e-05) φ largeur 6.34e-04 β∈[0.495007, 0.506158] vrai dedans=True | X=10^3 : T largeur 4.5e-02 β largeur 4.79e+00 | tangentielle β err max 5.1e-11
+[   20.41s] contrôle milieu rangs 100-101 T=237.1470 | X=10^7 : T∈[237.1470098866, 237.1470398020] (largeur 3.0e-05) φ largeur 4.36e-04 β∈[0.449018, 0.552482] vrai dedans=True | X=10^3 : T largeur 3.8e-02 β largeur 4.71e+01 | tangentielle β err max 6.1e-08
+[   22.64s] contrôle milieu rangs 10000-10001 T=9878.2187 | X=10^7 : T∈[9878.2187034020, 9878.2187175309] (largeur 1.4e-05) φ largeur 1.97e-04 β∈[-0.179042, 1.769681] vrai dedans=True | X=10^3 : T largeur 8.4e-02 β largeur 5.00e+03 | tangentielle β err max 1.2e-03
+[   22.64s] FIN e449a

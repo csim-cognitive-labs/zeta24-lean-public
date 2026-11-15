@@ -1,0 +1,102 @@
+RHV6Fresh/Terminal/ComplementRigidityProbe_SCRATCH.lean:28:27: warning: Variable name `j` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _j
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+RHV6Fresh/Terminal/ComplementRigidityProbe_SCRATCH.lean:169:95: error: unsolved goals
+case h₁
+C : OffCarrier
+x : ℝ
+hx : 1 ≤ x
+hx0 : 0 < x
+u : ℂ := ↑x * (zeroTerm C.zero x / (zeroPoint C.zero + 1))
+hu : u = ↑x * (zeroTerm C.zero x / (zeroPoint C.zero + 1))
+v : ℂ := ↑x * (zeroTerm (mirrorMember C.zero) x / (zeroPoint (mirrorMember C.zero) + 1))
+hv : v = ↑x * (zeroTerm (mirrorMember C.zero) x / (zeroPoint (mirrorMember C.zero) + 1))
+hrepr :
+  C.pairPrimitive x = -↑(zetaZeroMultiplicity (zeroPoint C.zero)) * (u + (starRingEnd ℂ) u + v + (starRingEnd ℂ) v)
+hu' : ‖u‖ = x ^ (1 + (1 / 2 - C.radialShift)) / (‖zeroPoint C.zero‖ * ‖zeroPoint C.zero + 1‖)
+hv' :
+  ‖v‖ = x ^ (1 + (1 / 2 + C.radialShift)) / (‖zeroPoint (mirrorMember C.zero)‖ * ‖zeroPoint (mirrorMember C.zero) + 1‖)
+hδ : 0 < C.radialShift
+hzn : 0 < ‖zeroPoint C.zero‖
+hzn1 : 0 < ‖zeroPoint C.zero + 1‖
+hmn : 0 < ‖zeroPoint (mirrorMember C.zero)‖
+hmn1 : 0 < ‖zeroPoint (mirrorMember C.zero) + 1‖
+hpow : x ^ (1 + (1 / 2 - C.radialShift)) ≤ x ^ (1 + (1 / 2 + C.radialShift))
+hupow : ‖u‖ ≤ x ^ (1 + (1 / 2 + C.radialShift)) / (‖zeroPoint C.zero‖ * ‖zeroPoint C.zero + 1‖)
+hm0 : 0 ≤ ↑(zetaZeroMultiplicity (zeroPoint C.zero))
+⊢ ‖u‖ + ‖u‖ +
+      x ^ (1 + (1 / 2 + C.radialShift)) / (‖zeroPoint (mirrorMember C.zero)‖ * ‖zeroPoint (mirrorMember C.zero) + 1‖) ≤
+    2 * (x ^ (1 + (1 / 2 + C.radialShift)) / (‖zeroPoint C.zero‖ * ‖zeroPoint C.zero + 1‖))
+
+case h₂
+C : OffCarrier
+x : ℝ
+hx : 1 ≤ x
+hx0 : 0 < x
+u : ℂ := ⋯
+hu : u = ↑x * (zeroTerm C.zero x / (zeroPoint C.zero + 1))
+v : ℂ := ⋯
+hv : v = ↑x * (zeroTerm (mirrorMember C.zero) x / (zeroPoint (mirrorMember C.zero) + 1))
+hrepr :
+  C.pairPrimitive x = -↑(zetaZeroMultiplicity (zeroPoint C.zero)) * (u + (starRingEnd ℂ) u + v + (starRingEnd ℂ) v)
+hu' : ‖u‖ = x ^ (1 + (1 / 2 - C.radialShift)) / (‖zeroPoint C.zero‖ * ‖zeroPoint C.zero + 1‖)
+hv' :
+  ‖v‖ = x ^ (1 + (1 / 2 + C.radialShift)) / (‖zeroPoint (mirrorMember C.zero)‖ * ‖zeroPoint (mirrorMember C.zero) + 1‖)
+hδ : 0 < C.radialShift
+hzn : 0 < ‖zeroPoint C.zero‖
+hzn1 : 0 < ‖zeroPoint C.zero + 1‖
+hmn : 0 < ‖zeroPoint (mirrorMember C.zero)‖
+hmn1 : 0 < ‖zeroPoint (mirrorMember C.zero) + 1‖
+hpow : x ^ (1 + (1 / 2 - C.radialShift)) ≤ x ^ (1 + (1 / 2 + C.radialShift))
+hupow : ‖u‖ ≤ x ^ (1 + (1 / 2 + C.radialShift)) / (‖zeroPoint C.zero‖ * ‖zeroPoint C.zero + 1‖)
+hm0 : 0 ≤ ↑(zetaZeroMultiplicity (zeroPoint C.zero))
+⊢ ‖v‖ ≤
+    2 *
+      (x ^ (1 + (1 / 2 + C.radialShift)) / (‖zeroPoint (mirrorMember C.zero)‖ * ‖zeroPoint (mirrorMember C.zero) + 1‖))
+RHV6Fresh/Terminal/ComplementRigidityProbe_SCRATCH.lean:211:72: error: No goals to be solved
+RHV6Fresh/Terminal/ComplementRigidityProbe_SCRATCH.lean:235:2: error: unsolved goals
+C : OffCarrier
+h : C.outgoing.zLaterMember = ↑(mirrorMember C.zero)
+hS1 :
+  ∀ (a : ℕ),
+    2 ≤ a →
+      ∀ (m : ℕ),
+        (∑ k ∈ Finset.range m, packetIncrement C.packetᶜ (a + k)).re =
+          ∑ k ∈ Finset.range m, ArithmeticFunction.vonMangoldt (a + k + 1) -
+              (stepAt backgroundPrimitive (a + m) - stepAt backgroundPrimitive a).re -
+            (C.contactReading (↑(a + m) + 1) - C.contactReading ↑(a + m) -
+              (C.contactReading (↑a + 1) - C.contactReading ↑a))
+hS3a :
+  ∀ (N : ℕ),
+    2 ≤ N →
+      ArithmeticFunction.vonMangoldt (N + 1) - 1 - 4 * trivialTailConstant -
+          ∑
+            ρ ∈
+              {memberIndex C.zero, memberIndex (mirrorMember C.zero), conjIndex C.zero,
+                conjIndex (mirrorMember C.zero)},
+            ↑(zetaZeroMultiplicity ↑ρ) ≤
+        ‖packetIncrement C.packetᶜ N‖
+hS3b : 1 / 2 + C.radialShift ≤ remainderExponent
+hS3c : ∀ {θ K : ℝ}, θ < 1 / 2 + C.radialShift → (∀ (x : ℝ), 1 < x → ‖smoothedRemainder x‖ ≤ K * x ^ θ) → False
+hS3d : 1 ∈ remainderExponents ∧ ¬1 < 1 / 2 + C.radialShift
+hS3e :
+  ∀ {θ K : ℝ},
+    (∀ (x : ℝ), 1 < x → ‖channelPrimitive C.packetᶜ x‖ ≤ K * x ^ (1 + θ)) →
+      ∃ K', ∀ (x : ℝ), 1 < x → ‖smoothedRemainder x‖ ≤ K' * x ^ max θ (1 / 2 + C.radialShift)
+⊢ False
+RHV6Fresh/Terminal/ComplementRigidityProbe_SCRATCH.lean:243:2: error: unsolved goals
+C : OffCarrier
+h : C.outgoing.zLaterMember = ↑(mirrorMember C.zero)
+θ K : ℝ
+hθ : θ < 1 / 2 + C.radialShift
+hK : ∀ (x : ℝ), 1 < x → ‖channelPrimitive C.packetᶜ x‖ ≤ K * x ^ (1 + θ)
+K' : ℝ
+hK' : ∀ (x : ℝ), 1 < x → ‖smoothedRemainder x‖ ≤ K' * x ^ (1 / 2 + C.radialShift)
+this :
+  1 / 2 + C.radialShift < 1 / 2 + C.radialShift →
+    (∀ (x : ℝ), 1 < x → ‖smoothedRemainder x‖ ≤ K' * x ^ (1 / 2 + C.radialShift)) → False
+⊢ False
+EXIT=1

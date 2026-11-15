@@ -1,0 +1,10 @@
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:76:96: error: unsolved goals
+z : TrueZero
+x : ℝ
+hx : 0 < x
+h1 : 0 < ‖zeroPoint z‖
+h2 : 0 < ‖zeroPoint (mirrorMember z)‖
+hx1 : x ^ (1 - rZeroRadialPosition ↑z) ≠ 0
+⊢ x ^ rZeroRadialPosition ↑z / (x ^ 1 / x ^ rZeroRadialPosition ↑z) / (‖zeroPoint z‖ / ‖zeroPoint (mirrorMember z)‖) =
+    x ^ (rZeroRadialPosition ↑z - (1 - rZeroRadialPosition ↑z)) * (‖zeroPoint (mirrorMember z)‖ / ‖zeroPoint z‖)
+EXIT=1

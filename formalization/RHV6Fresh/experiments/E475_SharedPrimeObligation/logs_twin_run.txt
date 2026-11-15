@@ -1,0 +1,6 @@
+[   0.00s] zéros lus : 2001 ; γ_1 = 14.134725142
+[   0.01s] M1 exact sur 2000 raccords : True
+[   0.10s] M2 identité 5.8e-13 ; test 1e-6 : False ; r/E dix premiers : [2.1008, 0.1735, 0.8629, 1.4976, 0.0957, 0.6941, 0.8289, 1.0655, 0.7224, 0.9255]
+[   0.10s] M2 fac_phase médiane globale 1.0005, min 0.1092, max 6.2618 ; r/E médiane 0.9999
+[   0.10s] M3 sensible (β=0,40 > 1e-3) : True ; variations β=0,40 : [0.0044, 0.0266, 0.0162, 0.0246, 0.0809, 0.0371, 0.0421, 0.0467, 0.0542, 0.0584]
+[   0.10s] verdict B ; écrit twin_results.json

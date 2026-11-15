@@ -1,0 +1,33 @@
+# Lean : les répertoires de build ne sont jamais versionnés (toutes les bases)
+.lake/
+build/
+*.olean
+*.ilean
+
+# Python
+venv/
+.venv/
+.venv_*/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Éditeurs / OS
+.vscode/
+.idea/
+.DS_Store
+*.log
+!tests/proofs/*.log
+.env
+
+# Gros intermédiaires regénérables du moteur AutoResearch (le SHA-256 est dans dataset_manifest.json)
+validation/p4_autoresearch_generic_engine*/**/base_dataset.jsonl
+validation/p4_autoresearch_generic_engine*/**/native/stderr.log
+validation/p4_autoresearch_generic_engine*/**/runner/native/stderr.log
+
+# Gros fichiers de modèles
+*.pt
+*.ckpt
+*.safetensors
+*.gguf

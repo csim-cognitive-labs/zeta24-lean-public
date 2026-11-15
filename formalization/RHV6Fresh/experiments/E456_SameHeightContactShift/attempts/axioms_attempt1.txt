@@ -1,0 +1,6 @@
+phase_diff_abs_lt_half_pi' depends on axioms: [propext, Classical.choice, Quot.sound]
+same_height_distinct_radial_no_shared_contact' depends on axioms: [propext, Classical.choice, Quot.sound]
+off_shares_no_contact_with_line_same_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+shared_contact_forces_height_change' depends on axioms: [propext, Classical.choice, Quot.sound]
+same_height_shift_within_half_cell' depends on axioms: [propext, Classical.choice, Quot.sound]
+cell_ratio_radially_blind' depends on axioms: [propext, Classical.choice, Quot.sound]

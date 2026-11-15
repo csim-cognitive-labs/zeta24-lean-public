@@ -1,0 +1,18 @@
+E403 — exécution du 2026-11-02 05:59:56 ; durée 103.2 s ; premiers ≤ 10000 (1229 écarts, dernier [9973, 10007])
+provenance : zeros: ../data/odlyzko_zeros6_2001052.txt
+provenance : sha256: 2ef7b752c2f17405222e670a61098250c8e4e09047f823f41e2b41a7b378e7c6 (== .sha256)
+provenance : N = 2001052 ; T_1 = 14.134725142 ; T_max = 1132490.658714411
+provenance : hypothèse de données : hauteurs de zéros connus posés sur la ligne (β = 1/2) ; ne certifient pas l'absence de zéros OFF
+1. identité réelle Z_n = 2Re Σ_ρ c_ρ(n) : max |R_n| = 1.436e-07 (n=1), médiane 2.081e-09 ; |R_n| ≤ eps_online : 1229/1229
+2. contacts porteurs d'amplitude (réel) : 1655515 contacts de foule ; max |β_lue − 0.5| = 8.31e-12 (hypothèse de données, pas une mesure)
+   synthétique : β_lue(0.3) : min 0.299999999999 max 0.300000000001 ; β_lue(0.7) : min 0.699999999999 max 0.700000000002
+3. foule non vide (1223 écarts) : |2Re S_foule| / Σ|c_foule| médiane 0.0569 ; Σ|d_foule(p_{n+1})| / |Z_n| médiane 103.381 ; Σ|c_foule| / |Z_n| médiane 17.335
+4. synthétique (remplacement) : écarts avec paire dans la foule 468/1229 ; |Δ_n| > |R_n| : 1229/1229 ; |Δ_n| > eps_online : 0/1229 ; |Δ_n| > eps_uncond : 0/1229
+   |Δ_n| : min 3.084e-08 max 3.456e-04 ; |Δ_n|/|R_n| max 3.379e+07 ; |d_0.7|/|d_0.3| : min 1.552 max 39.822 ; pente contre log p_{n+1} : 0.400000000000
+   amplitudes au dernier point de rencontre p=10007 : ON 1.581e-05 ; 0.3 2.504e-06 ; 0.7 9.973e-05
+5. jumeaux mpmath (dps 30) :
+   n=4 (foule 1) : Σc mpmath − numpy = 6.25e-17 ; Σ|d(p_{n+1})| mpmath − numpy = 0.00e+00 ; ΔA mpmath − flottant = 3.33e-16
+   n=614 (foule 336) : Σc mpmath − numpy = 9.64e-15 ; Σ|d(p_{n+1})| mpmath − numpy = 2.22e-16 ; ΔA mpmath − flottant = 4.83e-13
+   n=1228 (foule 587) : Σc mpmath − numpy = 2.08e-14 ; Σ|d(p_{n+1})| mpmath − numpy = 0.00e+00 ; ΔA mpmath − flottant = 1.55e-12
+borne de queue : Σ_{γ>T_max} 1/γ² ≤ 1.841305e-06 ; eps_online min 1.159e-05 max 7.362e-04 ; eps_uncond min 1.841e-05 max 7.358e-02
+Aucune conclusion sur β des vrais zéros.

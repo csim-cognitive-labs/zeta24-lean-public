@@ -1,0 +1,53 @@
+Volet 1 — crible jusqu'à X = 2000000 : 148933 premiers, 149235 rencontres brutes
+identité 1 : max |r(N) − r(N−1) + 1| sur les 1850765 entiers non-rencontre = 0.000e+00
+identité 2 : M =      10  M·A(M) = 33.764173  Σ_{k<M} ψ(k) = 33.764173  écart relatif = 0.0e+00
+identité 2 : M =     100  M·A(M) = 4804.988877  Σ_{k<M} ψ(k) = 4804.988877  écart relatif = 5.7e-16
+identité 2 : M =    1000  M·A(M) = 497858.613417  Σ_{k<M} ψ(k) = 497858.613417  écart relatif = 2.3e-16
+identité 2 : M =    4547  M·A(M) = 10332047.203094  Σ_{k<M} ψ(k) = 10332047.203094  écart relatif = 3.6e-15
+identité 2 : M =  100003  M·A(M) = 5000332445.660052  Σ_{k<M} ψ(k) = 5000332445.660078  écart relatif = 5.1e-15
+identité 2 : M = 1000003  M·A(M) = 500009135446.904358  Σ_{k<M} ψ(k) = 500009135446.796692  écart relatif = 2.2e-13
+identité 2 : M = 2000000  M·A(M) = 1999972094637.966797  Σ_{k<M} ψ(k) = 1999972094637.857910  écart relatif = 5.4e-14
+θ = 0.50 : max_E |r(E)|/E^θ = 0.9241 ; max_E |r(E−1)|/E^θ = 0.7767 ; max_N |r(N)|/N^θ = 1.0000 (en N = 1) ; borne compilée 2^θ·max_E + 1 = 2.3069 ; respectée : True
+θ = 0.52 : max_E |r(E)|/E^θ = 0.9114 ; max_E |r(E−1)|/E^θ = 0.7381 ; max_N |r(N)|/N^θ = 1.0000 (en N = 1) ; borne compilée 2^θ·max_E + 1 = 2.3069 ; respectée : True
+θ = 0.55 : max_E |r(E)|/E^θ = 0.8926 ; max_E |r(E−1)|/E^θ = 0.7142 ; max_N |r(N)|/N^θ = 1.0000 (en N = 1) ; borne compilée 2^θ·max_E + 1 = 2.3069 ; respectée : True
+θ = 0.60 : max_E |r(E)|/E^θ = 0.8622 ; max_E |r(E−1)|/E^θ = 0.6760 ; max_N |r(N)|/N^θ = 1.0000 (en N = 1) ; borne compilée 2^θ·max_E + 1 = 2.3069 ; respectée : True
+tranches dyadiques [2^j, 2^{j+1}) : max_E |r(E)|/√E, et le E qui le réalise
+  j =  4 : 0.6280 en E = 16 (r = -2.512)
+  j =  5 : 0.1910 en E = 59 (r = -1.467)
+  j =  6 : 0.4127 en E = 113 (r = +4.387)
+  j =  7 : 0.5066 en E = 199 (r = +7.146)
+  j =  8 : 0.4588 en E = 283 (r = +7.719)
+  j =  9 : 0.4633 en E = 661 (r = +11.910)
+  j = 10 : 0.6108 en E = 1423 (r = -23.040)
+  j = 11 : 0.5318 en E = 3299 (r = -30.545)
+  j = 12 : 0.5182 en E = 6379 (r = +41.384)
+  j = 13 : 0.6257 en E = 11777 (r = -67.907)
+  j = 14 : 0.7102 en E = 24137 (r = +110.331)
+  j = 15 : 0.7097 en E = 59753 (r = +173.493)
+  j = 16 : 0.5661 en E = 69991 (r = -149.771)
+  j = 17 : 0.5947 en E = 175621 (r = -249.219)
+  j = 18 : 0.6882 en E = 302831 (r = -378.703)
+  j = 19 : 0.5625 en E = 617819 (r = +442.160)
+  j = 20 : 0.6253 en E = 1090697 (r = -653.076)
+Volet 2 (tentative A) : 9592 points de rencontre (premiers ≤ 100000) ; R(p_1) = -0.023838
+  demandes : 4777 positives, 4814 négatives, 471 changements de signe ; somme télescopée = R(p_N) − R(p_1) = 2.179588 (vérif : 2.179588)
+  θ = 0.5 : max |R(p)|/p^θ = 0.02104 en p = 7 ; valeur au dernier point p = 99991 : 0.00682
+  θ = 0.6 : max |R(p)|/p^θ = 0.01869 en p = 3 ; valeur au dernier point p = 99991 : 0.00216
+  θ = 0.7 : max |R(p)|/p^θ = 0.01674 en p = 3 ; valeur au dernier point p = 99991 : 0.00068
+  lecture A : la somme partielle des demandes aux rencontres EST le reste lissé (identité télescopique) ; aucune loi d'annulation n'est lue ici autrement que par la valeur du reste lui-même.
+Volet 3 (tentative B) : zéros Odlyzko chargés (sha256 ok), N = 2001052, T_max = 1132490.659
+  paire synthétique : β = 0.6, T = 1001.876894 (milieu des hauteurs ON 1001.349483 et 1002.404305)
+  n | p_{n+1} | zéros tête (γ<πp) | tête | somme vraie (crible) | queue | dépôt brut paire
+  614 | 4547 | 15300 | +2.8574 | +3.2549 | +0.3975 | -0.1048
+  615 | 4549 | 15307 | -2.7815 | -3.1676 | -0.3861 | +0.0568
+  616 | 4561 | 15353 | +0.3889 | +0.4085 | +0.0196 | +0.1267
+  617 | 4567 | 15377 | -1.8496 | -2.0175 | -0.1679 | -0.3061
+  618 | 4583 | 15438 | +5.4466 | +5.5542 | +0.1076 | +0.3615
+  619 | 4591 | 15470 | +5.0175 | +5.1232 | +0.1057 | +0.0235
+  pas de la paire entre p = 4547 et 4549 : 0.1616 ; (p'/p)^β = 1.0003 ; pas de la tête : -5.6388 ; pas de la queue : -0.7836
+  pas de la paire entre p = 4549 et 4561 : 0.0699 ; (p'/p)^β = 1.0016 ; pas de la tête : +3.1704 ; pas de la queue : +0.4056
+  pas de la paire entre p = 4561 et 4567 : -0.4328 ; (p'/p)^β = 1.0008 ; pas de la tête : -2.2385 ; pas de la queue : -0.1875
+  pas de la paire entre p = 4567 et 4583 : 0.6676 ; (p'/p)^β = 1.0021 ; pas de la tête : +7.2961 ; pas de la queue : +0.2755
+  pas de la paire entre p = 4583 et 4591 : -0.3380 ; (p'/p)^β = 1.0010 ; pas de la tête : -0.4291 ; pas de la queue : -0.0019
+  lecture B : la paire est dans la tête à chaque rencontre ; son pas est lu par β ; rien ici ne contraint la tête ON à l'absorber ou non autrement que par la constance par membre (⟺ RH). Critère d'échec déclaré : B morte.
+terminé en 4.2 s

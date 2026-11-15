@@ -1,0 +1,15 @@
+[     0.0s] crible jusqu'à 30000000
+[     2.4s] premiers : 1857860 ; ψ(30000000) = 30000704.282093
+[     2.4s] définition 5.73e-10 ; additivité 1.11e-11
+[     2.4s] backgroundConstant = 5.467865
+[     3.2s] zéros lus : 2001052
+[    13.4s] Tour 1 (T=14.135) : 45 cellules ; A_rel max 0.0747 ; résidu/x_N fin -0.2034 (borne fond 49.40) ; troncature rel 2.87e-09
+[    25.2s] Tour 2 (T=21.022) : 67 cellules ; A_rel max 0.0631 ; résidu/x_N fin -0.1371 (borne fond 73.31) ; troncature rel 8.13e-09
+[    38.7s] Tour 3 (T=25.011) : 81 cellules ; A_rel max 0.0663 ; résidu/x_N fin -0.1153 (borne fond 87.18) ; troncature rel -6.12e-09
+[    48.3s] Tour 5 (T=32.935) : 107 cellules ; A_rel max 0.0413 ; résidu/x_N fin -0.0876 (borne fond 114.73) ; troncature rel -2.10e-09
+[    58.1s] Tour 10 (T=49.774) : 162 cellules ; A_rel max 0.0320 ; résidu/x_N fin 0.0580 (borne fond 173.32) ; troncature rel -2.22e-09
+[    68.4s] Tour 20 (T=77.145) : 252 cellules ; A_rel max 0.0303 ; résidu/x_N fin 0.0374 (borne fond 268.57) ; troncature rel -9.03e-09
+[    76.9s] Tour 100 (T=236.524) : 775 cellules ; A_rel max 0.0120 ; résidu/x_N fin -0.0121 (borne fond 823.34) ; troncature rel -3.53e-09
+[    84.6s] Tour 1000 (T=1419.422) : 4656 cellules ; A_rel max 0.0026 ; résidu/x_N fin 0.0022 (borne fond 4940.94) ; troncature rel -1.31e-07
+[    84.6s] paire artificielle calculée
+[    84.6s] FIN

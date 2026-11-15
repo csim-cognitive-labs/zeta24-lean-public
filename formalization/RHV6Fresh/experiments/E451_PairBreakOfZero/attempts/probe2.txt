@@ -1,0 +1,232 @@
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:5:35: error: unknown namespace `RHV2Fresh`
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:20:4: error: Function expected at
+  cZeroContribution
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  x
+
+Hint: The identifier `cZeroContribution` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:26:8: error(lean.unknownIdentifier): Unknown identifier `nZeroMultiplicity`
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:26:59: error(lean.unknownIdentifier): Unknown identifier `nZeroMultiplicity`
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:29:57: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:35:2: error: linarith failed to find a contradiction
+case h1
+x✝ : Sort u_1
+rZeroRadialPosition : x✝
+z : TrueZero
+hβ : sorry ≠ 1 / 2
+h : mirrorMember z = z
+h1 : RHV3Lean.rZeroRadialPosition ↑z = 1 - RHV3Lean.rZeroRadialPosition ↑z
+a✝ : sorry < 1 / 2
+⊢ False
+failed
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:39:45: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:41:44: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:42:2: error(lean.unknownIdentifier): Unknown identifier `thm_zeroRadialPosition_lt_one`
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:44:45: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:47:23: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:47:49: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:48:28: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:48:54: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:49:35: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:50:22: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:50:48: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:50:69: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:56:24: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (mirrorMember z).1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:56:65: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  (mirrorMember z).1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:57:25: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:57:51: error: Function expected at
+  rZeroHeight
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroHeight` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:68:5: error: Function expected at
+  cZeroContribution
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  x
+
+Hint: The identifier `cZeroContribution` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:68:43: error: Function expected at
+  cZeroContribution
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  x
+
+Hint: The identifier `cZeroContribution` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:76:15: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:79:22: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  x✝
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:84:68: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+
+Hint: The identifier `rZeroRadialPosition` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:88:22: error: Function expected at
+  rZeroRadialPosition
+but this term has type
+  x✝
+
+Note: Expected a function because this term is being applied to the argument
+  z.1
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:88:56: error: linarith failed to find a contradiction
+x✝ : Sort u_1
+rZeroRadialPosition : x✝
+atTop : Filter ℝ
+z : TrueZero
+hβ : 1 / 2 < sorry
+K : ℝ
+h1 : 0 < ‖zeroPoint z‖
+h2 : 0 < ‖zeroPoint (mirrorMember z)‖
+a✝ : 2 * sorry - 1 ≤ 0
+⊢ False
+failed
+RHV6Fresh/Terminal/PairBreakOfZero_SCRATCH.lean:89:12: error(lean.unknownIdentifier): Unknown identifier `Tendsto`
+EXIT=1

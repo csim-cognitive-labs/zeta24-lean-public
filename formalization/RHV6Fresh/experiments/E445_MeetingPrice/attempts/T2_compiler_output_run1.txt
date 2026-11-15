@@ -1,0 +1,56 @@
+RHV6Fresh/Terminal/E445_T2_SCRATCH.lean:26:4: error: linarith failed to find a contradiction
+β T : ℝ
+hβ : 0 < β
+hβ' : β < 1 / 2
+hT : 0 < T
+I : PrimeGapInterval
+γ : ℝ := 1 - β
+hγ : γ = 1 - β
+hγ0 : 0 < γ
+hγ1 : 1 / 2 < γ
+hlo : I.upper ^ γ * rexp (-(γ * π / T)) / ‖{ re := γ, im := T }‖ < |contactRealValue γ T (meetingCell γ T I)|
+hhi : |contactRealValue γ T (meetingCell γ T I)| ≤ I.upper ^ γ / ‖{ re := γ, im := T }‖
+hbudget : Chebyshev.theta I.upper ≤ log 4 * I.upper
+hsub : I.upper ^ γ ≤ I.upper
+a✝ : I.upper ^ γ * rexp (-(γ * π / T)) / ‖{ re := γ, im := T }‖ ≤ log 4 * I.upper
+⊢ False
+failed
+RHV6Fresh/Terminal/E445_T2_SCRATCH.lean:32:29: error: unsolved goals
+β T : ℝ
+hβ : 0 < β
+hβ' : β < 1 / 2
+hT : 0 < T
+I : PrimeGapInterval
+γ : ℝ := 1 - β
+hγ : γ = 1 - β
+hγ0 : 0 < γ
+hγ1 : 1 / 2 < γ
+hlo : I.upper ^ γ * rexp (-(γ * π / T)) / ‖{ re := γ, im := T }‖ < |contactRealValue γ T (meetingCell γ T I)|
+hhi : |contactRealValue γ T (meetingCell γ T I)| ≤ I.upper ^ γ / ‖{ re := γ, im := T }‖
+hbudget : Chebyshev.theta I.upper ≤ log 4 * I.upper
+hsub : I.upper ^ γ ≤ I.upper
+hneed : log 4 * I.upper < I.upper ^ γ * rexp (-(γ * π / T)) / ‖{ re := γ, im := T }‖
+hpos : 0 < ‖{ re := γ, im := T }‖
+hexp1 : rexp (-(γ * π / T)) ≤ 1
+⊢ 0 < rexp 1
+RHV6Fresh/Terminal/E445_T2_SCRATCH.lean:35:2: error: linarith failed to find a contradiction
+β T : ℝ
+hβ : 0 < β
+hβ' : β < 1 / 2
+hT : 0 < T
+I : PrimeGapInterval
+γ : ℝ := 1 - β
+hγ : γ = 1 - β
+hγ0 : 0 < γ
+hγ1 : 1 / 2 < γ
+hlo : I.upper ^ γ * rexp (-(γ * π / T)) / ‖{ re := γ, im := T }‖ < |contactRealValue γ T (meetingCell γ T I)|
+hhi : |contactRealValue γ T (meetingCell γ T I)| ≤ I.upper ^ γ / ‖{ re := γ, im := T }‖
+hbudget : Chebyshev.theta I.upper ≤ log 4 * I.upper
+hsub : I.upper ^ γ ≤ I.upper
+hneed : log 4 * I.upper < I.upper ^ γ * rexp (-(γ * π / T)) / ‖{ re := γ, im := T }‖
+hpos : 0 < ‖{ re := γ, im := T }‖
+hexp1 : rexp (-(γ * π / T)) ≤ 1
+h4 : 1 < log 4
+⊢ False
+failed
+EXIT=1

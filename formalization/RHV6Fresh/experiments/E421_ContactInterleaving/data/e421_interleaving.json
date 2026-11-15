@@ -1,0 +1,337 @@
+[
+ {
+  "N": 10,
+  "fenetre_log": [
+   6.907755278982137,
+   7.1300158904923565
+  ],
+  "n_contacts": 25,
+  "espacement_min": 7.753030510038172e-06,
+  "espacement_median": 0.0041848638037493835,
+  "espacement_max": 0.025087308181890755,
+  "pas_moyen": 0.008890424460408776,
+  "coincidences_1e-12": 0,
+  "coincidences_relatives_1e-3_pas_moyen": 1,
+  "espacement_min_en_pas_moyen": 0.0008720652815356909,
+  "paires": {
+   "1-2": {
+    "rapport_T": 1.4872620038811362,
+    "n_intervalles": 49,
+    "comptes_min": 1,
+    "comptes_max": 2,
+    "dans_plancher_plafond": true
+   },
+   "1-3": {
+    "rapport_T": 1.7694618981788757,
+    "n_intervalles": 49,
+    "comptes_min": 1,
+    "comptes_max": 2,
+    "dans_plancher_plafond": true
+   },
+   "2-3": {
+    "rapport_T": 1.1897445732905936,
+    "n_intervalles": 49,
+    "comptes_min": 1,
+    "comptes_max": 2,
+    "dans_plancher_plafond": true
+   },
+   "1-10": {
+    "rapport_T": 3.521386654353947,
+    "n_intervalles": 49,
+    "comptes_min": 3,
+    "comptes_max": 4,
+    "dans_plancher_plafond": true
+   }
+  },
+  "identite_decalage_max_err": 0.0,
+  "histogramme_phase_dans_cycle_tour1": [
+   1,
+   3,
+   1,
+   2,
+   6,
+   0,
+   3,
+   2,
+   4,
+   2
+  ]
+ },
+ {
+  "N": 100,
+  "fenetre_log": [
+   6.907755278982137,
+   7.1300158904923565
+  ],
+  "n_contacts": 996,
+  "espacement_min": 6.244855832449048e-08,
+  "espacement_median": 0.0001528844172380417,
+  "espacement_max": 0.0019189062935680568,
+  "pas_moyen": 0.00022315322440785083,
+  "coincidences_1e-12": 0,
+  "coincidences_relatives_1e-3_pas_moyen": 3,
+  "espacement_min_en_pas_moyen": 0.00027984609449494224,
+  "paires": {
+   "1-2": {
+    "rapport_T": 1.4872620038811362,
+    "n_intervalles": 49,
+    "comptes_min": 1,
+    "comptes_max": 2,
+    "dans_plancher_plafond": true
+   },
+   "1-3": {
+    "rapport_T": 1.7694618981788757,
+    "n_intervalles": 49,
+    "comptes_min": 1,
+    "comptes_max": 2,
+    "dans_plancher_plafond": true
+   },
+   "2-3": {
+    "rapport_T": 1.1897445732905936,
+    "n_intervalles": 49,
+    "comptes_min": 1,
+    "comptes_max": 2,
+    "dans_plancher_plafond": true
+   },
+   "1-100": {
+    "rapport_T": 16.733557058226097,
+    "n_intervalles": 49,
+    "comptes_min": 16,
+    "comptes_max": 17,
+    "dans_plancher_plafond": true
+   }
+  },
+  "identite_decalage_max_err": 0.0,
+  "histogramme_phase_dans_cycle_tour1": [
+   93,
+   101,
+   95,
+   99,
+   107,
+   100,
+   101,
+   101,
+   95,
+   103
+  ]
+ },
+ {
+  "N": 1000,
+  "fenetre_log": [
+   6.907755278982137,
+   7.1300158904923565
+  ],
+  "n_contacts": 55885,
+  "espacement_min": 4.277289633591863e-11,
+  "espacement_median": 2.761460002442817e-06,
+  "espacement_max": 5.3738900297695125e-05,
+  "pas_moyen": 3.9771067640729964e-06,
+  "coincidences_1e-12": 0,
+  "coincidences_relatives_1e-3_pas_moyen": 54,
+  "espacement_min_en_pas_moyen": 1.0754776995756197e-05,
+  "paires": {
+   "1-2": {
+    "rapport_T": 1.4872620038811362,
+    "n_intervalles": 49,
+    "comptes_min": 1,
+    "comptes_max": 2,
+    "dans_plancher_plafond": true
+   },
+   "1-3": {
+    "rapport_T": 1.7694618981788757,
+    "n_intervalles": 49,
+    "comptes_min": 1,
+    "comptes_max": 2,
+    "dans_plancher_plafond": true
+   },
+   "2-3": {
+    "rapport_T": 1.1897445732905936,
+    "n_intervalles": 49,
+    "comptes_min": 1,
+    "comptes_max": 2,
+    "dans_plancher_plafond": true
+   },
+   "1-100": {
+    "rapport_T": 16.733557058226097,
+    "n_intervalles": 49,
+    "comptes_min": 16,
+    "comptes_max": 17,
+    "dans_plancher_plafond": true
+   },
+   "1-1000": {
+    "rapport_T": 100.42094675957442,
+    "n_intervalles": 49,
+    "comptes_min": 100,
+    "comptes_max": 101,
+    "dans_plancher_plafond": true
+   },
+   "100-1000": {
+    "rapport_T": 6.0011715626360616,
+    "n_intervalles": 49,
+    "comptes_min": 6,
+    "comptes_max": 6,
+    "dans_plancher_plafond": true
+   }
+  },
+  "identite_decalage_max_err": 0.0,
+  "histogramme_phase_dans_cycle_tour1": [
+   5572,
+   5614,
+   5574,
+   5589,
+   5594,
+   5593,
+   5607,
+   5579,
+   5586,
+   5576
+  ]
+ },
+ {
+  "N": 10000,
+  "fenetre_log": [
+   6.907755278982137,
+   7.1300158904923565
+  ],
+  "n_contacts": 3768653,
+  "espacement_min": 1.2434497875801753e-14,
+  "espacement_median": 4.089393579320699e-08,
+  "espacement_max": 8.612317339284914e-07,
+  "pas_moyen": 5.8976141212846985e-08,
+  "coincidences_1e-12": 66,
+  "coincidences_relatives_1e-3_pas_moyen": 3732,
+  "espacement_min_en_pas_moyen": 2.108394618584015e-07,
+  "paires": {
+   "1-2": {
+    "rapport_T": 1.4872620038811362,
+    "n_intervalles": 49,
+    "comptes_min": 1,
+    "comptes_max": 2,
+    "dans_plancher_plafond": true
+   },
+   "1-3": {
+    "rapport_T": 1.7694618981788757,
+    "n_intervalles": 49,
+    "comptes_min": 1,
+    "comptes_max": 2,
+    "dans_plancher_plafond": true
+   },
+   "2-3": {
+    "rapport_T": 1.1897445732905936,
+    "n_intervalles": 49,
+    "comptes_min": 1,
+    "comptes_max": 2,
+    "dans_plancher_plafond": true
+   },
+   "1-100": {
+    "rapport_T": 16.733557058226097,
+    "n_intervalles": 49,
+    "comptes_min": 16,
+    "comptes_max": 17,
+    "dans_plancher_plafond": true
+   },
+   "1-1000": {
+    "rapport_T": 100.42094675957442,
+    "n_intervalles": 49,
+    "comptes_min": 100,
+    "comptes_max": 101,
+    "dans_plancher_plafond": true
+   },
+   "1-10000": {
+    "rapport_T": 698.8308972951376,
+    "n_intervalles": 49,
+    "comptes_min": 698,
+    "comptes_max": 699,
+    "dans_plancher_plafond": true
+   },
+   "100-10000": {
+    "rapport_T": 41.76224426542934,
+    "n_intervalles": 49,
+    "comptes_min": 41,
+    "comptes_max": 42,
+    "dans_plancher_plafond": true
+   }
+  },
+  "identite_decalage_max_err": 0.0,
+  "histogramme_phase_dans_cycle_tour1": [
+   376862,
+   376876,
+   376888,
+   376928,
+   376813,
+   376875,
+   376912,
+   376824,
+   376912,
+   376762
+  ]
+ },
+ {
+  "N": 2001052,
+  "fenetre_log": [
+   6.907755278982137,
+   6.907783019543434
+  ],
+  "n_contacts": 10456149,
+  "espacement_min": 0.0,
+  "espacement_median": 1.8385293287792592e-12,
+  "espacement_max": 4.4649617336744996e-11,
+  "pas_moyen": 2.653038063688978e-12,
+  "coincidences_1e-12": 3280654,
+  "coincidences_relatives_1e-3_pas_moyen": 8697,
+  "espacement_min_en_pas_moyen": 0.0,
+  "paires": {
+   "1-2": {
+    "rapport_T": 1.4872620038811362,
+    "n_intervalles": 49,
+    "comptes_min": 1,
+    "comptes_max": 2,
+    "dans_plancher_plafond": true
+   },
+   "1-3": {
+    "rapport_T": 1.7694618981788757,
+    "n_intervalles": 49,
+    "comptes_min": 1,
+    "comptes_max": 2,
+    "dans_plancher_plafond": true
+   },
+   "2-3": {
+    "rapport_T": 1.1897445732905936,
+    "n_intervalles": 49,
+    "comptes_min": 1,
+    "comptes_max": 2,
+    "dans_plancher_plafond": true
+   },
+   "1-100": {
+    "rapport_T": 16.733557058226097,
+    "n_intervalles": 49,
+    "comptes_min": 16,
+    "comptes_max": 17,
+    "dans_plancher_plafond": true
+   },
+   "1-1000": {
+    "rapport_T": 100.42094675957442,
+    "n_intervalles": 49,
+    "comptes_min": 100,
+    "comptes_max": 101,
+    "dans_plancher_plafond": true
+   },
+   "1-2001052": {
+    "rapport_T": 80121.16594678747,
+    "n_intervalles": 49,
+    "comptes_min": 80121,
+    "comptes_max": 80122,
+    "dans_plancher_plafond": true
+   },
+   "100-2001052": {
+    "rapport_T": 4788.053470520213,
+    "n_intervalles": 49,
+    "comptes_min": 4788,
+    "comptes_max": 4789,
+    "dans_plancher_plafond": true
+   }
+  },
+  "identite_decalage_max_err": 0.0,
+  "histogramme_phase_dans_cycle_tour1": null
+ }
+]

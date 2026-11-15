@@ -1,0 +1,86 @@
+RHV6Fresh/Terminal/E452_SCRATCH.lean:68:40: warning: Variable name `hβ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hβ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+RHV6Fresh/Terminal/E452_SCRATCH.lean:88:6: error: expected no space before
+RHV6Fresh/Terminal/E452_SCRATCH.lean:94:8: warning: declaration uses `sorry`
+RHV6Fresh/Terminal/E452_SCRATCH.lean:95:5: warning: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+RHV6Fresh/Terminal/E452_SCRATCH.lean:101:2: warning: 'exact abs_of_nonneg (add_nonneg (abs_nonneg _) (abs_nonneg _))' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+RHV6Fresh/Terminal/E452_SCRATCH.lean:101:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+RHV6Fresh/Terminal/E452_SCRATCH.lean:107:6: error: expected no space before
+RHV6Fresh/Terminal/E452_SCRATCH.lean:157:8: warning: declaration uses `sorry`
+RHV6Fresh/Terminal/E452_SCRATCH.lean:164:61: warning: 'rw [h]' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+RHV6Fresh/Terminal/E452_SCRATCH.lean:165:2: warning: '·
+  rw [neg_one_zpow_neg_one']
+  have :=
+    le_abs_self
+      (|contactRealValue β T (lastContactBefore β T x)| +
+        -1 * |contactRealValue (1 - β) T (lastContactBefore (1 - β) T x)|)
+  linarith' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+RHV6Fresh/Terminal/E452_SCRATCH.lean:169:2: warning: '·
+  rw [zpow_zero]
+  have :=
+    le_abs_self
+      (|contactRealValue β T (lastContactBefore β T x)| +
+        1 * |contactRealValue (1 - β) T (lastContactBefore (1 - β) T x)|)
+  linarith' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+RHV6Fresh/Terminal/E452_SCRATCH.lean:173:2: warning: '·
+  rw [zpow_one]
+  have :=
+    le_abs_self
+      (|contactRealValue β T (lastContactBefore β T x)| +
+        1 * |contactRealValue (1 - β) T (lastContactBefore (1 - β) T x)|)
+  linarith' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+RHV6Fresh/Terminal/E452_SCRATCH.lean:165:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+RHV6Fresh/Terminal/E452_SCRATCH.lean:169:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+RHV6Fresh/Terminal/E452_SCRATCH.lean:173:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+RHV6Fresh/Terminal/E452_SCRATCH.lean:188:10: error: don't know how to synthesize implicit argument `T`
+  @pair_value_sum_ge β ?m.156 hβ0 hβ1 x
+context:
+β T : ℝ
+hβ : 1 / 2 < β
+hβ1 : β < 1
+hT : 0 < T
+hβ0 : 0 < β
+x : ℝ
+hx : 2 * |contactRealValue (1 - β) T (lastContactBefore (1 - β) T x)| < |contactRealValue β T (lastContactBefore β T x)|
+hb : 0 < |contactRealValue (1 - β) T (lastContactBefore (1 - β) T x)|
+⊢ ℝ
+RHV6Fresh/Terminal/E452_SCRATCH.lean:188:7: error: failed to infer `have` declaration type
+RHV6Fresh/Terminal/E452_SCRATCH.lean:182:73: error: unsolved goals
+β T : ℝ
+hβ : 1 / 2 < β
+hβ1 : β < 1
+hT : 0 < T
+hβ0 : 0 < β
+x : ℝ
+hx : 2 * |contactRealValue (1 - β) T (lastContactBefore (1 - β) T x)| < |contactRealValue β T (lastContactBefore β T x)|
+hb : 0 < |contactRealValue (1 - β) T (lastContactBefore (1 - β) T x)|
+⊢ |contactRealValue β T (lastContactBefore β T x)| / 2 <
+    |contactRealValue β T (lastContactBefore β T x) + contactRealValue (1 - β) T (lastContactBefore (1 - β) T x)|
+EXIT=1

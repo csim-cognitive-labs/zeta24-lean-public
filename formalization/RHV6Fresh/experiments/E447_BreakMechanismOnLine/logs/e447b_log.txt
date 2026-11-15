@@ -1,0 +1,8 @@
+[    0.71s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    1.45s] 2.0
+[    0.52s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    3.64s] ψ aux entiers ≤ 1000000 prêt
+[    3.70s] rang 1 : Abel [0.0, 6.052493949005439e-31] | amp err 9.3e-31 viol 0 | solo 0 err 0.0e+00 | ok=True
+[    3.77s] rang 100 : Abel [4.67735140383871e-31, 9.662006928254037e-31] | amp err 1.4e-30 viol 0 | solo 8 err 9.5e-29 | ok=True
+[    3.95s] rang 10000 : Abel [1.2091028341090172e-30, 3.4693937070626314e-31] | amp err 1.4e-30 viol 0 | solo 300 err 2.0e-28 | ok=True
+[    3.96s] FIN e447b all_ok=True

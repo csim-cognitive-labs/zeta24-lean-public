@@ -1,0 +1,33 @@
+import RHV6Fresh.Terminal.MeetingPriceTheorem
+import RHV6Fresh.Terminal.ComplementRigidityAudit
+
+/-! E445 — Tentative T3 (libre) : non-compensation interne du miroir (`mirror_pair_no_internal_compensation`), prix non
+borné (P2), cassure portée par le complément (E435), norme de la primitive de la paire `x^{1+1/2+δ}` (E435), et le
+bilan pondéré borné par la dernière cellule (P5). On demande au compilateur l'énoncé exact qui fermerait. -/
+
+namespace RHV6Fresh
+open Real RHV3Lean Filter
+
+variable (C : OffCarrier)
+
+theorem T3_free (h : C.outgoing.zLaterMember = (mirrorMember C.zero).1) : False := by
+  -- (a) la paire dépasse chacun de ses membres en tout point : aucune compensation interne
+  have hnc : ∀ x : ℝ, 0 < x → ‖zeroTerm C.zero x‖ < ‖zeroTerm C.zero x + zeroTerm (mirrorMember C.zero) x‖ :=
+    fun x hx => (mirror_pair_no_internal_compensation C.zero hx).1
+  -- (b) prix radial non borné
+  have hprice : ∀ K : ℝ, ∃ x : ℝ, 1 < x ∧ K < offPrice (rZeroRadialPosition C.zero.1) x :=
+    offPrice_unbounded (by linarith [C.zero_low])
+  -- (c) la primitive de la paire est bornée par x^{1+(1/2+δ)} ; le reste a un exposant ≥ 1/2 + δ
+  have hpair := fun (x : ℝ) (hx : 1 ≤ x) => C.norm_pairPrimitive_le hx
+  have hexp : 1 / 2 + C.radialShift ≤ remainderExponent := C.remainderExponent_ge_mirror
+  -- (d) la cassure est portée par le complément à chaque rencontre
+  have hbreak := fun (N : ℕ) (hN : 2 ≤ N) => C.complement_break_lower_bound h hN
+  -- (e) une borne du complément seul ne transfère au reste que max(θ, 1/2 + δ)
+  have htransfer := fun (θ K : ℝ) (hK : ∀ x : ℝ, 1 < x → ‖channelPrimitive C.packetᶜ x‖ ≤ K * x ^ (1 + θ)) =>
+    C.complement_bound_transfers h hK
+  -- (f) FERMETURE LIBRE : le compilateur cherche l'énoncé manquant
+  have hneed : remainderExponent < 1 / 2 + C.radialShift := by
+    exact?
+  linarith
+
+end RHV6Fresh

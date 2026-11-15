@@ -1,0 +1,157 @@
+✖ [9106/9106] Building RHV6Fresh.Terminal.AmplitudeContact (9.5s)
+trace: .> LEAN_PATH=/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/Cli/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/batteries/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/Qq/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/aesop/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/proofwidgets/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/importGraph/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/packages/plausible/.lake/build/lib/lean:/opt/zeta24-lean/formalization/rhv2_fresh/.lake/packages/mathlib/.lake/build/lib/lean:/opt/zeta24-lean/formalization/rhv3_lean/.lake/build/lib/lean:/opt/zeta24-lean/formalization/RHV6Fresh/.lake/build/lib/lean /home/gha-deploy/.elan/toolchains/leanprover--lean4---v4.33.0-rc2/bin/lean /opt/zeta24-lean/formalization/RHV6Fresh/RHV6Fresh/Terminal/AmplitudeContact.lean -o /opt/zeta24-lean/formalization/RHV6Fresh/.lake/build/lib/lean/RHV6Fresh/Terminal/AmplitudeContact.olean -i /opt/zeta24-lean/formalization/RHV6Fresh/.lake/build/lib/lean/RHV6Fresh/Terminal/AmplitudeContact.ilean -c /opt/zeta24-lean/formalization/RHV6Fresh/.lake/build/ir/RHV6Fresh/Terminal/AmplitudeContact.c --setup /opt/zeta24-lean/formalization/RHV6Fresh/.lake/build/ir/RHV6Fresh/Terminal/AmplitudeContact.setup.json --json
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:8:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:9:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:10:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:11:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:15:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:17:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:19:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:22:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:23:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:24:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:25:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:26:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:29:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:30:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:35:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:36:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:47:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:55:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:56:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:65:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:72:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:76:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:87:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:90:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:91:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:92:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:109:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:115:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:120:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:123:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:126:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:132:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:134:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:139:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:140:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:144:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:146:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:150:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+error: RHV6Fresh/Terminal/AmplitudeContact.lean:166:67: unsolved goals
+C : OffCarrier
+I : PrimeGapInterval
+hp : 0 < meetingPoint I
+h : 1 - 2 * rZeroRadialPosition ↑C.zero = 1 - rZeroRadialPosition ↑C.zero - rZeroRadialPosition ↑C.zero
+hw : 0 < indexWeight (memberIndex C.zero)
+hw' : 0 < indexWeight (memberIndex (mirrorMember C.zero))
+hb : 0 < meetingPoint I ^ rZeroRadialPosition ↑C.zero
+⊢ meetingPoint I ^ 1 =
+    (meetingPoint I ^ rZeroRadialPosition ↑C.zero) ^ 2 *
+      meetingPoint I ^ (1 - rZeroRadialPosition ↑C.zero - rZeroRadialPosition ↑C.zero)
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:190:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:177:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:183:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:184:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:190:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:193:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: RHV6Fresh/Terminal/AmplitudeContact.lean:209:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+info: RHV6Fresh/Terminal/AmplitudeContact.lean:229:0: 'RHV6Fresh.contactAmplitude_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/AmplitudeContact.lean:230:0: 'RHV6Fresh.radial_from_amplitude_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/AmplitudeContact.lean:231:0: 'RHV6Fresh.OffCarrier.mirror_amplitude_ratio_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/AmplitudeContact.lean:232:0: 'RHV6Fresh.amplitudeContactRigidity_iff_riemannHypothesis' depends on axioms: [propext, Classical.choice, Quot.sound]
+error: Lean exited with code 1
+Some required targets logged failures:
+- RHV6Fresh.Terminal.AmplitudeContact
+error: build failed

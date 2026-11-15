@@ -1,0 +1,11 @@
+[    0.58s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    0.66s] N=10 : 25 contacts, pas moyen 8.890e-03, min 7.753e-06 (8.72e-04 pas), coïncidences abs 0 rel 1, décalage 0.0e+00, paires {'1-2': (1, 2, True), '1-3': (1, 2, True), '2-3': (1, 2, True), '1-10': (3, 4, True)}
+[    0.67s] N=100 : 996 contacts, pas moyen 2.232e-04, min 6.245e-08 (2.80e-04 pas), coïncidences abs 0 rel 3, décalage 0.0e+00, paires {'1-2': (1, 2, True), '1-3': (1, 2, True), '2-3': (1, 2, True), '1-100': (16, 17, True)}
+[    0.69s] N=1000 : 55885 contacts, pas moyen 3.977e-06, min 4.277e-11 (1.08e-05 pas), coïncidences abs 0 rel 54, décalage 0.0e+00, paires {'1-2': (1, 2, True), '1-3': (1, 2, True), '2-3': (1, 2, True), '1-100': (16, 17, True), '1-1000': (100, 101, True), '100-1000': (6, 6, True)}
+[    1.47s] N=10000 : 3768653 contacts, pas moyen 5.898e-08, min 1.243e-14 (2.11e-07 pas), coïncidences abs 66 rel 3732, décalage 0.0e+00, paires {'1-2': (1, 2, True), '1-3': (1, 2, True), '2-3': (1, 2, True), '1-100': (16, 17, True), '1-1000': (100, 101, True), '1-10000': (698, 699, True), '100-10000': (41, 42, True)}
+[   20.25s] N=2001052 : 10456149 contacts, pas moyen 2.653e-12, min 0.000e+00 (0.00e+00 pas), coïncidences abs 3280654 rel 8697, décalage 0.0e+00, paires {'1-2': (1, 2, True), '1-3': (1, 2, True), '2-3': (1, 2, True), '1-100': (16, 17, True), '1-1000': (100, 101, True), '1-2001052': (80121, 80122, True), '100-2001052': (4788, 4789, True)}
+[   21.49s] synthétique β=0.50 : déplacement 0.000 pas, changements de rang Σ=0 max=0, miroir dist. min 0.0000 pas (attendu 0.0000)
+[   22.08s] synthétique β=0.30 : déplacement 0.000 pas, changements de rang Σ=1047 max=72, miroir dist. min 0.0005 pas (attendu 0.0005)
+[   22.72s] synthétique β=0.45 : déplacement 0.000 pas, changements de rang Σ=289 max=24, miroir dist. min 0.0001 pas (attendu 0.0001)
+[   23.32s] synthétique β=0.49 : déplacement 0.000 pas, changements de rang Σ=53 max=6, miroir dist. min 0.0000 pas (attendu 0.0000)
+[   23.32s] terminé

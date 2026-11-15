@@ -1,0 +1,16 @@
+⚠ [3575/3615] Replayed RHV3Lean.Objects.TrueZero
+warning: RHV3Lean/Objects/TrueZero.lean:183:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+[... tronqué ...]
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+info: RHV6Fresh/Terminal/RaccordTransportObligation.lean:228:0: 'RHV6Fresh.amplitude_from_lastContact' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/RaccordTransportObligation.lean:229:0: 'RHV6Fresh.energyRatio_from_contacts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/RaccordTransportObligation.lean:230:0: 'RHV6Fresh.OffCarrier.pair_transport_from_contacts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/RaccordTransportObligation.lean:231:0: 'RHV6Fresh.OffCarrier.obligation_iff_factor_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/RaccordTransportObligation.lean:232:0: 'RHV6Fresh.OffCarrier.not_raccordTransportObligation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/RaccordTransportObligation.lean:233:0: 'RHV6Fresh.OffCarrier.obligation_of_link' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/RaccordTransportObligation.lean:234:0: 'RHV6Fresh.OffCarrier.link_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/RaccordTransportObligation.lean:235:0: 'RHV6Fresh.OffCarrier.break_split_any_packet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RHV6Fresh/Terminal/RaccordTransportObligation.lean:236:0: 'RHV6Fresh.OffCarrier.pairDepositOnLine_iff_sign_change' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (9095 jobs).
+EXIT=0

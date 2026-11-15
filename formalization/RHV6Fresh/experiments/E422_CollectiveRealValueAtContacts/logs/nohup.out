@@ -1,0 +1,33 @@
+[    0.55s] zéros : 2001052 hauteurs, SHA-256 2ef7b752c2f17405… vérifié, γ_max = 1132490.658714
+[    0.56s] rang 1, N=10 : part propre méd. 1.240e+00, accord signe 0.90, rms S 3.530, rms reste 3.087, var vs N préc. None
+[    0.56s] rang 1, N=100 : part propre méd. 1.159e+00, accord signe 0.90, rms S 3.916, rms reste 2.693, var vs N préc. 2.047813154959594
+[    0.56s] rang 1, N=1000 : part propre méd. 8.714e-01, accord signe 0.90, rms S 4.749, rms reste 3.093, var vs N préc. 1.2193515392353969
+[    0.57s] rang 1, N=10000 : part propre méd. 9.019e-01, accord signe 0.90, rms S 4.635, rms reste 2.927, var vs N préc. 0.4348139289101009
+[    0.64s] rang 1, N=100000 : part propre méd. 7.792e-01, accord signe 0.90, rms S 4.846, rms reste 2.932, var vs N préc. 0.7469055921122135
+[    1.61s] rang 1, N=2001052 : part propre méd. 7.949e-01, accord signe 0.90, rms S 4.831, rms reste 2.930, var vs N préc. 0.058441577610599295
+[    1.61s] rang 2, N=10 : part propre méd. 1.015e+00, accord signe 0.73, rms S 3.382, rms reste 2.591, var vs N préc. None
+[    1.61s] rang 2, N=100 : part propre méd. 8.291e-01, accord signe 0.60, rms S 3.902, rms reste 3.627, var vs N préc. 1.9405634336621214
+[    1.61s] rang 2, N=1000 : part propre méd. 6.963e-01, accord signe 0.53, rms S 3.945, rms reste 3.678, var vs N préc. 1.5528227542031778
+[    1.62s] rang 2, N=10000 : part propre méd. 9.967e-01, accord signe 0.53, rms S 4.024, rms reste 3.709, var vs N préc. 0.3764623792376457
+[    1.68s] rang 2, N=100000 : part propre méd. 9.634e-01, accord signe 0.53, rms S 4.013, rms reste 3.692, var vs N préc. 0.06533777404456347
+[    2.97s] rang 2, N=2001052 : part propre méd. 9.609e-01, accord signe 0.53, rms S 4.016, rms reste 3.695, var vs N préc. 0.0068824702484494875
+[    2.97s] rang 3, N=10 : part propre méd. 6.888e-01, accord signe 0.72, rms S 3.373, rms reste 2.951, var vs N préc. None
+[    2.97s] rang 3, N=100 : part propre méd. 6.914e-01, accord signe 0.78, rms S 3.435, rms reste 2.692, var vs N préc. 1.9671834606599523
+[    2.97s] rang 3, N=1000 : part propre méd. 4.312e-01, accord signe 0.89, rms S 4.050, rms reste 3.063, var vs N préc. 1.4477431426622274
+[    2.98s] rang 3, N=10000 : part propre méd. 4.520e-01, accord signe 0.83, rms S 3.975, rms reste 3.075, var vs N préc. 0.437693667222225
+[    3.06s] rang 3, N=100000 : part propre méd. 4.428e-01, accord signe 0.78, rms S 4.003, rms reste 3.089, var vs N préc. 0.07961179848088201
+[    4.71s] rang 3, N=2001052 : part propre méd. 4.426e-01, accord signe 0.78, rms S 4.006, rms reste 3.094, var vs N préc. 0.011132633001408595
+[    4.71s] rang 100, N=10 : part propre méd. 8.276e-02, accord signe 0.48, rms S 3.082, rms reste 3.087, var vs N préc. None
+[    4.72s] rang 100, N=100 : part propre méd. 6.943e-02, accord signe 0.53, rms S 3.616, rms reste 3.613, var vs N préc. 1.9308353991284248
+[    4.72s] rang 100, N=1000 : part propre méd. 6.005e-02, accord signe 0.52, rms S 3.809, rms reste 3.798, var vs N préc. 1.440605345982208
+[    4.79s] rang 100, N=10000 : part propre méd. 6.264e-02, accord signe 0.53, rms S 3.821, rms reste 3.809, var vs N préc. 0.7278197487151667
+[    5.58s] rang 100, N=100000 : part propre méd. 6.385e-02, accord signe 0.51, rms S 3.796, rms reste 3.785, var vs N préc. 0.24282317616481983
+[   21.40s] rang 100, N=2001052 : part propre méd. 6.387e-02, accord signe 0.52, rms S 3.796, rms reste 3.783, var vs N préc. 0.11486896786670082
+[   21.40s] rang 1000, N=10 : part propre méd. 1.340e-02, accord signe 0.50, rms S 3.081, rms reste 3.081, var vs N préc. None
+[   21.41s] rang 1000, N=100 : part propre méd. 1.139e-02, accord signe 0.50, rms S 3.618, rms reste 3.618, var vs N préc. 1.9304386169766465
+[   21.45s] rang 1000, N=1000 : part propre méd. 1.035e-02, accord signe 0.50, rms S 3.889, rms reste 3.889, var vs N préc. 1.425031944304351
+[   21.96s] rang 1000, N=10000 : part propre méd. 9.896e-03, accord signe 0.50, rms S 3.935, rms reste 3.935, var vs N préc. 0.648940989509255
+[   27.06s] rang 1000, N=100000 : part propre méd. 1.000e-02, accord signe 0.51, rms S 3.940, rms reste 3.940, var vs N préc. 0.32714094956776724
+[  119.49s] rang 1000, N=2001052 : part propre méd. 9.960e-03, accord signe 0.51, rms S 3.937, rms reste 3.937, var vs N préc. 0.06829866611633037
+[  119.51s] jumeau mpmath : 7.66e-14
+[  119.52s] terminé
