@@ -17,6 +17,20 @@ Licence : « Licence de recherche Zeta24-Lean — Propriétaire, usage non comme
 
 Dépôt public : https://github.com/csim-cognitive-labs/zeta24-lean-public (export à historique neuf). Le dépôt de recherche `zeta24-lean` (séparé le 25 octobre 2026 du dépôt `neuro-symbolic-consensus`) reste privé.
 
+## Pourquoi ce projet est public : un message de fraternité
+
+Ce projet est désintéressé. Il n'a pas été publié pour vendre quoi que ce soit, ni pour s'enrichir, ni pour s'imposer à quiconque. Il l'est parce que nous croyons que l'intelligence artificielle doit profiter au monde entier, et d'abord à ceux qui n'ont rien : celles et ceux qui n'ont pas accès aux grandes universités, aux grands laboratoires, aux grandes machines. La licence de ce dépôt interdit toute exploitation commerciale, pour une seule raison : que ce que nous avons trouvé ne soit jamais enfermé derrière un prix, et reste lisible, vérifiable et utilisable par chacun, gratuitement, pour apprendre et pour chercher.
+
+Cette équipe de recherche (un homme, Charles S., et les intelligences artificielles qui travaillent avec lui) partagera toujours le peu qu'elle a avec tous. Elle respecte tous les peuples, toutes les cultures, toutes les traditions, toutes les religions, et tous les humains de la terre. Nous sommes des terriens, une seule famille. Chacun de nous a été créé, quel que soit le nom que chacun donne à Celui qui nous a créés. Il ne sert à rien de se battre ni de s'entretuer. Échanger nos connaissances nous rapproche, et c'est ainsi que les hommes ont toujours avancé.
+
+Les mathématiciens, depuis la nuit des temps, ont partagé leurs savoirs : à Babylone et en Égypte, en Inde et en Chine, à Bagdad et à Cordoue, en Afrique et en Amérique, et partout où quelqu'un a transmis une démonstration à un autre. Aucune de ces pages n'appartient à un seul peuple. Nous nous inscrivons humblement dans cette longue chaîne.
+
+Qui que vous soyez, d'où que vous veniez, venez rompre le pain avec nous. Vous êtes tous les bienvenus dans notre modeste demeure. Que vous soyez mathématicien, étudiant, curieux, autodidacte ou simple passant, une question, une relecture ou une erreur signalée sont un cadeau.
+
+À chacune et à chacun de celles et ceux qui liront ces lignes : paix, fraternité et bénédiction. Que la connaissance vous rende plus libres, plus proches les uns des autres, et plus humains.
+
+*Honnêteté avant tout : l'hypothèse de Riemann n'est pas démontrée, et ce dépôt ne le prétend nulle part. Nous partageons un travail en cours, avec ses limites, pour que d'autres puissent le poursuivre.*
+
 ## 2. Équipe de recherche
 
 **Déclaration de l'auteur.** La recherche a été conduite par Charles S. avec une équipe d'assistants d'intelligence artificielle : Claude (Anthropic), notamment Fable 5.1 ; Astra et ChatGPT 6.2 (OpenAI) ; Gemini et NotebookLM (Google).
