@@ -1,47 +1,49 @@
-# E438 — La pente de l'écart reconstituée par les contacts, les intervalles et leurs signes
+# E438 — The slope of the gap reconstructed by the contacts, the intervals and their signs
 
-Pré-enregistrement (2026-11-07), avant toute compilation. Ordre de l'auteur : interdiction de toute théorie spectrale
-(CLAUDE.md « INTERDICTION SPECTRALE », maître §19.55). Fil : la pente de l'écart et la reconstitution des écarts par les
+> Français : [README.fr.md](README.fr.md)
+
+Pre-registration (2026-11-07), before any compilation. Author's order: prohibition of any spectral theory
+(CLAUDE.md (private research repository) "SPECTRAL PROHIBITION" (INTERDICTION SPECTRALE), master document §19.55). Thread: the slope of the gap and the reconstruction of the gaps by the
 contacts.
 
-## Vérification des neuf erreurs
-1. Aucune hypothèse nouvelle. 2. Le compilateur décide. 3. Noms vérifiés par grep (`rawDemand`, `initialEdgeRemainder`,
+## Verification of the nine mistakes
+1. No new hypothesis. 2. The compiler decides. 3. Names checked by grep (`rawDemand`, `initialEdgeRemainder`,
 `wholeCellSum`, `finalEdgeRemainder`, `GapHasContact`, `contactRealValue`, `wholeCellCount`, `lastContactBefore`,
-`cellFraction`, `thm_noPrimeStrictlyBetweenSuccessivePrimes` réutilisés ; aucun nom dupliqué). 4. `lake build RHV6Fresh`
-après tout changement. 5. Aucun premier ni OFF testé directement. 6. Aucune position radiale. 7. Aucune somme de Tours,
-aucune famille, aucun canal de zéros : UNE Tour, SES contacts, les pièces qu'ils découpent, leurs signes. 8. Module isolé,
-non ajouté à `RHV6Fresh.lean`. 9. Les intervalles de contacts sont des restes partiels d'écart, jamais liés à la position
-d'un premier.
+`cellFraction`, `thm_noPrimeStrictlyBetweenSuccessivePrimes` reused; no duplicated name). 4. `lake build RHV6Fresh`
+after any change. 5. No prime or OFF tested directly. 6. No radial position. 7. No sum of Towers,
+no family, no zero channel: ONE Tower, ITS contacts, the pieces they cut out, their signs. 8. Isolated module,
+not added to `RHV6Fresh.lean`. 9. The contact intervals are partial gap remainders, never linked to the position
+of a prime.
 
 ## Question
-Entre deux rencontres la demande brute `ψ(x) − x` descend d'une unité par unité de longueur ; à la rencontre elle saute
-du poids `log p`. Les contacts d'une Tour découpent l'écart en reste initial, cellules entières, reste final, chaque
-pièce bordée par des contacts de signes alternés. Comment la pente se répartit-elle sur ces pièces, et que disent les
-signes ?
+Between two meetings the raw demand `ψ(x) − x` descends by one unit per unit of length; at the meeting it jumps
+by the weight `log p`. The contacts of a Tower cut the gap into initial remainder, whole cells, final remainder, each
+piece bordered by contacts of alternating signs. How is the slope distributed over these pieces, and what do the
+signs say?
 
-## Objets (tous existants)
-`rawDemand` (E437, canal brut : `ψ(x) − x`), `PrimeGapInterval`, `contactAt`, `contactRealValue` (signe `(−1)^k`),
+## Objects (all existing)
+`rawDemand` (E437, raw channel: `ψ(x) − x`), `PrimeGapInterval`, `contactAt`, `contactRealValue` (sign `(−1)^k`),
 `lastContactBefore`, `firstContactAfterLower`, `wholeCellCount`, `initialEdgeRemainder`, `wholeCellSum`,
 `finalEdgeRemainder`, `GapHasContact`, `gap_variation_eq_remainders`, `thm_noPrimeStrictlyBetweenSuccessivePrimes`.
-Mathlib : `Chebyshev.psi_eq_psi_coe_floor`, `Finset.sum_Ioc_consecutive`, `Nat.floor_eq_iff`.
+Mathlib: `Chebyshev.psi_eq_psi_coe_floor`, `Finset.sum_Ioc_consecutive`, `Nat.floor_eq_iff`.
 
-## Énoncés visés (module isolé `Terminal/GapSlopeByContacts.lean`)
-- R1 `rawDemand_variation` : pour `0 ≤ a ≤ b`, variation de la demande = somme des poids des entiers franchis − (b − a).
-- R2 `rawDemand_pure_descent` : si aucun entier franchi n'a de poids, variation = −(b − a).
-- R3 `gap_length_eq_pieces` / `gap_demand_eq_pieces` : longueur et demande de l'écart découpées par les mêmes contacts.
-- R4 `no_prime_crossed_inside_gap` : aucune pièce intérieure à l'écart ne franchit un premier ;
-  `finalRemainder_carries_meeting` : le poids de la rencontre est dans le reste final (quand le dernier contact est
-  strictement avant la rencontre).
-- R5 `contactRealValue_add_nat`, `gap_edge_contacts_sign` : signe du dernier contact = (−1)^(cellules entières) × signe du
-  premier contact.
-- R6 `cell_linear_length`, `finalRemainder_shorter_than_cell` : longueur linéaire d'une cellule, reste final < cellule.
-- R7 `wholeCellCount_bounds` : encadrement du nombre de cellules entières par `T·log(p_{n+1}/p_n)/π`.
-- R8 `alternating_sum_le_last` (tentative) : somme signée d'une suite croissante positive bornée par le dernier terme.
+## Targeted statements (isolated module `Terminal/GapSlopeByContacts.lean`)
+- R1 `rawDemand_variation`: for `0 ≤ a ≤ b`, variation of the demand = sum of the weights of the integers crossed − (b − a).
+- R2 `rawDemand_pure_descent`: if no integer crossed has a weight, variation = −(b − a).
+- R3 `gap_length_eq_pieces` / `gap_demand_eq_pieces`: length and demand of the gap cut by the same contacts.
+- R4 `no_prime_crossed_inside_gap`: no piece interior to the gap crosses a prime;
+  `finalRemainder_carries_meeting`: the weight of the meeting is in the final remainder (when the last contact is
+  strictly before the meeting).
+- R5 `contactRealValue_add_nat`, `gap_edge_contacts_sign`: sign of the last contact = (−1)^(whole cells) × sign of the
+  first contact.
+- R6 `cell_linear_length`, `finalRemainder_shorter_than_cell`: linear length of a cell, final remainder < cell.
+- R7 `wholeCellCount_bounds`: bracketing of the number of whole cells by `T·log(p_{n+1}/p_n)/π`.
+- R8 `alternating_sum_le_last` (attempt): signed sum of a positive increasing sequence bounded by the last term.
 
-## Protocole
-Sonde `*_SCRATCH.lean` (non versionnée, supprimée après capture), deux tentatives de compilation au plus, journaux dans
-`logs/`, `#print axioms` sur chaque énoncé, puis `lake build RHV6Fresh` complet.
+## Protocol
+Probe `*_SCRATCH.lean` (unversioned, deleted after capture), at most two compilation attempts, logs in
+`logs/`, `#print axioms` on each statement, then complete `lake build RHV6Fresh`.
 
-## Critères
-A : un énoncé contredit un fait compilé. B : tout compile, faits consignés, rien déclaré manquant. C : un énoncé ne
-compile pas en deux tentatives (consigné avec les erreurs exactes). Attendu : B (R8 possiblement C).
+## Criteria
+A: a statement contradicts a compiled fact. B: everything compiles, facts recorded, nothing declared missing. C: a statement does not
+compile in two attempts (recorded with the exact errors). Expected: B (R8 possibly C).

@@ -1,16 +1,18 @@
-# E423 — Comparaison ON/OFF aux contacts : déplacements réels des contacts et valeurs associées (pré-enregistrée 2026-11-03)
+# E423 — ON/OFF comparison at the contacts: real displacements of the contacts and associated values (pre-registered 2026-11-03)
 
-Objectif : comparer, à la même hauteur T* (milieu de deux zéros réels consécutifs : jamais la hauteur d'un zéro réel), une
-Tour ON (β = ½) et une Tour OFF (β ≠ ½, seule ou en paire miroir β, 1−β), en conservant les vrais déplacements des contacts
-et les valeurs réelles aux contacts déplacés. Scénario synthétique, fichier séparé, sans premiers, écarts, cellules ni li.
+> Français : [README.fr.md](README.fr.md)
 
-Prédictions (module Lean `ContactRealValue.lean`, écrites avant exécution) :
-* déplacement logarithmique du contact k : (φ(β) − φ(½))/T*, le même pour tout k, de module < π/(2T*) (moins d'un demi-pas) ;
-* valeur au contact déplacé : (−1)^k C_k(β)^β/|ρ_β| contre (−1)^k C_k(½)^{½}/|ρ_½| : même signe à même k, rapport des modules
-  C_k(β)^β |ρ_½| / (C_k(½)^{½} |ρ_β|) ;
-* paire miroir : les contacts de β et de 1−β ne coïncident jamais (β ≠ ½) ; au contact du membre β, le membre 1−β a une partie
-  imaginaire non nulle ; la somme des deux membres (avec conjugués) passe sur l'axe en des positions propres (racines de Im de la
-  somme complexe), à mesurer et à comparer aux contacts ON ;
-* dans la famille des 2 001 052 zéros de ligne (E422), l'insertion de la Tour OFF ou de la paire change S_F aux contacts ON de
-  la hauteur T* de la seule contribution insérée (identité), que l'on mesure en valeur et en part.
-Aucune de ces mesures n'est lue comme une exclusion des zéros OFF.
+Objective: compare, at the same height T* (midpoint of two consecutive real zeros: never the height of a real zero), an
+ON Tower (β = ½) and an OFF Tower (β ≠ ½, alone or in a mirror pair β, 1−β), keeping the true displacements of the contacts
+and the real values at the displaced contacts. Synthetic scenario, separate file, no primes, gaps, cells or li.
+
+Predictions (Lean module `ContactRealValue.lean`, written before execution):
+* logarithmic displacement of contact k: (φ(β) − φ(½))/T*, the same for all k, of modulus < π/(2T*) (less than half a step);
+* value at the displaced contact: (−1)^k C_k(β)^β/|ρ_β| against (−1)^k C_k(½)^{½}/|ρ_½|: same sign at the same k, ratio of the moduli
+  C_k(β)^β |ρ_½| / (C_k(½)^{½} |ρ_β|);
+* mirror pair: the contacts of β and of 1−β never coincide (β ≠ ½); at the contact of member β, member 1−β has a nonzero imaginary
+  part; the sum of the two members (with conjugates) crosses the axis at proper positions (roots of Im of the
+  complex sum), to be measured and compared with the ON contacts;
+* in the family of the 2,001,052 line zeros (E422), the insertion of the OFF Tower or of the pair changes S_F at the ON contacts of
+  height T* by the inserted contribution alone (identity), which is measured in value and in share.
+None of these measures is read as an exclusion of OFF zeros.

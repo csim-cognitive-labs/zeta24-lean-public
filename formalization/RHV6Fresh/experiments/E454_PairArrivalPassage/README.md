@@ -1,29 +1,32 @@
-# E454 — K4 : la paire lue comme passage depuis l'arrivée basse — pré-enregistrement
+# E454 — K4: the pair read as a passage from the low arrival — pre-registration
 
-Date : 2026-11-08. Statut : pré-enregistré avant toute compilation (§19.77). Feu vert de l'auteur après K3 (« continues, tu
-as le feu vert »). Ordres : ban spectral total (usage et citation ; deux termes au plus, aucune somme de Tours) ; troisième
-ordre (contacts lisent `β`) ; R-E446 ; §19.44 ; interdit « amplitude contre budget » ; aucune prémisse équivalente à RH ;
-plage utile `β ≤ 1/2` pour l'arrivée (§19.76) ; deux tentatives de compilation au plus, chacune journalisée dans `attempts/`.
+> Français : [README.fr.md](README.fr.md)
+
+Date: 2026-11-08. Status: pre-registered before any compilation (§19.77). Green light from the author after K3
+("continue, you have the green light"). Orders: total spectral ban (use and citation; two terms at most, no sum of
+Towers); third order (contacts read `β`); R-E446; §19.44; forbidden "amplitude against budget"; no premise equivalent
+to RH; useful range `β ≤ 1/2` for the arrival (§19.76); at most two compilation attempts, each logged in `attempts/`.
 
 ## Question K4 (§19.77.2)
-K0–K3 décrivent la paire par ses deux termes. Que compile le corpus sur la paire lue comme PASSAGE de l'énumération canonique :
-place des deux membres, passage qui sort de l'arrivée basse, lecture de fréquence des deux membres, rapport à la prémisse unique ?
+K0–K3 describe the pair by its two terms. What does the corpus compile on the pair read as a PASSAGE of the canonical
+enumeration: place of the two members, passage leaving the low arrival, frequency reading of the two members, relation
+to the single premise?
 
-## Vérification de non-équivalence avec RH (faite avant, §19.77.3)
-Aucune hypothèse posée ; conditions = cas sur un passage ou un zéro donné ; L6 = contraposée d'une équivalence déjà compilée ;
-rien n'est affirmé sur l'existence d'arrivées basses. Réponse attendue consignée d'avance : forme du passage OFF, AUCUNE
-contradiction ; la frontière reste la prémisse unique (⟺ RH).
+## Check of non-equivalence with RH (done before, §19.77.3)
+No hypothesis posed; conditions = cases on a given passage or zero; L6 = contrapositive of an already compiled
+equivalence; nothing is asserted about the existence of low arrivals. Expected answer recorded in advance: form of the
+OFF passage, NO contradiction; the frontier remains the single premise (⟺ RH).
 
-## Énoncés Lean (module isolé `Terminal/PairArrivalPassage.lean`, import `PairWordInversion`)
-L1 `arrival_low_of_off` ; L2 `passage_height_le`, `passage_frozen_of_low_entry`, `passage_right_of_low_entry` ;
-L3 `low_arrival_precedes_mirror`, `low_entry_successor_radial_le`, `low_entry_successor_band` ;
-L4 `low_arrival_contact_ratio_lt`, `low_arrival_term_ratio_tendsto_zero` ; L5 `frozen_passage_same_word_slope` ;
-L6 `low_entry_not_expected`, `frozen_passage_has_low_member` ; L7 `arrival_exit_dichotomy`.
+## Lean statements (isolated module `Terminal/PairArrivalPassage.lean`, import `PairWordInversion`)
+L1 `arrival_low_of_off`; L2 `passage_height_le`, `passage_frozen_of_low_entry`, `passage_right_of_low_entry`;
+L3 `low_arrival_precedes_mirror`, `low_entry_successor_radial_le`, `low_entry_successor_band`;
+L4 `low_arrival_contact_ratio_lt`, `low_arrival_term_ratio_tendsto_zero`; L5 `frozen_passage_same_word_slope`;
+L6 `low_entry_not_expected`, `frozen_passage_has_low_member`; L7 `arrival_exit_dichotomy`.
 
-## Expériences
-Aucune : K4 ne produit aucune conclusion numérique. Preuves d'exécution = journaux de compilation dans `attempts/`.
+## Experiments
+None: K4 produces no numerical conclusion. Execution evidence = compilation logs in `attempts/`.
 
-## Critère
-Verdict A si les treize énoncés compilent en au plus deux tentatives, axiomes standards, zéro avertissement dans le module,
-grep du ban vide, `lake build RHV6Fresh` complet vert. Sinon verdict B avec chaque échec consigné. Dans tous les cas la
-réponse est consignée telle quelle ; toute contradiction qui apparaîtrait serait vérifiée pour non-équivalence avant d'être énoncée.
+## Criterion
+Verdict A if the thirteen statements compile in at most two attempts, standard axioms, zero warnings in the module,
+empty grep of the ban, full `lake build RHV6Fresh` green. Otherwise verdict B with each failure recorded. In all cases
+the answer is recorded as is; any contradiction that appeared would be checked for non-equivalence before being stated.

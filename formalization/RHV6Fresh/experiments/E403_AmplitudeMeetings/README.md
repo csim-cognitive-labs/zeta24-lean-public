@@ -1,73 +1,75 @@
-# E403 — Somme réelle des dépôts aux vrais points de rencontre, avec les vraies amplitudes (2026-11-02)
+# E403 — Real sum of the deposits at the true meeting points, with the true amplitudes (2026-11-02)
 
-## Pré-enregistrement (écrit AVANT exécution)
+> Français : [README.fr.md](README.fr.md)
 
-Question de l'auteur (2026-11-02) : les affirmations « le OFF ne viole aucune contrainte des rencontres » reposent-elles
-sur la projection (π(x), li(x), comptage de Riemann–von Mangoldt) ou sur les vrais écarts et la somme des contacts sur
-l'axe réel ? Réponse consignée : sur la projection ou sur une définition de contact sans amplitude. E403 fait la
-comparaison qui n'avait jamais été faite, avec le canal lissé COMPILÉ (`smoothedRemainder`, `nontrivialZeroResidueTerm`,
-module `Terminal/AmplitudeContact.lean`) et aucun autre.
+## Pre-registration (written BEFORE execution)
 
-### Objets (tous déterministes)
-* **Vrais écarts** : premiers `p ≤ 10 000` plus le suivant (1 229 écarts, mêmes que E402), vrais points de rencontre
-  `p_{n+1}`. Demande première exacte `A(x) = Σ_{m<x} Λ(m)(1 − m/x)` (crible, aucune formule asymptotique), fond `B(x)`
-  (formule E401/E402), cible des zéros `Z_n = ΔA − ΔB`.
-* **Zéros** : `../data/odlyzko_zeros6_2001052.txt` (SHA-256 vérifié), hauteurs posées sur la ligne (hypothèse de données).
-* **Dépôt d'un zéro au point de rencontre** : `d_ρ(x) = −x^ρ/(ρ(ρ+1))` (multiplicité 1), module `|d_ρ(x)| = x^β/(|ρ||ρ+1|)`
-  (= `meetingDeposit_norm`). Contribution à l'écart : `c_ρ(n) = d_ρ(p_{n+1}) − d_ρ(p_n)`.
-* **Contact porteur d'amplitude** : pour chaque membre de la foule qui traverse un contact `C_k` dans l'écart,
-  amplitude `A_k = |d_ρ(C_k)|` et pas d'amplitude `A_{k+1}/A_k` ; lecture `β_lue = T·log(A_{k+1}/A_k)/π`
+Author's question (2026-11-02): do the claims "OFF violates no constraint of the meetings" rest on the
+projection (π(x), li(x), Riemann–von Mangoldt counting) or on the true gaps and the sum of the contacts on the real
+axis? Recorded answer: on the projection or on a definition of contact without amplitude. E403 makes the
+comparison that had never been made, with the COMPILED smoothed channel (`smoothedRemainder`, `nontrivialZeroResidueTerm`,
+module `Terminal/AmplitudeContact.lean`) and no other.
+
+### Objects (all deterministic)
+* **True gaps**: primes `p ≤ 10 000` plus the next one (1,229 gaps, same as E402), true meeting points
+  `p_{n+1}`. Exact prime demand `A(x) = Σ_{m<x} Λ(m)(1 − m/x)` (sieve, no asymptotic formula), background `B(x)`
+  (formula of E401/E402), zero target `Z_n = ΔA − ΔB`.
+* **Zeros**: `../data/odlyzko_zeros6_2001052.txt` (SHA-256 checked), heights placed on the line (data hypothesis).
+* **Deposit of a zero at the meeting point**: `d_ρ(x) = −x^ρ/(ρ(ρ+1))` (multiplicity 1), modulus `|d_ρ(x)| = x^β/(|ρ||ρ+1|)`
+  (= `meetingDeposit_norm`). Contribution to the gap: `c_ρ(n) = d_ρ(p_{n+1}) − d_ρ(p_n)`.
+* **Amplitude-carrying contact**: for each member of the crowd that crosses a contact `C_k` in the gap,
+  amplitude `A_k = |d_ρ(C_k)|` and amplitude step `A_{k+1}/A_k`; reading `β_read = T·log(A_{k+1}/A_k)/π`
   (= `radial_from_amplitude_step`).
-* **Somme des amplitudes** (modules) de la foule à la rencontre, `Σ|c_ρ(n)|` ; somme signée `2Re Σ c_ρ(n)`.
+* **Sum of the amplitudes** (moduli) of the crowd at the meeting, `Σ|c_ρ(n)|`; signed sum `2Re Σ c_ρ(n)`.
 
-### Jumeau synthétique, SÉPARÉ (jamais lu comme mesure de β)
-Un zéro ON est REMPLACÉ par une paire OFF : le zéro réel de rang `j₀ = 2000` est retiré de la somme, la paire
-`β* = 0,3 / 0,7` est ajoutée à la hauteur `T* = (T_{2000} + T_{2001})/2` (hauteur d'aucun zéro existant, distance
-vérifiée `> 10⁻³`). Pour chaque vrai écart : complément exigé `Δ_n = 2Re(c_paire(n) − c_{j₀}(n))`, comparé
-(a) au résidu observé `|R_n|` de la reconstruction réelle, (b) à la borne de queue à l'échelle de la ligne `eps_online`,
-(c) à la borne inconditionnelle `eps_uncond` ; amplitudes `|d_{0,3}(p_{n+1})|`, `|d_{0,7}(p_{n+1})|`, `|d_{j₀}(p_{n+1})|`
-et leur croissance avec `p_{n+1}` (pente de `log|d_{0,7}/d_{0,3}|` contre `log p_{n+1}` : attendue exactement `0,4`).
-Second jumeau, mpmath dps 30, sur 3 écarts (premier à foule non vide, médian, dernier).
+### Synthetic twin, SEPARATE (never read as a measurement of β)
+An ON zero is REPLACED by an OFF pair: the real zero of rank `j₀ = 2000` is removed from the sum, the pair
+`β* = 0.3 / 0.7` is added at height `T* = (T_{2000} + T_{2001})/2` (height of no existing zero, distance
+checked `> 10⁻³`). For each true gap: required complement `Δ_n = 2Re(c_pair(n) − c_{j₀}(n))`, compared
+(a) to the observed residual `|R_n|` of the real reconstruction, (b) to the line-scale tail bound `eps_online`,
+(c) to the unconditional bound `eps_uncond`; amplitudes `|d_{0.3}(p_{n+1})|`, `|d_{0.7}(p_{n+1})|`, `|d_{j₀}(p_{n+1})|`
+and their growth with `p_{n+1}` (slope of `log|d_{0.7}/d_{0.3}|` against `log p_{n+1}`: expected exactly `0.4`).
+Second twin, mpmath dps 30, on 3 gaps (first one with non-empty crowd, median, last).
 
-### Prédictions dites d'avance
-1. Identité réelle `Z_n = 2Re Σ_ρ c_ρ(n)` au niveau des données (résidu ~10⁻⁷, comme E402) : c'est `gap_demand_eq_deposits`.
-2. `β_lue = 0,5` sur tous les contacts réels (à l'erreur flottante) : c'est l'hypothèse de données, pas une mesure.
-   Sur le synthétique : `β_lue = 0,3` et `0,7` exactement : le contact porteur d'amplitude N'EST PAS aveugle au radial.
-3. La somme des amplitudes `Σ|c|` de la foule est très supérieure à `|2Re Σ c|` (part de phase médiane ~0,06 en E402) ;
-   la somme des modules n'est pas la demande.
-4. Synthétique : `Δ_n` dépasse le résidu observé pour la plupart des écarts (E402 : 468 écarts avec paire, complément
-   jusqu'à 2 800× le résidu) ; `Δ_n` ne dépasse `eps_online` ni `eps_uncond` pour aucun écart (E402 : 0/468).
-   Le rapport `|d_{0,7}|/|d_{0,3}|` croît comme `p_{n+1}^{0,4}` (= `mirror_deposit_ratio`).
-5. **Aucune conclusion sur β des vrais zéros.** Ce que l'expérience peut dire : la comparaison réelle (vrais écarts ×
-   vraies amplitudes) distingue une paire du zéro remplacé SEULEMENT par rapport au résidu observé, lequel dépend de la
-   complétude de la liste des zéros ; aucune borne compilée (toutes à exposant 1 ou à l'échelle de la ligne) ne la
-   distingue. Si ce point 5 est contredit, il sera consigné tel quel.
+### Predictions stated in advance
+1. Real identity `Z_n = 2Re Σ_ρ c_ρ(n)` at the level of the data (residual ~10⁻⁷, as E402): this is `gap_demand_eq_deposits`.
+2. `β_read = 0.5` on all real contacts (up to floating-point error): this is the data hypothesis, not a measurement.
+   On the synthetic: `β_read = 0.3` and `0.7` exactly: the amplitude-carrying contact is NOT blind to the radial.
+3. The sum of the amplitudes `Σ|c|` of the crowd is much larger than `|2Re Σ c|` (median phase share ~0.06 in E402);
+   the sum of moduli is not the demand.
+4. Synthetic: `Δ_n` exceeds the observed residual for most gaps (E402: 468 gaps with pair, complement
+   up to 2,800× the residual); `Δ_n` exceeds neither `eps_online` nor `eps_uncond` for any gap (E402: 0/468).
+   The ratio `|d_{0.7}|/|d_{0.3}|` grows like `p_{n+1}^{0.4}` (= `mirror_deposit_ratio`).
+5. **No conclusion about β of the real zeros.** What the experiment can say: the real comparison (true gaps ×
+   true amplitudes) distinguishes a pair from the replaced zero ONLY with respect to the observed residual, which depends on the
+   completeness of the list of zeros; no compiled bound (all at exponent 1 or at line scale) distinguishes it.
+   If this point 5 is contradicted, it will be recorded as is.
 
-### Protocole
+### Protocol
 `nohup timeout 900 python3 -I e403_amplitude_meetings.py ../data/odlyzko_zeros6_2001052.txt 10000 . > e403_run.log`
-(borné < 5 min, numpy + mpmath ; aucune sortie fabriquée). Sorties : `e403_summary.txt`, `e403_per_gap.txt`,
+(bounded < 5 min, numpy + mpmath; no fabricated output). Outputs: `e403_summary.txt`, `e403_per_gap.txt`,
 `e403_contacts_chosen_gaps.txt`, `e403_synthetic.txt`, `e403_run.log`.
 
-## Exécution (2026-11-02, 103,2 s, `e403_run.log`) — résultats contre les prédictions
+## Execution (2026-11-02, 103.2 s, `e403_run.log`) — results against the predictions
 
-| # | Prédiction | Résultat |
+| # | Prediction | Result |
 |---|---|---|
-| 1 | identité réelle au niveau des données | max résidu 1,44·10⁻⁷ (n = 1), médiane 2,1·10⁻⁹ ; 1229/1229 sous `eps_online` ; jumeaux mpmath dps 30 : écarts ≤ 2,1·10⁻¹⁴ (sommes), ≤ 1,6·10⁻¹² (demande exacte) |
-| 2 | `β_lue = 0,5` sur le réel (donnée), `0,3 / 0,7` sur le synthétique | 1 655 515 contacts de foule, max écart 8,3·10⁻¹² ; synthétique 0,300000000000 ± 10⁻¹², 0,700000000000 ± 2·10⁻¹² : **le contact porteur d'amplitude lit la position radiale** |
-| 3 | somme des modules ≫ somme signée | part de phase médiane 0,057 ; somme des amplitudes au point de rencontre = 103 × la demande (médiane) ; somme des modules des contributions = 17 × la demande |
-| 4 | complément du remplacement > résidu observé pour la plupart des écarts ; jamais > bornes ; croissance `p^{0,4}` | **1229/1229** écarts (pas seulement les 468 dont la foule contient la paire : consigné, non dit d'avance) ; rapport complément/résidu jusqu'à 3,4·10⁷ ; `> eps_online` : 0/1229 ; `> eps_uncond` : 0/1229 ; pente mesurée 0,400000000000 ; `|d_{0,7}|/|d_{0,3}|` de 1,55 à 39,8 |
-| 5 | aucune conclusion sur β des vrais zéros | tenue |
+| 1 | real identity at the level of the data | max residual 1.44·10⁻⁷ (n = 1), median 2.1·10⁻⁹; 1229/1229 under `eps_online`; mpmath dps 30 twins: differences ≤ 2.1·10⁻¹⁴ (sums), ≤ 1.6·10⁻¹² (exact demand) |
+| 2 | `β_read = 0.5` on the real (data), `0.3 / 0.7` on the synthetic | 1,655,515 crowd contacts, max difference 8.3·10⁻¹²; synthetic 0.300000000000 ± 10⁻¹², 0.700000000000 ± 2·10⁻¹²: **the amplitude-carrying contact reads the radial position** |
+| 3 | sum of moduli ≫ signed sum | median phase share 0.057; sum of amplitudes at the meeting point = 103 × the demand (median); sum of moduli of the contributions = 17 × the demand |
+| 4 | replacement complement > observed residual for most gaps; never > bounds; growth `p^{0.4}` | **1229/1229** gaps (not only the 468 whose crowd contains the pair: recorded, not stated in advance); complement/residual ratio up to 3.4·10⁷; `> eps_online`: 0/1229; `> eps_uncond`: 0/1229; measured slope 0.400000000000; `|d_{0.7}|/|d_{0.3}|` from 1.55 to 39.8 |
+| 5 | no conclusion about β of the real zeros | held |
 
-## Lecture honnête
-1. La comparaison demandée par l'auteur est faite : vrais écarts à gauche, somme des dépôts de tous les zéros aux vrais
-   points de rencontre avec leurs vraies amplitudes à droite. Elle est une identité (`gap_demand_eq_deposits`), vérifiée
-   au niveau des données.
-2. Le contact porteur d'amplitude n'est pas aveugle : sur le synthétique, il rend `β* = 0,3` et `0,7` à `10⁻¹²`. Sur le
-   réel il rend `0,5` parce que les données posent `0,5`. Ce n'est pas une mesure de `β` : c'est la lecture d'une donnée.
-3. Le remplacement d'un zéro ON par une paire OFF modifie la somme réelle à TOUS les points de rencontre, d'une quantité
-   jusqu'à 3,4·10⁷ fois le résidu observé, et croissante comme `p^{0,4}` ; mais cette quantité reste sous toute borne
-   compilée (ligne, exposant 1). Le détecteur est donc le résidu observé, qui dépend de la complétude de la liste des
-   zéros ; aucune contrainte compilée sur l'axe réel n'est violée par la paire. L'affirmation « le OFF ne viole aucune
-   contrainte des rencontres » est remplacée par : « la paire change la somme réelle à chaque rencontre, et aucune borne
-   compilée ne voit ce changement ».
-4. Rien n'est conclu sur β des vrais zéros.
+## Honest reading
+1. The comparison requested by the author is made: true gaps on the left, sum of the deposits of all zeros at the true
+   meeting points with their true amplitudes on the right. It is an identity (`gap_demand_eq_deposits`), checked
+   at the level of the data.
+2. The amplitude-carrying contact is not blind: on the synthetic, it returns `β* = 0.3` and `0.7` to `10⁻¹²`. On the
+   real it returns `0.5` because the data place `0.5`. This is not a measurement of `β`: it is the reading of a datum.
+3. Replacing an ON zero by an OFF pair changes the real sum at ALL meeting points, by an amount
+   up to 3.4·10⁷ times the observed residual, and growing like `p^{0.4}`; but this amount stays under every
+   compiled bound (line, exponent 1). The detector is therefore the observed residual, which depends on the completeness of the list of
+   zeros; no compiled constraint on the real axis is violated by the pair. The claim "OFF violates no
+   constraint of the meetings" is replaced by: "the pair changes the real sum at every meeting, and no compiled
+   bound sees this change".
+4. Nothing is concluded about β of the real zeros.

@@ -1,32 +1,34 @@
-# E456 — K6 : décalage des contacts à même hauteur, audit du texte « transitions modulo 6 », causalité ON/OFF (pré-enregistrement, 2026-11-08)
+# E456 — K6: contact shift at the same height, audit of the "transitions modulo 6" text, ON/OFF causality (pre-registration, 2026-11-08)
 
-Référence : `RHV6final_STRATEGIE_SEMANTIQUE.md` §19.79. Questions de l'auteur : (Q1) « si on affecte quelque chose à β, T en
-souffre » à même hauteur visée ; (Q2) « les OFF sont peut-être nécessaires aux grandes hauteurs pour réaliser la cassure » ;
-(Q3) corriger le texte collé sur les quatre transitions modulo 6 et conduire des études de causalité ON/OFF ; (Q4) la distribution
-des transitions est-elle gaussienne ?
+> Français : [README.fr.md](README.fr.md)
 
-## Audit (avant exécution) — §19.79.2
-* Q1 déjà étudiée : `gap_reading_height_only`, `windingContact_lt_of_radial_lt`, `windingContact_sameHeight`, `contact_eq_iff_phase`,
-  `contact_radial_formula`, `tower_eq_of_same_word`. Compilable sans hypothèse : aucun contact partagé à même hauteur (tous indices) ;
-  rencontre commune ⟹ hauteurs différentes ; décalage < demi-cellule ; rapport de cellule aveugle à β. → K6.
-* Q2 : la phrase « hautes fréquences ⟹ cassure » vient du canal de sommation (E404/E408), interdit ; forme autorisée compilée pour
-  toute Tour : `log_ratio_ge_cell_of_meeting`, `two_consecutive_contacts_finite` ; pouvoir de résolution = T seul.
-* Q3 : le texte = E427 altéré ; erreurs e1–e5 (§19.79.2) ; compilé : `card_validWords_twelve`, `orientedBalance_abs_le_one`,
+Reference: `RHV6final_STRATEGIE_SEMANTIQUE.md` §19.79. Author's questions: (Q1) "if something is assigned to β, T
+suffers from it" at the targeted same height; (Q2) "the OFF are perhaps necessary at large heights to realize the
+break"; (Q3) correct the pasted text on the four transitions modulo 6 and conduct ON/OFF causality studies; (Q4) is the
+distribution of the transitions Gaussian?
+
+## Audit (before execution) — §19.79.2
+* Q1 already studied: `gap_reading_height_only`, `windingContact_lt_of_radial_lt`, `windingContact_sameHeight`, `contact_eq_iff_phase`,
+  `contact_radial_formula`, `tower_eq_of_same_word`. Compilable without hypothesis: no shared contact at the same height (all indices);
+  common meeting ⟹ different heights; shift < half-cell; cell ratio blind to β. → K6.
+* Q2: the sentence "high frequencies ⟹ break" comes from the summation channel (E404/E408), forbidden; authorized form compiled for
+  every Tower: `log_ratio_ge_cell_of_meeting`, `two_consecutive_contacts_finite`; resolving power = T alone.
+* Q3: the text = E427 altered; errors e1–e5 (§19.79.2); compiled: `card_validWords_twelve`, `orientedBalance_abs_le_one`,
   `eventOrientation_of_gap`.
-* Q4 : support fini de treize valeurs ⟹ pas gaussienne ; binomiale décalée attendue ; normale approchée aux longues fenêtres.
+* Q4: finite support of thirteen values ⟹ not Gaussian; shifted binomial expected; approximate normal at long windows.
 
-## Volet Lean
-`RHV6Fresh/Terminal/SameHeightContactShift.lean`, isolé, M1–M5 (§19.79.3). Aucune amplitude, aucune hypothèse.
+## Lean part
+`RHV6Fresh/Terminal/SameHeightContactShift.lean`, isolated, M1–M5 (§19.79.3). No amplitude, no hypothesis.
 
-## Volet déterministe
-`e456_causal_mod6_contact_shift.py` : P1 jumeau de K6 ; P2 recompte et énumération exacte ; P3 Gauss ; P4 intervention sur β à T
-fixée et sur T à β fixée. Données : `experiments/data/odlyzko_zeros1_first5000.txt` ; premiers ≤ 10⁶ par crible.
+## Deterministic part
+`e456_causal_mod6_contact_shift.py`: P1 twin of K6; P2 recount and exact enumeration; P3 Gauss; P4 intervention on β at fixed T
+and on T at fixed β. Data: `experiments/data/odlyzko_zeros1_first5000.txt`; primes ≤ 10⁶ by sieve.
 
-## Réponses attendues (consignées d'avance)
-P1 exact ; P2 effectifs du texte incohérents, |τ15 − τ51| ≤ 1, parts B + C + D = 1 ; P3 binomiale décalée, pas gaussienne à douze ;
-P4 recouvrement élevé non total, composition mod 6 identique au bruit près, contingence nulle, T change tout. Aucune contradiction
-OFF attendue.
+## Expected answers (recorded in advance)
+P1 exact; P2 counts of the text inconsistent, |τ15 − τ51| ≤ 1, shares B + C + D = 1; P3 shifted binomial, not Gaussian at twelve;
+P4 high but not total overlap, mod 6 composition identical up to noise, zero contingency, T changes everything. No OFF
+contradiction expected.
 
-## Protocole
-Deux tentatives Lean au plus, sondes scratch non versionnées, sorties capturées dans `attempts/` ; grep du ban avant build ;
-`lake build RHV6Fresh` complet après la tentative verte ; script exécuté une fois sous `nohup`, sortie dans `logs/`.
+## Protocol
+At most two Lean attempts, unversioned scratch probes, outputs captured in `attempts/`; grep of the ban before build;
+full `lake build RHV6Fresh` after the green attempt; script run once under `nohup`, output in `logs/`.

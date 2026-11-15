@@ -1,55 +1,57 @@
-# E401 — Registre déterministe des trois Tours connues sur les 168 écarts premiers depuis 2 (p_n ≤ 1000)
+# E401 — Deterministic register of the three known Towers over the 168 prime gaps from 2 (p_n ≤ 1000)
 
-Étape G du plan pré-enregistré (maître §19.24.8, feu vert de l'auteur le 2026-11-01). Aucun Lean modifié.
+> Français : [README.fr.md](README.fr.md)
 
-## Pré-enregistrement (écrit AVANT exécution)
+Step G of the pre-registered plan (master document §19.24.8, author's green light on 2026-11-01). No Lean modified.
 
-Objets : les trois premiers zéros certifiés (T₁, T₂, T₃, partie réelle 1/2 : théorèmes), leurs Tours, les 168 écarts
-`[p_n, p_{n+1}]` avec `p_n ≤ 1000` (de `[2, 3]` à `[997, 1009]`).
+## Pre-registration (written BEFORE execution)
 
-Pour chaque écart, le registre donne :
-1. les contacts `C_k = exp((arctan(T/β) + kπ)/T)` de chaque Tour traversés par l'écart (indices `k`), c'est-à-dire les
-   cellules `J_{k,n}` que l'écart découpe ;
-2. la contribution brute `−2 Re (p_{n+1}^ρ − p_n^ρ)/ρ` de chaque Tour (= `Δ_{ρ,n}` du texte, F3 compilé) et leur somme ;
-3. la contribution de comptage `−2 Re (Ei(ρ log p_{n+1}) − Ei(ρ log p_n))` et leur somme ;
-4. la contribution lissée `−2 Re (p_{n+1}^ρ − p_n^ρ)/(ρ(ρ+1))` (F4 compilé) et leur somme ;
-5. EN REGARD, la demande exacte de l'écart dans le canal compilé : `R(p_{n+1}) − R(p_n)` avec
+Objects: the first three certified zeros (T₁, T₂, T₃, real part 1/2: theorems), their Towers, the 168 gaps
+`[p_n, p_{n+1}]` with `p_n ≤ 1000` (from `[2, 3]` to `[997, 1009]`).
+
+For each gap, the register gives:
+1. the contacts `C_k = exp((arctan(T/β) + kπ)/T)` of each Tower crossed by the gap (indices `k`), that is, the
+   cells `J_{k,n}` that the gap cuts out;
+2. the raw contribution `−2 Re (p_{n+1}^ρ − p_n^ρ)/ρ` of each Tower (= `Δ_{ρ,n}` of the text, F3 compiled) and their sum;
+3. the counting contribution `−2 Re (Ei(ρ log p_{n+1}) − Ei(ρ log p_n))` and their sum;
+4. the smoothed contribution `−2 Re (p_{n+1}^ρ − p_n^ρ)/(ρ(ρ+1))` (F4 compiled) and their sum;
+5. ALONGSIDE, the exact demand of the gap in the compiled channel: `R(p_{n+1}) − R(p_n)` with
    `R(x) = Σ_{m<⌈x⌉} Λ(m)(1 − m/x) − [x/2 − ζ'/ζ(0) + (ζ'/ζ)(−1)/x + Σ_{j≥0} (−x^{s_j}/(s_j(s_j+1))), s_j = −2(j+1)]`,
-   formule prise telle quelle dans `ZetaPerronLineIdentity` / `ZetaSmoothedZeroFormulaP5` (aucune autre).
+   formula taken as is from `ZetaPerronLineIdentity` / `ZetaSmoothedZeroFormulaP5` (no other).
 
-Jumeau : deux implémentations à 30 et 50 chiffres (mpmath) ; les zéros sont recalculés (`zetazero`) et comparés aux
-valeurs certifiées à 30 chiffres. Aucun zéro synthétique, aucune fenêtre, aucune moyenne, aucune corrélation.
+Twin: two implementations at 30 and 50 digits (mpmath); the zeros are recomputed (`zetazero`) and compared to the
+certified values at 30 digits. No synthetic zero, no window, no average, no correlation.
 
-Résultats attendus, dits d'avance :
-- télescopage exact : pour chaque canal, la somme des 168 contributions d'une Tour égale sa contribution sur `[2, 1009]`
-  (identité `primeGapContribution_chain`, `gapTerm_add`) ;
-- la somme des trois Tours lissées n'égale la demande exacte sur AUCUN écart (c'est F8 compilé,
-  `no_finite_family_at_any_meeting`) ; l'écart résiduel est la queue des zéros omis (`localResidual_eq_tail`) ;
-- contrôle d'implémentation (pas un résultat) : le résidu `demande − Σ_{k≤K} lissée` décroît quand `K` passe de 3 à
-  30 puis 100 zéros, puisque la série lissée converge absolument ; aucune valeur n'est lue comme mesure de `β` ;
-- aucune conclusion sur `β` ; aucun contact n'est un premier ; aucune comparaison à une moyenne.
+Expected results, stated in advance:
+- exact telescoping: for each channel, the sum of the 168 contributions of a Tower equals its contribution on `[2, 1009]`
+  (identity `primeGapContribution_chain`, `gapTerm_add`);
+- the sum of the three smoothed Towers equals the exact demand on NO gap (this is F8 compiled,
+  `no_finite_family_at_any_meeting`); the residual gap is the tail of the omitted zeros (`localResidual_eq_tail`);
+- implementation check (not a result): the residual `demand − Σ_{k≤K} smoothed` decreases when `K` goes from 3 to
+  30 then 100 zeros, since the smoothed series converges absolutely; no value is read as a measurement of `β`;
+- no conclusion about `β`; no contact is a prime; no comparison to an average.
 
-Les huit points de la liste « erreurs de débutant » (CLAUDE.md, 2026-10-28) sont vérifiés : (1) rien n'est réfuté ;
-(2) aucun « critère échoué » ; (3) lecture aux fins d'écarts (rencontre = `p_{n+1}`) ; (4) rien demandé à l'auteur ;
-(5) aucun mot prêté ; (6) action = fichiers + commit ; (7) la demande est confrontée à la somme, pas à un membre ;
-(8) aucune lecture de hauteur depuis les écarts.
+The eight points of the "beginner mistakes" list (CLAUDE.md (private research repository), 2026-10-28) are checked: (1) nothing is refuted;
+(2) no "failed criterion"; (3) reading at gap ends (meeting = `p_{n+1}`); (4) nothing asked of the author;
+(5) no word attributed; (6) action = files + commit; (7) the demand is confronted with the sum, not with one member;
+(8) no height reading from the gaps.
 
-## Résultats (exécution du 2026-11-01, après pré-enregistrement ; 11 s à 30 chiffres, 13 s à 50 chiffres)
+## Results (run of 2026-11-01, after pre-registration; 11 s at 30 digits, 13 s at 50 digits)
 
-Fichiers : `e401_register_dps30.txt`, `e401_register_dps50.txt` (168 lignes : contacts traversés par Tour, contributions
-brute / comptage / lissée par Tour et sommes, demande exacte, résidus après 3, 30, 100 zéros), `e401_output_dps30.txt`,
-`e401_output_dps50.txt` (bilans).
+Files: `e401_register_dps30.txt`, `e401_register_dps50.txt` (168 lines: contacts crossed per Tower, raw /
+counting / smoothed contributions per Tower and sums, exact demand, residuals after 3, 30, 100 zeros), `e401_output_dps30.txt`,
+`e401_output_dps50.txt` (summaries).
 
-- Zéros 1..3 recalculés = valeurs certifiées à 1e−28, aux deux précisions.
-- Jumeau : contacts traversés identiques sur les 168 écarts ; toutes les colonnes numériques identiques sur les 12 chiffres
-  affichés (écart maximal 0).
-- Télescopage : pour chaque Tour et chaque canal, somme des 168 contributions − contribution sur `[2, 1009]` ≤ 2e−30
-  (identité, comme prévu).
-- Demande exacte totale sur `[2, 1009]` : −0,332282131799033 (même valeur aux deux précisions).
-- Nombre d'écarts où la somme lissée des trois Tours égale la demande à 1e−20 : **0 sur 168** (comme prévu : F8).
-- Contrôle d'implémentation (pas un résultat) : résidu maximal `|demande − Σ_{k≤K} lissée|` sur les 168 écarts :
-  0,149 (K = 3), 0,032 (K = 30), 0,013 (K = 100) : décroissant avec K, conforme à la convergence absolue de la série
-  lissée ; c'est la queue des zéros omis (`localResidual_eq_tail`), rien d'autre.
-- Les onze premières lignes reproduisent E400 (texte collé) à l'identique sur le canal brut.
+- Zeros 1..3 recomputed = certified values to 1e−28, at both precisions.
+- Twin: contacts crossed identical on the 168 gaps; all numeric columns identical on the 12 displayed digits
+  (maximum difference 0).
+- Telescoping: for each Tower and each channel, sum of the 168 contributions − contribution on `[2, 1009]` ≤ 2e−30
+  (identity, as expected).
+- Total exact demand on `[2, 1009]`: −0.332282131799033 (same value at both precisions).
+- Number of gaps where the smoothed sum of the three Towers equals the demand to 1e−20: **0 out of 168** (as expected: F8).
+- Implementation check (not a result): maximal residual `|demand − Σ_{k≤K} smoothed|` over the 168 gaps:
+  0.149 (K = 3), 0.032 (K = 30), 0.013 (K = 100): decreasing with K, consistent with the absolute convergence of the smoothed
+  series; it is the tail of the omitted zeros (`localResidual_eq_tail`), nothing else.
+- The first eleven lines reproduce E400 (pasted text) identically on the raw channel.
 
-Aucune conclusion sur β. Aucun contact n'est un premier. Aucune moyenne, fenêtre ni corrélation n'a été calculée.
+No conclusion about β. No contact is a prime. No average, window or correlation was computed.

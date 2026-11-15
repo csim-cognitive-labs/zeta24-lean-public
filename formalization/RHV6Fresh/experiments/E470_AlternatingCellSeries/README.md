@@ -1,11 +1,14 @@
-# E470 (Ψ4 + Ψ6) — alternance cumulée et budget alterné — pré-enregistrement (2026-11-13)
-Module `Terminal/AlternatingCellSeries.lean` (isolé ; importe Ψ2). Commit AVANT compilation ; deux tentatives.
-## Stratégie (règle R-Ψ)
-* Cible : la stabilité de la grammaire = annulation par alternance : somme alternée des parts d'une Tour de ligne bornée à l'échelle de la ligne ; le miroir la fait diverger ; Ψ6 : la paire est non bornée dans le budget alterné des premiers.
-* Objet cumulé : sommes partielles alternées des parts sur N cellules ; côté premiers, somme alternée des totaux de cellules (aires de demande).
-* Pourquoi la lecture ponctuelle ne suffit pas : une cellule ne s'annule avec rien.
-* Signature attendue d'un hors-ligne : somme alternée relative du miroir croissant comme e^{Nπ(β−1/2)/T} ; sur la ligne, bornée par une constante explicite.
-* Suite dans les deux issues : si tout compile : le plan Ψ est exécuté, consigner la cible unique en série ; sinon consigner l'énoncé réclamé.
-## Énoncés (G1–G6) : voir l'en-tête du module.
-## Jumeau (section Ψ4) : sommes alternées des parts des 5 premières Tours réelles sur 500 cellules contre la forme close (10^-12) ;
-borne de ligne vérifiée ; divergence de la paire témoin mesurée contre la forme close.
+# E470 (Ψ4 + Ψ6) — cumulative alternation and alternating budget — pre-registration (2026-11-13)
+
+> Français : [README.fr.md](README.fr.md)
+
+Module `Terminal/AlternatingCellSeries.lean` (isolated; imports Ψ2). Commit BEFORE compilation; two attempts.
+## Strategy (rule R-Ψ)
+* Target: stability of the grammar = cancellation by alternation: alternating sum of the shares of a line Tower bounded at the scale of the line; the mirror makes it diverge; Ψ6: the pair is unbounded in the alternating budget of the primes.
+* Cumulative object: alternating partial sums of the shares over N cells; primes side, alternating sum of the cell totals (areas of the demand).
+* Why the pointwise reading is not enough: a cell cancels with nothing.
+* Expected signature of an off-line zero: relative alternating sum of the mirror growing like e^{Nπ(β−1/2)/T}; on the line, bounded by an explicit constant.
+* Continuation in both outcomes: if everything compiles: the plan Ψ is executed, record the single remaining target in series; otherwise record the statement demanded.
+## Statements (G1–G6): see the header of the module.
+## Twin (section Ψ4): alternating sums of the shares of the first 5 real Towers over 500 cells against the closed form (10^-12);
+line bound verified; divergence of the witness pair measured against the closed form.

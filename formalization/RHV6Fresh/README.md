@@ -1,63 +1,64 @@
-# RHV6Fresh : build actif
+# RHV6Fresh: active build
 
-Projet `lake` (`lakefile.toml`, bibliothèque `RHV6Fresh`, `defaultTargets = ["RHV6Fresh"]`). Il dépend
-uniquement de `rhv3_lean` (`require`, chemin `../rhv3_lean`) et, par elle, de Mathlib.
-Toolchain : `leanprover/lean4:v4.33.0-rc2` (`lean-toolchain`).
+> Français : [README.fr.md](README.fr.md)
 
-## Statut (constaté le 15 novembre 2026)
+A `lake` project (`lakefile.toml`, library `RHV6Fresh`, `defaultTargets = ["RHV6Fresh"]`). It depends only on `rhv3_lean` (`require`, path `../rhv3_lean`) and, through it, on Mathlib.
+Toolchain: `leanprover/lean4:v4.33.0-rc2` (`lean-toolchain`). Some historical documents and experiment notes in this folder remain in French.
 
-RH n'est **pas démontrée**. Le dernier journal complet de `lake build RHV6Fresh` lu (`experiments/E476_TentBreak/logs_lake_build_full.txt`,
-14 novembre 2026) se termine par « Build completed successfully (9064 jobs) », sortie 0, zéro erreur ; aucun fichier Lean n'a changé depuis
-(commit `14af9d52`). Nous n'avons pas relancé le build pour cette mise à jour. L'ancienne mention d'un échec sur
-`Terminal/DemonstrationChain.lean` ligne 856 est périmée : le 28 octobre 2026 (commit `1c2ef553`) le but terminal est devenu l'hypothèse
-nommée « montée de la fréquence attendue ». Le build vert ne démontre pas RH : `riemannHypothesis_terminal` (même fichier) prend cette
-hypothèse, que `expectedFrequencyRises_iff_riemannHypothesis` prouve équivalente à RH ; il est donc conditionnel. Ses axiomes sont
-`propext`, `Classical.choice`, `Quot.sound`. Aucun axiome déclaré, aucun `sorry`, aucun `admit` dans les sources.
-`scripts/status.sh` relit `experiments/audit_semantique/main_build_error_20261005.txt`, daté du 27 octobre 2026 : il affiche encore un échec,
-ce journal est périmé tant que `scripts/status.sh --build` n'est pas relancé.
+## Status (as of 15 November 2026)
+
+RH is **not proved**. The last complete `lake build RHV6Fresh` log read (`experiments/E476_TentBreak/logs_lake_build_full.txt`,
+14 November 2026) ends with "Build completed successfully (9064 jobs)", exit code 0, zero errors; no Lean file has changed since
+(commit `14af9d52`). We did not rerun the build for this update. The former mention of a failure in
+`Terminal/DemonstrationChain.lean` line 856 is outdated: on 28 October 2026 (commit `1c2ef553`) the terminal goal became the named
+hypothesis "rise of the expected frequency". A green build does not prove RH: `riemannHypothesis_terminal` (same file) takes this
+hypothesis, which `expectedFrequencyRises_iff_riemannHypothesis` proves equivalent to RH; it is therefore conditional. Its axioms are
+`propext`, `Classical.choice`, `Quot.sound`. No declared axiom, no `sorry`, no `admit` in the sources.
+`scripts/status.sh` reads `experiments/audit_semantique/main_build_error_20261005.txt`, dated 27 October 2026: it still shows a failure,
+and this log is outdated until `scripts/status.sh --build` is rerun.
 
 ## Build
 
 ```bash
 cd formalization/RHV6Fresh
-lake build RHV6Fresh          # une seule commande ; ~1,5 min en incrémental si .lake/ existe
-scripts/status.sh             # affiche la sortie du dernier build (ÉTAT, BUILD, erreurs, analyse)
-scripts/status.sh --build     # relance lake build RHV6Fresh, réécrit la sortie, puis affiche
+lake build RHV6Fresh          # a single command; ~1.5 min incremental if .lake/ exists
+scripts/status.sh             # prints the output of the last build (STATE, BUILD, errors, analysis)
+scripts/status.sh --build     # reruns lake build RHV6Fresh, rewrites the output, then prints it
 ```
 
-`status.sh` lit `experiments/audit_semantique/main_build_error_20261005.txt` ; l'analyse est dans
-`experiments/audit_semantique/main_build_error_analysis.md`, l'état dans `main_build_state.md`, le
-verrou dans `semantic_lock.md`.
+`status.sh` reads `experiments/audit_semantique/main_build_error_20261005.txt`; the analysis is in
+`experiments/audit_semantique/main_build_error_analysis.md`, the state in `main_build_state.md`, and the
+lock in `semantic_lock.md`.
 
-## Où lire
+## Where to read
 
-- `RHV6Fresh.lean` : racine, qui importe la chaîne (dont `Terminal/DemonstrationChain.lean`).
-- `RHV6Fresh/Foundation/ZetaReflect.lean` : port de code tiers sous Apache 2.0, voir `THIRD_PARTY_NOTICES.md` à la racine du dépôt.
-- `RHV6Fresh/Terminal/` (393 fichiers `.lean`) : chaîne terminale, modules de contrôle et de contraintes.
-- `RHV6Fresh/Zeta23Port/` (134, code tiers Apache 2.0), `PNTPort/` (9, code tiers Apache 2.0), `Tower/` (7), `Direct/` (7), `Voyage/` (3), `Grammar/` (2), `Foundation/` (2), `RhGapPort/` (1) ; 560 fichiers dans `RHV6Fresh/RHV6Fresh/`, 662 au total sous `RHV6Fresh/` avec les expériences (recomptés par `find`, hors `.lake`).
-- `experiments/` (200 sous-dossiers) : expériences numériques et sondes, hors graphe de build.
-- `scripts/` : `status.sh`, `goal_dependencies.py` (graphe de dépendances des théorèmes), `raccord_check.py`.
-- `archives/` : archives de maîtres et audits antérieurs.
-- Maîtres : `RHV6final_STRATEGIE_SEMANTIQUE.md`, `RHV6final_STRATEGIE_MATHEMATIQUE.md`, `RHV6final_STRATEGIE_LEAN.md`
-  (alignés sur le code après coup ; en cas de conflit avec un théorème compilé, le maître est corrigé).
-- Audit : [AUDIT_SOLUTION_20261005.md](AUDIT_SOLUTION_20261005.md) ; audit sémantique
+- `RHV6Fresh.lean`: the root, which imports the chain (including `Terminal/DemonstrationChain.lean`).
+- `RHV6Fresh/Foundation/ZetaReflect.lean`: port of third-party code under Apache 2.0, see `THIRD_PARTY_NOTICES.md` at the repository root.
+- `RHV6Fresh/Terminal/` (393 `.lean` files): terminal chain, control and constraint modules.
+- `RHV6Fresh/Zeta23Port/` (134, third-party Apache 2.0 code), `PNTPort/` (9, third-party Apache 2.0 code), `Tower/` (7), `Direct/` (7), `Voyage/` (3), `Grammar/` (2), `Foundation/` (2), `RhGapPort/` (1); 560 files in `RHV6Fresh/RHV6Fresh/`, 662 in total under `RHV6Fresh/` with the experiments (recounted with `find`, excluding `.lake`).
+- `experiments/` (200 subfolders): numerical experiments and probes, outside the build graph.
+- `scripts/`: `status.sh`, `goal_dependencies.py` (theorem dependency graph), `raccord_check.py` (junction check).
+- `archives/`: archives of earlier master documents and audits.
+- Master documents: `RHV6final_STRATEGIE_SEMANTIQUE.md`, `RHV6final_STRATEGIE_MATHEMATIQUE.md`, `RHV6final_STRATEGIE_LEAN.md`
+  (aligned with the code after the fact; in case of conflict with a compiled theorem, the master document is corrected).
+- Audit: [AUDIT_SOLUTION_20261005.md](AUDIT_SOLUTION_20261005.md); semantic audit
   [AUDIT_SEMANTIQUE_RHV6Fresh.md](AUDIT_SEMANTIQUE_RHV6Fresh.md).
 
-## Règles
+## Rules
 
-- Aucun `sorry`, `admit` ni axiome ajouté ; aucune prémisse équivalente à RH dans un théorème présenté comme inconditionnel.
-- Un théorème qui dépend d'une hypothèse équivalente à RH est conditionnel, jamais « prouvé ».
-- Ne pas déplacer ce dossier ni `rhv3_lean` (chemins relatifs lake).
-- Démarche complète et contraintes : [CLAUDE.md](../../CLAUDE.md) à la racine.
-- Propriété : © 2026 Charles S., enveloppe Soleau INPI n° DSO2026044645 (15/11/2026) ; voir `COPYRIGHT.md` et `THIRD_PARTY_NOTICES.md` à la racine du dépôt.
+- No `sorry`, `admit` or added axiom; no premise equivalent to RH in a theorem presented as unconditional.
+- A theorem that depends on a hypothesis equivalent to RH is conditional, never "proved".
+- Do not move this folder or `rhv3_lean` (lake relative paths).
+- Full approach and constraints: [CLAUDE.md](../../CLAUDE.md) at the root.
+- Ownership: © 2026 Charles S., Soleau envelope INPI no. DSO2026044645 (15 November 2026); see `COPYRIGHT.md` and `THIRD_PARTY_NOTICES.md` at the repository root.
 
-## Build par défaut allégé (2026-10-27)
+## Lightened default build (2026-10-27)
 
-`lake build RHV6Fresh` ne compile plus les certificats de rectangles des bandes 22 et 28 (`Terminal/ZetaBox22/*`,
-`Terminal/ZetaBox28/*`, 100 fichiers, plusieurs heures de CPU, jusqu'à 6,5 Go par fichier). Seule la première bande
-(`Terminal/ZetaBox/*`, `N(15) = 1`, l'ancre) reste dans le build par défaut. Les contrôles `N(22) = 2`, `N(28) = 3`,
-`first_two_zeros_control`, `first_three_zeros_control`, `first_three_members_geometry`, `low_zero_after_certified_band` et le
-module `FirstArrivalsAnchor` sont dans la cible optionnelle `RHV6FreshCertificates`
-(`Terminal/FirstThreeZerosCertified.lean`) : `lake build RHV6FreshCertificates`. Aucun théorème de la chaîne ne les
-consomme ; la minoration de hauteur d'un membre bas est désormais `low_member_above_15`. `ZetaBox30` (jamais importé) est
-supprimé des sources (historique git conservé).
+`lake build RHV6Fresh` no longer compiles the rectangle certificates of bands 22 and 28 (`Terminal/ZetaBox22/*`,
+`Terminal/ZetaBox28/*`, 100 files, several hours of CPU, up to 6.5 GB per file). Only the first band
+(`Terminal/ZetaBox/*`, `N(15) = 1`, the anchor) remains in the default build. The controls `N(22) = 2`, `N(28) = 3`,
+`first_two_zeros_control`, `first_three_zeros_control`, `first_three_members_geometry`, `low_zero_after_certified_band` and the
+`FirstArrivalsAnchor` module are in the optional target `RHV6FreshCertificates`
+(`Terminal/FirstThreeZerosCertified.lean`): `lake build RHV6FreshCertificates`. No theorem of the chain
+consumes them; the height lower bound for a low member is now `low_member_above_15`. `ZetaBox30` (never imported) is
+removed from the sources (git history kept).

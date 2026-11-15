@@ -1,22 +1,24 @@
-# E455 — K5 : la fibre de l'arrivée basse, en fréquence seule (pré-enregistrement, 2026-11-08)
+# E455 — K5: the fibre of the low arrival, in frequency alone (pre-registration, 2026-11-08)
 
-Référence : `RHV6final_STRATEGIE_SEMANTIQUE.md` §19.78. Question de l'auteur : « les fréquences des OFF sont forcément
-différentes de celles des ON : un OFF ne peut pas prendre la hauteur du ON occupée ni atteindre le prochain ON ».
+> Français : [README.fr.md](README.fr.md)
 
-## Audit (avant compilation)
-* (a) compilé pour le ON suivi et l'historique (`no_shared_frequency_of_history_onLine`) ; NON compilé pour un ON postérieur de
-  même hauteur = `NoMixedHeight` (⟸ RH, jamais dérivée).
-* (b) compilé par l'ordre (`consecutive_no_height_between`, `frequency_never_decreases`) ; strict seulement hors fibre mixte.
-* (c) compilé comme RÉPÉTITION de fréquence (fibre ≥ 2, `mirror_breaks_frequency_cascade`, `passage_frozen_of_low_entry`), pas
-  comme valeur différente (bornes de rang aveugles au radial).
+Reference: `RHV6final_STRATEGIE_SEMANTIQUE.md` §19.78. Author's question: "the frequencies of the OFF are necessarily
+different from those of the ON: an OFF cannot take the occupied height of the ON nor reach the next ON".
+
+## Audit (before compilation)
+* (a) compiled for the followed ON and the history (`no_shared_frequency_of_history_onLine`); NOT compiled for a later ON of
+  the same height = `NoMixedHeight` (⟸ RH, never derived).
+* (b) compiled by the order (`consecutive_no_height_between`, `frequency_never_decreases`); strict only outside the mixed fibre.
+* (c) compiled as a frequency REPETITION (fibre ≥ 2, `mirror_breaks_frequency_cascade`, `passage_frozen_of_low_entry`), not
+  as a different value (rank bounds blind to the radial).
 
 ## Module
-`RHV6Fresh/Terminal/LowArrivalFrequencyFibre.lean`, isolé, six énoncés M1–M6 (§19.78.3). Aucune amplitude.
+`RHV6Fresh/Terminal/LowArrivalFrequencyFibre.lean`, isolated, six statements M1–M6 (§19.78.3). No amplitude.
 
-## Réponse attendue (consignée d'avance)
-Aucune contradiction. Le seul point ouvert est la fibre mixte, décidé par le côté du successeur de l'entrée basse. Frontière
-inchangée (prémisse unique ⟺ RH ; `NoMixedHeight` ⟸ RH).
+## Expected answer (recorded in advance)
+No contradiction. The only open point is the mixed fibre, decided by the side of the successor of the low entry. Frontier
+unchanged (single premise ⟺ RH; `NoMixedHeight` ⟸ RH).
 
-## Protocole
-Deux tentatives au plus ; sondes scratch non versionnées, sorties capturées dans `attempts/` ; grep du ban avant build ;
-`lake build RHV6Fresh` complet après la tentative verte.
+## Protocol
+At most two attempts; unversioned scratch probes, outputs captured in `attempts/`; grep of the ban before build;
+full `lake build RHV6Fresh` after the green attempt.

@@ -1,52 +1,54 @@
-# E431 — Rigidité arithmétique de la phase aux cassures : la paire ne peut déposer comme la ligne qu'en un seul premier (2026-11-04)
+# E431 — Arithmetic rigidity of the phase at the breaks: the pair can deposit like the line at only one prime (2026-11-04)
 
-Expérience de compilation seule (aucune mesure numérique ; aucun jumeau requis car aucune conclusion numérique).
-Demande de l'auteur : « continue, améliore la démarche et resserre l'étau ». Suite directe de E430 (§19.45) : la plus
-faible hypothèse compilée qui survivait, `PairDepositOnLine` (la paire dépose à la cassure comme la paire en ligne),
-équivaut à « le premier partagé tombe sur un changement de signe de la densité de ligne ». E430 l'avait étudiée en UN
-premier ; la directive impose de travailler sur une SÉRIE d'écarts.
+> Français : [README.fr.md](README.fr.md)
 
-## Question posée (avant toute compilation)
-Si l'on demande l'hypothèse « dépôt en ligne » non plus au seul premier partagé mais à chaque cassure d'une série de
-premiers, que reste-t-il ? Attendu (écrit avant exécution) : la factorisation unique interdit que deux premiers
-distincts tombent tous deux sur un changement de signe de la densité d'une même fréquence ; l'hypothèse ne peut donc
-être vraie qu'en un seul premier de toute la série. Ce qui resterait pour le chaînon manquant est alors l'absorption,
-par le complément, d'un surplus non nul de la paire en tous les premiers sauf au plus un.
+Compilation-only experiment (no numerical measurement; no twin required since there is no numerical conclusion).
+Author's request: "continue, improve the approach and tighten the vise". Direct follow-up of E430 (§19.45): the
+weakest compiled hypothesis that survived, `PairDepositOnLine` (the pair deposits at the break like the pair on the line),
+is equivalent to "the shared prime falls on a sign change of the line density". E430 had studied it at ONE
+prime; the directive requires working on a SERIES of gaps.
 
-## Protocole
-1. Pré-enregistrer ce fichier (commit) avant la première compilation.
-2. Sondes TDD dans un fichier de sondage NON versionné (`RaccordPhaseProbe_SCRATCH.lean`, supprimé après capture), chaque
-   sonde terminée par `done` pour que le compilateur imprime le but restant ; sorties exactes dans `logs/probe_attempt*.txt`.
-3. Écrire le module isolé `Terminal/RaccordPhaseRigidity.lean` (non ajouté à `RHV6Fresh.lean`) :
-   (a) la fraction de cellule d'une Tour en un changement de signe de la densité lit la position radiale :
-       `arctan(β/T)/π` (identité) ; sous `PairDepositOnLine`, fractions de la Tour et du miroir à la cassure ;
-   (b) l'hypothèse « dépôt en ligne » en tout premier de rang `m` (`PairDepositOnLineAt m`) et son équivalence avec
-       le changement de signe (même preuve qu'en E430) ;
-   (c) rigidité arithmétique : deux premiers distincts ne tombent jamais tous deux sur un changement de signe de la
-       densité d'une même fréquence (factorisation unique) ; conséquence pour tout porteur : `PairDepositOnLineAt` est
-       vraie en au plus un rang ;
-   (d) tentative (une seule) : une Tour `(β, T)` ne touche au plus que deux premiers (trois contacts en des premiers
-       distincts sont contradictoires) ; si le compilateur demande plus que la factorisation, consigner le but et
-       ne pas insister ;
-   (e) le surplus de la paire à une cassure (`pairSurplus m`), son expression `2(cosh(δ log p_m) − 1)·D_ligne(log p_m)`,
-       et : sur deux rangs distincts, l'un au moins des surplus est non nul.
-4. Deux tentatives de compilation au plus pour le module, journalisées (`logs/lean_attempt{1,2}.txt`).
-5. Aucune hypothèse posée ; aucun `sorry` ; `lake build RHV6Fresh` vert après (`logs/lake_build_full_trimmed.txt`).
+## Question posed (before any compilation)
+If the "deposit on the line" hypothesis is demanded no longer at the single shared prime but at every break of a series of
+primes, what remains? Expected (written before execution): unique factorization forbids two
+distinct primes from both falling on a sign change of the density of the same frequency; the hypothesis can therefore be true
+only at a single prime of the whole series. What would then remain for the missing link is the absorption,
+by the complement, of a nonzero surplus of the pair at all primes but at most one.
 
-## Sondes prévues et but attendu
-- S1 : de « surplus nul en tout rang » dériver `False` sans (c) — attendu : le compilateur demande deux rangs
-  distincts et la factorisation ; rien d'autre.
-- S2 : de « le complément absorbe le surplus en tout rang » dériver `False` — attendu : but ouvert sur le complément,
-  aucune contrainte compilée ne le ferme (identité de cassure pour tout paquet, E430 sonde 4).
+## Protocol
+1. Pre-register this file (commit) before the first compilation.
+2. TDD probes in an UNversioned probe file (`RaccordPhaseProbe_SCRATCH.lean`, deleted after capture), each
+   probe ending with `done` so that the compiler prints the remaining goal; exact outputs in `logs/probe_attempt*.txt`.
+3. Write the isolated module `Terminal/RaccordPhaseRigidity.lean` (not added to `RHV6Fresh.lean`):
+   (a) the cell fraction of a Tower at a sign change of the density reads the radial position:
+       `arctan(β/T)/π` (identity); under `PairDepositOnLine`, fractions of the Tower and of the mirror at the break;
+   (b) the "deposit on the line" hypothesis at any prime of rank `m` (`PairDepositOnLineAt m`) and its equivalence with
+       the sign change (same proof as in E430);
+   (c) arithmetic rigidity: two distinct primes never both fall on a sign change of the
+       density of the same frequency (unique factorization); consequence for any carrier: `PairDepositOnLineAt` is
+       true at at most one rank;
+   (d) attempt (single): a Tower `(β, T)` touches at most two primes (three contacts at distinct primes
+       are contradictory); if the compiler asks for more than the factorization, record the goal and
+       do not insist;
+   (e) the surplus of the pair at a break (`pairSurplus m`), its expression `2(cosh(δ log p_m) − 1)·D_line(log p_m)`,
+       and: at two distinct ranks, at least one of the surpluses is nonzero.
+4. At most two compilation attempts for the module, logged (`logs/lean_attempt{1,2}.txt`).
+5. No hypothesis posed; no `sorry`; `lake build RHV6Fresh` green afterwards (`logs/lake_build_full_trimmed.txt`).
 
-## Objets réutilisés (jamais reconstruits)
+## Planned probes and expected goal
+- S1: from "surplus zero at every rank" derive `False` without (c) — expected: the compiler asks for two distinct
+  ranks and the factorization; nothing else.
+- S2: from "the complement absorbs the surplus at every rank" derive `False` — expected: open goal on the complement,
+  no compiled constraint closes it (break identity for any packet, E430 probe 4).
+
+## Objects reused (never rebuilt)
 `stagePosition`, `cellFraction`, `lastContactBefore`, `mirror_stage_shift_ne_zero` (FirstExceedanceRaccord,
-MeetingContactReading) ; `realCountingDensity`, `densitySignChangeLog`, `realCountingDensity_eq_zero_iff`
-(LocalPrimeGapSynchronization) ; `PairDepositOnLine`, `breakLog`, `pairDepositOnLine_iff_sign_change`
-(RaccordTransportObligation) ; `pair_real_density_eq_cosh_line`, `radialShift_pos`, `linePoint_im`, `zero_radial_eq`,
-`mirror_radial_eq` (OffCarrier) ; `fnPrimeAtRank`, `thm_primeAtRank_isPrime`, `thm_primeAtRank_injective` (RHV3Lean) ;
+MeetingContactReading); `realCountingDensity`, `densitySignChangeLog`, `realCountingDensity_eq_zero_iff`
+(LocalPrimeGapSynchronization); `PairDepositOnLine`, `breakLog`, `pairDepositOnLine_iff_sign_change`
+(RaccordTransportObligation); `pair_real_density_eq_cosh_line`, `radialShift_pos`, `linePoint_im`, `zero_radial_eq`,
+`mirror_radial_eq` (OffCarrier); `fnPrimeAtRank`, `thm_primeAtRank_isPrime`, `thm_primeAtRank_injective` (RHV3Lean);
 `Real.arctan_inv_of_pos`, `Int.fract_eq_iff`, `Nat.Prime.dvd_of_dvd_pow`, `Nat.prime_dvd_prime_iff_eq` (Mathlib).
 
-## Ce que l'expérience ne prétend pas
-Aucune contradiction n'est attendue : l'absence de contrainte compilée sur le complément reste la frontière (§19.13,
-§19.44, §19.45). L'étau se resserre d'un cran : l'hypothèse la plus faible ne peut être vraie qu'une fois sur la série.
+## What the experiment does not claim
+No contradiction is expected: the absence of a compiled constraint on the complement remains the frontier (§19.13,
+§19.44, §19.45). The vise tightens by one notch: the weakest hypothesis can be true only once over the series.

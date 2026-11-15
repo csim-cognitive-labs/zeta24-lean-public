@@ -1,42 +1,44 @@
-# E458 — Φ2 : géométrie exacte de la bande miroir, B1–B4, plus B5 (poids de fibre ↔ bande) (pré-enregistrement, 2026-11-09)
+# E458 — Φ2: exact geometry of the mirror strip, B1–B4, plus B5 (fibre weight ↔ strip) (pre-registration, 2026-11-09)
 
-Référence : `RHV6final_STRATEGIE_SEMANTIQUE.md` §19.80 (plan Φ, étape Φ2), §19.85 (ordre de reprise validé), §19.86 (audit E460 : ajout de
-B5). Aucune hypothèse admise, aucun axiome, aucun `sorry` ; module isolé `RHV6Fresh/Terminal/MirrorStrip.lean`, NON ajouté à
-`RHV6Fresh.lean`. Aucune théorie spectrale. INTERDIT : affirmer une densité de la bande ; seule l'infinitude est visée.
+> Français : [README.fr.md](README.fr.md)
 
-## Objets nommés (avant compilation)
-* `mirrorStrip β T` : ensemble des RANGS de premiers où le mot du miroir `(1 − β, T)` diffère du mot de la Tour `(β, T)`
-  (`towerWord` d'E457) ;
-* `zeroStrip z` : bande d'un zéro vrai.
+Reference: `RHV6final_STRATEGIE_SEMANTIQUE.md` §19.80 (plan Φ, step Φ2), §19.85 (validated resumption order), §19.86 (audit E460: addition of
+B5). No hypothesis admitted, no axiom, no `sorry`; isolated module `RHV6Fresh/Terminal/MirrorStrip.lean`, NOT added to
+`RHV6Fresh.lean`. No spectral theory. FORBIDDEN: asserting a density of the strip; only infinitude is targeted.
 
-## Énoncés à compiler
-* **B0** (orientation) : sur la bande l'écart des deux mots vaut exactement un en valeur absolue ; pour `β < 1/2` le mot du miroir
-  vaut le mot de la Tour plus un sur la bande, et lui est égal hors bande.
-* **B1** : pour `0 < β < 1`, `T > 0` : bande vide ⟺ `β = 1/2`.
-* **B2** : bande infinie ⟺ `β ≠ 1/2`.
-* **B3** : bande non vide et finie impossible ; dichotomie : vide ou infinie.
-* **B4** (encadrement, `0 < β < 1/2`, `T > 0`) : le rang `n` est dans la bande ⟺ il existe un indice entier `k` tel que le premier
-  de rang `n` soit dans l'intervalle fermé à gauche, ouvert à droite, qui va du contact d'indice `k` du miroir au contact de MÊME
-  indice de la Tour ; ces deux contacts ne sont jamais confondus (le miroir strictement avant) et leur rapport est strictement
-  inférieur à une demi-cellule (`e^{π/(2T)}`). L'énoncé place un premier ENTRE deux contacts ; il n'affirme jamais qu'un contact
-  est un premier (§19.51).
-* **B5** (poids de fibre ↔ bande, sans hypothèse ; audit E460) : pour un zéro vrai, poids de fibre à sa hauteur strictement
-  inférieur à deux ⟹ bande vide ; bande non vide ⟹ poids de fibre au moins deux.
-* **B6** (reformulations, JAMAIS posées) : RH ⟺ la bande de tout zéro vrai est vide ⟺ la bande de tout zéro vrai est finie
-  (c'est l'hypothèse H-c du plan, classée équivalente : consignée comme reformulation).
+## Named objects (before compilation)
+* `mirrorStrip β T`: set of RANKS of primes where the word of the mirror `(1 − β, T)` differs from the word of the Tower `(β, T)`
+  (`towerWord` of E457);
+* `zeroStrip z`: strip of a true zero.
 
-Prévision : tout compile ; aucune contradiction n'est attendue ni cherchée ; toute Tour hors ligne, porteuse ou non, a la même bande :
-la géométrie de la bande ne porte pas l'arête.
+## Statements to compile
+* **B0** (orientation): on the strip the gap between the two words is exactly one in absolute value; for `β < 1/2` the word of the mirror
+  equals the word of the Tower plus one on the strip, and equals it off the strip.
+* **B1**: for `0 < β < 1`, `T > 0`: empty strip ⟺ `β = 1/2`.
+* **B2**: infinite strip ⟺ `β ≠ 1/2`.
+* **B3**: non-empty finite strip impossible; dichotomy: empty or infinite.
+* **B4** (bracketing, `0 < β < 1/2`, `T > 0`): the rank `n` is in the strip ⟺ there exists an integer index `k` such that the prime
+  of rank `n` lies in the left-closed, right-open interval that goes from the contact of index `k` of the mirror to the contact of the SAME
+  index of the Tower; these two contacts are never confounded (the mirror strictly before) and their ratio is strictly
+  smaller than half a cell (`e^{π/(2T)}`). The statement places a prime BETWEEN two contacts; it never asserts that a contact
+  is a prime (§19.51).
+* **B5** (fibre weight ↔ strip, without hypothesis; audit E460): for a true zero, fibre weight at its height strictly
+  less than two ⟹ empty strip; non-empty strip ⟹ fibre weight at least two.
+* **B6** (reformulations, NEVER posed): RH ⟺ the strip of every true zero is empty ⟺ the strip of every true zero is finite
+  (this is hypothesis H-c of the plan, classified as equivalent: recorded as a reformulation).
 
-## Volet déterministe (jumeau de B1, B4) — `e458_mirror_strip.py`
-200 premières hauteurs d'Odlyzko ; premiers ≤ 10⁶ (crible) ; ligne (`β = 1/2`) et contrôles `β ∈ {0,3 ; 0,4 ; 0,45}` aux mêmes hauteurs
-(Tours de contrôle, non porteuses : aucun zéro hors ligne n'est supposé ni testé). Mesures : effectif de la bande, premier rang de
-bande ; vérification de B0 (écart exactement plus un sur la bande) et de B4 dans les deux sens (tout premier de bande est dans
-l'intervalle de son indice ; aucun premier hors bande n'y est). Attendus écrits d'avance : ligne, effectif nul pour les 200 hauteurs ;
-contrôles, B0 et B4 à zéro violation hors cas sous le bruit de la double précision (comptés à part et recontrôlés en précision
-étendue s'il y en a) ; effectif de bande des contrôles : rapporté tel quel, AUCUN attendu de positivité jusqu'à 10⁶ (le théorème ne
-donne que l'infinitude), aucune loi, aucune densité.
+Forecast: everything compiles; no contradiction is expected or sought; every off-line Tower, carrier or not, has the same strip:
+the geometry of the strip does not carry the edge.
 
-## Protocole
-Deux tentatives au plus ; sondes `*_SCRATCH.lean` non versionnées supprimées après capture ; `attempts/` ; `#print axioms` ; grep du ban
-à zéro sur le module ; `lake build RHV6Fresh` complet vert ; script une fois sous `nohup`, sortie dans `logs/`.
+## Deterministic part (twin of B1, B4) — `e458_mirror_strip.py`
+First 200 Odlyzko heights; primes ≤ 10⁶ (sieve); line (`β = 1/2`) and controls `β ∈ {0.3; 0.4; 0.45}` at the same heights
+(control Towers, non-carriers: no off-line zero is assumed or tested). Measurements: size of the strip, first rank of
+the strip; verification of B0 (gap exactly plus one on the strip) and of B4 in both directions (every prime of the strip lies in
+the interval of its index; no prime off the strip lies in it). Expected, written in advance: line, size zero for the 200 heights;
+controls, B0 and B4 with zero violations except cases below double-precision noise (counted separately and re-checked in
+extended precision if any); strip size of the controls: reported as is, NO expectation of positivity up to 10⁶ (the theorem
+gives only infinitude), no law, no density.
+
+## Protocol
+At most two attempts; unversioned `*_SCRATCH.lean` probes deleted after capture; `attempts/`; `#print axioms`; grep of the ban
+at zero on the module; full `lake build RHV6Fresh` green; script once under `nohup`, output in `logs/`.

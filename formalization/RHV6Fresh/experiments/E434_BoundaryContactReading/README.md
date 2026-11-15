@@ -1,38 +1,40 @@
-# E434 — L'effet de bords de la paire lu par les contacts (2026-11-04)
+# E434 — The edge effect of the pair read by the contacts (2026-11-04)
 
-Expérience de compilation seule (aucune mesure numérique ; aucun jumeau requis). Demande de l'auteur : « ok continues »,
-après E433 (§19.48) : « absorber sur la série » est une équation par fenêtre entre le contenu arithmétique et l'effet de
-bords de la paire. Directive : la lecture radiale des contacts et le contenu arithmétique doivent se faire face dans une
-même équation.
+> Français : [README.fr.md](README.fr.md)
 
-## Question posée (avant toute compilation)
-La partie réelle de l'effet de bords de la paire à un bord `x` de fenêtre se lit-elle exactement par le dernier contact
-de chacun des deux membres (valeur au contact, facteur de croissance sur la fraction de cellule, fraction de cellule) ?
-Attendu (écrit avant exécution) :
-1. la partie imaginaire de la Tour se lit aussi par le dernier contact, en sinus de la fraction de cellule ;
-2. la partie réelle du canal intégré (`Tour/(ρ+1)`) est une combinaison de la partie réelle et de la partie imaginaire
-   de la Tour, à poids `β+1` et `T`, sur le carré de la norme de `ρ+1` : le canal intégré lit la fraction de cellule
-   avec un retard d'angle propre (arctangente de `T/(β+1)`), différent pour le zéro et pour le miroir ;
-3. la partie réelle de la primitive de la paire à `x` est `−2m·x` fois la somme des deux lectures intégrées ; elle se
-   lit donc entièrement par les contacts des deux membres ;
-4. le bilan de fenêtre (E433) s'écrit en partie réelle : contenu arithmétique de la fenêtre − partie réelle du complément
-   = effet de bords lu par les contacts aux deux bords.
+Compilation-only experiment (no numerical measurement; no twin required). Author's request: "ok continue",
+after E433 (§19.48): "absorbing over the series" is one equation per window between the arithmetic content and the
+edge effect of the pair. Directive: the radial reading of the contacts and the arithmetic content must face each other in one
+and the same equation.
 
-## Protocole
-1. Pré-enregistrer (commit) avant la première compilation.
-2. Sondes TDD dans `BoundaryContactProbe_SCRATCH.lean` (non versionné, supprimé après capture ; sorties exactes dans
+## Question posed (before any compilation)
+Is the real part of the edge effect of the pair at a window edge `x` read exactly by the last contact
+of each of the two members (value at the contact, growth factor over the cell fraction, cell fraction)?
+Expected (written before execution):
+1. the imaginary part of the Tower is also read by the last contact, as a sine of the cell fraction;
+2. the real part of the integrated channel (`Tower/(ρ+1)`) is a combination of the real part and the imaginary part
+   of the Tower, with weights `β+1` and `T`, over the squared norm of `ρ+1`: the integrated channel reads the cell fraction
+   with its own angle delay (arctangent of `T/(β+1)`), different for the zero and for the mirror;
+3. the real part of the primitive of the pair at `x` is `−2m·x` times the sum of the two integrated readings; it is
+   therefore read entirely by the contacts of the two members;
+4. the window balance (E433) is written in real part: arithmetic content of the window − real part of the complement
+   = edge effect read by the contacts at the two edges.
+
+## Protocol
+1. Pre-register (commit) before the first compilation.
+2. TDD probes in `BoundaryContactProbe_SCRATCH.lean` (unversioned, deleted after capture; exact outputs in
    `logs/probe_attempt*.txt`).
-3. Module isolé `Terminal/BoundaryContactReading.lean` (non ajouté à `RHV6Fresh.lean`) : points 1–4.
-   Si le compilateur demande davantage que les objets listés, consigner le but exact et ne pas insister.
-4. Deux tentatives de compilation au plus pour le module (`logs/lean_attempt{1,2}.txt`) ; aucune hypothèse posée ;
-   aucun `sorry` ; `lake build RHV6Fresh` vert après.
+3. Isolated module `Terminal/BoundaryContactReading.lean` (not added to `RHV6Fresh.lean`): points 1–4.
+   If the compiler asks for more than the objects listed, record the exact goal and do not insist.
+4. At most two compilation attempts for the module (`logs/lean_attempt{1,2}.txt`); no hypothesis posed;
+   no `sorry`; `lake build RHV6Fresh` green afterwards.
 
-## Sonde prévue
-- S1 : « complément silencieux sur la fenêtre, et les deux bords sont des contacts du zéro (fraction de cellule nulle)
-  ⟹ False » — attendu : pas de contradiction ; le compilateur laisse « contenu arithmétique de la fenêtre = combinaison
-  des valeurs aux contacts du zéro et des lectures du miroir aux deux bords ».
+## Planned probe
+- S1: "complement silent on the window, and both edges are contacts of the zero (cell fraction zero)
+  ⟹ False" — expected: no contradiction; the compiler leaves "arithmetic content of the window = combination
+  of the values at the contacts of the zero and of the readings of the mirror at the two edges".
 
-## Objets réutilisés
+## Objects reused
 `towerRe`, `towerValue_polar`, `towerRe_from_lastContact`, `height_mul_log_eq`, `contactRealValue`, `contactAt_pos`,
 `norm_mk_pos`, `integratedTower_eq_geometric_div`, `pairPrimitive`, `pair_complement_series_balance`,
 `remainderIncrement_series_arithmetic`, Mathlib `Complex.div_re`, `Real.sin_add_int_mul_pi`, `Real.cos_add_int_mul_pi`.

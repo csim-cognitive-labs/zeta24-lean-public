@@ -1,23 +1,27 @@
-# Droits d'auteur
+# Copyright
 
-**Copyright © 2026 Charles S. Tous droits réservés.**
+> Français : [COPYRIGHT.fr.md](COPYRIGHT.fr.md)
 
-## Objet couvert
+**Copyright © 2026 Charles S. All rights reserved.**
 
-Le présent dépôt (`zeta24-lean`) est couvert par ce copyright pour ce qui est l'œuvre de l'auteur : les textes, les documents stratégiques, les audits, les expériences, les scripts Python, le code Lean propre du projet, et les découvertes qu'ils consignent.
+Attribution: "Charles S. — CSIM Cognitive Labs".
 
-## Preuve d'antériorité
+## Covered material
 
-Enveloppe Soleau, numéro national DSO2026044645, déposée à l'INPI (démarche en ligne, 92) le 15/11/2026 à 18:14:32 UTC. L'enveloppe est conservée dix ans.
+This repository (`zeta24-lean`) is covered by this copyright for everything that is the author's work: the texts, the strategy documents, the audits, the experiments, the Python scripts, the project's own Lean code, and the discoveries they record. Contributors own nothing in the project; every contribution is assigned to the author (`LICENSE` art. 4(g)).
 
-## Autorisation accordée
+## Proof of priority
 
-Les droits accordés et leurs conditions sont définis exclusivement par le fichier [LICENSE](LICENSE). Ce fichier-ci n'y ajoute ni n'y retire rien.
+Soleau envelope, national number DSO2026044645, filed with the INPI (online procedure, 92) on 15 November 2026 at 18:14:32 UTC. The envelope is kept for ten years.
+
+## Permission granted
+
+The rights granted and their conditions are defined exclusively by the file [LICENSE](LICENSE). This file adds nothing to it and removes nothing from it.
 
 ## Exclusions
 
-Ce copyright ne couvre pas le code et les données de tiers, qui restent soumis à leurs propres licences et à leurs propres détenteurs de droits (Apache 2.0 pour le code Lean tiers ; tables d'Odlyzko pour les zéros). Ils sont listés dans [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Leurs notices sont conservées et rien dans ce fichier ne les remplace.
+This copyright does not cover third-party code and data, which remain subject to their own licences and their own rights holders (Apache 2.0 for the third-party Lean code; Odlyzko's tables for the zeros). They are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Their notices are kept and nothing in this file replaces them.
 
 ## Licence
 
-Licence : Licence de recherche Zeta24-Lean — Propriétaire, usage non commercial strict 1.0 (fichier LICENSE). Licence propriétaire à usage non commercial strict ; aucune redistribution de version modifiée ; toute contribution est cédée à l'auteur (voir LICENSE art. 4g). Aucune exploitation commerciale n'est autorisée sans convention écrite signée par l'auteur.
+Licence: Zeta24-Lean Research Licence — Proprietary, strict non-commercial use, version 1.0 (Licence de recherche Zeta24-Lean — Propriétaire, usage non commercial strict, version 1.0; file LICENSE). A proprietary licence for strictly non-commercial use; no redistribution of modified versions; every contribution is assigned to the author (see LICENSE art. 4(g)). No commercial exploitation is allowed without a written agreement signed by the author.

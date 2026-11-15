@@ -1,34 +1,36 @@
-# E447 — Le mécanisme de cassure sur la ligne critique, écrit avec les contacts (pré-enregistrement, §19.69, 2026-11-07)
+# E447 — The break mechanism on the critical line, written with the contacts (pre-registration, §19.69, 2026-11-07)
 
-Ordre de l'auteur (R-LIGNE) : tant qu'il reste du Lean à écrire, ne pas chercher la contradiction ; maîtriser
-parfaitement le mécanisme de cassure depuis la ligne (zéros ON, `β = 1/2`) avant toute déduction sur les OFF.
-Objets autorisés : une Tour `(1/2, T)`, ses contacts, ses cellules, ses valeurs réelles aux contacts ; les
-premiers, `rawDemand`, `cellDemand`, `cellWeight`, `cellPrimeWeight` ; les règles signées. Aucune somme de Tours,
-aucun objet spectral, aucune hypothèse, aucun énoncé sur `β ≠ 1/2`.
+> Français : [README.fr.md](README.fr.md)
 
-## Hypothèses (à décider par le compilateur, puis par le nombre)
-* H1 (attribution exacte) : la cassure `log q` au premier `q` entre dans le budget pondéré avec la valeur du
-  dernier contact avant `q` ; sur la ligne cette valeur est EXACTEMENT `√q · e^{−π f/(2T)} / ‖(1/2, T)‖` avec `f`
-  la fraction de cellule au point `q` ; donc comprise entre `√q · e^{−π/(2T)}` et `√q` (sur la norme).
-* H2 (bilan d'Abel) : la somme pondérée des pentes de cellules d'un bloc est, EXACTEMENT, le terme de bord
-  (valeur × demande brute aux deux contacts extrêmes) plus `(1 + e^{π/(2T)})` fois la somme pondérée des demandes
-  brutes aux contacts intérieurs : le budget collectif se lit sur la demande brute AUX CONTACTS, pas sur les cellules.
-* H3 (règle du carré sur la ligne) : le carré de la valeur au contact est l'abscisse du contact sur le carré de la
-  norme ; le rapport des carrés de deux valeurs consécutives est le rapport des longueurs de cellules.
-* H4 (cassure puis descente) : dans une cellule qui ne franchit qu'un poids, la demande brute entre le contact et le
-  premier vaut `log q − (q − C_k)` : montée d'un coup, descente linéaire.
-* H5 (taille de la demande pondérée aux contacts) : `|v_k · R(C_k)| / C_k^{3/2} → 0` le long de la Tour (PNT porté).
+Author's order (R-LINE): as long as Lean remains to be written, do not look for the contradiction; master the break
+mechanism from the line (ON zeros, `β = 1/2`) perfectly before any deduction on the OFF. Authorized objects: one
+Tower `(1/2, T)`, its contacts, its cells, its real values at the contacts; the primes, `rawDemand`, `cellDemand`,
+`cellWeight`, `cellPrimeWeight`; the signed rules. No sum of Towers, no spectral object, no hypothesis, no statement
+on `β ≠ 1/2`.
 
-## Énoncés prévus (module isolé `Terminal/BreakMechanismOnLine.lean`, import `MeetingRegimeFinite`)
-L1 `demandAtContact`, `cellDemand_telescope` ; L2 `valueCellSum_abel` (toute `β`), `contactRealValue_succ`,
-`valueCellSum_abel_signed` ; L3 `line_contactRealValue_sq`, `line_value_sq_succ`, `line_value_sq_ratio_eq_length_ratio` ;
+## Hypotheses (to be decided by the compiler, then by the numbers)
+* H1 (exact attribution): the break `log q` at the prime `q` enters the weighted budget with the value of the last
+  contact before `q`; on the line this value is EXACTLY `√q · e^{−π f/(2T)} / ‖(1/2, T)‖` with `f` the cell
+  fraction at the point `q`; hence between `√q · e^{−π/(2T)}` and `√q` (over the norm).
+* H2 (Abel balance): the weighted sum of the cell slopes of a block is, EXACTLY, the boundary term (value × raw
+  demand at the two extreme contacts) plus `(1 + e^{π/(2T)})` times the weighted sum of the raw demands at the
+  interior contacts: the collective budget is read on the raw demand AT THE CONTACTS, not on the cells.
+* H3 (square rule on the line): the square of the value at the contact is the abscissa of the contact over the square
+  of the norm; the ratio of the squares of two consecutive values is the ratio of the cell lengths.
+* H4 (break then descent): in a cell that crosses only one weight, the raw demand between the contact and the
+  prime equals `log q − (q − C_k)`: a jump up at once, linear descent.
+* H5 (size of the weighted demand at the contacts): `|v_k · R(C_k)| / C_k^{3/2} → 0` along the Tower (PNT ported).
+
+## Planned statements (isolated module `Terminal/BreakMechanismOnLine.lean`, import `MeetingRegimeFinite`)
+L1 `demandAtContact`, `cellDemand_telescope`; L2 `valueCellSum_abel` (any `β`), `contactRealValue_succ`,
+`valueCellSum_abel_signed`; L3 `line_contactRealValue_sq`, `line_value_sq_succ`, `line_value_sq_ratio_eq_length_ratio`;
 L4 `contact_of_fraction` (`C_k = x·e^{−π f/T}`), `line_break_amplitude_exact`, `line_break_amplitude_bounds`,
-`line_break_price_bounds` ; L5 `rawDemand_prime_from_contact`, `break_then_descent` ; L6 `demandAtContact_div_tendsto_zero`,
-`line_weighted_demand_at_contact_small`. Deux tentatives de compilation au plus, chaque sortie conservée dans `attempts/`.
+`line_break_price_bounds`; L5 `rawDemand_prime_from_contact`, `break_then_descent`; L6 `demandAtContact_div_tendsto_zero`,
+`line_weighted_demand_at_contact_small`. At most two compilation attempts, each output kept in `attempts/`.
 
-## Expérience (après compilation ; zéros d'Odlyzko, `β = 1/2`, 7 hauteurs, premiers ≤ 10⁷)
-(a) résidu de l'identité d'Abel sur des blocs de 50 cellules à chaque décade ; (b) formule exacte de l'amplitude à la
-cassure contre le calcul direct, et encadrement ; (c) `|v_k R(C_k)| / C_k^{3/2}` par décade ; (d) H4 sur les cellules à
-un seul poids. Jumeau déterministe mpmath 30 chiffres sur un sous-ensemble. Critère : A si toutes les identités sont
-exactes à la précision flottante et (c) décroît ; B si une identité compile mais le nombre contredit ; C sinon.
-Aucune conclusion sur les OFF n'est tirée, par ordre.
+## Experiment (after compilation; Odlyzko zeros, `β = 1/2`, 7 heights, primes ≤ 10⁷)
+(a) residual of the Abel identity on blocks of 50 cells at each decade; (b) exact formula of the amplitude at the
+break against direct computation, and bracketing; (c) `|v_k R(C_k)| / C_k^{3/2}` per decade; (d) H4 on cells with a
+single weight. mpmath deterministic twin with 30 digits on a subset. Criterion: A if all identities are exact to
+floating-point precision and (c) decreases; B if an identity compiles but the number contradicts; C otherwise.
+No conclusion on the OFF is drawn, by order.

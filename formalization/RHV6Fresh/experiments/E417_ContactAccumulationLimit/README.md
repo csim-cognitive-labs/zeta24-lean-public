@@ -1,11 +1,13 @@
-# E417 — Limite et fréquences hautes (pré-enregistrée le 2026-11-03)
+# E417 — Limit and high frequencies (pre-registered on 2026-11-03)
 
-**Question.** Comment les hautes fréquences forment-elles les cassures ? Convergence hors et aux événements, largeur des
-transitions finies, dépassement de Gibbs, canal brut contre canal intégré, hauteur maximale, précision nécessaire.
+> Français : [README.fr.md](README.fr.md)
 
-**Mesures.** (1) profil brut ψ̂₀_H(p + t), t ∈ [−½, ½], p ∈ {101, 1009, 10007}, H ∈ {10³, 10⁴, 10⁵, 10⁶, γ_max} : largeur
-10–90 % du saut, dépassement, rms hors de trois échelles, contre l'échelle πp/T_max (vérifiée, non supposée) ;
-(2) depuis E415 (W1) : rms de E_H aux événements et hors événements, canaux A et B, et produits B·T_max, A·√T_max ;
-(3) plus petite troncature rendant tous les écarts de W1 exacts (E416), par canal.
+**Question.** How do the high frequencies form the breaks? Convergence off and at the events, width of the finite
+transitions, Gibbs overshoot, raw channel against integrated channel, maximal height, necessary precision.
 
-**Résultats.** `RESULTS.md`, `data/e417_results.json`, `data/profile_p*_H*.npy`, `logs/e417.log`.
+**Measures.** (1) raw profile ψ̂₀_H(p + t), t ∈ [−½, ½], p ∈ {101, 1009, 10007}, H ∈ {10³, 10⁴, 10⁵, 10⁶, γ_max}: 10–90% width
+of the jump, overshoot, rms outside three scales, against the scale πp/T_max (checked, not assumed);
+(2) from E415 (W1): rms of E_H at the events and off the events, channels A and B, and products B·T_max, A·√T_max;
+(3) smallest truncation making all gaps of W1 exact (E416), by channel.
+
+**Results.** `RESULTS.md`, `data/e417_results.json`, `data/profile_p*_H*.npy`, `logs/e417.log`.

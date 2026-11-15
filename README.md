@@ -1,129 +1,131 @@
-# zeta24-lean — formalisation Lean 4 autour de l'hypothèse de Riemann
+# zeta24-lean — Lean 4 formalization around the Riemann Hypothesis
 
-> **Dépôt public, export daté du 15/11/2026 à historique neuf du dépôt de recherche privé `zeta24-lean` ; sélection documentée dans `PUBLICATION_SCOPE.md`.** Les mentions de « HEAD », de commits et de journaux ci-dessous renvoient à l'historique du dépôt de recherche privé, qui n'est pas reproduit ici (les hachages cités ne se retrouvent donc pas dans `git log` de ce dépôt).
+> Français : [README.fr.md](README.fr.md)
 
-> **État au 15 novembre 2026 (HEAD `4d4114c6`).**
-> **L'hypothèse de Riemann (RH) n'est PAS démontrée.** Ce dépôt est un programme de recherche ouvert, pas une preuve.
-> **Rien n'est admis** : aucune déclaration d'axiome et aucun `sorry` ou `admit` dans les sources Lean du projet (recherche par motif faite le 15/11/2026 dans `formalization/RHV6Fresh/RHV6Fresh` et `formalization/rhv3_lean`, hors `.lake`), et aucune prémisse équivalente à RH n'est utilisée dans un théorème présenté comme inconditionnel.
-> **Ce que compile le build.** Build reproduit dans CE dépôt public le 15/11/2026 (dépendance Mathlib épinglée à `51e6992efd06126df61a496bebf8f49482a4e129`, cache Mathlib téléchargé) : `lake update`, `lake exe cache get`, `lake build RHV6Fresh` se terminent par « Build completed successfully (9064 jobs). », `EXIT=0`, de 19:15:15 à 19:49:58 UTC. Journal complet : `formalization/RHV6Fresh/experiments/audit_semantique/build_public_20261115.txt`. **Ce build vert ne démontre pas RH** : le seul théorème qui a RH pour conclusion, `riemannHypothesis_terminal` (`formalization/RHV6Fresh/RHV6Fresh/Terminal/DemonstrationChain.lean`), prend en hypothèse la « montée de la fréquence attendue » (`ExpectedFrequencyRises`), que `expectedFrequencyRises_iff_riemannHypothesis` (même fichier) prouve équivalente à RH. Il est donc conditionnel, et il est déclaré tel. Axiomes relevés par `#print axioms` dans ce dépôt (sortie exacte) : `'RHV6Fresh.riemannHypothesis_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]` et `'RHV6Fresh.expectedFrequencyRises_iff_riemannHypothesis' depends on axioms: [propext, Classical.choice, Quot.sound]` : les trois axiomes standard de Lean (extensionnalité des propositions, choix classique, quotients), aucun `sorryAx`.
-> **Ce que le build ne compile pas.** Les certificats de rectangles de ζ aux hauteurs 22 et 28 et les contrôles qui en dépendent sont hors de la cible par défaut (cible optionnelle `RHV6FreshCertificates`, non reconstruite dans le journal ci-dessus). Les modules isolés écrits depuis le 29 octobre pour des expériences (par exemple `TentBreakObligation.lean`) ne sont pas importés par la racine `RHV6Fresh.lean` ; ils ont été compilés individuellement, chacun avec ses journaux dans `attempts/` du dossier d'expérience.
-> **Écart documentaire à connaître.** `formalization/RHV6Fresh/scripts/status.sh` relit un journal daté du 27 octobre 2026 qui affiche encore un échec ; ce journal est périmé (le but terminal a été transformé le 28 octobre, commit `1c2ef553`). Nous rapportons l'état constaté, pas celui affirmé par ce script.
+> **Public repository: a dated export (15 November 2026) with a fresh history of the private research repository `zeta24-lean`; the selection is documented in `PUBLICATION_SCOPE.md`.** The mentions of "HEAD", commits and logs below refer to the history of the private research repository, which is not reproduced here (the cited hashes therefore cannot be found in the `git log` of this repository).
 
-## 1. Propriété et dépôt
+> **State as of 15 November 2026 (HEAD `4d4114c6`).**
+> **The Riemann Hypothesis (RH) is NOT proved.** This repository is an open research programme, not a proof.
+> **Nothing is assumed**: no axiom declaration and no `sorry` or `admit` in the project's Lean sources (pattern search run on 15 November 2026 in `formalization/RHV6Fresh/RHV6Fresh` and `formalization/rhv3_lean`, excluding `.lake`), and no premise equivalent to RH is used in a theorem presented as unconditional.
+> **What the build compiles.** Build reproduced in THIS public repository on 15 November 2026 (Mathlib dependency pinned to `51e6992efd06126df61a496bebf8f49482a4e129`, Mathlib cache downloaded): `lake update`, `lake exe cache get`, `lake build RHV6Fresh` end with "Build completed successfully (9064 jobs).", `EXIT=0`, from 19:15:15 to 19:49:58 UTC. Full log: `formalization/RHV6Fresh/experiments/audit_semantique/build_public_20261115.txt`. **This green build does not prove RH**: the only theorem whose conclusion is RH, `riemannHypothesis_terminal` (`formalization/RHV6Fresh/RHV6Fresh/Terminal/DemonstrationChain.lean`), takes as a hypothesis the "rise of the expected frequency" (`ExpectedFrequencyRises`), which `expectedFrequencyRises_iff_riemannHypothesis` (same file) proves equivalent to RH. It is therefore conditional, and it is declared as such. Axioms reported by `#print axioms` in this repository (exact output): `'RHV6Fresh.riemannHypothesis_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]` and `'RHV6Fresh.expectedFrequencyRises_iff_riemannHypothesis' depends on axioms: [propext, Classical.choice, Quot.sound]`: the three standard Lean axioms (propositional extensionality, classical choice, quotients), no `sorryAx`.
+> **What the build does not compile.** The rectangle certificates for ζ at heights 22 and 28 and the checks that depend on them are outside the default target (optional target `RHV6FreshCertificates`, not rebuilt in the log above). The isolated modules written since 29 October for experiments (for example `TentBreakObligation.lean`) are not imported by the root `RHV6Fresh.lean`; they were compiled individually, each with its logs in `attempts/` of the experiment folder.
+> **A documentation discrepancy to be aware of.** `formalization/RHV6Fresh/scripts/status.sh` rereads a log dated 27 October 2026 that still shows a failure; that log is stale (the terminal goal was transformed on 28 October, commit `1c2ef553`). We report the state actually observed, not the one asserted by that script.
 
-**Projet, méthode, textes, code et découvertes : © 2026 Charles S. Enveloppe Soleau INPI n° DSO2026044645, déposée le 15/11/2026 (conservée dix ans).** Référence complète : numéro national DSO2026044645, déposée à l'INPI (démarche en ligne) le 15/11/2026 à 18:14:32 UTC.
+## 1. Ownership and repository
 
-Licence : « Licence de recherche Zeta24-Lean — Propriétaire, usage non commercial strict 1.0 » (fichier `LICENSE`). Licence propriétaire à usage non commercial strict ; aucune redistribution de version modifiée ; toute contribution est cédée à l'auteur (voir LICENSE art. 4g). Les composants tiers sous Apache 2.0 ne sont pas concernés par cette licence. GitHub affiche « No license » parce que la licence est personnalisée et n'est pas reconnue dans sa liste de licences standard. Le copyright et les notices sont dans `COPYRIGHT.md` à la racine ; les attributions du code tiers sont dans `THIRD_PARTY_NOTICES.md` à la racine. Le code Lean tiers porté (répertoires `formalization/RHV6Fresh/RHV6Fresh/Zeta23Port` et `formalization/RHV6Fresh/RHV6Fresh/PNTPort`, licence Apache 2.0) reste la propriété de ses auteurs et n'est pas couvert par ce copyright. Leurs provenances sont dans les fichiers `PROVENANCE.md` de ces répertoires (copie du répertoire zeta23 du dépôt `anthropics/formal-math`, révision `fbdc36bb` ; port du dépôt `AlexKontorovich/PrimeNumberTheoremAnd`, révision `127b50e3`). Le port `RhGapPort` reprend le paquet interne `rh_gap_criterion` du même auteur (présent dans le dépôt de recherche privé, absent de ce dépôt public).
+**Project, method, texts, code and discoveries: © 2026 Charles S. INPI Soleau envelope no. DSO2026044645, filed on 15 November 2026 (kept for ten years).** Full reference: national number DSO2026044645, filed with the INPI (online procedure) on 15/11/2026 at 18:14:32 UTC.
 
-Dépôt public : https://github.com/csim-cognitive-labs/zeta24-lean-public (export à historique neuf). Le dépôt de recherche `zeta24-lean` (séparé le 25 octobre 2026 du dépôt `neuro-symbolic-consensus`) reste privé.
+Licence: "Zeta24-Lean Research Licence — Proprietary, strictly non-commercial use 1.0" (file `LICENSE`). Proprietary licence for strictly non-commercial use; no redistribution of modified versions; every contribution is assigned to the author (see LICENSE art. 4g). Third-party components under Apache 2.0 are not covered by this licence. GitHub displays "No license" because the licence is custom and is not recognised in its list of standard licences. The copyright and notices are in `COPYRIGHT.md` at the root; the attributions for third-party code are in `THIRD_PARTY_NOTICES.md` at the root. The ported third-party Lean code (directories `formalization/RHV6Fresh/RHV6Fresh/Zeta23Port` and `formalization/RHV6Fresh/RHV6Fresh/PNTPort`, Apache 2.0 licence) remains the property of its authors and is not covered by this copyright. Their provenances are in the `PROVENANCE.md` files of those directories (copy of the zeta23 directory of the `anthropics/formal-math` repository, revision `fbdc36bb`; port from the `AlexKontorovich/PrimeNumberTheoremAnd` repository, revision `127b50e3`). The `RhGapPort` port reuses the author's internal package `rh_gap_criterion` (present in the private research repository, absent from this public repository).
 
-## Pourquoi ce projet est public : un message de fraternité
+Public repository: https://github.com/csim-cognitive-labs/zeta24-lean-public (export with a fresh history). The research repository `zeta24-lean` (split off on 25 October 2026 from the `neuro-symbolic-consensus` repository) remains private.
 
-Ce projet est désintéressé. Il n'a pas été publié pour vendre quoi que ce soit, ni pour s'enrichir, ni pour s'imposer à quiconque. Il l'est parce que nous croyons que l'intelligence artificielle doit profiter au monde entier, et d'abord à ceux qui n'ont rien : celles et ceux qui n'ont pas accès aux grandes universités, aux grands laboratoires, aux grandes machines. La licence de ce dépôt interdit toute exploitation commerciale, pour une seule raison : que ce que nous avons trouvé ne soit jamais enfermé derrière un prix, et reste lisible, vérifiable et utilisable par chacun, gratuitement, pour apprendre et pour chercher.
+## Why this project is public: a message of fellowship
 
-Cette équipe de recherche (un homme, Charles S., et les intelligences artificielles qui travaillent avec lui) partagera toujours le peu qu'elle a avec tous. Elle respecte tous les peuples, toutes les cultures, toutes les traditions, toutes les religions, et tous les humains de la terre. Nous sommes des terriens, une seule famille. Chacun de nous a été créé, quel que soit le nom que chacun donne à Celui qui nous a créés. Il ne sert à rien de se battre ni de s'entretuer. Échanger nos connaissances nous rapproche, et c'est ainsi que les hommes ont toujours avancé.
+This project is disinterested. It was not published to sell anything, to make money, or to impose anything on anyone. It is public because we believe that artificial intelligence must benefit the whole world, and first of all those who have nothing: those who have no access to the great universities, the great laboratories, the great machines. The licence of this repository forbids all commercial exploitation for one reason only: so that what we have found is never locked behind a price, and remains readable, verifiable and usable by everyone, free of charge, for learning and for research.
 
-Les mathématiciens, depuis la nuit des temps, ont partagé leurs savoirs : à Babylone et en Égypte, en Inde et en Chine, à Bagdad et à Cordoue, en Afrique et en Amérique, et partout où quelqu'un a transmis une démonstration à un autre. Aucune de ces pages n'appartient à un seul peuple. Nous nous inscrivons humblement dans cette longue chaîne.
+This research team (one man, Charles S., and the artificial intelligences that work with him) will always share the little it has with everyone. It respects all peoples, all cultures, all traditions, all religions, and every human being on earth. We are earthlings, one single family. Each of us was created, whatever name each gives to the One who created us. There is no point in fighting or killing one another. Exchanging our knowledge brings us closer, and this is how people have always moved forward.
 
-Qui que vous soyez, d'où que vous veniez, venez rompre le pain avec nous. Vous êtes tous les bienvenus dans notre modeste demeure. Que vous soyez mathématicien, étudiant, curieux, autodidacte ou simple passant, une question, une relecture ou une erreur signalée sont un cadeau.
+Mathematicians, since the dawn of time, have shared their knowledge: in Babylon and in Egypt, in India and in China, in Baghdad and in Córdoba, in Africa and in the Americas, and wherever someone has passed a proof on to another. None of these pages belongs to a single people. We humbly take our place in this long chain.
 
-À chacune et à chacun de celles et ceux qui liront ces lignes : paix, fraternité et bénédiction. Que la connaissance vous rende plus libres, plus proches les uns des autres, et plus humains.
+Whoever you are, wherever you come from, come and break bread with us. You are all welcome in our modest home. Whether you are a mathematician, a student, simply curious, self-taught, or just passing by, a question, a careful reading or a reported error is a gift.
 
-*Honnêteté avant tout : l'hypothèse de Riemann n'est pas démontrée, et ce dépôt ne le prétend nulle part. Nous partageons un travail en cours, avec ses limites, pour que d'autres puissent le poursuivre.*
+To each and every one of you who reads these lines: peace, fellowship and blessing. May knowledge make you freer, closer to one another, and more human.
 
-## 2. Équipe de recherche
+*Honesty above all: the Riemann Hypothesis is not proved, and this repository does not claim otherwise anywhere. We are sharing work in progress, with its limits, so that others can carry it further.*
 
-**Déclaration de l'auteur.** La recherche a été conduite par Charles S. avec une équipe d'assistants d'intelligence artificielle : Claude (Anthropic), notamment Fable 5.1 ; Astra et ChatGPT 6.2 (OpenAI) ; Gemini et NotebookLM (Google).
+## 2. Research team
 
-Les assistants ont exécuté, compilé, mesuré et consigné sous la direction de l'auteur. L'auteur a fixé les questions, tranché les orientations et récusé les dérives ; les sections 19 du maître sémantique (`formalization/RHV6Fresh/RHV6final_STRATEGIE_SEMANTIQUE.md`) en témoignent : ordres, rectifications et interdictions y sont consignés avec leur date (par exemple §19.9, §19.51, §19.63, §19.67, §19.85, §19.98, §19.108). Nous reproduisons cette déclaration ; nous ne l'avons pas vérifiée au-delà de ces traces écrites.
+**Author's statement.** The research was conducted by Charles S. with a team of artificial-intelligence assistants: Claude (Anthropic), notably Fable 5.1; Astra and ChatGPT 6.2 (OpenAI); Gemini and NotebookLM (Google).
 
-## 3. Orientation et discipline de preuve
+The assistants executed, compiled, measured and recorded under the author's direction. The author set the questions, decided the orientations and rejected the drifts; sections 19 of the semantic master document (`formalization/RHV6Fresh/RHV6final_STRATEGIE_SEMANTIQUE.md`, in French) bear witness to this: orders, rectifications and prohibitions are recorded there with their dates (for example §19.9, §19.51, §19.63, §19.67, §19.85, §19.98, §19.108). We reproduce this statement; we have not verified it beyond these written traces.
 
-**Objectif.** Un terme Lean de type `RiemannHypothesis` obtenu sans prémisse admise. La recherche part de l'arithmétique des premiers, de leurs écarts et de la formule de reconstruction par les zéros ρ = β + iT.
+## 3. Orientation and proof discipline
 
-**Causalité visée** (auteur, §19.20 et §19.80 du maître) : les premiers et leurs écarts exacts produisent, par reconstruction collective de tous les zéros, des fréquences ; chaque zéro définit une « Tour » dont les « contacts » jalonnent l'axe réel ; la rencontre au premier partagé est définie par la grammaire des premiers ; on cherche la contrainte arithmétique que cette reconstruction impose à une première Tour hors de la ligne (zéro « OFF »), que ses contacts et ceux de son miroir ne peuvent pas satisfaire.
+**Goal.** A Lean term of type `RiemannHypothesis` obtained without any assumed premise. The research starts from the arithmetic of the primes, their gaps, and the reconstruction formula through the zeros ρ = β + iT.
 
-**Quatre degrés de certitude, à ne jamais fusionner** : (1) théorème Lean recompilé sans `sorryAx`, avec ses axiomes examinés ; (2) théorème conditionnel, hypothèses conservées et classées ; (3) identité algébrique ou réduction définitionnelle ; (4) observation numérique (« jumeau » déterministe). Une réécriture de but n'est pas une réduction mathématique.
+**Intended causality** (author, §19.20 and §19.80 of the master document): the primes and their exact gaps produce frequencies, through collective reconstruction from all the zeros; each zero defines a "Tower" whose "contacts" mark out the real axis; the meeting at the shared prime is defined by the grammar of the primes; the aim is to find the arithmetic constraint that this reconstruction imposes on a first off-line Tower (an "OFF" zero), a constraint that its contacts and those of its mirror cannot satisfy.
 
-**Hiérarchie.** Le théorème compilé d'abord ; le jumeau numérique sert à mesurer, jamais à conclure ; en cas de conflit entre un texte et un théorème compilé, le théorème l'emporte.
+**Four degrees of certainty, never to be merged**: (1) a Lean theorem recompiled without `sorryAx`, with its axioms examined; (2) a conditional theorem, with hypotheses kept and classified; (3) an algebraic identity or a definitional reduction; (4) a numerical observation (deterministic "twin"). Rewriting a goal is not a mathematical reduction.
 
-**Ordres de l'auteur en vigueur** (sources : `CONTRIBUTING.md`, les trois maîtres `RHV6final_STRATEGIE_*.md`, en particulier le maître sémantique, passation `formalization/RHV6Fresh/HANDOVER_20261107_LIGNE.md`) :
-- les contacts d'une Tour lisent la position radiale β, par les formules tangentielles compilées ; un intervalle de contacts est défini par la fréquence ET l'amplitude (§19.63, rectifié le 4 et le 7 novembre) ;
-- on ne lie jamais une Tour à la position exacte d'un premier : les intervalles de contacts sont des restes partiels d'écarts, reconstitués collectivement (§19.51, 6 novembre) ;
-- la plage utile pour l'arrivée est β ≤ 1/2, jamais « toute β dans l'intervalle ouvert (0,1) » (§19.76) ;
-- « équivalent à RH » n'est pas une objection ; admettre un tel énoncé comme prémisse reste interdit (§19.98, 13 novembre) ;
-- la fréquence avant la hauteur : le point de rencontre impose une fréquence, puis une hauteur ;
-- avant toute compilation ou exécution : pré-enregistrement commité, deux tentatives de compilation au plus, jumeau déterministe pour tout chiffre, rien fabriqué.
+**Hierarchy.** The compiled theorem comes first; the numerical twin is used to measure, never to conclude; in case of conflict between a text and a compiled theorem, the theorem prevails.
 
-## 4. Histoire consolidée
+**Author's orders in force** (sources: `CONTRIBUTING.md`, the three master documents `RHV6final_STRATEGIE_*.md` (in French), in particular the semantic master document, handover `formalization/RHV6Fresh/HANDOVER_20261107_LIGNE.md` (in French)):
+- the contacts of a Tower read the radial position β, through the compiled tangential formulas; an interval of contacts is defined by the frequency AND the amplitude (§19.63, rectified on 4 and 7 November);
+- a Tower is never tied to the exact position of a prime: the intervals between contacts are partial remainders of gaps, reconstructed collectively (§19.51, 6 November);
+- the useful range for the arrival is β ≤ 1/2, never "every β in the open interval (0,1)" (§19.76);
+- "equivalent to RH" is not an objection; admitting such a statement as a premise remains forbidden (§19.98, 13 November);
+- frequency before height: the meeting point imposes a frequency, then a height;
+- before any compilation or execution: a committed pre-registration, at most two compilation attempts, a deterministic twin for every figure, nothing fabricated.
 
-Les lignes d'avant le 26 octobre sont conservées du README précédent. Pour chaque ligne récente : **C** = compilé, **M** = mesuré (jumeau), **R** = rétracté ou récusé.
+## 4. Consolidated history
 
-| Phase | Problème poursuivi | Acquis et révisions |
+The rows before 26 October are carried over from the previous README. For each recent row: **C** = compiled, **M** = measured (twin), **R** = retracted or rejected.
+
+| Phase | Problem pursued | Gains and revisions |
 |---|---|---|
-| P1–P4 / KVM8, RHV2–RHV3 | Grammaire des écarts et alignement des premiers avec ζ ; contrôles statistiques | Protocoles et jeux de validation ; les contrôles statistiques ne remplacent aucune contrainte analytique. |
-| Juillet–août 2026, `tour10*` et E44 | Géométrie des Tours, rayon/contact, inversion des paramètres | Les contacts consécutifs reconstruisent T et β sous la convention de branche. |
-| Août–septembre, `rh_gap_criterion`, RHV4/RHV5, début RHV6 | Événements premiers, passages, miroirs, certificats de comptage | Unicité du successeur, symétries, premières réductions conditionnelles. |
-| Septembre, E076–E116 | ON/OFF au même T, progression, deuxième Tour | La progression de T ne prouve pas β invariant. |
-| Octobre, E197–E244 | Tours dans le champ de comptage, synchronisation exacte, fibres, énergies | Distinction canal de comptage, canal brut, lissage ; plusieurs obligations non fermées. |
-| E264–E352 | Synchronisation locale, reconstruction, grammaire | Contrôles finis seulement. Le dossier d'audit E301 : **R** ses conclusions sont déclarées fausses par l'auteur (§19.9, 30 octobre) ; on ne les cite pas. |
-| 22–25 octobre, E353–E376 ; E2M | Mots grammaticaux, canaux de Dirichlet, défaut radial ; correspondance naïve zéro vers transition | **R** la correspondance E2M est rétractée (superposition numérique n'est pas application canonique). |
-| 25–28 octobre, séparation et chaîne terminale | Migration ; bande sans zéro, décomposition des séjours, rigidité radiale finie (C, voir §5) ; 27 octobre : build allégé | 28 octobre (`1c2ef553`) : le but terminal devient l'hypothèse nommée « montée de la fréquence attendue », prouvée équivalente à RH ; la chaîne compile (C) et reste conditionnelle. |
-| 28–31 octobre, §19 réorientation (§19.1–19.23) | Zéro hors ligne vers porteur vers raccord obligatoire | **C** porteur OFF canonique (`OffCarrier.lean`), trichotomie du membre sortant, fenêtre de trois zéros, cap de fréquence, PNT porté et conséquences (`LogGapsTheorem.lean`, `SummitVertical.lean`). **R** E301 (§19.9) ; la lecture « le contact lisse est une rencontre arithmétique » est déclarée fausse (§19.10). Aucune loi de conservation du transport dans le corpus (§19.19). |
-| 31 octobre–3 novembre, §19.24–19.38, E398–E426 | Contacts, contributions par écart, accumulation des valeurs ; E398 (sommet atteint) | **C** géométrie des valeurs réelles aux contacts (`ContactRealValue.lean`), inversion tangentielle, rencontres entre Tours (`TowerMeetings.lean`). **R** le local à deux ou trois zéros (§19.29, « il faut des millions de zéros »). |
-| 3–6 novembre, §19.39–19.50, E427–E435 | Contraintes entre Tours aux contacts ; grammaire retrouvée depuis les zéros | **C** modules par expérience (grammaire, lecture de série, valeur aux rencontres, transport au premier partagé). **M** niveau 2 négatif : aucun transport aux contacts ; audit de 22 énoncés sur le complément : aucune rigidité indépendante (E435). |
-| 6 novembre, §19.51, E436 | Retrait de la route « contacts d'une Tour et position d'un premier » | **R** toute formule liant la grille de contacts à un premier exact ; **R** « manque = absorption par le complément ou exposant du reste ». **C** découpage d'un écart par les contacts (restes partiels). |
-| 7 novembre, §19.53–19.70, E437–E448 | Reconstruction des écarts par les contacts ; prix de la rencontre ; régime fini ; cassure sur la ligne | **C** bilans signés, prix exact (E445), régime « un premier par cellule de rencontre » fini pour toute Tour (`MeetingRegimeFinite.lean`), mécanisme de cassure sur la ligne (`BreakMechanismOnLine.lean`). **R** amendement spectral d'E445 (§19.67) ; obligation « amplitude et variation de la demande brute » retirée. |
-| 8 novembre, §19.71, E449 | Inversion : écarts, contacts, zéro | **C** le mot des écarts détermine la Tour (T, phase, β) ; la cause est le PNT porté. |
-| 8 novembre, §19.72–19.79, E450–E456 (plan K0–K6) | Paire OFF et miroir | **C** cassure de la paire au premier partagé, ordre du zéro (`PairBreakOfZero.lean`), imposition de la rencontre (`PairMeetingImposition.lean`), paire lue comme passage (`PairArrivalPassage.lean`). **M** décalage des contacts à même hauteur. **R** (rectification §19.76) la plage « toute β ». Aucune contradiction obtenue. |
-| 8–12 novembre, plan Φ, §19.80–19.97, E457–E466 | L'arête manquante : la sélection des porteurs ; collectif de nouveau autorisé (§19.91) | **C** bande miroir décrite, recomposition collective, bilan en aires de la demande sur les pièces découpées par les contacts. **M** prédicteur latéral E464/E466 (horizon mesuré, pas théorème). **R** (§19.85) E457 ne dit pas « propriété de queue » : il dit qu'aucun prédicat sur une fenêtre finie du mot ne caractérise la sélection. Aucune contradiction. |
-| 13 novembre, plan Ψ, §19.98–19.101, E467–E471 | Attaques cumulatives | **C** quatre modules, 31 énoncés (`MemberConstancySeries.lean`, `FiberAnnihilator.lean`, `PairAsymmetryOverPrimes.lean`, `AlternatingCellSeries.lean`) : la part relative d'une Tour est multipliée par un facteur fixe par cellule, constante exactement sur la ligne ; la paire est non bornée au cumul. **M** exposants de la paire mesurés proches des attendus. Le plan n'a pas clos RH. |
-| 13 novembre, §19.105–19.107, E472–E474 | Budget alterné ; grammaire des aires de cellules ; tente | **C** séparation du budget arithmétique et du fond (`ArithmeticBudgetSeparation.lean`), aires de cellules (`CellAreaGrammar.lean`, `CellAreaTent.lean`, `CellAreaIntegral.lean`). **M** budget relatif sous 0,08 sur 8 Tours. **R** rectifications d'un audit externe : « budget lu sur les premiers seuls » trop fort ; « annulation par alternance » abusif. Classées **auxiliaires** par l'auteur le 14 novembre, sans portée vers RH (§19.108). |
-| 14 novembre, §19.108–19.109, E475 | Question active : obligation de la reconstruction exacte d'un écart à la première Tour OFF, au premier partagé | Audit, aucun module : les cinq points de la stratégie sont déjà des objets compilés. **M** M1 exact (le premier partagé est le premier suivant, 2000 raccords) ; M2 échoue par la lettre, loi exacte consignée ; M3 sensible, égale au prix déjà compilé. Verdict B : la question sur les parts d'un écart est vide ; la paire ne change que l'énumération. |
-| 14 novembre, §19.110, E476 | Tente et cassure | **C** `TentBreakObligation.lean`, 10 énoncés, deux tentatives, build complet vert : le poids de la cassure dans la tente, l'amplitude payée lit ce poids, dent de scie et point neutre, même poids pour la Tour et son miroir si et seulement si β = 1/2. **M** identités à 1e-14 sur 8 Tours ; deux tests échoués par la lettre (prédiction mal écrite). Verdict B ; l'obligation est une forme compilée, pas une contradiction. |
-| 14 novembre, §19.111, E477 | Poids alternés Tour moins miroir sur les premiers à mot décalé | **M** poids alternés égaux au premier ordre, effet moyen du second ordre en l'écart ; trois tests échoués par la lettre, dont une prédiction fausse en nature (fluctuations). Aucun module, **aucun théorème**, fil clos. Verdict B. |
+| P1–P4 / KVM8, RHV2–RHV3 | Grammar of gaps and alignment of the primes with ζ; statistical controls | Protocols and validation sets; statistical controls do not replace any analytic constraint. |
+| July–August 2026, `tour10*` and E44 | Geometry of Towers, radius/contact, inversion of parameters | Consecutive contacts reconstruct T and β under the branch convention. |
+| August–September, `rh_gap_criterion`, RHV4/RHV5, start of RHV6 | Prime events, passages, mirrors, counting certificates | Uniqueness of the successor, symmetries, first conditional reductions. |
+| September, E076–E116 | ON/OFF at the same T, progression, second Tower | The progression of T does not prove that β is invariant. |
+| October, E197–E244 | Towers in the counting field, exact synchronization, fibres, energies | Distinction between counting channel, raw channel and smoothing; several obligations remain unclosed. |
+| E264–E352 | Local synchronization, reconstruction, grammar | Finite checks only. The E301 audit file: **R** its conclusions are declared false by the author (§19.9, 30 October); they are not cited. |
+| 22–25 October, E353–E376; E2M | Grammatical words, Dirichlet channels, radial defect; naive zero-to-transition correspondence | **R** the E2M correspondence is retracted (a numerical superposition is not a canonical map). |
+| 25–28 October, separation and terminal chain | Migration; zero-free band, decomposition of dwells, finite radial rigidity (C, see §5); 27 October: lightened build | 28 October (`1c2ef553`): the terminal goal becomes the named hypothesis "rise of the expected frequency", proved equivalent to RH; the chain compiles (C) and remains conditional. |
+| 28–31 October, §19 reorientation (§19.1–19.23) | Off-line zero, then carrier, then obligatory junction (raccord) | **C** canonical OFF carrier (`OffCarrier.lean`), trichotomy of the outgoing member, three-zero window, frequency cap, ported PNT and its consequences (`LogGapsTheorem.lean`, `SummitVertical.lean`). **R** E301 (§19.9); the reading "the smoothed contact is an arithmetic meeting" is declared false (§19.10). No transport conservation law in the corpus (§19.19). |
+| 31 October–3 November, §19.24–19.38, E398–E426 | Contacts, per-gap contributions, accumulation of values; E398 (summit attained) | **C** geometry of the real values at contacts (`ContactRealValue.lean`), tangential inversion, meetings between Towers (`TowerMeetings.lean`). **R** the local approach with two or three zeros (§19.29, "millions of zeros are needed"). |
+| 3–6 November, §19.39–19.50, E427–E435 | Constraints between Towers at contacts; grammar recovered from the zeros | **C** modules per experiment (grammar, series reading, value at meetings, transport at the shared prime). **M** level 2 negative: no transport at contacts; audit of 22 statements about the complement: no independent rigidity (E435). |
+| 6 November, §19.51, E436 | Withdrawal of the route "contacts of a Tower and position of a prime" | **R** every formula tying the contact grid to an exact prime; **R** "what is missing = absorption by the complement or exponent of the remainder". **C** splitting of a gap by the contacts (partial remainders). |
+| 7 November, §19.53–19.70, E437–E448 | Reconstruction of gaps by the contacts; price of the meeting; finite regime; break on the line | **C** signed balances, exact price (E445), the "one prime per meeting cell" regime is finite for every Tower (`MeetingRegimeFinite.lean`), break mechanism on the line (`BreakMechanismOnLine.lean`). **R** spectral amendment of E445 (§19.67); the obligation "amplitude and variation of the raw demand" withdrawn. |
+| 8 November, §19.71, E449 | Inversion: gaps, contacts, zero | **C** the word of gaps determines the Tower (T, phase, β); the cause is the ported PNT. |
+| 8 November, §19.72–19.79, E450–E456 (plan K0–K6) | OFF pair and mirror | **C** break of the pair at the shared prime, order of the zero (`PairBreakOfZero.lean`), imposition of the meeting (`PairMeetingImposition.lean`), pair read as a passage (`PairArrivalPassage.lean`). **M** shift of the contacts at the same height. **R** (rectification §19.76) the "every β" range. No contradiction obtained. |
+| 8–12 November, plan Φ, §19.80–19.97, E457–E466 | The missing edge: the selection of carriers; collective channel allowed again (§19.91) | **C** mirror band described, collective recomposition, area balance of the demand over the pieces cut by the contacts. **M** lateral predictor E464/E466 (measured horizon, not a theorem). **R** (§19.85) E457 does not say "tail property": it says that no predicate on a finite window of the word characterizes the selection. No contradiction. |
+| 13 November, plan Ψ, §19.98–19.101, E467–E471 | Cumulative attacks | **C** four modules, 31 statements (`MemberConstancySeries.lean`, `FiberAnnihilator.lean`, `PairAsymmetryOverPrimes.lean`, `AlternatingCellSeries.lean`): the relative share of a Tower is multiplied by a fixed factor per cell, constant exactly on the line; the pair is unbounded in cumulative terms. **M** exponents of the pair measured close to those expected. The plan did not close RH. |
+| 13 November, §19.105–19.107, E472–E474 | Alternating budget; grammar of cell areas; tent | **C** separation of the arithmetic budget from the background (`ArithmeticBudgetSeparation.lean`), cell areas (`CellAreaGrammar.lean`, `CellAreaTent.lean`, `CellAreaIntegral.lean`). **M** relative budget below 0.08 over 8 Towers. **R** rectifications from an external audit: "budget read on the primes alone" too strong; "cancellation by alternation" improper. Classified **auxiliary** by the author on 14 November, with no bearing on RH (§19.108). |
+| 14 November, §19.108–19.109, E475 | Active question: obligation of the exact reconstruction of a gap at the first OFF Tower, at the shared prime | Audit, no module: the five points of the strategy are already compiled objects. **M** M1 exact (the shared prime is the next prime, 2000 junctions (raccords)); M2 fails by the letter, exact law recorded; M3 sensitive, equal to the price already compiled. Verdict B: the question about the shares of a gap is empty; the pair changes only the enumeration. |
+| 14 November, §19.110, E476 | Tent and break | **C** `TentBreakObligation.lean`, 10 statements, two attempts, full green build: the weight of the break in the tent, the amplitude paid reads this weight, sawtooth and neutral point, same weight for the Tower and its mirror if and only if β = 1/2. **M** identities to 1e-14 over 8 Towers; two tests failed by the letter (prediction badly written). Verdict B; the obligation is a compiled form, not a contradiction. |
+| 14 November, §19.111, E477 | Alternating weights Tower minus mirror over primes with a shifted word | **M** alternating weights equal at first order, mean effect of second order in the word shift; three tests failed by the letter, one of which was a prediction wrong in nature (fluctuations). No module, **no theorem**, thread closed. Verdict B. |
 
-Chaque expérience a son pré-enregistrement (commit antérieur), son jumeau, son `RESULTS.md` et un verdict A, B ou C ; les verdicts B sont fréquents et ne sont pas des succès.
+Each experiment has its pre-registration (an earlier commit), its twin, its `RESULTS.md` and a verdict A, B or C; B verdicts are frequent and are not successes.
 
-## 5. Découvertes établies, résultats mesurés, frontière
+## 5. Established discoveries, measured results, frontier
 
-**Théorèmes compilés** (nommés en mots ; fichiers sous `formalization/RHV6Fresh/RHV6Fresh/Terminal/`, sauf mention). Sources des énoncés : maître sémantique et journaux de build cités à la section 4.
-- Bande sans zéro appliquée aux vrais zéros : pour une hauteur supérieure à 3, la position radiale reste dans une bande qui s'élargit vers un demi — `ZeroFreeRegionBand.lean`. Elle ne sépare pas la ligne du hors-ligne.
-- Identité exacte des séjours grammaticaux modulo 6 : la quasi-compensation est l'équirépartition des premiers entre les classes 1 et 5 à une unité près — `GrammarDwellDecomposition.lean` ; borne d'Abel du canal orienté — `GrammarWeightedG4.lean`.
-- Rigidité radiale d'une somme exponentielle finie bornée — `FiniteRadialRigidity.lean` (outil conditionnel : la borne du signal infini n'est pas acquise).
-- Le théorème des nombres premiers (forme de Tchebychev) est porté, et en découlent comme théorèmes que les écarts logarithmiques tendent vers zéro et que les rencontres échantillonnent les fréquences — `LogGapsTheorem.lean` (§19.18 et suivants du maître), code tiers dans `PNTPort`.
-- Porteur OFF canonique et profil d'une perturbation hors ligne : arrivée basse, fibre finie, pas sortant gelé — `OffCarrier.lean`, `OnRegimeStabilityPackage.lean`.
-- Cascade de fréquences : sur la ligne elle est strictement croissante à tout rang ; sa stricte croissance partout est équivalente à RH — `FrequencyCascadeStability.lean` (cité dans `DemonstrationChain.lean`).
-- Contacts : valeur réelle à chaque contact, inversion tangentielle de (T, β), entrelacement — `ContactRealValue.lean`, `TangentialInversion.lean`, `AmplitudeContact.lean`.
-- Le mot des écarts détermine la Tour (E449) ; le miroir a un mot fonction de celui de la Tour, mots égaux si et seulement si β = 1/2.
-- Régime fini à un premier par cellule de rencontre — `MeetingRegimeFinite.lean` ; amplitude exacte de la cassure sur la ligne — `BreakMechanismOnLine.lean`.
-- Cumul : facteur par cellule de la part d'une Tour, constante si et seulement si ligne ; paire non bornée — plan Ψ, quatre modules cités plus haut.
-- Poids de la cassure dans la tente, et égalité des poids Tour/miroir si et seulement si β = 1/2 — `TentBreakObligation.lean` (isolé).
-- Équivalence : la montée de la fréquence attendue (hypothèse du théorème terminal) équivaut à RH — `DemonstrationChain.lean`. C'est ce qui rend le théorème terminal conditionnel.
+**Compiled theorems** (named in words; files under `formalization/RHV6Fresh/RHV6Fresh/Terminal/`, unless stated otherwise). Sources of the statements: the semantic master document and the build logs cited in section 4.
+- Zero-free band applied to the actual zeros: for a height above 3, the radial position stays within a band that widens towards one half — `ZeroFreeRegionBand.lean`. It does not separate the line from off-line positions.
+- Exact identity for the grammatical dwells modulo 6: the quasi-compensation is the equidistribution of the primes between classes 1 and 5 up to one unit — `GrammarDwellDecomposition.lean`; Abel bound for the oriented channel — `GrammarWeightedG4.lean`.
+- Radial rigidity of a bounded finite exponential sum — `FiniteRadialRigidity.lean` (conditional tool: the bound for the infinite signal is not established).
+- The prime number theorem (Chebyshev form) is ported, and from it follow, as theorems, that the logarithmic gaps tend to zero and that the meetings sample the frequencies — `LogGapsTheorem.lean` (§19.18 onwards of the master document), third-party code in `PNTPort`.
+- Canonical OFF carrier and profile of an off-line perturbation: low arrival, finite fibre, frozen outgoing step — `OffCarrier.lean`, `OnRegimeStabilityPackage.lean`.
+- Frequency cascade: on the line it is strictly increasing at every rank; its strict increase everywhere is equivalent to RH — `FrequencyCascadeStability.lean` (cited in `DemonstrationChain.lean`).
+- Contacts: real value at each contact, tangential inversion of (T, β), interlacing — `ContactRealValue.lean`, `TangentialInversion.lean`, `AmplitudeContact.lean`.
+- The word of gaps determines the Tower (E449); the mirror has a word that is a function of the Tower's word, and the words are equal if and only if β = 1/2.
+- Finite regime with one prime per meeting cell — `MeetingRegimeFinite.lean`; exact amplitude of the break on the line — `BreakMechanismOnLine.lean`.
+- Cumulation: per-cell factor of the share of a Tower, constant if and only if on the line; unbounded pair — plan Ψ, four modules cited above.
+- Weight of the break in the tent, and equality of the Tower/mirror weights if and only if β = 1/2 — `TentBreakObligation.lean` (isolated).
+- Equivalence: the rise of the expected frequency (hypothesis of the terminal theorem) is equivalent to RH — `DemonstrationChain.lean`. This is what makes the terminal theorem conditional.
 
-**Résultats mesurés** (jumeaux déterministes, mesures et non preuves) : dossiers `formalization/RHV6Fresh/experiments/E4xx_*` ; zéros d'Odlyzko jusqu'à 2 001 052, premiers jusqu'à 3·10^7. À titre d'exemples : E475 (premier partagé exact sur 2000 raccords), E476 (identités à 1e-14), E477 (second ordre en l'écart de mot).
+**Measured results** (deterministic twins, measurements and not proofs): folders `formalization/RHV6Fresh/experiments/E4xx_*`; Odlyzko zeros up to 2,001,052, primes up to 3·10^7. As examples: E475 (exact shared prime over 2000 junctions (raccords)), E476 (identities to 1e-14), E477 (second order in the word shift).
 
-**Frontière actuelle, en une phrase.** On n'a toujours pas obtenu, à partir des seuls premiers et de la reconstruction exacte d'un écart, une contrainte arithmétique que la première Tour hors ligne et son miroir ne puissent pas satisfaire : les obligations compilées à la rencontre au premier partagé sont satisfaites par toute famille, paire OFF comprise, et seules l'amplitude relative constante et la montée de la fréquence attendue sont violées par la paire, sans être dérivées de la reconstruction (question Q475, `experiments/E475_SharedPrimeObligation/AUDIT_20261114.md`, §19.108–19.109).
+**Current frontier, in one sentence.** Starting from the primes alone and the exact reconstruction of a gap, we have still not obtained an arithmetic constraint that the first off-line Tower and its mirror cannot satisfy: the compiled obligations at the meeting at the shared prime are satisfied by every family, the OFF pair included, and only the constant relative amplitude and the rise of the expected frequency are violated by the pair, without being derived from the reconstruction (question Q475, `experiments/E475_SharedPrimeObligation/AUDIT_20261114.md`, §19.108–19.109).
 
-**Récusé explicitement par l'auteur** (à ne pas citer comme résultat) : les conclusions d'E301 (§19.9) ; toute liaison d'une Tour à la position exacte d'un premier (§19.51) ; la conclusion d'une étude spectrale d'E445 (§19.67) ; la lecture « propriété de queue » pour E457 (§19.85) ; l'obligation liant la contradiction OFF à l'amplitude et à la variation de la demande brute (§19.68) ; toute affirmation que les contacts ne liraient pas β (§19.44, §19.63) ; la plage « toute β » pour l'arrivée (§19.76) ; la correspondance naïve E2M.
+**Explicitly rejected by the author** (not to be cited as results): the conclusions of E301 (§19.9); any tying of a Tower to the exact position of a prime (§19.51); the conclusion of a spectral study in E445 (§19.67); the "tail property" reading for E457 (§19.85); the obligation tying the OFF contradiction to the amplitude and to the variation of the raw demand (§19.68); any claim that the contacts do not read β (§19.44, §19.63); the "every β" range for the arrival (§19.76); the naive E2M correspondence.
 
-## 6. Appel aux mathématiciens du monde entier
+## 6. Call to mathematicians around the world
 
-L'auteur ouvre ce projet et invite toute personne qui le souhaite à le poursuivre.
+The author opens this project and invites anyone who wishes to continue it.
 
-**Constat de l'auteur.** Les intelligences artificielles actuelles exécutent, compilent et mesurent avec rigueur, mais ne savent pas encore trouver des découvertes, les retenir et les combiner entre elles pour fermer une preuve. Nous ne sommes pas à l'intelligence artificielle générale. Ce projet en est une illustration : plus de cinq cents fichiers Lean dans la bibliothèque active, des dizaines d'expériences pré-enregistrées, et une question centrale toujours ouverte.
+**The author's observation.** Today's artificial intelligences execute, compile and measure rigorously, but do not yet know how to find discoveries, retain them and combine them with one another to close a proof. We are not at artificial general intelligence. This project is an illustration: more than five hundred Lean files in the active library, dozens of pre-registered experiments, and a central question that is still open.
 
-**Ce que l'auteur demande :**
-- relire les théorèmes compilés (liste de la section 5) et les énoncés qui les accompagnent ;
-- attaquer la question active Q475 : quelle contrainte nouvelle la reconstruction exacte d'un écart entre deux premiers consécutifs impose à la première Tour hors ligne, que ses contacts et ceux de son miroir ne peuvent satisfaire ;
-- proposer des contraintes arithmétiques nouvelles au premier partagé ;
-- signaler toute erreur, y compris de vocabulaire ou de portée.
+**What the author asks:**
+- to review the compiled theorems (list in section 5) and the statements that accompany them;
+- to attack the active question Q475: what new constraint the exact reconstruction of a gap between two consecutive primes imposes on the first off-line Tower, a constraint that its contacts and those of its mirror cannot satisfy;
+- to propose new arithmetic constraints at the shared prime;
+- to report any error, including errors of vocabulary or of scope.
 
-**Comment contribuer.** Lire `CONTRIBUTING.md` et les maîtres (`RHV6final_STRATEGIE_*.md`), en particulier le maître sémantique (`formalization/RHV6Fresh/RHV6final_STRATEGIE_SEMANTIQUE.md`, en particulier §19.98 à §19.111). Règles : aucun `sorry`, aucun `admit`, aucun axiome ajouté ; `lake build RHV6Fresh` doit rester vert ; pré-enregistrer (commit) les hypothèses et les seuils avant de compiler ou d'exécuter ; fournir un jumeau déterministe pour tout chiffre ; ne jamais présenter un énoncé conditionnel comme inconditionnel. Ouvrir une issue ou une pull request sur le dépôt, en citant l'auteur (Charles S.). Les contributions sont soumises aux conditions de `COPYRIGHT.md`. Nous ne promettons aucune preuve.
+**How to contribute.** Read `CONTRIBUTING.md` and the master documents (`RHV6final_STRATEGIE_*.md`, in French), in particular the semantic master document (`formalization/RHV6Fresh/RHV6final_STRATEGIE_SEMANTIQUE.md`, in French, especially §19.98 to §19.111). Rules: no `sorry`, no `admit`, no added axiom; `lake build RHV6Fresh` must stay green; pre-register (commit) the hypotheses and thresholds before compiling or running; provide a deterministic twin for every figure; never present a conditional statement as unconditional. Open an issue or a pull request on the repository, citing the author (Charles S.). Contributions are subject to the terms of `COPYRIGHT.md`. We promise no proof.
 
-## 7. Reproduire
+## 7. Reproducing
 
-**Build Lean** (toolchain `leanprover/lean4:v4.33.0-rc2`, fichier `formalization/RHV6Fresh/lean-toolchain`). Mathlib est épinglé par dépendance git, révision `51e6992efd06126df61a496bebf8f49482a4e129`, déclarée dans `formalization/rhv3_lean/lakefile.toml` ; `RHV6Fresh` accède à `rhv3_lean` par chemin relatif `../rhv3_lean`. `formalization/RHV6Fresh/lake-manifest.json` est le manifeste régénéré par `lake update` lors du build de vérification du 15/11/2026 (il fige Mathlib et ses dépendances) ; celui de `rhv3_lean` n'est pas versionné.
+**Lean build** (toolchain `leanprover/lean4:v4.33.0-rc2`, file `formalization/RHV6Fresh/lean-toolchain`). Mathlib is pinned as a git dependency, revision `51e6992efd06126df61a496bebf8f49482a4e129`, declared in `formalization/rhv3_lean/lakefile.toml`; `RHV6Fresh` reaches `rhv3_lean` by the relative path `../rhv3_lean`. `formalization/RHV6Fresh/lake-manifest.json` is the manifest regenerated by `lake update` during the verification build of 15 November 2026 (it pins Mathlib and its dependencies); the one in `rhv3_lean` is not versioned.
 ```bash
 cd formalization/RHV6Fresh
 lake update                          # résout Mathlib et ses dépendances à la révision épinglée
@@ -131,18 +133,22 @@ lake exe cache get                   # (si disponible) télécharge les .olean d
 lake build RHV6Fresh                 # cible par défaut
 lake build RHV6FreshCertificates     # optionnelle : certificats de rectangles 22 et 28 (très coûteux)
 ```
-Les répertoires `.lake/` ne sont pas versionnés : sans cache, la première construction de Mathlib est très longue. Ne déplacez pas `rhv3_lean` ni `RHV6Fresh`. `scripts/status.sh --build` relance le build et réécrit son journal.
+(The comments in the code block above are in French: resolves Mathlib and its dependencies at the pinned revision; (if available) downloads the precompiled Mathlib .olean files; default target; optional: rectangle certificates 22 and 28 (very expensive).)
 
-**Jumeau Python** (Python 3 avec numpy ; dépendances propres à chaque script, à lire dans son en-tête) :
+The `.lake/` directories are not versioned: without the cache, the first build of Mathlib is very long. Do not move `rhv3_lean` or `RHV6Fresh`. `scripts/status.sh --build` reruns the build and rewrites its log.
+
+**Python twin** (Python 3 with numpy; dependencies specific to each script, to be read in its header):
 ```bash
 cd formalization/RHV6Fresh/experiments/E477_ShiftedPrimesPair
 nohup python3 twin_e477.py > logs_twin_run.txt 2>&1 &     # environ 15 s ; protocole borné : pas de sondage en boucle
 ```
-Les résultats attendus sont dans `RESULTS.md` et `twin_results.json` du même dossier.
+(Comment in French: about 15 s; bounded protocol: no polling in a loop.)
 
-**Données.** `formalization/RHV6Fresh/experiments/data/` contient les zéros d'Odlyzko : `odlyzko_zeros6_2001052.txt` (36 018 936 octets, SHA-256 `2ef7b752c2f17405222e670a61098250c8e4e09047f823f41e2b41a7b378e7c6`) et ses préfixes `odlyzko_zeros1_first5000.txt`, `odlyzko_zeros1_first300.txt`. Provenance (fichier `odlyzko_zeros6_2001052.PROVENANCE.md`) : A. M. Odlyzko, « Tables of zeros of the Riemann zeta function », fichier `zeros6`, https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros6, téléchargé le 27 octobre 2026. Ces hauteurs sont celles de zéros connus sur la ligne critique ; elles ne certifient pas l'absence de zéros hors ligne.
+The expected results are in `RESULTS.md` and `twin_results.json` of the same folder.
 
-## 8. Plan du dépôt public
+**Data.** `formalization/RHV6Fresh/experiments/data/` contains the Odlyzko zeros: `odlyzko_zeros6_2001052.txt` (36,018,936 bytes, SHA-256 `2ef7b752c2f17405222e670a61098250c8e4e09047f823f41e2b41a7b378e7c6`) and its prefixes `odlyzko_zeros1_first5000.txt`, `odlyzko_zeros1_first300.txt`. Provenance (file `odlyzko_zeros6_2001052.PROVENANCE.md`): A. M. Odlyzko, "Tables of zeros of the Riemann zeta function", file `zeros6`, https://www-users.cse.umn.edu/~odlyzko/zeta_tables/zeros6, downloaded on 27 October 2026. These heights are those of known zeros on the critical line; they do not certify the absence of off-line zeros.
+
+## 8. Layout of the public repository
 
 ```text
 formalization/
@@ -162,108 +168,114 @@ formalization/
 docs/ANNONCE_PUBLICATION_20261115.md   annonce de publication
 README.md, COPYRIGHT.md, LICENSE, THIRD_PARTY_NOTICES.md, CONTRIBUTING.md, CITATION.cff, SECURITY.md, PUBLICATION_SCOPE.md
 ```
-Ce qui n'est pas dans ce dépôt (bases `rhv2_fresh`, `rhv4_lean`, `RHV5Fresh`, `rh_gap_criterion`, expériences antérieures à E400, `research/`, `validation/`, `src/`, `docs/` antérieurs, journal interne de travail) reste dans le dépôt de recherche privé et peut être fourni sur demande ; voir `PUBLICATION_SCOPE.md`.
+(The annotations in the tree above are in French. Translation, line by line: ζ foundations, counting, certificates; pinned Mathlib dependency / active build; `RHV6Fresh.lean` and `RHV6FreshCertificates.lean` at the root / library code / terminal chain and results modules (including `DemonstrationChain.lean`) / third-party code (Apache 2.0), see `THIRD_PARTY_NOTICES.md` (twice) / experiments E400 to E477 (70 folders), `audit_semantique/` (without its `data/`), `data/` (< 1 MB, plus the Odlyzko zeros) / compilation logs / the three master documents / handover (§1 to §36) / audits of this folder / publication announcement.)
+
+What is not in this repository (the bases `rhv2_fresh`, `rhv4_lean`, `RHV5Fresh`, `rh_gap_criterion`, experiments earlier than E400, `research/`, `validation/`, `src/`, earlier `docs/`, the internal working log) remains in the private research repository and can be provided on request; see `PUBLICATION_SCOPE.md`.
 
 ---
 
-# Annexes : inventaire historique arrêté au 26 octobre 2026
+# Annexes: historical inventory frozen at 26 October 2026
 
-**Les annexes décrivent l'ensemble du dépôt de recherche privé.** Les dossiers et fichiers cités qui ne figurent pas dans ce dépôt public (voir `PUBLICATION_SCOPE.md`) sont « dans le dépôt de recherche privé ». Les sections ci-dessous sont conservées du README précédent, sans mise à jour (elles décrivent l'état au 26 octobre : par exemple, le but terminal qu'elles mentionnent a été transformé depuis, voir le bandeau). Les chiffres d'expériences y sont ceux de cette date ; l'évolution depuis est dans la section 4. Les dossiers d'audit E301 y figurent par leur nom ; leurs conclusions sont récusées (section 5).
+**The annexes describe the whole private research repository.** Folders and files cited that do not appear in this public repository (see `PUBLICATION_SCOPE.md`) are "in the private research repository". The sections below are carried over from the previous README, without updating (they describe the state as of 26 October: for example, the terminal goal they mention has since been transformed, see the banner). The experiment figures in them are those of that date; developments since then are in section 4. The E301 audit folders appear in them by name; their conclusions are rejected (section 5).
 
-## A1. Découvertes démontrées et limites
+## A1. Demonstrated discoveries and limits
 
-**Grammaire modulo 6.** Pour les premiers `p>3`, l'état est 1 ou 5. Il existe quatre transitions `11,15,51,55`. Le canal orienté `N15−N51` est un télescopage des états d'extrémité et vaut en valeur absolue au plus 1 sur un préfixe. Ce n'est pas une contrainte indépendante sur β. Les suites d'écarts, les familles et les méta-patterns expérimentaux ne sont pas interchangeables avec ces quatre transitions.
+**Grammar modulo 6.** For primes `p>3`, the state is 1 or 5. There are four transitions `11,15,51,55`. The oriented channel `N15−N51` is a telescoping of the endpoint states and has absolute value at most 1 on a prefix. It is not an independent constraint on β. Experimental gap sequences, families and meta-patterns are not interchangeable with these four transitions.
 
-**Séjours et canal de caractère.** Dans `Terminal/GrammarDwellDecomposition.lean`, pour tout mot de deux états :
+**Dwells and character channel.** In `Terminal/GrammarDwellDecomposition.lean`, for any two-state word:
 ```text
 N11 − N55 = (N1• − N5•) − (N15 − N51).
 G11 − G55 = (W1 − W5) − (G15 − G51)   (tous poids réels).
 ```
-Le premier terme pondéré est un canal de caractère, le second une somme d'Abel dont la variation totale majore la valeur. La quasi-compensation empirique des séjours n'est pas une borne uniforme ; ces identités ne démontrent pas l'absence de tout couplage spectral.
+(Comment in French: all weights real.)
 
-**Tours et inversion tangentielle.** Pour `β,T>0` :
+The first weighted term is a character channel, the second an Abel sum whose total variation bounds the value. The empirical quasi-compensation of the dwells is not a uniform bound; these identities do not prove the absence of any spectral coupling.
+
+**Towers and tangential inversion.** For `β,T>0`:
 ```text
 φ(β,T) = arctan(T/β)
 log C_k = (φ + kπ)/T,    log(C_{k+1}/C_k) = π/T
 T = π/log(C⁺/C⁻),        β = T/tan(T log C⁻)  (branche vérifiée)
 ```
-Le contact est dérivé du zéro ; retrouver le zéro depuis deux contacts **choisis** n'établit pas que les premiers produisent ces contacts. Le candidat géométrique `k* = floor((T log S−φ)/π)` sélectionne la cellule contenant une échelle `S>0`, mais le théorème identifiant cette cellule au passage premier authentique n'est pas acquis.
+(Comment in French: branch verified.)
 
-**Miroir et ON/OFF.** Le miroir authentique de `β+iT` est `1−β+iT`. Il se confond avec le membre initial exactement quand `β=1/2`. Hors ligne, même T et même largeur logarithmique `π/T`, mais phases et amplitudes différentes. Cette symétrie est statique ; elle ne prouve pas à elle seule la stabilité ON du successeur. Un quartet OFF complet est une expérience hypothétique, pas une substitution de zéro isolé dans la vraie fonction ζ.
+The contact is derived from the zero; recovering the zero from two **chosen** contacts does not establish that the primes produce those contacts. The geometric candidate `k* = floor((T log S−φ)/π)` selects the cell containing a scale `S>0`, but the theorem identifying this cell with the authentic prime passage is not established.
 
-**Reconstruction analytique.** Le terme individuel exact du canal de Tchebychev est proportionnel à `−x^ρ/ρ`; le canal du comptage `li(x)` utilise des contributions appropriées telles que `Ei(ρ log x)`, avec correctifs, branche et troncature. Les sommes lissées, les termes bruts et les formes normalisées doivent avoir des types distincts (`ExactZeroSignal`, `RescaledZeroSignal`, `UnitCoefficientMode`), sans substitutions tacites. La somme infinie et son complément ne sont pas contrôlés par une expérience avec 300 zéros.
+**Mirror and ON/OFF.** The authentic mirror of `β+iT` is `1−β+iT`. It coincides with the initial member exactly when `β=1/2`. Off the line, same T and same logarithmic width `π/T`, but different phases and amplitudes. This symmetry is static; on its own it does not prove the ON stability of the successor. A complete OFF quartet is a hypothetical experiment, not a substitution of an isolated zero in the true function ζ.
 
-**Bande sans zéro et rigidité.** `ZeroFreeRegionBand` réutilise la région sans zéro inconditionnelle de `rhv3_lean` : pour `T>3`, `A/(log T)^9 < β < 1−A/(log T)^9`. Cette bande s'élargit à haute fréquence, elle ne force pas `β=1/2`. `FiniteRadialRigidity` prouve pour une somme exponentielle **finie et bornée** que les exposants positifs sont exclus ; le contrôle uniforme du complément infini manque. `GrammarWeightedG4` établit des bornes pour le canal orienté, non pour le canal commun.
+**Analytic reconstruction.** The exact individual term of the Chebyshev channel is proportional to `−x^ρ/ρ`; the counting channel `li(x)` uses appropriate contributions such as `Ei(ρ log x)`, with corrections, branch and truncation. Smoothed sums, raw terms and normalized forms must have distinct types (`ExactZeroSignal`, `RescaledZeroSignal`, `UnitCoefficientMode`), with no tacit substitutions. The infinite sum and its complement are not controlled by an experiment with 300 zeros.
 
-**Comptage et premières hauteurs.** Les certificats de rectangles de ζ établissent les premiers zéros en ligne et l'absence de membre bas jusqu'à la hauteur 28 dans les modules concernés. Un « OFF possible » après ce seuil a une fibre miroir et un profil contraints, mais aucune contradiction terminale n'est obtenue.
+**Zero-free band and rigidity.** `ZeroFreeRegionBand` reuses the unconditional zero-free region of `rhv3_lean`: for `T>3`, `A/(log T)^9 < β < 1−A/(log T)^9`. This band widens at high frequency; it does not force `β=1/2`. `FiniteRadialRigidity` proves, for a **finite and bounded** exponential sum, that positive exponents are excluded; uniform control of the infinite complement is missing. `GrammarWeightedG4` establishes bounds for the oriented channel, not for the common channel.
 
-## A2. Matrice des solutions tentées
+**Counting and first heights.** The ζ rectangle certificates establish the first zeros on the line and the absence of a low member up to height 28 in the modules concerned. A "possible OFF" beyond this threshold has a constrained mirror fibre and profile, but no terminal contradiction is obtained.
 
-| Voie | Module, TDD ou série | Résultat effectif | Obstacle terminal |
+## A2. Matrix of attempted solutions
+
+| Route | Module, TDD or series | Actual result | Terminal obstacle |
 |---|---|---|---|
-| Géométrie des contacts | E44, TangentialInversion, E367/E374, `TDD_ContactInversion` | Inversion exacte si contacts authentiques fournis | Sélection indépendante du contact |
-| Succession / fibre / miroir | Direct/Raccords, OnRegime*, HorizontalExclusion, E208–E214 | Identités d'ordre, miroir distinct, profil d'une première rupture | Admissibilité réfléchie ou exclusion de la sortie OFF |
-| Conservation de régime | `DemonstrationChain`, `OnRegimeStabilityPackage`, E350–E351 | Récurrence **conditionnelle** et contraintes d'une rupture | `β_E=1/2 ⇒ β_L=1/2` non démontré |
-| Domination de la première Tour | E218, anciennes prémisses terminales | Formulations conditionnelles, parfois RH-équivalentes | Inégalité indépendante sur le vrai reste |
-| Énergie et budgets | E216, E224–E241, E324, TDD A3 | Identités ou outils coercifs conditionnels | Construire une énergie positive et son budget arithmétique |
-| Grammaire de fenêtres | E340–E344, E353–E363 | Mots, supports et transitions calculés | Pas de borne du résidu collectif |
-| Canaux signés, Dirichlet, Abel | GrammarDwell*, GrammarWeightedG4, T1/T2 papier | Canal orienté et correction des puissances isolés | Canal commun, T1/T2 Lean, raccord `transitionSum` |
-| Formule explicite / Mellin | E365, E372 sondes, PrimePowerCorrection/Z3 envisagés | Identités et critères conditionnels | Reste `O(x^θ)` avec exposant suffisamment petit |
-| Reconstruction finie / projection | E308, E330–E336, E364–E376, Z1 | Identifiabilité limitée, calibrations et contre-tests | Projection et troncature infinies contrôlées |
-| ON/OFF synthétiques | E268–E288, E347, E369, E373, E375 | Croissance OFF, déplacement d'enveloppe et phases | Compensation collective authentique non exclue |
-| Loi de transport affine | `TDD_AuthenticTransportCore`, A1–A9 | Implications formelles et deux contre-exemples abstraits | Fonction `F(Q,e)` authentique, source issue des premiers |
-| Certification indépendante | P0–P11, `ROOT_CAUSE_MASTER_MATRIX` | Graphe de dépendances partiel | Première flèche premiers→sortie spectrale non construite |
+| Geometry of contacts | E44, TangentialInversion, E367/E374, `TDD_ContactInversion` | Exact inversion if authentic contacts are supplied | Independent selection of the contact |
+| Succession / fibre / mirror | Direct/Raccords (junctions), OnRegime*, HorizontalExclusion, E208–E214 | Order identities, distinct mirror, profile of a first break | Reflected admissibility or exclusion of the OFF exit |
+| Regime conservation | `DemonstrationChain`, `OnRegimeStabilityPackage`, E350–E351 | **Conditional** recurrence and constraints of a break | `β_E=1/2 ⇒ β_L=1/2` not proved |
+| Domination of the first Tower | E218, former terminal premises | Conditional formulations, sometimes RH-equivalent | Independent inequality on the true remainder |
+| Energy and budgets | E216, E224–E241, E324, TDD A3 | Identities or conditional coercive tools | Construct a positive energy and its arithmetic budget |
+| Grammar of windows | E340–E344, E353–E363 | Words, supports and transitions computed | No bound on the collective residual |
+| Signed channels, Dirichlet, Abel | GrammarDwell*, GrammarWeightedG4, paper T1/T2 | Oriented channel and correction of isolated powers | Common channel, Lean T1/T2, junction (raccord) `transitionSum` |
+| Explicit formula / Mellin | E365, E372 probes, PrimePowerCorrection/Z3 envisaged | Identities and conditional criteria | Remainder `O(x^θ)` with a sufficiently small exponent |
+| Finite reconstruction / projection | E308, E330–E336, E364–E376, Z1 | Limited identifiability, calibrations and counter-tests | Infinite projection and truncation under control |
+| Synthetic ON/OFF | E268–E288, E347, E369, E373, E375 | OFF growth, envelope shift and phases | Authentic collective compensation not excluded |
+| Affine transport law | `TDD_AuthenticTransportCore`, A1–A9 | Formal implications and two abstract counterexamples | Authentic function `F(Q,e)`, source coming from the primes |
+| Independent certification | P0–P11, `ROOT_CAUSE_MASTER_MATRIX` | Partial dependency graph | First arrow primes→spectral output not constructed |
 
-### Essais A1–A9 (transport authentique)
+### Trials A1–A9 (authentic transport)
 
-| Essai | Preuve/contre-modèle | Donnée nouvelle manquante |
+| Trial | Proof/counter-model | New missing data |
 |---|---|---|
-| A1 | `j=Ae+b`, `e=0` ⟹ `j=b` | Produire `b` sans définir le défaut |
-| A2 | `j=F(Q,e)`, `e=0`, `F(Q,0)=0` ⟹ `j=0` | Construire `F` depuis `Q` arithmétique |
-| A3 | `j²≤V≤Ae²`, `e=0` ⟹ `j=0` | Énergie arithmétique indépendante |
-| A4 | Source strictement absorbée avec `q<1` ⟹ nul | Estimation authentique `q<1` |
-| A5 | Bornes arbitrairement petites pour **le même** `j` ⟹ zéro | Reste uniformément contrôlé |
-| A6 | Transport impair ⟹ fixe zéro | Parité exacte du certificat, attention `J` non impair |
-| A7 | Chemin `0,1,0` | Un bilan cyclique nul ne suffit pas |
-| A8 | Fibre miroir `{−1,1}` | Invariance de fibre ≠ membre fixé |
-| A9 | Successeur OFF d'un ON ⟹ réfléchi non consécutif | Admissibilité du reflet, déjà proche du verrou |
+| A1 | `j=Ae+b`, `e=0` ⟹ `j=b` | Produce `b` without defining the defect |
+| A2 | `j=F(Q,e)`, `e=0`, `F(Q,0)=0` ⟹ `j=0` | Construct `F` from arithmetic `Q` |
+| A3 | `j²≤V≤Ae²`, `e=0` ⟹ `j=0` | Independent arithmetic energy |
+| A4 | Strictly absorbed source with `q<1` ⟹ zero | Authentic estimate `q<1` |
+| A5 | Arbitrarily small bounds for **the same** `j` ⟹ zero | Uniformly controlled remainder |
+| A6 | Odd transport ⟹ fixes zero | Exact parity of the certificate, caution: `J` not odd |
+| A7 | Path `0,1,0` | A zero cyclic balance is not enough |
+| A8 | Mirror fibre `{−1,1}` | Fibre invariance ≠ fixed member |
+| A9 | OFF successor of an ON ⟹ non-consecutive reflected | Admissibility of the reflection, already close to the lock |
 
-Ces neuf essais compilent individuellement selon les journaux de `authentic_transport_causality`; ils ne ferment **aucune obligation arithmétique terminale**.
+These nine trials compile individually according to the logs of `authentic_transport_causality`; they close **no terminal arithmetic obligation**.
 
-## A3. Registre des expériences : objectifs et résultats documentés
+## A3. Experiment registry: documented objectives and results
 
-Le registre complet des **107 dossiers** `formalization/RHV6Fresh/experiments/` (dans le dépôt de recherche privé ; le dépôt public n'en contient que la sélection E400–E477) est organisé ci-dessous par vagues ; les rapports de chaque dossier restent la source de détails, de chiffres et d'éventuelles rectifications.
+The full registry of the **107 folders** of `formalization/RHV6Fresh/experiments/` (in the private research repository; the public repository contains only the selection E400–E477) is organized below by waves; the reports of each folder remain the source of details, figures and any rectifications.
 
-| Séries | But commun | Résultats et réserves |
+| Series | Common aim | Results and reservations |
 |---|---|---|
-| E076–E116 (scripts directement sous `experiments/`) | Phase, Tours, contacts, miroir et grammaire | Tests géométriques et cas OFF ; inversion et progression ne fournissent pas la cause de ON. |
-| E117–E196 | Énergies, contacts, incidences, propagation et inversions | Plusieurs contre-tests et corrections de schémas ; lire les `*_output.md`. |
-| E197–E211 | Fenêtres, fibres, li(x), Tour collective, premier zéro | Décomposition des contributions et diagnostic du passage entrant/sortant. |
-| E212–E244 | Regime ON, jonctions, harmonie et correction collective | Le raccord arithmétique sur le reste demeure ouvert ; fenêtres finies non suffisantes. |
-| E264–E300 | Tours individuelles, sensibilité ON/OFF, fenêtres et synchronisation | 51 images/PDF dans la série ; témoins finis, non des certificats RH. |
-| E301–E313 | Audit contradictoire, 3 Tours, battements, non-compensation, modes | Séparation du comptage exact et des signaux tronqués. |
-| E321–E336 | Reconstruction autour de li(x), résultats 3/10 zéros, inverse et ancrage | Inversion ≠ identification spectrale autonome. |
-| E337–E352 | Plan de comptage, grammaire, rencontres, stabilité, OFF nouvelle hauteur | Plusieurs pistes requalifiées ; conservation ON non établie. |
-| E353–E363 | Grammaire exhaustive de 500 000 écarts en 100 fenêtres | 994 971 mots distincts de longueur 2–12 rapportés, 7 compositions de classes contre 8 chemins d'états (projection non injective) ; certaines fins de listes du calcul `meta_graph` omises historiquement. |
-| E364–E370 (scripts racine) | 36 hauteurs fixes, `ψ` exact, récupération de fréquences, inverse contacts, OFF | Fenêtres finies ; `β` non identifiable depuis signal ON normalisé seul ; pas de borne du reste. |
-| E371–E376 (scripts racine) | Détection, calibration, appariement, inversion contacts, quartet synthétique | Pics de fréquences ≠ nouveaux zéros ; intervalle d'erreur non certifié ; aucune preuve d'identifiabilité. |
-| **E371 — Archétype B (dossier distinct)** | Décomposition des séjours jusqu'à `10^7` | `D=−33` à `10^6`, `D=−189` à `10^7`, maximum `|D|=362`, observation seulement. |
-| **E372 — ClosureAttempts (dossier distinct)** | Six sondes de fermeture terminale | P1 bande/gel compatibles ; P2 multiplicité forte absente ; P3 finitude vs reste infini ; P4/P5 gain d'exposant manquant ; P6 règle de jonction RH-équivalente. |
-| **E373 — WeightedGrammarChannels (dossier distinct)** | 300 zéros et poids `−2Re((q^ρ−p^ρ)/ρ)` ; OFF synthétique | Identités pondérées confirmées ; variation OFF voisine d'un mode commun ; **les anciens chiffres du reste direct sont invalidés jusqu'à recalcul**, en raison des puissances de 2 et 3 omises avant correction du script. |
-| E2M (24 octobre) | Superposition zéros et premiers | 2 001 052 ordinates ; 1 912 998 intervalles de hauteurs sans transition et 88 055 transitions sur l'axe brut ; **mapping causal rétracté**. |
-| Authentic transport (25 octobre) | Transports homogène/affine/énergie/absorption/miroir | A1–A9 sont conditionnels ou contre-modèles ; zéro fermeture nouvelle. |
+| E076–E116 (scripts directly under `experiments/`) | Phase, Towers, contacts, mirror and grammar | Geometric tests and OFF cases; inversion and progression do not supply the cause of ON. |
+| E117–E196 | Energies, contacts, incidences, propagation and inversions | Several counter-tests and corrections of schemes; read the `*_output.md` files. |
+| E197–E211 | Windows, fibres, li(x), collective Tower, first zero | Decomposition of contributions and diagnosis of the incoming/outgoing passage. |
+| E212–E244 | ON regime, junctions, harmony and collective correction | The arithmetic junction (raccord) on the remainder remains open; finite windows not sufficient. |
+| E264–E300 | Individual Towers, ON/OFF sensitivity, windows and synchronization | 51 images/PDFs in the series; finite witnesses, not RH certificates. |
+| E301–E313 | Adversarial audit, 3 Towers, beats, non-compensation, modes | Separation of the exact count from truncated signals. |
+| E321–E336 | Reconstruction around li(x), 3/10-zero results, inverse and anchoring | Inversion ≠ autonomous spectral identification. |
+| E337–E352 | Counting plan, grammar, meetings, stability, OFF at a new height | Several leads requalified; ON conservation not established. |
+| E353–E363 | Exhaustive grammar of 500,000 gaps in 100 windows | 994,971 distinct words of length 2–12 reported, 7 class compositions against 8 state paths (non-injective projection); some list endings of the `meta_graph` computation historically omitted. |
+| E364–E370 (root scripts) | 36 fixed heights, exact `ψ`, frequency recovery, inverse contacts, OFF | Finite windows; `β` not identifiable from the normalized ON signal alone; no bound on the remainder. |
+| E371–E376 (root scripts) | Detection, calibration, matching, inversion of contacts, synthetic quartet | Frequency peaks ≠ new zeros; error interval not certified; no proof of identifiability. |
+| **E371 — Archetype B (separate folder)** | Decomposition of dwells up to `10^7` | `D=−33` at `10^6`, `D=−189` at `10^7`, maximum `|D|=362`, observation only. |
+| **E372 — ClosureAttempts (separate folder)** | Six terminal-closure probes | P1 band/freeze compatible; P2 strong multiplicity absent; P3 finiteness vs infinite remainder; P4/P5 exponent gain missing; P6 junction (raccord) rule RH-equivalent. |
+| **E373 — WeightedGrammarChannels (separate folder)** | 300 zeros and weights `−2Re((q^ρ−p^ρ)/ρ)`; synthetic OFF | Weighted identities confirmed; OFF variation close to a common mode; **the old figures for the direct remainder are invalidated until recomputed**, because of the powers of 2 and 3 omitted before the script was corrected. |
+| E2M (24 October) | Superposition of zeros and primes | 2,001,052 ordinates; 1,912,998 height intervals without transition and 88,055 transitions on the raw axis; **causal mapping retracted**. |
+| Authentic transport (25 October) | Homogeneous/affine/energy/absorption/mirror transports | A1–A9 are conditional or counter-models; zero new closure. |
 
-Les **190 sous-dossiers directs de `research/`** archivent les campagnes historiques (E44, `tour10*`, rétrospectives et preuves de concept). Les **38 familles de `validation/`** contrôlent P4/zêta, KVM8, alignements et ablations. Leurs README originaux restent disponibles et leurs résultats ne sont pas convertis en théorèmes par cette consolidation.
+The **190 direct subfolders of `research/`** archive the historical campaigns (E44, `tour10*`, retrospectives and proofs of concept). The **38 families of `validation/`** check P4/zeta, KVM8, alignments and ablations. Their original READMEs remain available and their results are not converted into theorems by this consolidation.
 
-### Index des ensembles d'expériences
+### Index of experiment sets
 
-- **E197–E244** : `e197_window_comparison`, `e198_transmissions_300`, `e199_increment_matrix_fibers`, `e200_arrival_fiber_hypotheses`, `e201_first_zero_contact_comparison`, `e202_cell_passage_restitution`, `e203_transition_rigidity_raccord`, `e204_three_towers_li_field`, `e205_counting_field`, `e206_prime_gap_ledger`, `e207_collective_contact_geometry`, `e208_on_regime_anchor`, `e209_regime_transport`, `e210_first_regime_change`, `e211_on_regime_induction_probe`, `e212_archaeology`, `e213_mixed_fibers`, `e214_tower_transport`, `e215_window_collective`, `e216_energy_raccords`, `e217_missing_property_probes`, `e218_global_tower_dominance`, `e219_prime_gap_zero_dna`, `e220_counting_channel_gap_contributions`, `e221_collective_compatibility`, `e222_frequency_extraction`, `e223_global_gap_invariant`, `e224_harmonic_restoring_law`, `e225_mirror_harmonic_balance`, `e226_xi_kernel_spectral_stability`, `e227_functional_equation_restoring_constraint`, `e228_zero_mode_stability`, `e229_prime_gap_harmonic_response`, `e230_terminal_closure_challenge`, `e231_contact_sign_closure`, `e232_two_gap_charge_closure`, `e233_six_beats_closure`, `e234_grammar_noncompensation`, `e235_two_gap_determinant`, `e236_raccord_additive_rigidity`, `e237_first_off_minimal_compensation`, `e238_exact_counting_closure`, `e239_first_zero_causality`, `e240_harmonic_current`, `e241_tower_coupling`, `e242_exact_signal_audit`, `e243_gap_synchronization`, `e244_amplitude_stable_sync`. Dossiers transversaux : `e224_e230_compiler_probe`, `e231_e238_euler_product_route`, `e231_e238_lean_closure_probes`.
-- **E264–E352** : `E264_E300_LocalSynchronization`, `E301_AuditContradictoire`, `E302_THREE_ON_TRUE_3D_SYNCHRONIZATION`, `E303_THREE_ON_COLLECTIVE_BEATS`, `E305_FixedGapRaccords`, `E308_PrimeOnlyRadialRigidity`, `E309_PerGapSynchronizationDistinctHeights`, `E310_PrimeMusicAmplitudeStability`, `E311_SuccessiveModeExtraction`, `E312_SignalProgressionTranslation`, `E313_ConstantAmplitudeNeed`, `E321_GeneratedFrequencyMeetingPoints`, `E322_CountingReconstructionAroundLi`, `E323_SynchronizationMatrix`, `E324_ImposedAmplitudeNonCompensation`, `E325_JointGapTriple`, `E326_GoalAudit`, `E327_PrimeQuantitativeGrammar`, `E328_ThreeZerosAroundLi`, `E329_PrimeGapWindowsThreeZeros`, `E330_ThreeZeroResultant`, `E331_TenZeroResultant`, `E332_SuccessiveSumsSameGaps`, `E333_CountingFieldArchitecture`, `E334_InversePrimeSpectralReconstruction`, `E335_FirstZeroArithmeticAnchor`, `E336_LocalGlobalGapMatrix`, `E337_CountingPlane`, `E338_PrimeToCountingPlane`, `E340_GrammarWindow`, `E341_GrammarWindowQualification`, `E342_PrimeInversionThreeZeros`, `E343_GapInverseCountingPlane`, `E344_GrammarOperator`, `E345_HarmonicCollaborationFiveZeros`, `E345_E346_STABLE_TOWERS_REBUILD`, `E346_BilateralHarmonicRaccord`, `E347_OFF_NewHeight_E345_E346`, `E348_InequalityCandidates`, `E349_TwoMeetingInversion5000Gaps`, `E350_GrammarSpectralStability`, `E351_GapDemandStability`, `E352_ProjectionOnKnownZeros`.
-- **Autres registres actifs** : `E371_ArchetypeB_Anatomy`, `E372_ClosureAttempts_ZeroFreeBand`, `E373_WeightedGrammarChannels`, `authentic_transport_causality`, `causal_advanced_validation`, `root_cause_validation`, `d1012_causal_validation`, `project_audit`, `audit_semantique`. Les programmes E353–E376 sont également directement sous le dossier `experiments/`.
+- **E197–E244**: `e197_window_comparison`, `e198_transmissions_300`, `e199_increment_matrix_fibers`, `e200_arrival_fiber_hypotheses`, `e201_first_zero_contact_comparison`, `e202_cell_passage_restitution`, `e203_transition_rigidity_raccord`, `e204_three_towers_li_field`, `e205_counting_field`, `e206_prime_gap_ledger`, `e207_collective_contact_geometry`, `e208_on_regime_anchor`, `e209_regime_transport`, `e210_first_regime_change`, `e211_on_regime_induction_probe`, `e212_archaeology`, `e213_mixed_fibers`, `e214_tower_transport`, `e215_window_collective`, `e216_energy_raccords`, `e217_missing_property_probes`, `e218_global_tower_dominance`, `e219_prime_gap_zero_dna`, `e220_counting_channel_gap_contributions`, `e221_collective_compatibility`, `e222_frequency_extraction`, `e223_global_gap_invariant`, `e224_harmonic_restoring_law`, `e225_mirror_harmonic_balance`, `e226_xi_kernel_spectral_stability`, `e227_functional_equation_restoring_constraint`, `e228_zero_mode_stability`, `e229_prime_gap_harmonic_response`, `e230_terminal_closure_challenge`, `e231_contact_sign_closure`, `e232_two_gap_charge_closure`, `e233_six_beats_closure`, `e234_grammar_noncompensation`, `e235_two_gap_determinant`, `e236_raccord_additive_rigidity`, `e237_first_off_minimal_compensation`, `e238_exact_counting_closure`, `e239_first_zero_causality`, `e240_harmonic_current`, `e241_tower_coupling`, `e242_exact_signal_audit`, `e243_gap_synchronization`, `e244_amplitude_stable_sync`. Cross-cutting folders: `e224_e230_compiler_probe`, `e231_e238_euler_product_route`, `e231_e238_lean_closure_probes`.
+- **E264–E352**: `E264_E300_LocalSynchronization`, `E301_AuditContradictoire`, `E302_THREE_ON_TRUE_3D_SYNCHRONIZATION`, `E303_THREE_ON_COLLECTIVE_BEATS`, `E305_FixedGapRaccords`, `E308_PrimeOnlyRadialRigidity`, `E309_PerGapSynchronizationDistinctHeights`, `E310_PrimeMusicAmplitudeStability`, `E311_SuccessiveModeExtraction`, `E312_SignalProgressionTranslation`, `E313_ConstantAmplitudeNeed`, `E321_GeneratedFrequencyMeetingPoints`, `E322_CountingReconstructionAroundLi`, `E323_SynchronizationMatrix`, `E324_ImposedAmplitudeNonCompensation`, `E325_JointGapTriple`, `E326_GoalAudit`, `E327_PrimeQuantitativeGrammar`, `E328_ThreeZerosAroundLi`, `E329_PrimeGapWindowsThreeZeros`, `E330_ThreeZeroResultant`, `E331_TenZeroResultant`, `E332_SuccessiveSumsSameGaps`, `E333_CountingFieldArchitecture`, `E334_InversePrimeSpectralReconstruction`, `E335_FirstZeroArithmeticAnchor`, `E336_LocalGlobalGapMatrix`, `E337_CountingPlane`, `E338_PrimeToCountingPlane`, `E340_GrammarWindow`, `E341_GrammarWindowQualification`, `E342_PrimeInversionThreeZeros`, `E343_GapInverseCountingPlane`, `E344_GrammarOperator`, `E345_HarmonicCollaborationFiveZeros`, `E345_E346_STABLE_TOWERS_REBUILD`, `E346_BilateralHarmonicRaccord`, `E347_OFF_NewHeight_E345_E346`, `E348_InequalityCandidates`, `E349_TwoMeetingInversion5000Gaps`, `E350_GrammarSpectralStability`, `E351_GapDemandStability`, `E352_ProjectionOnKnownZeros`.
+- **Other active registries**: `E371_ArchetypeB_Anatomy`, `E372_ClosureAttempts_ZeroFreeBand`, `E373_WeightedGrammarChannels`, `authentic_transport_causality`, `causal_advanced_validation`, `root_cause_validation`, `d1012_causal_validation`, `project_audit`, `audit_semantique`. The programmes E353–E376 are also directly under the `experiments/` folder.
 
-## A4. Index des TDD et tests formels
+## A4. Index of TDD and formal tests
 
-**34 fichiers Lean contenant TDD dans leur nom ont été identifiés** dans le dépôt lors de l'inventaire Git (les logs et plans TDD ne sont pas compris). Registre primaire actif :
+**34 Lean files containing TDD in their name were identified** in the repository during the Git inventory (TDD logs and plans are not included). Active primary registry:
 ```text
 TDD_ArithmeticCandidate.lean          TDD_ArithmeticFrequencyNecessity.lean
 TDD_ArithmeticRefinement.lean         TDD_AstraDivisorMass.lean
@@ -280,52 +292,52 @@ TDD_ValidatedZeroMatching.lean       TDD_WindowGrammarStability.lean
 authentic_transport_causality/TDD_AuthenticTransportCore.lean
 authentic_transport_causality/TDD_TransportReductionAudit.lean
 ```
-Ces 26 fichiers sont dans `formalization/RHV6Fresh/experiments/` (les deux derniers dans le sous-dossier). Les 8 autres sont dans `formalization/rh_gap_criterion/` et `research/tdd_true_off_zeta_only_20260913/` : séries `Round26FSFiberedPartnershipTDDRepair`, `Round27EFiberedPartnershipTDD`, `Round27GTwoBaseReflectedLaurentTDD`, `SemanticTransportClosure20260821/{FinalConditionalFirstReturnClosureTDD,ProgressiveFiberedFirstReturnClosureP2TDD,ProgressiveFiberedFirstReturnClosureP3TDD,ProgressiveFiberedFirstReturnClosureTDD}`, `TrueOffZetaOnlyTDD`.
+These 26 files are in `formalization/RHV6Fresh/experiments/` (the last two in the subfolder). The other 8 are in `formalization/rh_gap_criterion/` and `research/tdd_true_off_zeta_only_20260913/`: series `Round26FSFiberedPartnershipTDDRepair`, `Round27EFiberedPartnershipTDD`, `Round27GTwoBaseReflectedLaurentTDD`, `SemanticTransportClosure20260821/{FinalConditionalFirstReturnClosureTDD,ProgressiveFiberedFirstReturnClosureP2TDD,ProgressiveFiberedFirstReturnClosureP3TDD,ProgressiveFiberedFirstReturnClosureTDD}`, `TrueOffZetaOnlyTDD`.
 
-Catégories de tests : **arithmétique/fréquence**, **grammaire/fenêtres**, **contact/inversion**, **reste critique et intégration**, **signaux exacts/projections**, **transport/mirroir**, **causalité/diviseurs/masses**, **routes historiques de première rupture**. Les résultats `project_audit/tdd_results.json`, `project_audit/README.md` et `authentic_transport_causality/BUILD_AND_AXIOMS.md` sont les sources des vérifications ciblées. Un PASS de TDD ne signifie pas que son hypothèse conditionnelle est vraie pour les véritables premiers.
+Test categories: **arithmetic/frequency**, **grammar/windows**, **contact/inversion**, **critical remainder and integration**, **exact signals/projections**, **transport/mirror**, **causality/divisors/masses**, **historical routes of first break**. The results `project_audit/tdd_results.json`, `project_audit/README.md` and `authentic_transport_causality/BUILD_AND_AXIOMS.md` are the sources for the targeted verifications. A TDD PASS does not mean that its conditional hypothesis is true for the actual primes.
 
-## A5. Atlas des graphiques et figures
+## A5. Atlas of graphs and figures
 
-L'inventaire de l'arbre Git au 26 octobre recense **450 fichiers** sous extensions `.png`, `.svg`, `.jpg`, `.jpeg`, `.webp`, `.pdf` (certaines planches ont les deux formats PNG/SVG ; ne pas compter les deux comme expériences indépendantes). L'existence est vérifiée par l'arbre Git ; la correction physique de chaque tracé n'a **pas** été contrôlée image par image.
+The inventory of the Git tree as of 26 October lists **450 files** with the extensions `.png`, `.svg`, `.jpg`, `.jpeg`, `.webp`, `.pdf` (some plates exist in both PNG and SVG; do not count both as independent experiments). Existence is verified by the Git tree; the physical correctness of each plot was **not** checked image by image.
 
-| Galerie / dossier sous `formalization/RHV6Fresh/experiments/` | Fichiers visuels | Sujet |
+| Gallery / folder under `formalization/RHV6Fresh/experiments/` | Visual files | Subject |
 |---|---:|---|
-| `E264_E300_LocalSynchronization/` | 51 | Tours, ON/OFF, sensibilité, contacts, compensation |
-| `E302_THREE_ON_TRUE_3D_SYNCHRONIZATION/` | 18 | 3 Tours, contacts, li, écarts et reconstruction |
-| `E303_THREE_ON_COLLECTIVE_BEATS/` | 18 | Battements, superposition, comptage |
-| `e243_gap_synchronization/` | 14 | Contributions par écart |
-| `E347_OFF_NewHeight_E345_E346/` | 13 | OFF à nouvelle hauteur et contrôles |
-| `e207_collective_contact_geometry/` | 12 | Géométrie des contacts |
-| `e244_amplitude_stable_sync/` | 10 | Amplitude ON stable et synchronisation |
-| `E334_InversePrimeSpectralReconstruction/` | 9 | Reconstruction inverse |
-| `E331_TenZeroResultant/` | 8 | Superposition de dix zéros |
-| `authentic_transport_causality/` | 8 | **Schémas SVG**, pas de courbes quantitatives |
-| `e208_on_regime_anchor/` | 8 | Ancrage ON |
-| `e242_exact_signal_audit/` | 8 | Audit du signal exact |
-| `E333_CountingFieldArchitecture/` | 7 | Architecture du comptage |
-| `E342_PrimeInversionThreeZeros/` | 7 | Inversion trois zéros |
-| `E345_E346_STABLE_TOWERS_REBUILD/` | 7 | Reconstruction de Tours stables |
-| `e199_increment_matrix_fibers/` | 7 | Fibres et matrices |
-| `e219_prime_gap_zero_dna/` | 7 | Grammaire des écarts et signatures |
-| `E345_HarmonicCollaborationFiveZeros/` | 6 | Cinq zéros |
+| `E264_E300_LocalSynchronization/` | 51 | Towers, ON/OFF, sensitivity, contacts, compensation |
+| `E302_THREE_ON_TRUE_3D_SYNCHRONIZATION/` | 18 | 3 Towers, contacts, li, gaps and reconstruction |
+| `E303_THREE_ON_COLLECTIVE_BEATS/` | 18 | Beats, superposition, counting |
+| `e243_gap_synchronization/` | 14 | Per-gap contributions |
+| `E347_OFF_NewHeight_E345_E346/` | 13 | OFF at a new height and checks |
+| `e207_collective_contact_geometry/` | 12 | Geometry of contacts |
+| `e244_amplitude_stable_sync/` | 10 | Stable ON amplitude and synchronization |
+| `E334_InversePrimeSpectralReconstruction/` | 9 | Inverse reconstruction |
+| `E331_TenZeroResultant/` | 8 | Superposition of ten zeros |
+| `authentic_transport_causality/` | 8 | **SVG diagrams**, no quantitative curves |
+| `e208_on_regime_anchor/` | 8 | ON anchoring |
+| `e242_exact_signal_audit/` | 8 | Audit of the exact signal |
+| `E333_CountingFieldArchitecture/` | 7 | Architecture of the counting field |
+| `E342_PrimeInversionThreeZeros/` | 7 | Three-zero inversion |
+| `E345_E346_STABLE_TOWERS_REBUILD/` | 7 | Reconstruction of stable Towers |
+| `e199_increment_matrix_fibers/` | 7 | Fibres and matrices |
+| `e219_prime_gap_zero_dna/` | 7 | Grammar of gaps and signatures |
+| `E345_HarmonicCollaborationFiveZeros/` | 6 | Five zeros |
 | `e198_transmissions_300/` | 6 | 300 transmissions |
-| `e205_counting_field/` | 6 | Champ de comptage |
-| `e209_regime_transport/` | 6 | Régime et transport |
-| Autres dossiers et fichiers directs | Complément jusqu'à 450 | Voir chemins et README individuels |
+| `e205_counting_field/` | 6 | Counting field |
+| `e209_regime_transport/` | 6 | Regime and transport |
+| Other folders and direct files | Remainder up to 450 | See individual paths and READMEs |
 
-Exemples de tracés nommés : `E264_A1_zeros_1_3_tours_individuelles`, `E268_fig_ON_vs_OFF_T1`, `E270_fig_contacts_contributions`, `E302/fig3_li_signaux`, `E303/fig7_comptage`, `e115_figA_analytic_plane_scaled`, `e115_figB_tower_log_view`, `e115_figC_normalized_axes`, `e364_e370_synchronized_views.png`, `e371_e376_reconstruction_audit.png`. Chaque chemin doit être interprété avec sa notice de campagne et ses hypothèses. **Une Tour ON normalisée peut être dessinée avec amplitude fixe ; le terme de comptage exact n'a pas la même enveloppe.** Les représentations circulaires isolées ne décrivent pas à elles seules le champ autour de `li(x)`.
+Examples of named plots: `E264_A1_zeros_1_3_tours_individuelles`, `E268_fig_ON_vs_OFF_T1`, `E270_fig_contacts_contributions`, `E302/fig3_li_signaux`, `E303/fig7_comptage`, `e115_figA_analytic_plane_scaled`, `e115_figB_tower_log_view`, `e115_figC_normalized_axes`, `e364_e370_synchronized_views.png`, `e371_e376_reconstruction_audit.png`. Each path must be interpreted together with its campaign notice and its hypotheses. **A normalized ON Tower can be drawn with fixed amplitude; the exact counting term does not have the same envelope.** Isolated circular representations do not on their own describe the field around `li(x)`.
 
 
-## A8. Index exhaustifs (dans le dépôt de recherche privé)
+## A8. Exhaustive indexes (in the private research repository)
 
-Les trois registres suivants (`docs/RH_FIGURES_ATLAS_20261026.md`, `docs/RH_EXPERIMENTS_TDD_READMES_INDEX_20261026.md`, `docs/RH_E_NUMBERED_SCRIPTS_INDEX_20261026.md`) sont dans le dépôt de recherche privé et ne sont pas publiés ici.
+The following three registries (`docs/RH_FIGURES_ATLAS_20261026.md`, `docs/RH_EXPERIMENTS_TDD_READMES_INDEX_20261026.md`, `docs/RH_E_NUMBERED_SCRIPTS_INDEX_20261026.md`) are in the private research repository and are not published here.
 
-## A9. Carte de navigation
+## A9. Navigation map
 
-- [README du dépôt](README.md) — point d'entrée.
-- [README du build RHV6Fresh](formalization/RHV6Fresh/README.md) — commandes et statut.
-- [Périmètre de publication](PUBLICATION_SCOPE.md) — ce qui est inclus et exclu.
-- [Audit de solution](formalization/RHV6Fresh/AUDIT_SOLUTION_20261005.md) ; [Audit de fidélité aux maîtres](formalization/RHV6Fresh/AUDIT_FIDELITE_RHV6_vs_MAITRES.md).
-- Dans le dépôt de recherche privé seulement : README des formalizations, des docs, des recherches, du code Python, des validations.
+- [Repository README](README.md) — entry point.
+- [README of the RHV6Fresh build](formalization/RHV6Fresh/README.md) — commands and status.
+- [Publication scope](PUBLICATION_SCOPE.md) — what is included and excluded.
+- [Solution audit](formalization/RHV6Fresh/AUDIT_SOLUTION_20261005.md); [Audit of fidelity to the master documents](formalization/RHV6Fresh/AUDIT_FIDELITE_RHV6_vs_MAITRES.md).
+- In the private research repository only: READMEs of the formalizations, the docs, the research, the Python code, the validations.
 
-**Provenance et fidélité :** cette synthèse résulte de l'inventaire du tree `main` (8 698 fichiers, 117 README, 107 sous-dossiers d'expériences RHV6Fresh, 450 documents visuels, 34 fichiers Lean TDD par nom) et de la lecture des README principaux et audits ciblés. Elle n'implique **ni réexécution des 107 campagnes, ni examen individuel des 450 figures, ni certification nouvelle du build**. Les résultats divergents doivent être arbitrés par la source expérimentale corrigée, la signature Lean et le journal d'exécution, puis éventuellement par un rerun.
+**Provenance and fidelity:** this synthesis results from the inventory of the `main` tree (8,698 files, 117 READMEs, 107 RHV6Fresh experiment subfolders, 450 visual documents, 34 Lean TDD files by name) and from reading the main READMEs and targeted audits. It implies **neither a rerun of the 107 campaigns, nor an individual examination of the 450 figures, nor any new certification of the build**. Divergent results must be arbitrated by the corrected experimental source, the Lean signature and the execution log, and then possibly by a rerun.

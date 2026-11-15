@@ -1,13 +1,15 @@
-# E419 — Raccordement avec la grammaire première (pré-enregistrée le 2026-11-03)
+# E419 — Junction with the prime grammar (pre-registered on 2026-11-03)
 
-**Question centrale.** L'accumulation collective impose-t-elle une contrainte supplémentaire au raccord entre deux Tours
-successives, ou reproduit-elle une identité spectrale déjà connue ?
+> Français : [README.fr.md](README.fr.md)
 
-**Objets réutilisés.** Rencontre = p_{n+1} (fin de l'écart), passage = cellule d'un membre, contacts authentiques =
-passages sur l'axe (`contact_is_axis_passage`), accumulation sur l'écart = de p_n + ½ à p_{n+1} + ½.
+**Central question.** Does the collective accumulation impose an additional constraint on the junction between two successive
+Towers, or does it reproduce an already known spectral identity?
 
-**Mesures.** (1) accumulation brute par écart (2 001 052 zéros, 167 écarts p ≤ 1000) contre Σ Λ sur l'écart ; (2) indépendance
-du découpage (contacts propres, contacts d'une autre Tour, aucun contact) ; (3) sensibilité radiale par écart (quartet OFF au
-rang 2000) contre le résidu de troncature ; (4) compte d'information : une valeur par écart contre 2·2 001 052 paramètres.
+**Objects reused.** Meeting = p_{n+1} (end of the gap), passage = cell of a member, authentic contacts =
+passages on the axis (`contact_is_axis_passage`), accumulation over the gap = from p_n + ½ to p_{n+1} + ½.
 
-**Classification attendue (§19 de la mission), à démontrer autant que possible.** Voir `RESULTS.md` et le rapport maître.
+**Measures.** (1) raw accumulation per gap (2,001,052 zeros, 167 gaps p ≤ 1000) against Σ Λ over the gap; (2) independence
+of the partition (own contacts, contacts of another Tower, no contact); (3) radial sensitivity per gap (OFF quartet at
+rank 2000) against the truncation residual; (4) information count: one value per gap against 2·2,001,052 parameters.
+
+**Expected classification (§19 of the mission), to be demonstrated as far as possible.** See `RESULTS.md` and the master document.

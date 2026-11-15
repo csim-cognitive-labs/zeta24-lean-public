@@ -1,39 +1,41 @@
-# E433 — Le bilan de la paire sur une série de pas consécutifs : ce que le complément doit absorber (2026-11-04)
+# E433 — The balance of the pair over a series of consecutive steps: what the complement must absorb (2026-11-04)
 
-Expérience de compilation seule (aucune mesure numérique ; aucun jumeau requis). Demande de l'auteur : « continues »,
-après E432 dont le chaînon manquant est « le complément ne peut pas absorber, sur la série des pas, le surplus intégré
-de la paire ». Directive : travailler sur une SÉRIE d'écarts, jamais un seul ; fréquence avant hauteur.
+> Français : [README.fr.md](README.fr.md)
 
-## Question posée (avant toute compilation)
-Sur une fenêtre de `m` pas consécutifs à partir de `a ≥ 2`, que vaut exactement la somme des incréments du complément
-de la paire, et par quels points la paire y entre-t-elle ?
-Attendu (écrit avant exécution) :
-1. la somme des incréments de tout paquet sur la fenêtre se télescope en deux pas locaux, celui de la fin moins celui
-   du début (« effondrement aux bords » : les pas intérieurs de la paire s'annulent exactement sur la série) ;
-2. la somme des incréments du reste exact sur la fenêtre vaut la somme des poids de von Mangoldt des points atteints
-   moins la variation du pas du fond ;
-3. donc la somme du complément sur la fenêtre = contenu arithmétique de la fenêtre − (pas local de la paire à la fin −
-   pas local au début) ; la paire n'entre que par la primitive de ses quatre membres évaluée aux deux bords ;
-4. pour la paire miroir (cas (a)), le pas local a une forme close : primitive `−m·x·Tour/(ρ+1)` des quatre membres ;
-   la norme du membre miroir de cette primitive croît comme `x^{2−β}/(‖ρ'‖·‖ρ'+1‖)`.
+Compilation-only experiment (no numerical measurement; no twin required). Author's request: "continue",
+after E432, whose missing link is "the complement cannot absorb, over the series of steps, the integrated surplus
+of the pair". Directive: work on a SERIES of gaps, never a single one; frequency before height.
 
-## Protocole
-1. Pré-enregistrer (commit) avant la première compilation.
-2. Sondes TDD dans `SeriesBalanceProbe_SCRATCH.lean` (non versionné, supprimé après capture ; sorties exactes dans
+## Question posed (before any compilation)
+Over a window of `m` consecutive steps starting from `a ≥ 2`, what exactly is the sum of the increments of the complement
+of the pair, and through which points does the pair enter?
+Expected (written before execution):
+1. the sum of the increments of any packet over the window telescopes into two local steps, that of the end minus that of
+   the start ("collapse at the edges": the interior steps of the pair cancel exactly over the series);
+2. the sum of the increments of the exact remainder over the window equals the sum of the von Mangoldt weights of the points reached
+   minus the variation of the background step;
+3. hence the sum of the complement over the window = arithmetic content of the window − (local step of the pair at the end −
+   local step at the start); the pair enters only through the primitive of its four members evaluated at the two edges;
+4. for the mirror pair (case (a)), the local step has a closed form: primitive `−m·x·Tower/(ρ+1)` of the four members;
+   the norm of the mirror member of this primitive grows like `x^{2−β}/(‖ρ'‖·‖ρ'+1‖)`.
+
+## Protocol
+1. Pre-register (commit) before the first compilation.
+2. TDD probes in `SeriesBalanceProbe_SCRATCH.lean` (unversioned, deleted after capture; exact outputs in
    `logs/probe_attempt*.txt`).
-3. Module isolé `Terminal/PacketSeriesBalance.lean` (non ajouté à `RHV6Fresh.lean`) : points 1–4.
-   Si le compilateur demande davantage que les objets listés, consigner le but exact et ne pas insister.
-4. Deux tentatives de compilation au plus pour le module (`logs/lean_attempt{1,2}.txt`) ; aucune hypothèse posée ;
-   aucun `sorry` ; `lake build RHV6Fresh` vert après.
+3. Isolated module `Terminal/PacketSeriesBalance.lean` (not added to `RHV6Fresh.lean`): points 1–4.
+   If the compiler asks for more than the objects listed, record the exact goal and do not insist.
+4. At most two compilation attempts for the module (`logs/lean_attempt{1,2}.txt`); no hypothesis posed;
+   no `sorry`; `lake build RHV6Fresh` green afterwards.
 
-## Sondes prévues
-- S1 : « le complément de la paire est nul sur tous les pas d'une fenêtre ⟹ False » — attendu : pas de contradiction ;
-  le compilateur laisse « contenu arithmétique de la fenêtre = différence des pas locaux de la paire aux bords ».
-- S2 : « le complément de la paire est borné en norme sur tous les pas à partir de `a` ⟹ False » — attendu : pas de
-  contradiction ; but restant = croissance en `N^{1−β}` du pas local de la paire contre le contenu arithmétique, qui est
-  l'exposant du reste (frontière connue, ⟺ RH).
+## Planned probes
+- S1: "the complement of the pair is zero on all steps of a window ⟹ False" — expected: no contradiction;
+  the compiler leaves "arithmetic content of the window = difference of the local steps of the pair at the edges".
+- S2: "the complement of the pair is bounded in norm on all steps from `a` ⟹ False" — expected: no
+  contradiction; remaining goal = growth in `N^{1−β}` of the local step of the pair against the arithmetic content, which is
+  the exponent of the remainder (known frontier, ⟺ RH).
 
-## Objets réutilisés
+## Objects reused
 `packetIncrement`, `remainderIncrement`, `localPacket`, `remainderIncrement_eq_packet_add_complement`,
 `remainderIncrement_arithmetic`, `gap_demand_sum_increments`, `packet_channel_four_of_mirror`,
 `residueTerm_eq_zeroTerm`, `residueTerm_conjIndex`, `norm_zeroTerm_eq`, `mirror_multiplicity_eq`,

@@ -1,52 +1,54 @@
-# E446 — Le régime « une rencontre par cellule » est fini : pré-enregistrement (copie du §19.68, 2026-11-07)
+# E446 — The "one meeting per cell" regime is finite: pre-registration (copy of §19.68, 2026-11-07)
 
-### 19.68 Le budget collectif par les seuls objets autorisés : le régime « une rencontre par cellule » est fini (pré-enregistrement d'E446, 2026-11-07)
+> Français : [README.fr.md](README.fr.md)
 
-**Ordre de l'auteur.** « Planifie, émets des hypothèses, vérifie avec les expériences, reste dans le cadre, produis du
-Lean qui implémente la cause racine du constat, avance. » Cadre : stratégie unique de §19.67, objets autorisés
-seulement (une Tour, ses contacts, ses cellules, ses valeurs ; les premiers, `rawDemand`, `cellWeight`,
-`cellPrimeWeight`, `cellDemand` ; les théorèmes compilés du corpus, dont `logGapsVanish_holds` et `WeakPNT''`).
+### 19.68 The collective budget through the authorized objects only: the "one meeting per cell" regime is finite (pre-registration of E446, 2026-11-07)
 
-**Constat à expliquer (E445, T2 et P6).** Le prix d'une rencontre (`x^β`, P6) bat le budget d'UNE rencontre (`log p`),
-jamais le budget cumulé. **Cause racine proposée (hypothèses H1–H3).**
-* **H1 (régime fini).** Tous les énoncés « la cellule de rencontre franchit exactement un premier » (`meeting_cell_primes`,
-  `cellPrimeWeight_meeting`, `meeting_cellDemand`, `valuePrimeSum_eq_meetings`, `amplitudeMeetingSum`) supposent que
-  l'écart `[p_n, p_{n+1}]` ET l'écart suivant contiennent chacun un contact. Ces deux hypothèses placent une cellule entière
-  `[C_k, C_{k+1}]` dans `]p_n, p_{n+2}]`, donc `log p_{n+2} − log p_n ≥ π/T`. Or `logGapsVanish_holds` (PNT porté) donne
-  `log p_{n+1} − log p_n → 0`. Donc pour toute Tour `(β, T)` il existe un rang `N(β, T)` au-delà duquel deux écarts
-  consécutifs n'ont jamais chacun un contact : la série des rencontres à un premier par cellule est FINIE. Le prix à
-  `M_n` n'est confronté au budget `log p` d'une rencontre que sur un segment initial fini.
-* **H2 (le budget exact d'une cellule est sa longueur, au premier ordre).** Au-delà du régime, une cellule contient
-  plusieurs premiers ; son budget exact est `cellWeight = ψ(C_{k+1}) − ψ(C_k)` et, par `WeakPNT''`,
-  `cellWeight/cellLength → 1`, `cellDemand/cellLength → 0`. Le « budget collectif » d'une cellule n'est pas `log p`
-  mais la longueur de la cellule, à un reste près qui est la variation de `rawDemand` sur la cellule.
-* **H3 (le prix d'une Tour sur sa cellule est négligeable devant ce budget).** Le pas d'une Tour `(β, T)` sur sa propre
-  cellule vaut `|v_{k+1} − v_k| = (1 + e^{βπ/T}) C_k^β/‖ρ‖` ; divisé par la longueur `C_k (e^{π/T} − 1)` il tend vers zéro
-  pour tout `0 < β < 1`, ON ou OFF. P6 vaut aussi pour `β = 1/2` (`price_beats_budget_on_line`) : la lecture « le prix
-  OFF bat le budget » n'était pas discriminante.
+**Author's order.** "Plan, formulate hypotheses, verify with experiments, stay within the framework, produce Lean that
+implements the root cause of the finding, move forward." Framework: single strategy of §19.67, authorized objects only
+(one Tower, its contacts, its cells, its values; the primes, `rawDemand`, `cellWeight`, `cellPrimeWeight`,
+`cellDemand`; the compiled theorems of the corpus, including `logGapsVanish_holds` and `WeakPNT''`).
 
-**Pré-enregistrement E446 (`experiments/E446_MeetingRegimeFinite/`).** Module isolé `Terminal/MeetingRegimeFinite.lean`
-(importe `MeetingPriceTheorem` et `LogGapsTheorem`) : F1 `meeting_cell_within_two_gaps` ; F2 `log_ratio_ge_cell_of_meeting`
-(`π/T ≤ log p_{n+2} − log p_n`) ; F3 `two_consecutive_contacts_finite` (∃ N, ∀ n ≥ N, ¬(contact dans l'écart n ∧ contact
-dans l'écart n+1)) ; F4 `meeting_series_rank_bounded`, `meeting_break_rank_bounded` (les hypothèses de
-`cellPrimeWeight_meeting` et de `valuePrimeSum_eq_meetings` ne sont satisfaites qu'à rang borné) ; F5
-`cellWeight_eq_psi_diff`, `contactAt_tendsto_atTop`, `cellWeight_div_cellLength_tendsto_one` ; F6
-`cellDemand_div_cellLength_tendsto_zero` ; F7 `tower_step_div_cellLength_tendsto_zero` ; F8 `price_beats_budget_on_line` ;
-F9 `valueNonPrimeSum`, `valuePrimeSum_balance` (budget pondéré des premiers d'un bloc = demande pondérée − poids non
-premiers pondérés + longueurs pondérées, forme close B4). Deux tentatives de compilation au plus, sorties conservées dans
-`attempts/`. **Expérience chiffrée** (`scripts/e446a_regime.py`, premiers ≤ 10⁷) : pour les sept Tours réelles et les
-paires témoins `β ∈ {0,3 ; 0,4 ; 0,45}`, (a) dernier rang `N_obs` où deux écarts consécutifs ont chacun un contact, nombre
-de tels rangs, et contrôle de F2 sur chacun (0 violation attendu) ; (b) `cellWeight/cellLength` et `cellDemand/cellLength`
-par décade de `C_k` (écart à 1, resp. à 0, décroissant attendu) ; (c) pas de la Tour sur sa cellule contre la longueur
-(formule F7 à 10⁻¹², décroissance attendue). **Jumeau** (`scripts/e446b_twin_mpmath.py`, 30 chiffres) : mêmes rangs `N_obs`
-et mêmes rapports sur un échantillon de cellules. **Critère** : A si F1–F9 compilent et (a)–(c) sont conformes ; B si une
-partie compile ; C sinon. Prédictions : `N_obs` fini pour chaque Tour, croissant avec `T` ; `N_obs` plus grand pour le
-miroir `1 − β` que pour `β` ? (non prédit : la phase `arctan(T/β)` décale les contacts, la condition F2 ne dépend que de `T`
-mais le rang effectif dépend des deux).
+**Finding to explain (E445, T2 and P6).** The price of a meeting (`x^β`, P6) beats the budget of ONE meeting (`log p`),
+never the cumulative budget. **Proposed root cause (hypotheses H1–H3).**
+* **H1 (finite regime).** All the statements "the meeting cell crosses exactly one prime" (`meeting_cell_primes`,
+  `cellPrimeWeight_meeting`, `meeting_cellDemand`, `valuePrimeSum_eq_meetings`, `amplitudeMeetingSum`) assume that
+  the gap `[p_n, p_{n+1}]` AND the next gap each contain a contact. These two hypotheses place an entire cell
+  `[C_k, C_{k+1}]` inside `]p_n, p_{n+2}]`, hence `log p_{n+2} − log p_n ≥ π/T`. Now `logGapsVanish_holds` (PNT ported)
+  gives `log p_{n+1} − log p_n → 0`. Hence for every Tower `(β, T)` there is a rank `N(β, T)` beyond which two
+  consecutive gaps never each have a contact: the series of meetings with one prime per cell is FINITE. The price at
+  `M_n` is confronted with the budget `log p` of a meeting only on a finite initial segment.
+* **H2 (the exact budget of a cell is its length, to first order).** Beyond the regime, a cell contains several
+  primes; its exact budget is `cellWeight = ψ(C_{k+1}) − ψ(C_k)` and, by `WeakPNT''`,
+  `cellWeight/cellLength → 1`, `cellDemand/cellLength → 0`. The "collective budget" of a cell is not `log p` but the
+  length of the cell, up to a remainder which is the variation of `rawDemand` over the cell.
+* **H3 (the price of a Tower on its cell is negligible against this budget).** The step of a Tower `(β, T)` on its own
+  cell is `|v_{k+1} − v_k| = (1 + e^{βπ/T}) C_k^β/‖ρ‖`; divided by the length `C_k (e^{π/T} − 1)` it tends to zero
+  for every `0 < β < 1`, ON or OFF. P6 also holds for `β = 1/2` (`price_beats_budget_on_line`): the reading "the OFF
+  price beats the budget" was not discriminating.
 
-**Ce que cela change dans la stratégie.** L'étape « budget collectif » ne peut pas être « prix à `M_n` contre `log p` sur
-la série » : cette série est finie. Le budget collectif exact d'une cellule est sa longueur plus la variation de la
-demande brute sur la cellule ; le prix d'une Tour sur sa cellule lui est négligeable. La confrontation ne peut porter que
-sur la variation de `rawDemand` sur la cellule (objet autorisé), dont le corpus ne sait que `o(cellule)` (F6). Aucune
-relation compilée ne lie l'amplitude d'une Tour à cette variation : c'est l'obligation ouverte, consignée sans objet
-spectral. [RETIRÉE par l'auteur le 2026-11-07 : voir « Correction de l'auteur » en fin de section.]
+**E446 pre-registration (`experiments/E446_MeetingRegimeFinite/`).** Isolated module `Terminal/MeetingRegimeFinite.lean`
+(imports `MeetingPriceTheorem` and `LogGapsTheorem`): F1 `meeting_cell_within_two_gaps`; F2 `log_ratio_ge_cell_of_meeting`
+(`π/T ≤ log p_{n+2} − log p_n`); F3 `two_consecutive_contacts_finite` (∃ N, ∀ n ≥ N, ¬(contact in gap n ∧ contact
+in gap n+1)); F4 `meeting_series_rank_bounded`, `meeting_break_rank_bounded` (the hypotheses of
+`cellPrimeWeight_meeting` and of `valuePrimeSum_eq_meetings` are satisfied only at bounded rank); F5
+`cellWeight_eq_psi_diff`, `contactAt_tendsto_atTop`, `cellWeight_div_cellLength_tendsto_one`; F6
+`cellDemand_div_cellLength_tendsto_zero`; F7 `tower_step_div_cellLength_tendsto_zero`; F8 `price_beats_budget_on_line`;
+F9 `valueNonPrimeSum`, `valuePrimeSum_balance` (weighted budget of the primes of a block = weighted demand − weighted
+non-prime weights + weighted lengths, closed form B4). At most two compilation attempts, outputs kept in
+`attempts/`. **Numerical experiment** (`scripts/e446a_regime.py`, primes ≤ 10⁷): for the seven real Towers and the
+witness pairs `β ∈ {0.3; 0.4; 0.45}`, (a) last rank `N_obs` where two consecutive gaps each have a contact, number
+of such ranks, and check of F2 on each (0 violations expected); (b) `cellWeight/cellLength` and `cellDemand/cellLength`
+per decade of `C_k` (gap to 1, resp. to 0, expected to decrease); (c) step of the Tower on its cell against the length
+(formula F7 to 10⁻¹², decrease expected). **Twin** (`scripts/e446b_twin_mpmath.py`, 30 digits): same ranks `N_obs`
+and same ratios on a sample of cells. **Criterion**: A if F1–F9 compile and (a)–(c) conform; B if part of it
+compiles; C otherwise. Predictions: `N_obs` finite for each Tower, increasing with `T`; `N_obs` larger for the
+mirror `1 − β` than for `β`? (not predicted: the phase `arctan(T/β)` shifts the contacts, the condition F2 depends
+only on `T` but the effective rank depends on both).
+
+**What this changes in the strategy.** The "collective budget" step cannot be "price at `M_n` against `log p` over
+the series": this series is finite. The exact collective budget of a cell is its length plus the variation of the raw
+demand over the cell; the price of a Tower on its cell is negligible against it. The confrontation can only bear on
+the variation of `rawDemand` over the cell (authorized object), of which the corpus knows only `o(cell)` (F6). No
+compiled relation links the amplitude of a Tower to this variation: this is the open obligation, recorded without
+spectral object. [WITHDRAWN by the author on 2026-11-07: see "Author's correction" at the end of the section.]

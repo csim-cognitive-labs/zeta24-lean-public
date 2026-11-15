@@ -1,21 +1,25 @@
-# Contribuer
+# Contributing
 
-Propriété © Charles S. (voir `COPYRIGHT.md`). Le code tiers (`Zeta23Port`, `PNTPort`) reste sous sa licence Apache 2.0 (voir `THIRD_PARTY_NOTICES.md`).
+> Français : [CONTRIBUTING.fr.md](CONTRIBUTING.fr.md)
 
-Avant toute contribution, lire `README.md`, puis les trois maîtres `formalization/RHV6Fresh/RHV6final_STRATEGIE_{SEMANTIQUE,MATHEMATIQUE,LEAN}.md` (ordres de l'auteur, interdits, état de la route ; en particulier le maître sémantique, §19.98 à §19.111) et le présent fichier. Le journal interne de travail du dépôt de recherche privé n'est pas publié. En cas de conflit, un théorème compilé l'emporte.
+Owner: © Charles S. (see `COPYRIGHT.md`). The third-party code (`Zeta23Port`, `PNTPort`) remains under its Apache 2.0 licence (see `THIRD_PARTY_NOTICES.md`).
 
-Règles :
+Before any contribution, read `README.md`, then the three master documents `formalization/RHV6Fresh/RHV6final_STRATEGIE_{SEMANTIQUE,MATHEMATIQUE,LEAN}.md` (the author's orders, prohibitions and the state of the route; in particular the semantic master, §19.98 to §19.111), and this file. The internal working log of the private research repository is not published. In case of conflict, a compiled theorem prevails. Some historical documents and experiment notes remain in French.
 
-1. Aucun `sorry`, aucun `admit`, aucun axiome ajouté, aucune hypothèse non déchargée ; `#print axioms` sur chaque énoncé.
-2. `lake build RHV6Fresh` doit rester vert après tout changement Lean.
-3. Pré-enregistrement (commit) avant toute compilation définitive ou exécution numérique.
-4. Jumeau déterministe pour toute conclusion numérique ; ne jamais fabriquer de sortie.
-5. Les modules isolés ne sont pas importés par `RHV6Fresh.lean`.
-6. Deux tentatives de compilation au plus par module définitif, chacune consignée (dossier `attempts/`, erreurs exactes).
-7. Ni fichier de plus de 50 Mo, ni modèle (`*.pt`, `*.safetensors`, `*.gguf`), ni dossier `venv/` ou `.lake/`.
-8. Attribution : toute contribution cite l'auteur du dépôt et conserve les notices de copyright et de provenance existantes.
+Rules:
 
-Toute erreur trouvée (énoncé faux, preuve incomplète, résultat numérique non reproductible) se signale par une issue, avec la référence du fichier et du commit.
-Toute modification passe par une pull request citant l'auteur.
+1. No `sorry`, no `admit`, no added axiom, no undischarged hypothesis; run `#print axioms` on every statement.
+2. `lake build RHV6Fresh` must stay green after every Lean change.
+3. Pre-registration (commit) before any final compilation or numerical run.
+4. A deterministic twin for every numerical conclusion; never fabricate output.
+5. Isolated modules are not imported by `RHV6Fresh.lean`.
+6. At most two compilation attempts per final module, each one logged (`attempts/` folder, exact errors).
+7. No file larger than 50 MB, no model (`*.pt`, `*.safetensors`, `*.gguf`), no `venv/` or `.lake/` folder.
+8. Attribution: every contribution cites the repository author and keeps the existing copyright and provenance notices. The attribution form is "Charles S. — CSIM Cognitive Labs".
 
-Toute contribution est cédée à l'auteur à titre exclusif, mondial et gratuit dans les termes de `LICENSE` art. 4(g) ; en soumettant une PR ou une issue contenant une contribution, vous acceptez ces termes.
+Any error found (false statement, incomplete proof, non-reproducible numerical result) is reported through an issue, with the file and commit reference.
+Every change goes through a pull request citing the author.
+
+Licence and ownership: the project is under the Zeta24-Lean Research Licence — Proprietary, strict non-commercial use, version 1.0 (Licence de recherche Zeta24-Lean — Propriétaire, usage non commercial strict, version 1.0), see `LICENSE`. No commercial exploitation is allowed, and modified versions may not be redistributed.
+
+Every contribution is assigned to the author on an exclusive, worldwide, royalty-free basis under the terms of `LICENSE` art. 4(g); by submitting a PR or an issue containing a contribution, you accept these terms. Contributors own nothing in the project.

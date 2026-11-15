@@ -1,33 +1,37 @@
-# E445 — Le Théorème du Prix au point de rencontre : pré-enregistrement (copie du §19.65, 2026-11-07)
+# E445 — The Price Theorem at the meeting point: pre-registration (copy of §19.65, 2026-11-07)
 
-### 19.65 Plan d'attaque de l'auteur (2026-11-07) : le Théorème du Prix au point de rencontre — pré-enregistrement d'E445
+> Français : [README.fr.md](README.fr.md)
 
-**Ordre.** Chaîne : `(β, T)` → contacts → amplitudes et fractions → bilan signé des rencontres → raccord arithmétique.
-Les builds E441–E443 établissent des propriétés réelles des cellules et des rencontres mais ne démontrent pas que la
-position radiale est sans effet ; les théorèmes d'inversion acquis rendent cette exclusion injustifiée. Piste
-prioritaire : (1) le facteur `x^{β−1/2}` est exactement l'écart radial d'amplitude entre une Tour OFF et une Tour ON ;
-(2) pour `β < 1/2` il décroît, celui du miroir `x^{1/2−β}` croît ; (3) les contacts rendent `β` et `T` exactement :
-l'écart est identifiable ; (4) au point de rencontre l'amplitude est imposée par le zéro ; (5) le Théorème du Prix doit
-quantifier le coût exact de cette différence au raccord ; (6) le bilan signé conserve phases, signes et amplitudes des
-deux membres ; (7) la constellation complète réalise exactement la cassure arithmétique : c'est le budget collectif ;
-(8) un budget exact et fini à chaque rencontre n'est pas une borne uniforme ; (9) la contradiction exige que les autres
-contributions ne puissent satisfaire à la fois le budget et le prix OFF ; (10) démontrer l'incompatibilité. Exigence :
-au moins trois tentatives de fermeture, dont une libre, erreur exacte et demandes du compilateur consignées.
-Amendement consigné dans `CLAUDE.md` : la constellation entre uniquement à l'étape de confrontation (7)–(10).
+### 19.65 Author's attack plan (2026-11-07): the Price Theorem at the meeting point — pre-registration of E445
 
-**Pré-enregistrement E445 (`experiments/E445_MeetingPrice/`).** Module isolé `Terminal/MeetingPriceTheorem.lean`
-(partie compilable, une Tour et la paire `(β, T)`, `(1−β, T)` en amplitudes réelles) : P1 `offPrice β x =
-cosh((β−1/2) log x)` et `x^β + x^{1−β} = 2 x^{1/2} · offPrice` (prix exact de la paire contre deux Tours ON) ; P2
-`offPrice ≥ 1 + ((β−1/2) log x)²/2`, non borné dès que `β ≠ 1/2` ; P3 prix identifié par les valeurs aux rencontres
-(`radial_of_meeting_values`) ; P4 amplitude imposée à la cellule de rencontre : `p^β e^{−βπ/T}/‖ρ‖ < |v| ≤ p^β/‖ρ‖` ;
-P5 réponse à la question §19.64 : `|valueCellSum| ≤ |v_dernière| · D · q/(q−1)` (`q = e^{βπ/T}`) si toutes les pentes
-de cellule sont bornées par `D` ; P6 le prix bat le budget d'une rencontre : `K log x < x^r` pour `x` grand (`r > 0`).
-**Trois tentatives de fermeture** (fichiers d'essai conservés en `attempts/*.lean.txt` avec la sortie exacte du
-compilateur) : T1 prix contre budget à une rencontre via `complement_break_lower_bound` (E435) ; T2 bilan pondéré de la
-série (P5) des deux membres contre le budget cumulé (Tchebychev `ψ ≤ (log 4 + 4) x`) ; T3 libre : non-compensation
-interne du miroir + prix non borné + cassure portée par le complément. Critère : A si `False` compile sans hypothèse
-nouvelle ; sinon consigner l'énoncé exact que le compilateur réclame et son statut dans le corpus (⟺ RH ou non).
-Expérience chiffrée : prix et budget aux rencontres pour `β` témoin ∈ {0,3 ; 0,4 ; 0,45}, bornes P4–P5 sur les sept
-Tours réelles, jumeau mpmath.
+**Order.** Chain: `(β, T)` → contacts → amplitudes and fractions → signed balance of the meetings → arithmetic
+junction. The builds E441–E443 establish real properties of the cells and the meetings but do not prove that the
+radial position has no effect; the acquired inversion theorems make this exclusion unjustified. Priority track:
+(1) the factor `x^{β−1/2}` is exactly the radial amplitude gap between an OFF Tower and an ON Tower; (2) for
+`β < 1/2` it decreases, that of the mirror `x^{1/2−β}` increases; (3) the contacts return `β` and `T` exactly: the
+gap is identifiable; (4) at the meeting point the amplitude is imposed by the zero; (5) the Price Theorem must
+quantify the exact cost of this difference at the junction; (6) the signed balance preserves phases, signs and
+amplitudes of the two members; (7) the complete constellation realizes exactly the arithmetic break: this is the
+collective budget; (8) an exact and finite budget at each meeting is not a uniform bound; (9) the contradiction
+requires that the other contributions cannot satisfy both the budget and the OFF price at once; (10) prove the
+incompatibility. Requirement: at least three closure attempts, one of them free, exact error and compiler requests
+logged. Amendment recorded in `CLAUDE.md` (private research repository): the constellation enters only at the
+confrontation step (7)–(10).
 
-**Révocation (2026-11-07, §19.67)** : l'amendement « constellation à l'étape de confrontation » est annulé ; T1 et T3 et leurs conclusions sont annulées (étude spectrale) ; voir `RESULTS.md`, section « Révocation ».
+**E445 pre-registration (`experiments/E445_MeetingPrice/`).** Isolated module `Terminal/MeetingPriceTheorem.lean`
+(compilable part, one Tower and the pair `(β, T)`, `(1−β, T)` in real amplitudes): P1 `offPrice β x =
+cosh((β−1/2) log x)` and `x^β + x^{1−β} = 2 x^{1/2} · offPrice` (exact price of the pair against two ON Towers); P2
+`offPrice ≥ 1 + ((β−1/2) log x)²/2`, unbounded as soon as `β ≠ 1/2`; P3 price identified by the values at the
+meetings (`radial_of_meeting_values`); P4 amplitude imposed at the meeting cell: `p^β e^{−βπ/T}/‖ρ‖ < |v| ≤ p^β/‖ρ‖`;
+P5 answer to the §19.64 question: `|valueCellSum| ≤ |v_last| · D · q/(q−1)` (`q = e^{βπ/T}`) if all cell slopes are
+bounded by `D`; P6 the price beats the budget of one meeting: `K log x < x^r` for large `x` (`r > 0`).
+**Three closure attempts** (trial files kept in `attempts/*.lean.txt` with the exact compiler output): T1 price
+against budget at one meeting via `complement_break_lower_bound` (E435); T2 weighted balance of the series (P5) of the
+two members against the cumulative budget (Chebyshev `ψ ≤ (log 4 + 4) x`); T3 free: internal non-compensation of
+the mirror + unbounded price + break carried by the complement. Criterion: A if `False` compiles without new
+hypothesis; otherwise record the exact statement the compiler demands and its status in the corpus (⟺ RH or not).
+Numerical experiment: price and budget at the meetings for witness `β` ∈ {0.3; 0.4; 0.45}, bounds P4–P5 on the seven
+real Towers, mpmath twin.
+
+**Revocation (2026-11-07, §19.67)**: the amendment "constellation at the confrontation step" is cancelled; T1 and T3
+and their conclusions are cancelled (spectral study); see `RESULTS.md`, section "Revocation".

@@ -1,16 +1,18 @@
-# E416 — Reconstruction indépendante des écarts premiers (pré-enregistrée le 2026-11-03)
+# E416 — Independent reconstruction of the prime gaps (pre-registered on 2026-11-03)
 
-**Question.** À partir des poids spectraux Λ̂_H(n) d'E415 (canaux A et B), sans la liste des premiers, sans les écarts,
-sans correction ajustée, obtient-on la suite des événements, des premiers et des écarts ?
+> Français : [README.fr.md](README.fr.md)
 
-**Règle de lecture pré-enregistrée (sans seuil empirique).** Pour chaque n, l'ensemble admissible de Λ(n) sans donnée
-arithmétique est {0, log n} ∪ {log n / k : k ≥ 2, n = m^k exactement} (test de puissance exacte sur n seul). La valeur
-admissible la plus proche de Λ̂_H(n) décide : 0 → aucun événement ; log n → événement premier ; log n / k → puissance.
-C'est l'opérateur arithmétique `reconstructedPrimeEvent N := Λ̂(N) = log N` de `Terminal/RawEventReconstruction.lean`
-(`vonMangoldt_eq_log_iff`), rendu robuste à la troncature par le plus proche voisin. Aucun paramètre n'est ajusté.
+**Question.** From the spectral weights Λ̂_H(n) of E415 (channels A and B), without the list of primes, without the gaps,
+without fitted correction, does one obtain the sequence of events, primes and gaps?
 
-**Mesures.** événements retrouvés / faux / manqués ; premiers retrouvés / faux / manqués ; écarts consécutifs exacts
-(préfixe avant première divergence) ; somme des erreurs absolues ; première divergence ; évolution avec le nombre de
-zéros ; influence de la précision (E414) ; sensibilité aux hautes fréquences (E417).
+**Pre-registered reading rule (no empirical threshold).** For each n, the admissible set of Λ(n) without arithmetic data
+is {0, log n} ∪ {log n / k : k ≥ 2, n = m^k exactly} (exact-power test on n alone). The closest
+admissible value to Λ̂_H(n) decides: 0 → no event; log n → prime event; log n / k → power.
+This is the arithmetic operator `reconstructedPrimeEvent N := Λ̂(N) = log N` of `Terminal/RawEventReconstruction.lean`
+(`vonMangoldt_eq_log_iff`), made robust to truncation by the nearest neighbor. No parameter is fitted.
 
-**Résultats.** `RESULTS.md`, `data/e416_results.json`, `data/e416_W*_{A,B}_sequences.txt`, `logs/e416.log`.
+**Measures.** events found / false / missed; primes found / false / missed; exact consecutive gaps
+(prefix before the first divergence); sum of absolute errors; first divergence; evolution with the number of
+zeros; influence of precision (E414); sensitivity to high frequencies (E417).
+
+**Results.** `RESULTS.md`, `data/e416_results.json`, `data/e416_W*_{A,B}_sequences.txt`, `logs/e416.log`.

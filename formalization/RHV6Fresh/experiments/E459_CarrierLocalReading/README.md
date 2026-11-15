@@ -1,64 +1,66 @@
-# E459 — Φ3 : hypothèses locales H-a et H-b, classement en trois rubriques puis exigences (pré-enregistrement, 2026-11-09)
+# E459 — Φ3: local hypotheses H-a and H-b, classification in three headings then requirements (pre-registration, 2026-11-09)
 
-Référence : `RHV6final_STRATEGIE_SEMANTIQUE.md` §19.80 (Φ3), §19.83 point 3 (règle des trois rubriques), §19.86 (prévision issue de
-l'audit E460), §19.88. Aucune hypothèse admise, aucun axiome, aucun `sorry` ; module isolé
-`RHV6Fresh/Terminal/CarrierLocalReading.lean`, NON ajouté à `RHV6Fresh.lean`. Aucune théorie spectrale. Aucun zéro hors ligne n'est
-supposé ni testé : le classement se fait au niveau des Tours (couples position radiale, hauteur), et les énoncés sur les zéros vrais
-sont des équivalences ou des implications depuis RH.
+> Français : [README.fr.md](README.fr.md)
 
-Ordre suivi, dit tel quel : une sonde non versionnée (`attempts/probe1.txt`, sans erreur) a précédé ce pré-enregistrement pour établir
-le classement, comme l'ordre de l'auteur le demande (classer AVANT de pré-enregistrer) ; le module définitif est compilé après ce commit.
+Reference: `RHV6final_STRATEGIE_SEMANTIQUE.md` §19.80 (Φ3), §19.83 point 3 (rule of the three headings), §19.86 (forecast from the
+audit E460), §19.88. No hypothesis admitted, no axiom, no `sorry`; isolated module
+`RHV6Fresh/Terminal/CarrierLocalReading.lean`, NOT added to `RHV6Fresh.lean`. No spectral theory. No off-line zero is
+assumed or tested: the classification is made at the level of the Towers (pairs radial position, height), and the statements on
+true zeros are equivalences or implications from RH.
 
-## Formes précises des hypothèses
-* **Forme paramétrique** `SameReadingAt β T n` : le rang `n` n'est pas dans la bande de la Tour `(β, T)` (le mot du miroir et le mot de
-  la Tour coïncident au premier de rang `n`).
-* **H-a (au rang `n`)**, sur les zéros vrais : `SameReadingAtRankOnCarriers n` — pour tout zéro vrai, même lecture au rang `n`. Le plan
-  disait « au premier de la première cassure » ; E450 traite un premier partagé quelconque : H-a est donc posée à rang fixé quelconque
-  (et, par extension, sur tout ensemble FINI de rangs).
-* **H-b**, sur les zéros vrais : `SameMeetingCellsOnCarriers` — même cellule de rencontre pour la Tour et son miroir à TOUTE rencontre ;
-  variante `SameReadingBeyondOnCarriers N` (toutes les rencontres à partir du rang `N`). La cellule de rencontre de l'écart de rang `n`
-  est le mot au rang `n + 1` (identité de définition, à compiler).
+Order followed, stated as is: an unversioned probe (`attempts/probe1.txt`, without error) preceded this pre-registration to establish
+the classification, as the author's order requests (classify BEFORE pre-registering); the final module is compiled after this commit.
 
-## Classement en trois rubriques (établi par la sonde, à compiler dans le module)
-| Hypothèse | (i) implication compilée | (ii) contre-modèle compilé au niveau des Tours | (iii) réciproque |
+## Precise forms of the hypotheses
+* **Parametric form** `SameReadingAt β T n`: the rank `n` is not in the strip of the Tower `(β, T)` (the word of the mirror and the word of
+  the Tower coincide at the prime of rank `n`).
+* **H-a (at rank `n`)**, on true zeros: `SameReadingAtRankOnCarriers n` — for every true zero, same reading at rank `n`. The plan
+  said "at the prime of the first break"; E450 treats any shared prime: H-a is therefore posed at any fixed rank
+  (and, by extension, on any FINITE set of ranks).
+* **H-b**, on true zeros: `SameMeetingCellsOnCarriers` — same meeting cell for the Tower and its mirror at EVERY meeting;
+  variant `SameReadingBeyondOnCarriers N` (all the meetings from rank `N` on). The meeting cell of the gap of rank `n`
+  is the word at rank `n + 1` (definitional identity, to be compiled).
+
+## Classification in three headings (established by the probe, to be compiled in the module)
+| Hypothesis | (i) compiled implication | (ii) counter-model compiled at the level of the Towers | (iii) converse |
 |---|---|---|---|
-| H-a au rang `n` (ou sur un ensemble fini de rangs) | RH ⟹ H-a | OUI, hors cas dégénéré : si aucun premier de l'ensemble n'est exactement sur un contact de la ligne à la hauteur `T`, il existe une fenêtre ouverte autour de la ligne où toute Tour a la même lecture ; en particulier une Tour du côté bas, hors ligne, la satisfait. Cas dégénéré (premier exactement sur un contact de la ligne) : la même lecture à ce rang FORCE la ligne à cette hauteur. Classement exact : « H-a au rang `n` force la ligne à la hauteur `T` » ⟺ « le premier de rang `n` est exactement sur un contact de la ligne de hauteur `T` ». | H-a ⟹ RH : OUVERTE, dite comme telle ; au niveau des Tours elle ne force pas la ligne (rubrique ii) : « strictement plus faible, sur les Tours ». |
-| H-b sur toutes les rencontres (ou à partir d'un rang quelconque) | RH ⟺ H-b (les deux sens) | aucun : sur les Tours, même lecture à partir d'un rang ⟺ ligne | sans objet : ÉQUIVALENTE, donc REFORMULATION, jamais posée |
-| H-b restreinte à une sous-suite infinie stricte de rencontres | RH ⟹ | non établi | OUVERTE ; la trancher demanderait de savoir si la bande rencontre la sous-suite, question de répartition INTERDITE (aucune densité affirmée) ; non poursuivie |
-| H-c (poids et bande) | — | — | équivalente : close comme reformulation en E458 (B6) |
+| H-a at rank `n` (or on a finite set of ranks) | RH ⟹ H-a | YES, outside the degenerate case: if no prime of the set is exactly on a contact of the line at height `T`, there is an open window around the line where every Tower has the same reading; in particular an off-line Tower on the low side satisfies it. Degenerate case (prime exactly on a contact of the line): the same reading at this rank FORCES the line at this height. Exact classification: "H-a at rank `n` forces the line at height `T`" ⟺ "the prime of rank `n` is exactly on a contact of the line of height `T`". | H-a ⟹ RH: OPEN, stated as such; at the level of the Towers it does not force the line (heading ii): "strictly weaker, on the Towers". |
+| H-b on all the meetings (or from any rank) | RH ⟺ H-b (both directions) | none: on the Towers, same reading from a rank on ⟺ line | not applicable: EQUIVALENT, hence REFORMULATION, never posed |
+| H-b restricted to a strict infinite subsequence of meetings | RH ⟹ | not established | OPEN; settling it would require knowing whether the strip meets the subsequence, a question of distribution FORBIDDEN (no density asserted); not pursued |
+| H-c (weight and strip) | — | — | equivalent: closed as a reformulation in E458 (B6) |
 
-Remarque de portée (§19.85) : « même lecture à partir d'un rang ⟺ ligne » est un énoncé de queue pour la question du MIROIR (compilé
-ici) ; il ne dit rien de la sélection des porteurs.
+Scope remark (§19.85): "same reading from a rank on ⟺ line" is a tail statement for the question of the MIRROR (compiled
+here); it says nothing about the selection of carriers.
 
-## Énoncés à compiler
-1. `sameReadingAt_iff`, `meetingCell_eq_towerWord`, `same_meetingCell_iff` (dictionnaire).
-2. `floor_stable_of_continuous_not_int`, `towerWord_stable_near` : hors contact exact, le mot est localement constant en la position
-   radiale (des deux côtés).
-3. `sameReading_window` : fenêtre de même lecture autour de la ligne sur tout ensemble fini de rangs sans contact exact ;
-   `exists_offLine_sameReading_on_finset` : contre-modèle du côté bas (rubrique ii).
-4. `mem_mirrorStrip_of_prime_on_line_contact` : cas dégénéré ; `sameReadingAt_forces_line_iff` : classement exact de H-a.
-5. `sameReading_beyond_iff` : sur les Tours, même lecture à partir d'un rang ⟺ ligne.
-6. `sameReadingAtRank_of_riemannHypothesis` (RH ⟹ H-a) ; `sameReadingBeyond_iff_riemannHypothesis`,
+## Statements to compile
+1. `sameReadingAt_iff`, `meetingCell_eq_towerWord`, `same_meetingCell_iff` (dictionary).
+2. `floor_stable_of_continuous_not_int`, `towerWord_stable_near`: outside exact contact, the word is locally constant in the radial
+   position (on both sides).
+3. `sameReading_window`: window of same reading around the line on any finite set of ranks without exact contact;
+   `exists_offLine_sameReading_on_finset`: counter-model on the low side (heading ii).
+4. `mem_mirrorStrip_of_prime_on_line_contact`: degenerate case; `sameReadingAt_forces_line_iff`: exact classification of H-a.
+5. `sameReading_beyond_iff`: on the Towers, same reading from a rank on ⟺ line.
+6. `sameReadingAtRank_of_riemannHypothesis` (RH ⟹ H-a); `sameReadingBeyond_iff_riemannHypothesis`,
    `sameMeetingCells_iff_riemannHypothesis` (H-b ⟺ RH).
-Limite dite d'avance : la non-vacuité de la branche « sans contact exact » n'est pas compilée (elle est mesurée par le jumeau) ; le
-classement exact (énoncé 4) couvre les deux branches sans en avoir besoin. Le cas dégénéré est une branche logique : il n'est JAMAIS
-affirmé qu'un premier est sur un contact (§19.51).
+Limit stated in advance: the non-vacuity of the "without exact contact" branch is not compiled (it is measured by the twin); the exact
+classification (statement 4) covers both branches without needing it. The degenerate case is a logical branch: it is NEVER
+asserted that a prime is on a contact (§19.51).
 
-## Prévisions écrites avant exécution
-* Tout compile (la sonde est passée).
-* Critère d'arrêt du plan (hypothèse plus faible que RH, vraie sur les contrôles, dont l'exigence compilée fait intervenir le poids) :
-  NON atteint — H-a est plus faible sur les Tours mais son exigence ne fait pas intervenir le poids (fenêtre autour de la ligne,
-  fixée par la fraction de cellule) ; H-b est une reformulation.
+## Forecasts written before execution
+* Everything compiles (the probe passed).
+* Stopping criterion of the plan (hypothesis weaker than RH, true on the controls, whose compiled requirement involves the weight):
+  NOT reached — H-a is weaker on the Towers but its requirement does not involve the weight (window around the line,
+  fixed by the cell fraction); H-b is a reformulation.
 
-## Volet déterministe — `e459_local_reading.py`
-200 premières hauteurs d'Odlyzko, premiers ≤ 10⁶, contrôles `β ∈ {0,3 ; 0,4 ; 0,45}` (Tours non porteuses). Mesures : (a) fraction de
-cellule de la ligne aux dix premiers rangs, pour les 200 hauteurs : plus petite distance à un contact (attendu : strictement positive
-partout, branche non dégénérée) ; (b) demi-largeur EXACTE de la fenêtre de même lecture au rang 0 et sur les dix premiers rangs
-(formule tangentielle), recoupée par test direct de part et d'autre du bord ; (c) part des contrôles qui satisfont H-a au rang 0 et
-sur les dix premiers rangs (attendu : majoritaire au rang 0 pour chaque contrôle, le décalage de phase étant petit devant la
-cellule ; aucun seuil chiffré n'est fixé) ; (d) premier rang de bande (rang où H-b casse) pour chaque contrôle : attendu fini pour
-toutes les Tours de contrôle (déjà observé en E458 : aucune bande vide). Mesure, aucune loi, aucune densité.
+## Deterministic part — `e459_local_reading.py`
+First 200 Odlyzko heights, primes ≤ 10⁶, controls `β ∈ {0.3; 0.4; 0.45}` (non-carrier Towers). Measurements: (a) cell fraction of
+the line at the first ten ranks, for the 200 heights: smallest distance to a contact (expected: strictly positive
+everywhere, non-degenerate branch); (b) EXACT half-width of the window of same reading at rank 0 and over the first ten ranks
+(tangential formula), cross-checked by direct test on both sides of the edge; (c) share of controls that satisfy H-a at rank 0 and
+over the first ten ranks (expected: majority at rank 0 for each control, the phase shift being small relative to the
+cell; no numerical threshold is fixed); (d) first strip rank (rank where H-b breaks) for each control: expected finite for
+all control Towers (already observed in E458: no empty strip). Measurement, no law, no density.
 
-## Protocole
-Deux tentatives au plus ; `attempts/` ; `#print axioms` ; grep du ban à zéro ; `lake build RHV6Fresh` complet vert ; script une fois
-sous `nohup`, sortie dans `logs/`.
+## Protocol
+At most two attempts; `attempts/`; `#print axioms`; grep of the ban at zero; full `lake build RHV6Fresh` green; script once
+under `nohup`, output in `logs/`.

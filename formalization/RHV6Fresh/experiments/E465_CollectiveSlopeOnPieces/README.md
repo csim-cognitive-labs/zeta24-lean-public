@@ -1,54 +1,56 @@
-# E465 — Φ8 : le bilan collectif écrit en pentes de la demande sur les pièces découpées par les contacts — pré-enregistrement
+# E465 — Φ8: the collective balance written in slopes of the demand on the pieces cut by the contacts — pre-registration
 
-Référence : `RHV6final_STRATEGIE_SEMANTIQUE.md` §19.95 ; E463 (§19.93), E438 (§19.55–19.56), E464 (§19.94). Ordre de l'auteur du
-2026-11-09 : « je suis d'accord avec la prochaine tâche […] fais-la complète ». Aucune hypothèse admise, aucun axiome, aucun `sorry` ;
-module isolé `RHV6Fresh/Terminal/CollectiveSlopeOnPieces.lean`, NON ajouté à `RHV6Fresh.lean`. Ce commit contient le module définitif et
-précède toute compilation (aucune sonde).
+> Français : [README.fr.md](README.fr.md)
 
-## Audit (fait avant ce pré-enregistrement)
-* E463 (K7) : sur toute pièce, la somme des parts de tous les membres d'une recomposition égale la variation du signal LISSÉ des
-  premiers multiplié par l'abscisse. Le membre arithmétique n'était pas écrit avec la demande brute.
-* E438 : la demande brute, sur toute pièce, descend d'une unité par unité de longueur et reçoit le poids de chaque entier franchi ;
-  le découpage d'un écart par les contacts (`gap_variation_eq_remainders`) vaut pour TOUTE fonction.
-* Le pont : l'abscisse fois le signal lissé est la somme des poids franchis depuis l'origine, chacun multiplié par sa distance à
-  l'abscisse ; c'est une quantité intégrée (du second ordre) de la demande. Sur une pièce elle varie donc d'une AIRE de la demande.
-* Noms vérifiés par grep : aucun doublon (`integratedSignal`, `demandArea`, `residualBackground`, `integratedDemandC`, …).
+Reference: `RHV6final_STRATEGIE_SEMANTIQUE.md` §19.95; E463 (§19.93), E438 (§19.55–19.56), E464 (§19.94). Author's order of
+2026-11-09: "I agree with the next task […] do it completely". No hypothesis admitted, no axiom, no `sorry`;
+isolated module `RHV6Fresh/Terminal/CollectiveSlopeOnPieces.lean`, NOT added to `RHV6Fresh.lean`. This commit contains the final module and
+precedes any compilation (no probe).
 
-## Ce que le module doit compiler (énoncés pré-écrits, en mots)
-* S1 l'abscisse fois le signal lissé est le signal intégré (somme des poids fois distance).
-* S2 sur une pièce, le signal intégré varie du niveau de départ fois la longueur, plus chaque poids franchi fois sa distance à la fin.
-* S3 terme principal retiré, cette variation est l'aire de la demande : demande au départ fois longueur, moins le demi-carré de la
-  longueur (descente de pente un), plus chaque poids franchi fois sa distance à la fin de la pièce.
-* S4 pièce sans poids : descente pure. S5 les aires s'ajoutent de pièce en pièce.
-* S6 pièce intérieure à un écart : seuls des poids non premiers.
-* S7 pièce d'un écart allant jusqu'à la rencontre : le poids du premier de la rencontre entre avec une distance NULLE ; aucun poids
-  premier n'entre dans l'aire d'un écart (il entre par le niveau de départ de l'écart suivant).
-* S8 pièce franchissant un seul entier, premier : son poids entre par sa distance à la fin de la pièce.
-* S9 une pièce plus courte qu'un pas d'entier franchit au plus un entier (leçon d'E464, voir ci-dessous).
-* S10 bilan collectif : la somme des parts de tous les membres sur une pièce égale l'aire de la demande, moins la variation du fond
-  résiduel (fond d'E462 privé de son terme principal).
-* S11 sur une cellule entre deux contacts consécutifs d'une Tour : le terme de cette Tour dans le total est sa part d'E463 ; le total
-  est l'aire de la demande sur la cellule.
-* S12 l'aire de la demande sur un écart se découpe par les contacts d'une Tour (reste initial, cellules entières, reste final) ;
-  chaque reste est une aire ; bilan collectif de l'écart entier.
+## Audit (done before this pre-registration)
+* E463 (K7): on every piece, the sum of the shares of all the members of a recomposition equals the variation of the SMOOTHED signal of the
+  primes multiplied by the abscissa. The arithmetic member was not written with the raw demand.
+* E438: the raw demand, on every piece, descends by one unit per unit of length and receives the weight of each integer crossed;
+  the cutting of a gap by the contacts (`gap_variation_eq_remainders`) holds for ANY function.
+* The bridge: the abscissa times the smoothed signal is the sum of the weights crossed since the origin, each multiplied by its distance to
+  the abscissa; it is an integrated quantity (second order) of the demand. On a piece it therefore varies by an AREA of the demand.
+* Names checked by grep: no duplicate (`integratedSignal`, `demandArea`, `residualBackground`, `integratedDemandC`, …).
 
-## Leçons d'E464 utilisées
-* L1 (échelle) : le prédicteur ne sépare un entier que si la cellule de la Tour la plus haute est nettement plus courte qu'un pas
-  d'entier. D'où S9 : c'est le seuil géométrique en deçà duquel une cellule isole au plus un poids ; au-delà, l'aire d'une cellule
-  mélange plusieurs poids et aucune lecture « un premier par cellule » n'est permise (cohérent avec E446 : régime fini).
-* L2 (ordre de lecture) : le prédicteur lit un SAUT de la demande brute reconstituée ; le signal recomposé sans reste est du second
-  ordre : une rencontre n'y fait pas de saut, elle change la pente. D'où S7–S8 : le poids entre par une distance, nulle à la rencontre.
-* L3 (méthode) : l'horizon numérique annoncé avant E464 était faux d'un facteur 2 à 3. Ici aucun seuil numérique n'est annoncé ;
-  le jumeau ne vérifie que des identités exactes, avec une tolérance d'arrondi pré-écrite.
+## What the module must compile (statements pre-written, in words)
+* S1 the abscissa times the smoothed signal is the integrated signal (sum of weights times distance).
+* S2 on a piece, the integrated signal varies by the starting level times the length, plus each weight crossed times its distance to the end.
+* S3 main term removed, this variation is the area of the demand: demand at the start times length, minus half the square of the
+  length (descent of slope one), plus each weight crossed times its distance to the end of the piece.
+* S4 piece without weight: pure descent. S5 the areas add up from piece to piece.
+* S6 piece interior to a gap: only non-prime weights.
+* S7 piece of a gap going up to the meeting: the weight of the prime of the meeting enters with a ZERO distance; no prime weight
+  enters the area of a gap (it enters through the starting level of the next gap).
+* S8 piece crossing a single integer, prime: its weight enters through its distance to the end of the piece.
+* S9 a piece shorter than an integer step crosses at most one integer (lesson of E464, see below).
+* S10 collective balance: the sum of the shares of all the members on a piece equals the area of the demand, minus the variation of the residual
+  background (background of E462 deprived of its main term).
+* S11 on a cell between two consecutive contacts of a Tower: the term of this Tower in the total is its share from E463; the total
+  is the area of the demand on the cell.
+* S12 the area of the demand on a gap is cut by the contacts of a Tower (initial remainder, whole cells, final remainder);
+  each remainder is an area; collective balance of the entire gap.
 
-## Classement contre RH (dit avant compilation)
-Aucune hypothèse posée. S1–S12 sont des identités inconditionnelles, valables pour toute recomposition, sur la ligne comme hors ligne.
-Elles n'excluent aucun zéro hors ligne. La part d'UNE Tour reste non lue sur les premiers de sa cellule : seul le total l'est.
+## Lessons of E464 used
+* L1 (scale): the predictor separates an integer only if the cell of the highest Tower is clearly shorter than an integer
+  step. Hence S9: it is the geometric threshold below which a cell isolates at most one weight; beyond, the area of a cell
+  mixes several weights and no "one prime per cell" reading is permitted (consistent with E446: finite regime).
+* L2 (reading order): the predictor reads a JUMP of the reconstructed raw demand; the signal recomposed without remainder is second
+  order: a meeting makes no jump in it, it changes the slope. Hence S7–S8: the weight enters through a distance, zero at the meeting.
+* L3 (method): the numerical horizon announced before E464 was wrong by a factor 2 to 3. Here no numerical threshold is announced;
+  the twin verifies only exact identities, with a pre-written rounding tolerance.
 
-## Jumeau déterministe (pré-écrit)
-`twin.py` : arithmétique à 50 chiffres ; vérifie S1–S3, S5, S7, S8 et S12 sur les cellules de contacts des 5 premières Tours de la
-ligne et sur les 200 premiers écarts ; critère : écart relatif au plus 10^-30 partout. Borné (moins d'une minute), sous `nohup`.
+## Classification against RH (stated before compilation)
+No hypothesis posed. S1–S12 are unconditional identities, valid for every recomposition, on the line as well as off the line.
+They exclude no off-line zero. The share of ONE Tower remains unread on the primes of its cell: only the total is.
 
-## Verdicts pré-écrits
-A : S1–S12 compilés en au plus deux tentatives, axiomes standard, build complet vert, jumeau conforme. B : un énoncé change de forme
-(dit tel quel). C : échec après deux tentatives (consigné, module retiré).
+## Deterministic twin (pre-written)
+`twin.py`: 50-digit arithmetic; verifies S1–S3, S5, S7, S8 and S12 on the contact cells of the first 5 Towers of the
+line and on the first 200 gaps; criterion: relative gap at most 10^-30 everywhere. Bounded (under a minute), under `nohup`.
+
+## Pre-written verdicts
+A: S1–S12 compiled in at most two attempts, standard axioms, full build green, twin conforming. B: a statement changes form
+(stated as is). C: failure after two attempts (recorded, module removed).

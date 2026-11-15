@@ -1,62 +1,64 @@
-# E405 — Le reste brut aux points de rencontre : jumeau numérique du module `RawMeetingRemainder.lean` (2026-11-02)
+# E405 — The raw remainder at the meeting points: numerical twin of the module `RawMeetingRemainder.lean` (2026-11-02)
 
-Pré-enregistrée AVANT exécution (engagée avant le lancement ; résultats ajoutés après). Exécution bornée (< 10 min),
-réelle (crible), aucune sortie fabriquée. Trois volets SÉPARÉS : réel (premiers par crible, zéros Odlyzko sur la ligne),
-jumeau OFF synthétique (hauteurs jamais égales à une hauteur ON existante), identités déterministes.
+> Français : [README.fr.md](README.fr.md)
 
-## Ce que le Lean compile (à vérifier numériquement, pas à découvrir)
-1. Reste brut `r(N) = ψ(N) − N`. Entre deux rencontres (entiers de poids non nul), `r` descend d'exactement une unité par
-   entier ; à une rencontre il saute du poids. Donc, entre deux rencontres, `|r|` est majoré par le maximum de ses valeurs
-   aux deux bouts (`abs_rawRemainder_le_of_noEvent`).
-2. Pont brut → lissé à l'entier : `M·A(M) = Σ_{k<M} ψ(k)` (`natMul_smoothedVonMangoldtSum_eq`,
+Pre-registered BEFORE execution (committed before launch; results added afterwards). Bounded execution (< 10 min),
+real (sieve), no fabricated output. Three SEPARATE parts: real (primes by sieve, Odlyzko zeros on the line),
+synthetic OFF twin (heights never equal to an existing ON height), deterministic identities.
+
+## What the Lean compiles (to be checked numerically, not discovered)
+1. Raw remainder `r(N) = ψ(N) − N`. Between two meetings (integers of nonzero weight), `r` descends by exactly one unit per
+   integer; at a meeting it jumps by the weight. Hence, between two meetings, `|r|` is bounded by the maximum of its values
+   at the two ends (`abs_rawRemainder_le_of_noEvent`).
+2. Raw → smoothed bridge at the integer: `M·A(M) = Σ_{k<M} ψ(k)` (`natMul_smoothedVonMangoldtSum_eq`,
    `rawCumulative_eq_sum_massA`).
-3. Une borne `|r(E)| ≤ C·E^θ` et `|r(E−1)| ≤ C·E^θ` aux seules rencontres `E` donne la même borne à tout entier
-   (facteur `C·2^θ + 1`, Bertrand), puis `‖reste lissé(x)‖ ≤ C'·x^θ` pour tout `x > 1`, puis `β ≤ θ` pour tout membre
+3. A bound `|r(E)| ≤ C·E^θ` and `|r(E−1)| ≤ C·E^θ` at the meetings `E` only gives the same bound at every integer
+   (factor `C·2^θ + 1`, Bertrand), then `‖smoothed remainder(x)‖ ≤ C'·x^θ` for every `x > 1`, then `β ≤ θ` for every member
    (`zero_re_le_of_rawRemainder_at_events`).
 
-## Volet 1 — réel, identités (déterministe)
-- Crible de Λ jusqu'à X = 2 000 000 ; `r(N)` pour tout N ≤ X.
-- Vérification exacte de 1 (descente d'une unité entre rencontres, sur tous les N) et de 2 (pour M dans une liste fixée).
-- Pour θ ∈ {0.50, 0.52, 0.55, 0.60} : maximum de `|r(E)|/E^θ` et `|r(E−1)|/E^θ` sur les rencontres E ≤ X, maximum de
-  `|r(N)|/N^θ` sur tous les N ≤ X, et vérification de l'inégalité compilée `max_N ≤ (2^θ·max_E + 1)` (le +1 vient de N = 1).
-- Par tranche dyadique [2^j, 2^{j+1}) : maximum de `|r(E)|/√E` aux rencontres (lecture : croît-il ? ne tranche pas θ).
+## Part 1 — real, identities (deterministic)
+- Sieve of Λ up to X = 2,000,000; `r(N)` for all N ≤ X.
+- Exact verification of 1 (descent of one unit between meetings, over all N) and of 2 (for M in a fixed list).
+- For θ ∈ {0.50, 0.52, 0.55, 0.60}: maximum of `|r(E)|/E^θ` and `|r(E−1)|/E^θ` over the meetings E ≤ X, maximum of
+  `|r(N)|/N^θ` over all N ≤ X, and verification of the compiled inequality `max_N ≤ (2^θ·max_E + 1)` (the +1 comes from N = 1).
+- By dyadic slice [2^j, 2^{j+1}): maximum of `|r(E)|/√E` at the meetings (reading: does it grow? does not decide θ).
 
-## Volet 2 — tentative A (pré-enregistrée en §19.34.5), réel
-- Aux points de rencontre p_{n+1} (premiers ≤ 100 000) : reste lissé exact `R(p) = A(p) − B(p)` (fond d'E401 par mpmath),
-  = somme télescopée des demandes des écarts précédents + R(p_1). Signe de chaque demande, nombre de changements de signe,
-  maximum de `|R(p)|/p^θ` pour θ ∈ {0.5, 0.6, 0.7}. Critère d'échec déclaré : si aucune loi d'annulation ne s'écrit
-  autrement que « la somme partielle EST le reste », A est une tautologie (prédiction de l'exécutant).
+## Part 2 — attempt A (pre-registered in §19.34.5), real
+- At the meeting points p_{n+1} (primes ≤ 100,000): exact smoothed remainder `R(p) = A(p) − B(p)` (background of E401 via mpmath),
+  = telescoped sum of the demands of the preceding gaps + R(p_1). Sign of each demand, number of sign changes,
+  maximum of `|R(p)|/p^θ` for θ ∈ {0.5, 0.6, 0.7}. Declared failure criterion: if no cancellation law can be written
+  other than "the partial sum IS the remainder", A is a tautology (executor's prediction).
 
-## Volet 3 — tentative B (pré-enregistrée en §19.34.6), réel + jumeau synthétique, minimal
-- Six écarts consécutifs n = 614..619 (ceux d'E404). Au point de rencontre p = p_{n+1} : canal brut, somme des termes
-  `x^ρ/ρ` des zéros de hauteur < π·p (tête) contre le reste brut vrai moyenné des deux côtés (crible) ; queue = vrai − tête.
-- Paire synthétique β = 0.6 à une hauteur T choisie au milieu de deux hauteurs ON consécutives (jamais une hauteur ON) :
-  dépôt brut de la paire aux six rencontres, pas entre rencontres consécutives, comparé à la tête et à la queue.
-- Critère d'échec déclaré : si l'absorption du pas de la paire par la tête n'est contrainte que par la constance par membre
-  (⟺ RH, §19.21), B est morte (prédiction de l'exécutant).
+## Part 3 — attempt B (pre-registered in §19.34.6), real + synthetic twin, minimal
+- Six consecutive gaps n = 614..619 (those of E404). At the meeting point p = p_{n+1}: raw channel, sum of the terms
+  `x^ρ/ρ` of the zeros of height < π·p (head) against the true raw remainder averaged over the two sides (sieve); tail = true − head.
+- Synthetic pair β = 0.6 at a height T chosen in the middle of two consecutive ON heights (never an ON height):
+  raw deposit of the pair at the six meetings, step between consecutive meetings, compared to the head and to the tail.
+- Declared failure criterion: if the absorption of the pair's step by the head is constrained only by per-member constancy
+  (⟺ RH, §19.21), B is dead (executor's prediction).
 
-## Règle
-Aucune conclusion sur β ne sera tirée des maxima numériques : le manque est l'exposant aux rencontres, et seul le
-compilateur le tranche. Les chiffres servent de jumeau des identités et de lecture, pas de preuve.
+## Rule
+No conclusion about β will be drawn from the numerical maxima: what is missing is the exponent at the meetings, and only the
+compiler decides it. The figures serve as a twin of the identities and as a reading, not as proof.
 
-## Résultats (ajoutés après exécution ; `e405_results.txt`, 4,2 s ; un premier lancement s'est arrêté après le
-volet 1 sur un cast numpy → mpmath, corrigé par `int(p)`, relancé au complet, volet 1 identique)
-Volet 1 (réel, identités). Crible jusqu'à deux millions : 148 933 premiers, 149 235 rencontres brutes. La descente
-d'une unité par entier entre rencontres est exacte sur les 1 850 765 entiers non-rencontre (écart zéro). L'identité
-« M fois la somme lissée en M égale la somme des ψ(k) pour k < M » tient à l'arrondi machine près pour les sept M
-testés. Les maxima de |ψ(N) − N|/N^θ à toutes les rencontres (deux côtés) et à tout entier respectent l'inégalité
-compilée (facteur 2^θ plus un) pour les quatre exposants ; le maximum global est atteint en N = 1 (valeur un).
-Tranches dyadiques jusqu'à deux millions : le maximum de |ψ(E) − E|/√E aux rencontres oscille entre 0,19 et 0,71
-sans tendance lisible à cette échelle. Aucune conclusion sur θ : la croissance ultime n'est pas une mesure.
-Volet 2 (tentative A). 9 592 rencontres (premiers ≤ 100 000) : 4 777 demandes positives, 4 814 négatives, 471
-changements de signe ; la somme télescopée des demandes est, à l'identique, le reste lissé au dernier point moins
-le reste au premier. Les quotients |R(p)|/p^θ sont tous petits (maximum atteint sur les tout premiers p) et
-décroissent. Verdict par le critère déclaré : A est une tautologie. La « loi d'annulation » n'est que la valeur du
-reste ; aucune identité sur les seuls premiers n'apparaît qui donnerait l'exposant autrement.
-Volet 3 (tentative B, minimale). Six rencontres consécutives (4547 à 4591) : la tête (zéros de hauteur inférieure
-à π fois le premier, quinze mille environ) porte presque toute la somme vraie ; la queue est de l'ordre du dixième.
-La paire synthétique (β = 0,6, hauteur jamais ON) dépose entre −0,31 et +0,36 à chaque rencontre, du même ordre que
-la queue. Son pas entre rencontres consécutives (−0,43 à +0,67) est dominé par la rotation de phase ; le facteur
-radial entre deux rencontres consécutives est de 1,0003 à 1,0021 seulement. Lire β sur un pas exigerait de séparer
-la phase de l'amplitude à cette échelle, ce que ni la tête ni la queue ne font. Verdict par le critère déclaré :
-B est morte (seule la constance par membre contraindrait l'absorption, et elle équivaut à RH).
+## Results (added after execution; `e405_results.txt`, 4.2 s; a first launch stopped after
+part 1 on a numpy → mpmath cast, fixed with `int(p)`, relaunched in full, part 1 identical)
+Part 1 (real, identities). Sieve up to two million: 148,933 primes, 149,235 raw meetings. The descent
+of one unit per integer between meetings is exact on the 1,850,765 non-meeting integers (difference zero). The identity
+"M times the smoothed sum at M equals the sum of ψ(k) for k < M" holds up to machine rounding for the seven M
+tested. The maxima of |ψ(N) − N|/N^θ at all meetings (both sides) and at every integer respect the compiled
+inequality (factor 2^θ plus one) for the four exponents; the global maximum is attained at N = 1 (value one).
+Dyadic slices up to two million: the maximum of |ψ(E) − E|/√E at the meetings oscillates between 0.19 and 0.71
+with no readable trend at this scale. No conclusion about θ: ultimate growth is not a measurement.
+Part 2 (attempt A). 9,592 meetings (primes ≤ 100,000): 4,777 positive demands, 4,814 negative, 471
+sign changes; the telescoped sum of the demands is, identically, the smoothed remainder at the last point minus the
+remainder at the first. The quotients |R(p)|/p^θ are all small (maximum attained on the very first p) and
+decreasing. Verdict by the declared criterion: A is a tautology. The "cancellation law" is only the value of the
+remainder; no identity on the primes alone appears that would give the exponent otherwise.
+Part 3 (attempt B, minimal). Six consecutive meetings (4547 to 4591): the head (zeros of height below
+π times the prime, about fifteen thousand) carries almost all of the true sum; the tail is of the order of a tenth.
+The synthetic pair (β = 0.6, never an ON height) deposits between −0.31 and +0.36 at each meeting, of the same order as
+the tail. Its step between consecutive meetings (−0.43 to +0.67) is dominated by the phase rotation; the radial factor
+between two consecutive meetings is only 1.0003 to 1.0021. Reading β on a step would require separating
+phase from amplitude at this scale, which neither the head nor the tail does. Verdict by the declared criterion:
+B is dead (only per-member constancy would constrain the absorption, and it is equivalent to RH).

@@ -1,45 +1,47 @@
-# E443 — Les écarts au-dessus du seuil : ce que les contacts et leurs signes seuls en disent
+# E443 — Gaps above the threshold: what the contacts and their signs alone say
 
-Pré-enregistrement (2026-11-07), avant toute compilation et toute exécution. Suite d'E442 (§19.61), sous l'ordre
-« poursuis le plus possible ». Interdiction spectrale en vigueur (§19.55) ; ordre de travail §19.53.
+> Français : [README.fr.md](README.fr.md)
 
-## Vérification des neuf erreurs
-1. Aucune hypothèse nouvelle (Bertrand et les bornes de Tchebychev `ψ − θ ≤ 2√x log x` sont des théorèmes de
-   Mathlib / du corpus, aucune asymptotique, aucun PNT, aucune théorie spectrale). 2. Le compilateur décide. 3. Noms
-   vérifiés par grep (`primeSuccessor_le_two_mul` réutilisé de `ContinuousProgression` ; `gap_le_lower`,
-   `wholeCellCount_lt_log_two`, `meetingCell_displacement_lt`, `gap_in_cell_of_no_contact`, `gap_demand_variation`,
-   `gap_primes_singleton`, `cellNonPrimeWeight_le_sqrt`, `meeting_falls_above_second_threshold` libres). 4. `lake
-   build RHV6Fresh` après tout changement. 5. Aucun premier ni OFF testé directement. 6. Aucune position radiale.
-   7. Aucune famille. 8. Module isolé. 9. Intervalles = restes partiels.
+Pre-registration (2026-11-07), before any compilation and any execution. Follows E442 (§19.61), under the order
+"pursue as far as possible". Spectral ban in force (§19.55); working order §19.53.
+
+## Check of the nine errors
+1. No new hypothesis (Bertrand and the Chebyshev bounds `ψ − θ ≤ 2√x log x` are theorems of Mathlib / of the corpus,
+   no asymptotics, no PNT, no spectral theory). 2. The compiler decides. 3. Names checked by grep
+   (`primeSuccessor_le_two_mul` reused from `ContinuousProgression`; `gap_le_lower`, `wholeCellCount_lt_log_two`,
+   `meetingCell_displacement_lt`, `gap_in_cell_of_no_contact`, `gap_demand_variation`, `gap_primes_singleton`,
+   `cellNonPrimeWeight_le_sqrt`, `meeting_falls_above_second_threshold` free). 4. `lake build RHV6Fresh` after every
+   change. 5. No prime and no OFF tested directly. 6. No radial position. 7. No family. 8. Isolated module.
+   9. Intervals = partial remainders.
 
 ## Question
-Au-dessus du seuil `x*` d'une Tour (`x*(r−1) = log x*`), ses cellules sont plus longues que les poids des
-rencontres ; la plupart des écarts n'ont plus de contact et tiennent dans une seule cellule signée. Que disent
-alors les contacts, les intervalles et leurs signes : combien de contacts au plus par écart (Bertrand), où tient
-un écart sans contact, quelle est la pente d'un écart entier, et à partir de quelle hauteur (second seuil `x**`)
-toute cellule de rencontre descend sûrement, le poids non premier étant borné par Tchebychev.
+Above the threshold `x*` of a Tower (`x*(r−1) = log x*`), its cells are longer than the weights of the meetings;
+most gaps no longer have a contact and fit in a single signed cell. What do the contacts, the intervals and their
+signs then say: how many contacts at most per gap (Bertrand), where does a gap without contact fit, what is the
+slope of an entire gap, and from what height (second threshold `x**`) does every meeting cell surely descend, the
+non-prime weight being bounded by Chebyshev.
 
-## Énoncés visés (module isolé `Terminal/GapsAboveThreshold.lean`, importe `ExactDisplacementAndThreshold` et `ContinuousProgression`)
-- A1 `gap_le_lower`, `upper_le_two_lower` : Bertrand sur l'écart (`p_{n+1} − p_n ≤ p_n`).
-- A2 `wholeCellCount_lt_log_two` : moins de `T log 2/π` cellules entières dans tout écart.
-- A3 `meetingCell_displacement_lt` : le déplacement de la cellule de rencontre entre deux écarts consécutifs est
+## Targeted statements (isolated module `Terminal/GapsAboveThreshold.lean`, imports `ExactDisplacementAndThreshold` and `ContinuousProgression`)
+- A1 `gap_le_lower`, `upper_le_two_lower`: Bertrand on the gap (`p_{n+1} − p_n ≤ p_n`).
+- A2 `wholeCellCount_lt_log_two`: fewer than `T log 2/π` whole cells in any gap.
+- A3 `meetingCell_displacement_lt`: the displacement of the meeting cell between two consecutive gaps is
   `< T log 2/π + 1`.
-- A4 `gap_in_cell_of_no_contact` : un écart sans contact tient dans la cellule de sa rencontre.
-- A5 `gap_primes_singleton`, `gap_demand_variation` : la pente d'un écart entier = `log p_{n+1}` + poids non
-  premiers − longueur de l'écart (aucune hypothèse de contact).
-- A6 `cellNonPrimeWeight_le_sqrt` : poids non premier d'une cellule `≤ 2√C_{k+1} log C_{k+1}` (Tchebychev,
+- A4 `gap_in_cell_of_no_contact`: a gap without contact fits in the cell of its meeting.
+- A5 `gap_primes_singleton`, `gap_demand_variation`: the slope of an entire gap = `log p_{n+1}` + non-prime
+  weights − length of the gap (no contact hypothesis).
+- A6 `cellNonPrimeWeight_le_sqrt`: non-prime weight of a cell `≤ 2√C_{k+1} log C_{k+1}` (Chebyshev,
   Mathlib `psi_sub_theta_le`).
-- A7 `meeting_falls_above_second_threshold` : si `log p + 2√(p r) log(p r) < p(1 − 1/r)`, la cellule de
-  rencontre descend (condition en `p` et `T` seuls).
+- A7 `meeting_falls_above_second_threshold`: if `log p + 2√(p r) log(p r) < p(1 − 1/r)`, the meeting cell
+  descends (condition in `p` and `T` alone).
 
-## Expérience chiffrée (`scripts/e443a_above_threshold.py`, jumeau `scripts/e443b_twin_mpmath.py`)
-Tours de rangs 1, 100, 10³, 10⁴, 10⁵ (β = ½), premiers ≤ 10⁶, Λ exact. Contrôles (0 violation attendue) : A1–A7.
-Mesures : part des écarts avec contact par décade contre la règle `moyenne(min(1, g/L))` ; second seuil `x**`
-(résolu) contre le plus petit `p` au-delà duquel toute cellule de rencontre descend ; entre `x*` et `x**`, part
-des cellules de rencontre qui descendent ; premiers par cellule contre `L/log p` ; part des cellules de pente
-positive au-dessus de `x*` (mesure sans théorème, étiquetée comme telle).
+## Numerical experiment (`scripts/e443a_above_threshold.py`, twin `scripts/e443b_twin_mpmath.py`)
+Towers of ranks 1, 100, 10³, 10⁴, 10⁵ (β = ½), primes ≤ 10⁶, exact Λ. Controls (0 violations expected): A1–A7.
+Measurements: share of gaps with a contact per decade against the rule `mean(min(1, g/L))`; second threshold `x**`
+(solved) against the smallest `p` beyond which every meeting cell descends; between `x*` and `x**`, share of meeting
+cells that descend; primes per cell against `L/log p`; share of cells of positive slope above `x*` (measurement
+without theorem, labelled as such).
 
-## Protocole et critères
-Sonde non versionnée, deux tentatives au plus pour le module définitif, journaux, `#print axioms`, build complet ;
-scripts bornés (< 10 min), `nohup`, aucune sortie fabriquée. A : contradiction ; B : tout compile et 0 violation ;
-C : échec en deux tentatives. Attendu : B.
+## Protocol and criteria
+Unversioned probe, at most two attempts for the final module, logs, `#print axioms`, full build; bounded scripts
+(< 10 min), `nohup`, no fabricated output. A: contradiction; B: everything compiles and 0 violations;
+C: failure in two attempts. Expected: B.

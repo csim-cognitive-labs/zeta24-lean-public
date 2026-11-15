@@ -1,53 +1,55 @@
-# E437 — Recomposition collective d'un écart par les restes partiels de plusieurs Tours, canal brut (2026-11-07)
+# E437 — Collective recomposition of a gap by the partial remainders of several Towers, raw channel (2026-11-07)
 
-Expérience de compilation seule (aucune mesure numérique). Ordre de l'auteur (§19.53) : connaissance et maîtrise des
-écarts et des contacts AVANT toute chasse radiale. Aucune position radiale n'entre dans une conclusion ; aucun zéro OFF ;
-aucune somme infinie ; aucun retour à l'analyse spectrale.
+> Français : [README.fr.md](README.fr.md)
 
-## Vérification écrite des neuf points (CLAUDE.md)
-(1) rien sur la synchronisation ; (2) aucun critère sur la structure ; (3) rien lu sur un signal mélangé : chaque part
-est la variation de la Tour entre les deux bornes de l'écart ; (4) aucune définition demandée ; (5) aucun mot prêté ;
-(6) action livrée ; (7) aucune paire traitée ; (8) écarts jamais liés à la hauteur ; (9) aucune Tour ne touche un premier :
-les bornes de l'écart sont les premiers, les contacts découpent la part de chaque Tour.
+Compilation-only experiment (no numerical measurement). Author's order (§19.53): knowledge and mastery of the
+gaps and the contacts BEFORE any radial hunt. No radial position enters a conclusion; no OFF zero;
+no infinite sum; no return to spectral analysis.
 
-## Question posée (avant compilation)
-Dans le canal brut (demande `ψ(x) − x` sur l'axe réel), comment une famille FINIE de Tours recompose-t-elle un écart par
-les restes partiels de chacune, que porte le reste explicite, et comment le bilan passe-t-il à l'écart suivant ? Et, point
-de l'auteur : le reste est-il nécessaire (une famille finie peut-elle recomposer l'écart seule) ?
+## Written verification of the nine points (CLAUDE.md (private research repository))
+(1) nothing on the synchronization; (2) no criterion on the structure; (3) nothing read on a mixed signal: each share
+is the variation of the Tower between the two bounds of the gap; (4) no definition requested; (5) no word attributed;
+(6) action delivered; (7) no pair treated; (8) gaps never linked to the height; (9) no Tower touches a prime:
+the bounds of the gap are the primes, the contacts cut out the share of each Tower.
 
-## Hypothèses admises
-Aucune.
+## Question posed (before compilation)
+In the raw channel (demand `ψ(x) − x` on the real axis), how does a FINITE family of Towers recompose a gap through
+the partial remainders of each, what does the explicit remainder carry, and how does the balance pass to the next gap? And, point
+of the author: is the remainder necessary (can a finite family recompose the gap alone)?
 
-## Acquis réutilisés (forme Lean vérifiée avant usage)
+## Hypotheses admitted
+None.
+
+## Established results reused (Lean form checked before use)
 `Chebyshev.psi` (Mathlib), `massA`, `massA_succ`, `massA_eq_psi`, `psiRemainder`, `towerRe`, `breakResidual`,
 `breakResidual_erase`, `PrimeGapInterval` (`lower`, `upper`, `one_lt_lower`, `lower_lt_upper`), `meetingPoint`,
 `thm_primeAtRank_isPrime`, `GapHasContact`, `gap_variation_eq_remainders`, `initialEdgeRemainder`, `wholeCellSum`,
 `finalEdgeRemainder`, `consecutive_lower_eq_upper`, `ArithmeticFunction.vonMangoldt_apply_prime`.
 
-## Protocole
-1. Pré-enregistrement (ce fichier, commit) avant toute compilation.
-2. Sondes de noms dans `CollectiveGapRecomposition_SCRATCH.lean` (non versionné, supprimé après capture ; sorties dans
+## Protocol
+1. Pre-registration (this file, commit) before any compilation.
+2. Name probes in `CollectiveGapRecomposition_SCRATCH.lean` (unversioned, deleted after capture; outputs in
    `logs/probe_attempt*.txt`).
-3. Module isolé `Terminal/CollectiveGapRecomposition.lean` (non ajouté à `RHV6Fresh.lean`), deux tentatives au plus,
-   journalisées (`logs/lean_attempt{1,2}.txt`), aucun `sorry`, axiomes affichés, `lake build RHV6Fresh` vert.
+3. Isolated module `Terminal/CollectiveGapRecomposition.lean` (not added to `RHV6Fresh.lean`), at most two attempts,
+   logged (`logs/lean_attempt{1,2}.txt`), no `sorry`, axioms displayed, `lake build RHV6Fresh` green.
 
-## Énoncés visés et attendus (écrits avant exécution)
-- **R1 Recomposition collective.** Pour une famille finie dont chaque membre a un contact dans l'écart, la somme des
-  parts = somme sur les membres de (reste partiel initial + cellules entières + reste partiel final). Attendu : compile
-  (somme de `gap_variation_eq_remainders`).
-- **R2 Bilan d'un écart avec reste explicite.** Demande de l'écart = parts de la famille + variation du reste explicite
-  sur l'écart. Attendu : identité, compile.
-- **R3 Passage à l'écart suivant.** Sur une série d'écarts, les variations du reste et les demandes télescopent.
-  Attendu : compile.
-- **R4 Descente entre rencontres.** Entre deux entiers consécutifs la demande brute descend linéairement ; au passage
-  de l'entier elle saute du poids de l'entier. Attendu : compile (`massA_succ`, plancher).
-- **R5 Continuité de la famille.** Toute famille finie de Tours est continue en toute abscisse positive. Attendu : compile.
-- **R6 Le reste porte le saut.** Pour toute famille finie, la variation du reste explicite au passage d'une rencontre
-  tend vers le poids du premier (tout le saut). Attendu : compile.
-- **R7 Aucune famille finie ne recompose la rencontre.** Le reste explicite ne peut pas être constant à gauche d'un
-  premier. Attendu : compile par R6 (unicité de la limite, poids d'un premier > 0).
-Si R6/R7 échouent, buts reproduits intégralement, jamais renommés « ce qui manque ».
+## Targeted statements and expectations (written before execution)
+- **R1 Collective recomposition.** For a finite family each member of which has a contact in the gap, the sum of the
+  shares = sum over the members of (initial partial remainder + whole cells + final partial remainder). Expected: compiles
+  (sum of `gap_variation_eq_remainders`).
+- **R2 Balance of a gap with explicit remainder.** Demand of the gap = shares of the family + variation of the explicit remainder
+  over the gap. Expected: identity, compiles.
+- **R3 Passage to the next gap.** Over a series of gaps, the variations of the remainder and the demands telescope.
+  Expected: compiles.
+- **R4 Descent between meetings.** Between two consecutive integers the raw demand descends linearly; at the passage
+  of the integer it jumps by the weight of the integer. Expected: compiles (`massA_succ`, floor).
+- **R5 Continuity of the family.** Every finite family of Towers is continuous at every positive abscissa. Expected: compiles.
+- **R6 The remainder carries the jump.** For every finite family, the variation of the explicit remainder at the passage of a meeting
+  tends to the weight of the prime (the whole jump). Expected: compiles.
+- **R7 No finite family recomposes the meeting.** The explicit remainder cannot be constant to the left of a
+  prime. Expected: compiles by R6 (uniqueness of the limit, weight of a prime > 0).
+If R6/R7 fail, goals are reproduced in full, never renamed "what is missing".
 
-## Critères
-A fermeture compilée ; B réduction inconditionnelle nouvelle (recomposition collective d'un écart par les restes partiels,
-reste explicite portant tout le saut, compilés) ; C équivalence à RH ; D rien de compilable. Attendu : B.
+## Criteria
+A compiled closure; B new unconditional reduction (collective recomposition of a gap by the partial remainders,
+explicit remainder carrying the whole jump, compiled); C equivalence to RH; D nothing compilable. Expected: B.

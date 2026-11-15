@@ -1,83 +1,85 @@
-# E428 — Lecture des transitions par la progression complète des contacts sur une série d'écarts, raccord individuel–collectif et information radiale du miroir (pré-enregistrée 2026-11-04)
+# E428 — Reading of the transitions by the complete progression of the contacts over a series of gaps, individual–collective junction and radial information of the mirror (pre-registered 2026-11-04)
 
-Plan : §19.42 (proposition), §19.42.5 (obligations A–D de l'auteur), §19.42.6 (quatre corrections de l'auteur,
-feu vert conditionnel). Directives : série d'écarts, jamais un écart isolé ; ne pas réduire l'étude à la seule
-fréquence ; aucune hypothèse OFF, aucune borne posée, aucune contradiction anticipée ; les premiers ne servent qu'à
-valider après coup ; prédictions compilées avant mesure ; jumeau déterministe ; critères fixés ici, non modifiés après.
+> Français : [README.fr.md](README.fr.md)
 
-Module Lean de référence, compilé AVANT exécution : `Terminal/ContactSeriesReading.lean` (isolé, non ajouté à
-`RHV6Fresh.lean` ; aucun `sorry` ; deux tentatives au plus, chacune journalisée `logs/lean_attempt{1,2}.log`).
+Plan: §19.42 (proposal), §19.42.5 (author's obligations A–D), §19.42.6 (author's four corrections,
+conditional green light). Directives: series of gaps, never an isolated gap; do not reduce the study to frequency
+alone; no OFF hypothesis, no bound posed, no anticipated contradiction; the primes serve only to
+validate afterwards; predictions compiled before measurement; deterministic twin; criteria fixed here, not modified afterwards.
 
-## Objets réutilisés (jamais reconstruits)
-`cellIndexAt`, `stagePosition`, `cellIndexAt_eq_ceil` (CellRestitution, FirstExceedanceRaccord) ; `contactAt`,
-`contactAt_ratio`, `accumulationFrom`, `contact_accumulation_eq_endpoint_difference` (ContactValueGeometry) ;
-`contactRealValue` (ContactRealValue) ; `truncatedStep`, `truncatedStep_eq`, `lowFrequencies`, `integratedTowerTerm`,
-`reconstructedVonMangoldt_eq_limit_contact_accumulation` (RawEventReconstruction) ; `complexMode`, `mirrorMode_add`,
-`mirrorMode_sub`, `mirrorMode_add_norm`, `mirrorMode_add_norm_ge` (HarmonicRestoringLaw) ;
-`inversion_from_consecutive_contacts` (JointParameterReading) ; `transitionOf_cls`, `eventOrientation_of_gap`
-(TransitionRigidity, GrammarContactStability) ; `logRatio_not_determined_by_transition` (GrammarContactStability).
+Reference Lean module, compiled BEFORE execution: `Terminal/ContactSeriesReading.lean` (isolated, not added to
+`RHV6Fresh.lean`; no `sorry`; at most two attempts, each logged in `logs/lean_attempt{1,2}.log`).
 
-## Prédictions compilées que la mesure doit retrouver (énoncés du module)
-* **A0** `truncatedStep_eq_sum_individual` : pas tronqué = fond + somme finie (sur `lowFrequencies H`) des
-  contributions individuelles ; `individual_contribution_eq_own_contact_accumulation` : chaque contribution est
-  l'accumulation de sa propre Tour sur ses propres contacts, quels que soient `(β, T, k₀, n)` ;
-  `collective_eq_individual_add_rest` : collectif = une Tour + le reste (garde-fou : jamais une Tour seule) ;
-  `reconstructedVonMangoldt_eq_limit_of_individual_sums` : la limite en `H` de ces sommes est `Λ̂(N)` (même
-  troncature, même lissage, même limite que le théorème compilé).
-* **A1** `seriesShift_telescopes` : les décalages d'indices consécutifs d'une série se somment en le décalage total.
-* **A2** `cellIndex_difference_bounds` : `|Δk − T·log(q'/q)/π| < 1` pour tout `(β, T > 0)` ;
-  `log_ratio_bracket` : `|log(q'/q) − hΔk| < h`, `h = π/T`.
-* **A3 corrigé** `estimate_brackets` : `q̂e^{−h} < q < q̂e^{h}` ; `certified_rounding` : `q̂(e^h − 1) < ½ ⟹ |q − q̂| < ½` ;
-  `certified_unique_integer` : un seul entier à moins de ½ de `q̂`. La certification ne lit que `(p, T, Δk)`.
-  `old_threshold_not_certifying` : contre-exemple où `q(e^h − 1) < ½` mais `q̂(e^h − 1) ≥ ½` (ancien seuil du plan).
-* **A4** `mirror_series_amplitude_difference` : sur une série, amplitude du miroir − amplitude de la Tour =
-  `(1 − 2β)·log(q/p)`, nulle ⟺ `β = ½` (identité ; aucune loi posée).
-* **C corrigé** `mirror_contact_log_ratio` : `log(C_k(β)/C_k(1−β)) = (φ_β − φ_{1−β})/T` ;
-  `mirrorPhaseShift_eq_zero_iff` : nul ⟺ `β = ½` ; `mirror_stagePosition_difference` : constante en `q` ;
-  `mirror_series_shift_difference_le_one` : les différences d'indices de la Tour et du miroir sur une même série
-  diffèrent d'au plus une unité (à vérifier en mesure, jamais présumées égales) ;
-  `mirrorMode_sub_norm` : `‖v₊ − v₋‖ = 2|sinh(dt)|` (pas de plancher : la minoration ≥ 2 ne porte que sur la somme).
+## Objects reused (never rebuilt)
+`cellIndexAt`, `stagePosition`, `cellIndexAt_eq_ceil` (CellRestitution, FirstExceedanceRaccord); `contactAt`,
+`contactAt_ratio`, `accumulationFrom`, `contact_accumulation_eq_endpoint_difference` (ContactValueGeometry);
+`contactRealValue` (ContactRealValue); `truncatedStep`, `truncatedStep_eq`, `lowFrequencies`, `integratedTowerTerm`,
+`reconstructedVonMangoldt_eq_limit_contact_accumulation` (RawEventReconstruction); `complexMode`, `mirrorMode_add`,
+`mirrorMode_sub`, `mirrorMode_add_norm`, `mirrorMode_add_norm_ge` (HarmonicRestoringLaw);
+`inversion_from_consecutive_contacts` (JointParameterReading); `transitionOf_cls`, `eventOrientation_of_gap`
+(TransitionRigidity, GrammarContactStability); `logRatio_not_determined_by_transition` (GrammarContactStability).
 
-## Données
-Zéros `experiments/data/odlyzko_zeros6_2001052.txt` (SHA-256 vérifiée par `contact_common.load_zeros`) ; premiers par
-crible dans le script (entiers exacts) ; Tours authentiques des zéros de rangs 1, 10, 100, 1 000, 10 000, 100 000,
-1 000 000, 2 001 052 (β = ½) ; Tours de séparation : mêmes hauteurs, β ∈ {0,3 ; 0,7} (synthétiques, toujours en paire
-miroir, jamais aux hauteurs d'un autre zéro réel).
+## Compiled predictions that the measurement must recover (statements of the module)
+* **A0** `truncatedStep_eq_sum_individual`: truncated step = background + finite sum (over `lowFrequencies H`) of the
+  individual contributions; `individual_contribution_eq_own_contact_accumulation`: each contribution is
+  the accumulation of its own Tower on its own contacts, whatever `(β, T, k₀, n)`;
+  `collective_eq_individual_add_rest`: collective = one Tower + the rest (safeguard: never a single Tower alone);
+  `reconstructedVonMangoldt_eq_limit_of_individual_sums`: the limit in `H` of these sums is `Λ̂(N)` (same
+  truncation, same smoothing, same limit as the compiled theorem).
+* **A1** `seriesShift_telescopes`: the consecutive index shifts of a series add up to the total shift.
+* **A2** `cellIndex_difference_bounds`: `|Δk − T·log(q'/q)/π| < 1` for all `(β, T > 0)`;
+  `log_ratio_bracket`: `|log(q'/q) − hΔk| < h`, `h = π/T`.
+* **A3 corrected** `estimate_brackets`: `q̂e^{−h} < q < q̂e^{h}`; `certified_rounding`: `q̂(e^h − 1) < ½ ⟹ |q − q̂| < ½`;
+  `certified_unique_integer`: a single integer within ½ of `q̂`. The certification reads only `(p, T, Δk)`.
+  `old_threshold_not_certifying`: counterexample where `q(e^h − 1) < ½` but `q̂(e^h − 1) ≥ ½` (former threshold of the plan).
+* **A4** `mirror_series_amplitude_difference`: over a series, amplitude of the mirror − amplitude of the Tower =
+  `(1 − 2β)·log(q/p)`, zero ⟺ `β = ½` (identity; no law posed).
+* **C corrected** `mirror_contact_log_ratio`: `log(C_k(β)/C_k(1−β)) = (φ_β − φ_{1−β})/T`;
+  `mirrorPhaseShift_eq_zero_iff`: zero ⟺ `β = ½`; `mirror_stagePosition_difference`: constant in `q`;
+  `mirror_series_shift_difference_le_one`: the index differences of the Tower and of the mirror over the same series
+  differ by at most one unit (to be checked in measurement, never presumed equal);
+  `mirrorMode_sub_norm`: `‖v₊ − v₋‖ = 2|sinh(dt)|` (no floor: the lower bound ≥ 2 holds only for the sum).
 
-## E428(a) — lecture certifiée par série (`scripts/e428a_series_reading.py`)
-Ancrages r ∈ {2, 100, 1000} (p_r = 5, 541, 7 919) ; séries m ∈ {12, 120, 1200} ; toutes les Tours ci-dessus.
-Pour chaque (Tour, r, m) et chaque j ≤ m : Δk_j = k(p_{r+j}) − k(p_r) lu dans la Tour ; `q̂_j = p_r·exp(πΔk_j/T)` ;
-certification `q̂_j(e^h − 1) < ½` ; entier lu = arrondi de `q̂_j` ; mot de transitions de la série lue (classe mod 6 des
-écarts lus, orientation). Validation après : comparaison aux vrais premiers et au vrai mot.
-Critères : (i) **0 lecture certifiée fausse** (réfutation d'un énoncé compilé sinon : erreur à localiser) ;
-(ii) nombre de lectures certifiées, nombre de lectures exactes non certifiées (consignées, jamais revendiquées) ;
-(iii) comparaison ancien seuil / seuil corrigé : nombre de cas où l'ancien certifierait à tort ;
-(iv) à même hauteur, β = 0,3 / 0,5 / 0,7 : fraction des Δk_j distincts (information radiale des indices, obligation C) ;
-le mot lu certifié est attendu identique (il est fonction du premier lu, unique) même quand Δk diffère.
-Jumeau : mpmath 30 chiffres, Tour du zéro 1 et du zéro 2 001 052, ancrage 2, j ≤ 12.
+## Data
+Zeros `experiments/data/odlyzko_zeros6_2001052.txt` (SHA-256 checked by `contact_common.load_zeros`); primes by
+sieve in the script (exact integers); authentic Towers of the zeros of ranks 1, 10, 100, 1,000, 10,000, 100,000,
+1,000,000, 2,001,052 (β = ½); separation Towers: same heights, β ∈ {0.3; 0.7} (synthetic, always in mirror
+pair, never at the heights of another real zero).
 
-## E428(b) — miroir, raccord individuel–collectif, recherche d'une loi sur série (`scripts/e428b_mirror_series.py`)
-Événements r = 2..2001 (5 ≤ p ≤ 17 393), mêmes Tours en paires (β, 1 − β).
-1. **C** : décalage de phase `(φ_β − φ_{1−β})/π` ; indices absolus Tour/miroir à chaque p (fraction d'inégalité,
-   différence ∈ {⌊s⌋, ⌈s⌉} où s = décalage/π) ; différences sur séries depuis chaque ancrage : écart Tour/miroir
-   dans {−1, 0, +1} (0 violation attendue), fraction non nulle (mesure) ; log-rapport des contacts contre la formule ;
-   norme de la somme miroir `2cosh(dt)` et de la différence `2|sinh(dt)|` aux abscisses `t = log p` (identités).
-2. **A0** : pour N ∈ {5, 7, 11, 101, 1009}, H = 1 000 : pas collectif tronqué (somme sur les zéros de hauteur ≤ H) contre
-   somme des contributions individuelles (identité, écart attendu ≤ 10⁻¹⁰ relatif) ; contribution d'une Tour seule
-   contre le collectif (jamais égale : garde-fou).
-3. **A4, recherche d'une loi** : fenêtres glissantes de 12 événements (1 989 fenêtres, mots de 12 transitions) ;
-   candidats sur la série : amplitude totale `β·log(p_{fin}/p_début)`, somme des valeurs signées aux contacts de
-   rencontre, somme orientée pondérée, nombre d'écarts Tour/miroir d'indices non nuls dans la fenêtre, différence
-   d'amplitude Tour/miroir. Critère pré-enregistré d'une loi : à mot identique (fenêtres partageant le même mot de 12
-   transitions, groupes d'au moins 2 fenêtres), étendue du candidat ≤ 10⁻⁹ pour tous les groupes. Attendu (compilé
-   `logRatio_not_determined_by_transition`) : aucun candidat de longueur ne le satisfait ; le candidat « écarts
-   d'indices Tour/miroir » est mesuré sans attente.
-Jumeau : mpmath 30 chiffres sur 10 événements pour la paire (0,3 ; 0,7) à la hauteur du zéro 1.
+## E428(a) — certified reading by series (`scripts/e428a_series_reading.py`)
+Anchors r ∈ {2, 100, 1000} (p_r = 5, 541, 7,919); series m ∈ {12, 120, 1200}; all the Towers above.
+For each (Tower, r, m) and each j ≤ m: Δk_j = k(p_{r+j}) − k(p_r) read in the Tower; `q̂_j = p_r·exp(πΔk_j/T)`;
+certification `q̂_j(e^h − 1) < ½`; integer read = rounding of `q̂_j`; word of transitions of the series read (class mod 6 of the
+gaps read, orientation). Validation afterwards: comparison with the true primes and the true word.
+Criteria: (i) **0 false certified readings** (otherwise refutation of a compiled statement: error to be located);
+(ii) number of certified readings, number of exact uncertified readings (recorded, never claimed);
+(iii) comparison former threshold / corrected threshold: number of cases where the former would certify wrongly;
+(iv) at the same height, β = 0.3 / 0.5 / 0.7: fraction of distinct Δk_j (radial information of the indices, obligation C);
+the certified word read is expected identical (it is a function of the prime read, unique) even when Δk differs.
+Twin: mpmath 30 digits, Tower of zero 1 and of zero 2,001,052, anchor 2, j ≤ 12.
 
-## Verdict en trois niveaux (critères fixés)
-* **A0 / A1–A3** : réussi ⟺ énoncés compilés et 0 lecture certifiée fausse ; sinon erreur consignée.
-* **C** : réussi ⟺ 0 violation de l'écart {−1, 0, +1} ; la fraction non nulle est l'information radiale mesurée.
-* **A4 / B** : une loi n'est déclarée que si le critère de mot est satisfait ; attendu : aucune pour les candidats
-  de longueur ; résultat du candidat miroir consigné tel quel.
-* **D** : non exécuté ici ; frontière inchangée sauf si A4 fournit une loi (alors seulement, étape suivante).
-Aucun critère ne sera modifié après exécution. Résultats, y compris négatifs, dans `RESULTS.md`.
+## E428(b) — mirror, individual–collective junction, search for a law on a series (`scripts/e428b_mirror_series.py`)
+Events r = 2..2001 (5 ≤ p ≤ 17,393), same Towers in pairs (β, 1 − β).
+1. **C**: phase shift `(φ_β − φ_{1−β})/π`; absolute Tower/mirror indices at each p (fraction of inequality,
+   difference ∈ {⌊s⌋, ⌈s⌉} where s = shift/π); differences over series from each anchor: Tower/mirror difference
+   in {−1, 0, +1} (0 violations expected), nonzero fraction (measurement); log-ratio of contacts against the formula;
+   norm of the mirror sum `2cosh(dt)` and of the difference `2|sinh(dt)|` at abscissas `t = log p` (identities).
+2. **A0**: for N ∈ {5, 7, 11, 101, 1009}, H = 1,000: truncated collective step (sum over zeros of height ≤ H) against
+   sum of the individual contributions (identity, difference expected ≤ 10⁻¹⁰ relative); contribution of a single Tower
+   against the collective (never equal: safeguard).
+3. **A4, search for a law**: sliding windows of 12 events (1,989 windows, words of 12 transitions);
+   candidates on the series: total amplitude `β·log(p_{end}/p_{start})`, sum of the signed values at the meeting
+   contacts, weighted oriented sum, number of nonzero Tower/mirror index differences in the window, Tower/mirror
+   amplitude difference. Pre-registered criterion for a law: at identical word (windows sharing the same word of 12
+   transitions, groups of at least 2 windows), range of the candidate ≤ 10⁻⁹ for all groups. Expected (compiled
+   `logRatio_not_determined_by_transition`): no length candidate satisfies it; the candidate "Tower/mirror
+   index differences" is measured with no expectation.
+Twin: mpmath 30 digits on 10 events for the pair (0.3; 0.7) at the height of zero 1.
+
+## Verdict on three levels (criteria fixed)
+* **A0 / A1–A3**: succeeded ⟺ compiled statements and 0 false certified readings; otherwise error recorded.
+* **C**: succeeded ⟺ 0 violations of the {−1, 0, +1} difference; the nonzero fraction is the measured radial information.
+* **A4 / B**: a law is declared only if the word criterion is satisfied; expected: none for the length
+  candidates; result of the mirror candidate recorded as is.
+* **D**: not executed here; frontier unchanged unless A4 provides a law (then only, next step).
+No criterion will be modified after execution. Results, including negative ones, in `RESULTS.md`.

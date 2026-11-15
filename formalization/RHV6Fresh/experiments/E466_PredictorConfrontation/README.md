@@ -1,60 +1,62 @@
-# E466 — confrontation de quatre lectures du prédicteur de premiers (pré-enregistrement, 2026-11-12)
+# E466 — confrontation of four readings of the prime predictor (pre-registration, 2026-11-12)
 
-Expérience LATÉRALE (hors route de preuve, comme E464). Réponse à l'audit externe transmis par l'auteur le 2026-11-12, dont les points
-sont acceptés et repris ici comme cahier des charges : (A) E464 n'utilisait aucune grammaire ; (B) le seuil 0,75 est arbitraire et a masqué
-une séparation encore présente à cellule 0,55–0,83 ; (C) l'effet de Fejér doit être MESURÉ, non expliqué ; (D) la seconde différence
-du signal intégré (E465) vaut le poids exact seulement pour le signal exact, l'erreur de troncature reste dans la seconde différence et
-doit être mesurée, le fond exigé par la formule doit être conservé ; (E) l'horizon « hauteur max / pi » est une échelle de résolution de
-la méthode, soutenue par les mesures, PAS une impossibilité démontrée (le théorème `short_piece_crosses_at_most_one` ne prouve qu'un
-sens). Rectification consignée : ma phrase du 2026-11-12 « horizon hors de portée pour une raison de théorème » est RETIRÉE.
+> Français : [README.fr.md](README.fr.md)
 
-## Ce qui est figé
-* E464 reste la référence immuable (code, résultats, journal inchangés). Son canal est reproduit ici tel quel (variante J-F).
-* Données : `experiments/data/odlyzko_zeros6_2001052.txt`, deux familles (2 001 052 Tours ; 500 000 Tours), comme E464.
-* Fenêtres de 300 entiers. Fenêtres de référence (celles d'E464) : 10^3, 10^4, 10^5, 2·10^5, 3·10^5, 5·10^5, 10^6, 10^7, 10^8.
-  Fenêtres INÉDITES (jamais lues auparavant) : 5·10^4, 1,5·10^5, 2,5·10^5, 4·10^5, 7·10^5.
-* Aucun crible, aucun test de primalité dans la prédiction. Contrôle exact (division) À LA FIN seulement, catégorisé : premiers,
-  puissances de premiers, autres composés (point 6 de l'audit).
+LATERAL experiment (outside the proof route, like E464). Response to the external audit transmitted by the author on 2026-11-12, whose points
+are accepted and taken up here as specifications: (A) E464 used no grammar; (B) the threshold 0.75 is arbitrary and masked
+a separation still present at cell 0.55–0.83; (C) the Fejér effect must be MEASURED, not explained; (D) the second difference
+of the integrated signal (E465) equals the exact weight only for the exact signal, the truncation error remains in the second difference and
+must be measured, the background required by the formula must be kept; (E) the horizon "max height / pi" is a resolution scale of the
+method, supported by the measurements, NOT a proved impossibility (the theorem `short_piece_crosses_at_most_one` proves only one
+direction). Rectification recorded: my sentence of 2026-11-12 "horizon out of reach for a reason of theorem" is WITHDRAWN.
 
-## Les quatre canaux de score (tous normalisés par le logarithme de l'entier)
-* J-F : saut de la demande reconstituée entre n−1/2 et n+1/2, poids de Fejér (= E464 exactement).
-* J-noF : même saut, sans Fejér (coupure nette à la hauteur maximale).
-* D2-F : seconde différence sur un pas d'entier du signal INTÉGRÉ reconstitué (E465 : x fois la somme lissée), poids de Fejér.
-  Le signal intégré reconstitué conserve le fond exigé par la formule : moitié du carré, terme linéaire du logarithme de deux pi,
-  somme des zéros triviaux (cinq termes) ; les constantes disparaissent dans la seconde différence, la moitié du carré donne exactement un.
-* D2-noF : même seconde différence, sans Fejér.
-Valeur exacte attendue du score (signal exact) : 1 sur un premier, 1/k sur une puissance k-ième, 0 ailleurs.
+## What is frozen
+* E464 remains the immutable reference (code, results, log unchanged). Its channel is reproduced here as is (variant J-F).
+* Data: `experiments/data/odlyzko_zeros6_2001052.txt`, two families (2 001 052 Towers; 500 000 Towers), as in E464.
+* Windows of 300 integers. Reference windows (those of E464): 10^3, 10^4, 10^5, 2·10^5, 3·10^5, 5·10^5, 10^6, 10^7, 10^8.
+  NEW windows (never read before): 5·10^4, 1.5·10^5, 2.5·10^5, 4·10^5, 7·10^5.
+* No sieve, no primality test in the prediction. Exact control (division) AT THE END only, categorized: primes,
+  prime powers, other composites (point 6 of the audit).
 
-## Décisions pré-écrites (aucune ne sera modifiée après lecture des résultats)
-* R0 : « premier » si score > 0,75 (règle E464, conservée pour comparaison).
-* R1 : « premier » si score > 0,75 ET l'entier passe la grammaire modulo 6 (reste 1 ou 5 ; nécessaire, jamais suffisante). Elle ne
-  peut que retirer des faux positifs ; elle ne peut créer aucun manqué.
-* R2 (abstention géométrique) : la décision est DIFFÉRÉE sur toute fenêtre où la cellule de la Tour la plus haute dépasse 1 pas
-  d'entier (information des contacts/cellules utilisable AVANT la prédiction, non circulaire). Les erreurs sont comptées séparément
-  sur fenêtres décidées et différées.
-* Les scores bruts (min sur premiers, max sur composés, max sur puissances de premiers, marge = min premiers − max composés)
-  sont conservés pour chaque fenêtre et chaque canal, indépendamment de tout seuil.
-* Erreur de reconstruction (point D) : pour chaque canal, max sur la fenêtre de |score − valeur exacte|, sur chaque catégorie.
+## The four score channels (all normalized by the logarithm of the integer)
+* J-F: jump of the reconstructed demand between n−1/2 and n+1/2, Fejér weight (= E464 exactly).
+* J-noF: same jump, without Fejér (sharp cut-off at the maximal height).
+* D2-F: second difference over an integer step of the reconstructed INTEGRATED signal (E465: x times the smoothed sum), Fejér weight.
+  The reconstructed integrated signal keeps the background required by the formula: half the square, linear term of the logarithm of two pi,
+  sum of the trivial zeros (five terms); the constants disappear in the second difference, the half-square gives exactly one.
+* D2-noF: same second difference, without Fejér.
+Expected exact value of the score (exact signal): 1 on a prime, 1/k on a k-th power, 0 elsewhere.
 
-## Information des contacts : ce que j'ai cherché et ce que je n'ai pas trouvé (dit avant exécution)
-Hors la résolution (longueur de la cellule la plus fine, utilisée par R2), je n'ai identifié aucune utilisation NON circulaire des
-contacts qui discrimine deux entiers voisins : les théorèmes de succession (écart, rencontre, reste final) prennent les premiers vrais
-en entrée. Toute variante qui les utiliserait serait circulaire. Ce point est consigné comme négatif de recherche, à rouvrir si un
-énoncé compilé donne une lecture des contacts calculable sans les premiers.
+## Pre-written decisions (none will be modified after reading the results)
+* R0: "prime" if score > 0.75 (E464 rule, kept for comparison).
+* R1: "prime" if score > 0.75 AND the integer passes the mod 6 grammar (remainder 1 or 5; necessary, never sufficient). It can
+  only remove false positives; it cannot create any miss.
+* R2 (geometric abstention): the decision is DEFERRED on every window where the cell of the highest Tower exceeds 1 integer
+  step (information of the contacts/cells usable BEFORE the prediction, non-circular). Errors are counted separately
+  on decided and deferred windows.
+* The raw scores (min on primes, max on composites, max on prime powers, margin = min primes − max composites)
+  are kept for each window and each channel, independently of any threshold.
+* Reconstruction error (point D): for each channel, max over the window of |score − exact value|, on each category.
 
-## Attentes écrites avant exécution
-* A1 : J-F reproduit E464 à l'identique (mêmes comptes, mêmes scores à 10^-9).
-* A2 : les canaux D2 et J donnent des scores très proches (la seconde différence du signal intégré tronqué est, au premier ordre,
-  le saut du signal tronqué) ; je n'attends PAS de gain de résolution du seul passage à la seconde différence.
-* A3 : sans Fejér, séparation plus nette là où elle existe (cellule < 1) mais oscillations parasites plus fortes : marge pouvant
-  augmenter OU diminuer ; je n'annonce aucun sens. Ma conjecture « Fejér divise la hauteur efficace par deux » est TESTÉE par la
-  comparaison des horizons de marge positive entre F et noF ; elle est réfutée si l'horizon de marge positive ne bouge pas.
-* A4 : la grammaire modulo 6 ne change rien aux comptes (E464 n'avait aucun faux positif).
-* A5 : fenêtres inédites : mêmes régimes qu'E464 aux mêmes cellules (exact ≤ 0,28 ; séparation sans seuil 0,5–0,85 ; recouvrement ≥ 1).
+## Information from the contacts: what I looked for and what I did not find (stated before execution)
+Apart from the resolution (length of the finest cell, used by R2), I have identified no NON-circular use of the
+contacts that discriminates two neighbouring integers: the succession theorems (gap, meeting, final remainder) take the true primes
+as input. Any variant that used them would be circular. This point is recorded as a negative research finding, to be reopened if a compiled
+statement gives a reading of the contacts computable without the primes.
 
-## Verdicts pré-écrits
-* A : A1 vraie, et un canal au moins possède une marge positive sur une fenêtre où J-F n'en a pas (gain d'information mesuré).
-* B : A1 vraie, aucun canal n'étend l'horizon de marge positive de J-F (le changement de lecture n'apporte rien ; seule la
-  calibration du seuil comptait).
-* C : A1 fausse (reproduction d'E464 échouée) : tout le reste est suspendu.
-Exécution bornée sous `nohup`, `timeout` 45 min, journal `logs/run.txt` versionné, résultats `results.json`.
+## Expectations written before execution
+* A1: J-F reproduces E464 identically (same counts, same scores to 10^-9).
+* A2: the D2 and J channels give very close scores (the second difference of the truncated integrated signal is, to first order,
+  the jump of the truncated signal); I do NOT expect a resolution gain from the sole passage to the second difference.
+* A3: without Fejér, sharper separation where it exists (cell < 1) but stronger parasitic oscillations: margin may
+  increase OR decrease; I announce no direction. My conjecture "Fejér divides the effective height by two" is TESTED by the
+  comparison of the positive-margin horizons between F and noF; it is refuted if the positive-margin horizon does not move.
+* A4: the mod 6 grammar changes nothing in the counts (E464 had no false positive).
+* A5: new windows: same regimes as E464 at the same cells (exact ≤ 0.28; separation without threshold 0.5–0.85; overlap ≥ 1).
+
+## Pre-written verdicts
+* A: A1 true, and at least one channel has a positive margin on a window where J-F has none (information gain measured).
+* B: A1 true, no channel extends the positive-margin horizon of J-F (the change of reading brings nothing; only the
+  calibration of the threshold mattered).
+* C: A1 false (reproduction of E464 failed): everything else is suspended.
+Bounded execution under `nohup`, `timeout` 45 min, log `logs/run.txt` versioned, results `results.json`.

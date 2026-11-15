@@ -1,57 +1,59 @@
-# E402 — Reconstruction collective par les contacts (mission R9, §19.30) — EXÉCUTÉE le 2026-11-01
+# E402 — Collective reconstruction by contacts (mission R9, §19.30) — EXECUTED on 2026-11-01
 
-Pré-enregistrement : maître §19.29.5 (2026-11-01, avant exécution), vérifié avant lancement ; extension demandée par la
-mission R9 (phases d'entrée/sortie, contacts traversés, décalage à la rencontre, foule/queue/fond, résidu, bornes,
-transitions, dérive séparée β / T, synthétique séparé). Feu vert de l'auteur : « exécute les expériences dont tu as besoin ».
+> Français : [README.fr.md](README.fr.md)
 
-## Protocole (tel qu'exécuté)
-* Script : `e402_collective_contacts.py` (numpy + mpmath), lancé `nohup timeout 900 python3 -I … 10000 .`, durée 108,6 s.
-* Zéros : `../data/odlyzko_zeros6_2001052.txt`, SHA-256 `2ef7b752…78e7c6` vérifié contre `.sha256` ; 2 001 052 hauteurs,
-  strictement croissantes, `T_1 = 14.134725142`, `T_max = 1132490.658714411`. Hypothèse de données : hauteurs de zéros connus
-  posés sur la ligne (`β = 1/2`) ; elles ne certifient pas l'absence de zéros OFF.
-* Premiers : crible, `p ≤ 10 000` plus le suivant (1 229 écarts, de `[2, 3]` à `[9973, 10007]`) ; toute foule est dans les
-  données (`K_max = 16 924 < 2 001 052`).
-* Canal : le canal lissé compilé (même formule que E401, aucune autre). Demande première `D_n = Δ Σ_{m<x} Λ(m)(1 − m/x)` ;
-  fond `B_n = Δ[x/2 − ζ'/ζ(0) + (ζ'/ζ)(−1)/x + Σ_j −x^{s_j}/(s_j(s_j+1))]` ; cible des zéros `Z_n = D_n − B_n` ; contribution
-  complexe d'un zéro `c_ρ(n) = −(p_{n+1}^ρ − p_n^ρ)/(ρ(ρ+1))`, demande `= 2 Re Σ_ρ c_ρ(n)` (conjugués). Somme complexe
-  conservée partout ; la somme des modules n'est donnée qu'à part (part de phase).
-* Foule de l'écart : `T_ρ ≤ π/ℓ_n` ; queue : le reste des 2 001 052 zéros ; troncature au-delà de `T_max` bornée
-  indépendamment du résidu : `Σ_{γ>T_max} 1/γ² ≤ 1,841·10⁻⁶` (N(T) ≤ N_up(T), Trudgian 2014, N(T_max) = 2 001 052 exact),
-  `eps_uncond = 2(p_n + p_{n+1})·σ` (|x^ρ| ≤ x, toute position radiale de la queue), `eps_online = 2(√p_n + √p_{n+1})·σ`
-  (si la queue est en ligne).
-* Contacts : phase `θ = T log p − arctan(T/β)` à l'entrée et à la sortie, contacts traversés `⌊θ_out/π⌋ − ⌊θ_in/π⌋`,
-  décalage du contact à la rencontre `(log p_{n+1} − log C_k)/ℓ` (quarts comptés), rencontres exactes `log C_k = log p_{n+1}`.
-* Transitions : `K_{n+1} − K_n` (fenêtres d'un ensemble fixe).
-* Dérive (3 écarts × 10 zéros) : `∂c/∂β = dc/dρ`, `∂c/∂T = i·dc/dρ` (analytiques), `∂u_k/∂β = −1/(β²+T²)`,
-  `∂u_k/∂T = β/(T(β²+T²)) − u_k/T`, `∂(π/T)/∂β = 0` exact : les deux effets sont séparés.
-* Jumeaux : E401 (dps 30, 168 écarts) contre `Z_n` ; télescopage 100 zéros ; identités compilées (`|u| = 2|sin(Tℓ/2)|/T`,
-  plateau `≤ ℓ`, enveloppe `≤ 2/T`) sur toute la foule de trois écarts à deux précisions ; sommes de foule et `A(x)` en mpmath.
-* Synthétique, SÉPARÉ (`e402_synthetic.txt`) : paire `β* = 0,3 / 0,7` à `T* = 2515,928766` (milieu des zéros 2000 et 2001,
-  hauteur d'aucun zéro réel) ; contributions, complément exigé, résidu « avec paire » ; jamais lue comme mesure de β.
+Pre-registration: master document §19.29.5 (2026-11-01, before execution), checked before launch; extension requested by
+mission R9 (entry/exit phases, contacts crossed, shift at the meeting, crowd/tail/background, residual, bounds,
+transitions, separate drift in β / T, separate synthetic). Author's green light: "run the experiments you need".
 
-## Résultats (fichiers : `e402_summary.txt`, `e402_per_gap.txt`, `e402_members_chosen_gaps.txt`, `e402_drift.txt`, `e402_synthetic.txt`, `e402_run.log`)
-| Quantité | Valeur |
+## Protocol (as executed)
+* Script: `e402_collective_contacts.py` (numpy + mpmath), launched `nohup timeout 900 python3 -I … 10000 .`, duration 108.6 s.
+* Zeros: `../data/odlyzko_zeros6_2001052.txt`, SHA-256 `2ef7b752…78e7c6` checked against `.sha256`; 2,001,052 heights,
+  strictly increasing, `T_1 = 14.134725142`, `T_max = 1132490.658714411`. Data hypothesis: heights of known zeros
+  placed on the line (`β = 1/2`); they do not certify the absence of OFF zeros.
+* Primes: sieve, `p ≤ 10 000` plus the next one (1,229 gaps, from `[2, 3]` to `[9973, 10007]`); every crowd is in the
+  data (`K_max = 16,924 < 2,001,052`).
+* Channel: the compiled smoothed channel (same formula as E401, no other). Prime demand `D_n = Δ Σ_{m<x} Λ(m)(1 − m/x)`;
+  background `B_n = Δ[x/2 − ζ'/ζ(0) + (ζ'/ζ)(−1)/x + Σ_j −x^{s_j}/(s_j(s_j+1))]`; zero target `Z_n = D_n − B_n`; complex
+  contribution of a zero `c_ρ(n) = −(p_{n+1}^ρ − p_n^ρ)/(ρ(ρ+1))`, demand `= 2 Re Σ_ρ c_ρ(n)` (conjugates). Complex sum
+  kept throughout; the sum of moduli is given only separately (phase share).
+* Crowd of the gap: `T_ρ ≤ π/ℓ_n`; tail: the rest of the 2,001,052 zeros; truncation beyond `T_max` bounded
+  independently of the residual: `Σ_{γ>T_max} 1/γ² ≤ 1.841·10⁻⁶` (N(T) ≤ N_up(T), Trudgian 2014, N(T_max) = 2,001,052 exact),
+  `eps_uncond = 2(p_n + p_{n+1})·σ` (|x^ρ| ≤ x, any radial position of the tail), `eps_online = 2(√p_n + √p_{n+1})·σ`
+  (if the tail is on the line).
+* Contacts: phase `θ = T log p − arctan(T/β)` at entry and exit, contacts crossed `⌊θ_out/π⌋ − ⌊θ_in/π⌋`,
+  shift of the contact at the meeting `(log p_{n+1} − log C_k)/ℓ` (quarters counted), exact meetings `log C_k = log p_{n+1}`.
+* Transitions: `K_{n+1} − K_n` (windows of a fixed set).
+* Drift (3 gaps × 10 zeros): `∂c/∂β = dc/dρ`, `∂c/∂T = i·dc/dρ` (analytic), `∂u_k/∂β = −1/(β²+T²)`,
+  `∂u_k/∂T = β/(T(β²+T²)) − u_k/T`, `∂(π/T)/∂β = 0` exact: the two effects are separated.
+* Twins: E401 (dps 30, 168 gaps) against `Z_n`; telescoping over 100 zeros; compiled identities (`|u| = 2|sin(Tℓ/2)|/T`,
+  plateau `≤ ℓ`, envelope `≤ 2/T`) on the whole crowd of three gaps at two precisions; crowd sums and `A(x)` in mpmath.
+* Synthetic, SEPARATE (`e402_synthetic.txt`): pair `β* = 0.3 / 0.7` at `T* = 2515.928766` (midpoint of zeros 2000 and 2001,
+  height of no real zero); contributions, required complement, residual "with pair"; never read as a measurement of β.
+
+## Results (files: `e402_summary.txt`, `e402_per_gap.txt`, `e402_members_chosen_gaps.txt`, `e402_drift.txt`, `e402_synthetic.txt`, `e402_run.log`)
+| Quantity | Value |
 |---|---|
-| résidu `R_n = Z_n − 2Re(S_foule + S_queue)` | max 1,44·10⁻⁷ (n = 1), médiane 2,1·10⁻⁹ |
-| `|R_n| ≤ eps_uncond` / `≤ eps_online` | 1229/1229 / 1229/1229 (eps_online de 1,2·10⁻⁵ à 7,4·10⁻⁴) |
-| foules | `K_min = 0` ; 6 écarts à foule VIDE (rangs 0,1,2,3,5,8 : seuil `π/ℓ < T_1`) ; `K_max = 16 924` (n = 1223) |
-| part de la foule / de la queue dans `Z_n` (médianes) | 1,0003 / 0,0335 |
-| part de phase de la foule `|S|/Σ|c|` | min 0,0009, médiane 0,057, max 1 |
-| contacts traversés par la foule | 1 655 515 au total ; 7 écarts sans aucun contact de foule ; rencontres exactes : 0 |
-| quarts de l'écart (depuis la rencontre) | 414 409 / 414 234 / 413 158 / 413 714 |
-| transitions `K_{n+1} − K_n` | de −15 025 à +15 544 ; 636 croissances, 587 décroissances, 5 constantes |
-| jumeau E401 | max écart 4,7·10⁻¹³ ; télescopage 4,4·10⁻¹⁶ ; identités 2·10⁻¹⁶ à 1,8·10⁻¹⁵ ; foules mpmath ≤ 2,1·10⁻¹⁴ |
-| synthétique | 468 écarts contiennent la paire dans leur foule ; complément exigé de 5,8·10⁻⁷ à 4,0·10⁻⁴ ; **0/468 dépasse `eps_online`, 0/468 dépasse `eps_uncond`** ; contre le résidu observé (1,4·10⁻⁷), 4,0·10⁻⁴ est 2 800 fois plus grand |
+| residual `R_n = Z_n − 2Re(S_crowd + S_tail)` | max 1.44·10⁻⁷ (n = 1), median 2.1·10⁻⁹ |
+| `|R_n| ≤ eps_uncond` / `≤ eps_online` | 1229/1229 / 1229/1229 (eps_online from 1.2·10⁻⁵ to 7.4·10⁻⁴) |
+| crowds | `K_min = 0`; 6 gaps with EMPTY crowd (ranks 0,1,2,3,5,8: threshold `π/ℓ < T_1`); `K_max = 16,924` (n = 1223) |
+| share of crowd / tail in `Z_n` (medians) | 1.0003 / 0.0335 |
+| phase share of the crowd `|S|/Σ|c|` | min 0.0009, median 0.057, max 1 |
+| contacts crossed by the crowd | 1,655,515 in total; 7 gaps with no crowd contact at all; exact meetings: 0 |
+| quarters of the gap (from the meeting) | 414,409 / 414,234 / 413,158 / 413,714 |
+| transitions `K_{n+1} − K_n` | from −15,025 to +15,544; 636 increases, 587 decreases, 5 constant |
+| E401 twin | max difference 4.7·10⁻¹³; telescoping 4.4·10⁻¹⁶; identities 2·10⁻¹⁶ to 1.8·10⁻¹⁵; mpmath crowds ≤ 2.1·10⁻¹⁴ |
+| synthetic | 468 gaps contain the pair in their crowd; required complement from 5.8·10⁻⁷ to 4.0·10⁻⁴; **0/468 exceeds `eps_online`, 0/468 exceeds `eps_uncond`**; against the observed residual (1.4·10⁻⁷), 4.0·10⁻⁴ is 2,800 times larger |
 
-## Lecture honnête
-1. **Identité exacte vérifiée numériquement** : la demande première de chaque écart est reconstituée par la somme complexe de
-   tous les zéros (foule + queue) plus le fond, au niveau de la précision des données ; c'est `localSynchronization` (C126),
-   pas un résultat nouveau. Les phases se compensent fortement dans la foule (part de phase médiane 0,057).
-2. **Résultats dits d'avance** : foules immenses pour les écarts ordinaires (jusqu'à 16 924 pour `p ≈ 10⁴`) — mais les six
-   premiers écarts courts ont une foule VIDE (ce qui n'avait pas été dit d'avance : consigné) ; aucun contact n'est une
-   rencontre ; aucune comparaison à une moyenne ; aucune conclusion sur β.
-3. **Le défaut de reconstruction n'est pas un détecteur** : la borne d'erreur compilée (exposant 1, `collective_residual_bound`)
-   et même la borne à l'échelle de la ligne ne sont jamais dépassées par le complément exigé par la paire synthétique
-   (0/468). Seule la comparaison au résidu OBSERVÉ (qui repose sur la complétude de la liste des zéros) le distingue : c'est un
-   contrôle numérique, jamais une preuve concernant les vrais zéros (mission §7).
-4. **Rien n'est conclu sur β.** La rigidité des contacts n'est pas supposée ; elle n'est pas obtenue.
+## Honest reading
+1. **Exact identity checked numerically**: the prime demand of each gap is reconstituted by the complex sum of
+   all zeros (crowd + tail) plus the background, at the level of the data precision; this is `localSynchronization` (C126),
+   not a new result. The phases strongly compensate in the crowd (median phase share 0.057).
+2. **Results stated in advance**: huge crowds for ordinary gaps (up to 16,924 for `p ≈ 10⁴`) — but the first six
+   short gaps have an EMPTY crowd (which had not been stated in advance: recorded); no contact is a
+   meeting; no comparison to an average; no conclusion about β.
+3. **The reconstruction defect is not a detector**: the compiled error bound (exponent 1, `collective_residual_bound`)
+   and even the bound at line scale are never exceeded by the complement required by the synthetic pair
+   (0/468). Only the comparison with the OBSERVED residual (which relies on the completeness of the list of zeros) distinguishes it: this is a
+   numerical check, never a proof concerning the real zeros (mission §7).
+4. **Nothing is concluded about β.** Rigidity of the contacts is not assumed; it is not obtained.
