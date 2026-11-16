@@ -4,7 +4,7 @@
 
 Owner: © Charles S. (see `COPYRIGHT.md`). The third-party code (`Zeta23Port`, `PNTPort`) remains under its Apache 2.0 licence (see `THIRD_PARTY_NOTICES.md`).
 
-Before any contribution, read `README.md`, then the three master documents `formalization/RHV6Fresh/RHV6final_STRATEGIE_{SEMANTIQUE,MATHEMATIQUE,LEAN}.md` (the author's orders, prohibitions and the state of the route; in particular the semantic master, §19.98 to §19.111), and this file. The internal working log of the private research repository is not published. In case of conflict, a compiled theorem prevails. Some historical documents and experiment notes remain in French.
+Before any contribution, read `README.md`, then the three English master documents `formalization/RHV6Fresh/MASTER_{SEMANTIC,MATHEMATICAL,LEAN}.md` (the author's orders, prohibitions and the state of the route; in particular the semantic master, §19.98 to §19.111), and this file. The internal working log of the private research repository is not published. In case of conflict, a compiled theorem prevails. Some historical documents and experiment notes remain in French.
 
 Rules:
 

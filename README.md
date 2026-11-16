@@ -49,7 +49,7 @@ The assistants executed, compiled, measured and recorded under the author's dire
 
 **Hierarchy.** The compiled theorem comes first; the numerical twin is used to measure, never to conclude; in case of conflict between a text and a compiled theorem, the theorem prevails.
 
-**Author's orders in force** (sources: `CONTRIBUTING.md`, the three master documents `RHV6final_STRATEGIE_*.md` (in French), in particular the semantic master document, handover `formalization/RHV6Fresh/HANDOVER_20261107_LIGNE.md` (in French)):
+**Author's orders in force** (sources: `CONTRIBUTING.md`, the three English master documents `formalization/RHV6Fresh/MASTER_SEMANTIC.md`, `MASTER_MATHEMATICAL.md` and `MASTER_LEAN.md` (current state and latest attempt only; the complete French masters `RHV6final_STRATEGIE_*.md` keep the full research history), in particular the semantic master document, handover `formalization/RHV6Fresh/HANDOVER_20261107_LIGNE.md` (in French)):
 - the contacts of a Tower read the radial position β, through the compiled tangential formulas; an interval of contacts is defined by the frequency AND the amplitude (§19.63, rectified on 4 and 7 November);
 - a Tower is never tied to the exact position of a prime: the intervals between contacts are partial remainders of gaps, reconstructed collectively (§19.51, 6 November);
 - the useful range for the arrival is β ≤ 1/2, never "every β in the open interval (0,1)" (§19.76);
@@ -121,7 +121,7 @@ The author opens this project and invites anyone who wishes to continue it.
 - to propose new arithmetic constraints at the shared prime;
 - to report any error, including errors of vocabulary or of scope.
 
-**How to contribute.** Read `CONTRIBUTING.md` and the master documents (`RHV6final_STRATEGIE_*.md`, in French), in particular the semantic master document (`formalization/RHV6Fresh/RHV6final_STRATEGIE_SEMANTIQUE.md`, in French, especially §19.98 to §19.111). Rules: no `sorry`, no `admit`, no added axiom; `lake build RHV6Fresh` must stay green; pre-register (commit) the hypotheses and thresholds before compiling or running; provide a deterministic twin for every figure; never present a conditional statement as unconditional. Open an issue or a pull request on the repository, citing the author (Charles S.). Contributions are subject to the terms of `COPYRIGHT.md`. We promise no proof.
+**How to contribute.** Read `CONTRIBUTING.md` and the English master documents (`MASTER_SEMANTIC.md`, `MASTER_MATHEMATICAL.md`, `MASTER_LEAN.md` in `formalization/RHV6Fresh/`; the full French history is in `RHV6final_STRATEGIE_*.md`), in particular the semantic master document (`formalization/RHV6Fresh/RHV6final_STRATEGIE_SEMANTIQUE.md`, in French, especially §19.98 to §19.111). Rules: no `sorry`, no `admit`, no added axiom; `lake build RHV6Fresh` must stay green; pre-register (commit) the hypotheses and thresholds before compiling or running; provide a deterministic twin for every figure; never present a conditional statement as unconditional. Open an issue or a pull request on the repository, citing the author (Charles S.). Contributions are subject to the terms of `COPYRIGHT.md`. We promise no proof.
 
 ## 7. Reproducing
 
@@ -162,7 +162,7 @@ formalization/
     experiments/                   expériences E400 à E477 (70 dossiers), audit_semantique/ (sans son data/), data/ (< 1 Mo, plus les zéros d'Odlyzko)
     scripts/                       status.sh, goal_dependencies.py, raccord_check.py
     audits_compilation/            journaux de compilation
-    RHV6final_STRATEGIE_{SEMANTIQUE,MATHEMATIQUE,LEAN}.md   les trois maîtres
+    MASTER_{SEMANTIC,MATHEMATICAL,LEAN}.md   English master documents (current state); RHV6final_STRATEGIE_*.md = full French history
     HANDOVER_20261107_LIGNE.md     passation (§1 à §36)
     AUDIT_*.md                     audits de ce dossier
 docs/ANNONCE_PUBLICATION_20261115.md   annonce de publication

@@ -39,7 +39,7 @@ lock in `semantic_lock.md`.
 - `experiments/` (200 subfolders): numerical experiments and probes, outside the build graph.
 - `scripts/`: `status.sh`, `goal_dependencies.py` (theorem dependency graph), `raccord_check.py` (junction check).
 - `archives/`: archives of earlier master documents and audits.
-- Master documents: `RHV6final_STRATEGIE_SEMANTIQUE.md`, `RHV6final_STRATEGIE_MATHEMATIQUE.md`, `RHV6final_STRATEGIE_LEAN.md`
+- Master documents (English, current state and latest attempt): `MASTER_SEMANTIC.md`, `MASTER_MATHEMATICAL.md`, `MASTER_LEAN.md`. Full French history: `RHV6final_STRATEGIE_SEMANTIQUE.md`, `RHV6final_STRATEGIE_MATHEMATIQUE.md`, `RHV6final_STRATEGIE_LEAN.md`
   (aligned with the code after the fact; in case of conflict with a compiled theorem, the master document is corrected).
 - Audit: [AUDIT_SOLUTION_20261005.md](AUDIT_SOLUTION_20261005.md); semantic audit
   [AUDIT_SEMANTIQUE_RHV6Fresh.md](AUDIT_SEMANTIQUE_RHV6Fresh.md).
